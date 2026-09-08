@@ -8,42 +8,84 @@
     <meta name="theme-color" content="#090d16" />
     <meta name="apple-itunes-app" content="app-id=6757712692" />
     
-    <link rel="canonical" href="https://stavris8894.github.io/parenty-page/" />
+    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log" />
+    <meta name="robots" content="index, follow" />
+    
+    <link rel="canonical" href="https://parenty.uk/" />
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="apple-touch-icon" href="logo.png" />
 
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Parenty" />
-    <meta property="og:url" content="https://stavris8894.github.io/parenty-page/" />
+    <meta property="og:url" content="https://parenty.uk/" />
     <meta property="og:title" content="Parenty – Family Health & Medication Tracker" />
     <meta property="og:description" content="Never miss a medicine dose for your family. Smart reminders, fever logs, and multi-caregiver sync." />
-    <meta property="og:image" content="https://stavris8894.github.io/parenty-page/logo.png" />
+    <meta property="og:image" content="https://parenty.uk/logo.png" />
     
     <!-- Twitter / X Meta -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Parenty – Family Health & Medication Tracker" />
     <meta name="twitter:description" content="Never miss a medicine dose for your family. Smart reminders, fever logs, and multi-caregiver sync." />
-    <meta name="twitter:image" content="https://stavris8894.github.io/parenty-page/logo.png" />
+    <meta name="twitter:image" content="https://parenty.uk/logo.png" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Parenty",
-      "operatingSystem": "iOS, Android",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Parenty",
+        "url": "https://parenty.uk/",
+        "image": "https://parenty.uk/logo.png",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Stavros Georgiou"
+        },
+        "installUrl": [
+          "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
+          "https://play.google.com/store/apps/details?id=cy.com.parenty"
+        ],
+        "description": "Parenty takes the stress out of pediatric medication management. Track dose schedules, fever temperatures, and symptom recovery across all family caregivers."
       },
-      "installUrl": [
-        "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
-        "https://play.google.com/store/apps/details?id=cy.com.parenty"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does device synchronization work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Parenty automatically syncs medicine logs across all signed-in devices in real time so everyone stays updated."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I manage multiple children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! You can create individual profiles for each child with dedicated schedules, dosages, and temperature charts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Troubleshooting Checklist",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If notifications aren't appearing, verify that system notification permissions are granted and the app is updated to the latest version."
+            }
+          }
+        ]
+      }
+    ]
     </script>
 
     <!-- Google Fonts -->
@@ -299,82 +341,133 @@
             font-family: 'Outfit', sans-serif;
         }
 
-        /* App Homescreen Frame Showcase */
+        /* App Showcase & Screenshots Slider */
         .app-showcase {
             position: relative;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 20px 0 10px;
         }
 
-        .app-frame {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px var(--primary-glow);
-            backdrop-filter: blur(20px);
+        .showcase-header {
+            text-align: center;
+            margin-bottom: 28px;
         }
 
-        .mockup-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 20px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .mockup-user-info {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .mockup-avatar {
-            width: 52px;
-            height: 52px;
-            border-radius: 16px;
-            background: var(--primary-gradient);
+        .showcase-tabs {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
         }
 
-        .mockup-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            text-align: left;
-        }
-
-        .mockup-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .mockup-card:hover {
-            border-color: rgba(99, 102, 241, 0.5);
+        .showcase-tab {
             background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
         }
 
-        .card-pill-tag {
-            display: inline-flex;
+        .showcase-tab:hover {
+            color: var(--text-main);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .showcase-tab.active {
+            background: var(--primary-gradient);
+            color: #ffffff;
+            border-color: transparent;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .showcase-slider-wrapper {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .showcase-track {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 16px 20px 36px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .showcase-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .showcase-card {
+            flex: 0 0 310px;
+            scroll-snap-align: center;
+            border-radius: 28px;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.15);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-hover);
+            box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.7), 0 0 40px var(--primary-glow);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(18, 24, 40, 0.9);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            font-size: 24px;
+            display: flex;
             align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--accent-green);
-            margin-bottom: 12px;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .slider-arrow:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-arrow.prev {
+            left: -16px;
+        }
+
+        .slider-arrow.next {
+            right: -16px;
         }
 
         /* Features Section */
@@ -595,11 +688,19 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
-            .mockup-cards-grid {
-                grid-template-columns: 1fr;
+            .showcase-card {
+                flex: 0 0 260px;
             }
-            .app-frame {
-                padding: 20px;
+            .slider-arrow {
+                display: none;
+            }
+            .showcase-track {
+                padding: 10px 16px 24px;
+                gap: 16px;
+            }
+            .showcase-tab {
+                padding: 7px 14px;
+                font-size: 13px;
             }
             .cta-box {
                 padding: 40px 20px;
@@ -717,33 +818,46 @@
                 </a>
             </div>
 
-            <!-- App Homescreen Showcase Frame -->
+            <!-- App Screenshots Showcase Section -->
             <div class="app-showcase" id="preview">
-                <div class="app-frame">
-                    <div class="mockup-header">
-                        <div class="mockup-user-info">
-                            <div class="mockup-avatar">P</div>
-                            <div>
-                                <h4 style="font-size: 18px; font-weight: 700;">Leo's Health Dashboard</h4>
-                                <p style="font-size: 13px; color: var(--text-muted);">Active Medication Schedule</p>
-                            </div>
-                        </div>
-                        <span class="card-pill-tag">● Live Care Sync</span>
+                <div class="showcase-header">
+                    <div class="hero-badge" style="margin-bottom: 16px;">
+                        <span>📱 Preview the Experience</span>
                     </div>
+                    <h2 class="hero-title" style="font-size: 38px; margin-bottom: 12px;">See Parenty <span>in Action</span></h2>
+                    <p class="hero-subtitle" style="margin-bottom: 28px; max-width: 650px;">A thoughtful, calm interface designed to reduce anxiety when your little ones need care.</p>
+                </div>
 
-                    <div class="mockup-cards-grid">
-                        <div class="mockup-card">
-                            <div class="card-pill-tag">⏰ Next Dose: 8:00 PM</div>
-                            <h4 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">Amoxicillin 250mg</h4>
-                            <p style="font-size: 14px; color: var(--text-muted);">5 mL oral suspension • Every 8 hours</p>
+                <!-- Category Tabs -->
+                <div class="showcase-tabs">
+                    <button class="showcase-tab active" data-index="0">🏠 Overview</button>
+                    <button class="showcase-tab" data-index="1">⏰ Dose Reminders</button>
+                    <button class="showcase-tab" data-index="2">🌡️ Symptom Tracker</button>
+                    <button class="showcase-tab" data-index="3">🩺 Doctor Visits</button>
+                    <button class="showcase-tab" data-index="4">📊 History & Reports</button>
+                </div>
+
+                <!-- Slider Track -->
+                <div class="showcase-slider-wrapper">
+                    <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous screenshot">‹</button>
+                    <div class="showcase-track" id="showcaseTrack">
+                        <div class="showcase-card">
+                            <img src="screenshots/screenshot-1.png" alt="Parenty Dashboard – Everything your child needs, at a glance" loading="eager" width="1260" height="2736" />
                         </div>
-
-                        <div class="mockup-card">
-                            <div class="card-pill-tag" style="background: rgba(236, 72, 153, 0.15); color: var(--accent-pink);">🌡️ Fever Log</div>
-                            <h4 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">37.2°C (Normal)</h4>
-                            <p style="font-size: 14px; color: var(--text-muted);">Recorded 45 mins ago • Paracetamol given</p>
+                        <div class="showcase-card">
+                            <img src="screenshots/screenshot-2.png" alt="Parenty Medication Scheduler – Set up reminders in seconds" loading="lazy" width="1260" height="2736" />
+                        </div>
+                        <div class="showcase-card">
+                            <img src="screenshots/screenshot-3.png" alt="Parenty Symptom Tracker – Monitor symptoms and progress" loading="lazy" width="1260" height="2736" />
+                        </div>
+                        <div class="showcase-card">
+                            <img src="screenshots/screenshot-4.png" alt="Parenty Doctor Directory – Don't miss an appointment with a doctor" loading="lazy" width="1260" height="2736" />
+                        </div>
+                        <div class="showcase-card">
+                            <img src="screenshots/screenshot-5.png" alt="Parenty Medical Reports – Share clear history with doctor" loading="lazy" width="1260" height="2736" />
                         </div>
                     </div>
+                    <button class="slider-arrow next" id="sliderNext" aria-label="Next screenshot">›</button>
                 </div>
             </div>
         </div>
@@ -888,6 +1002,63 @@
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Screenshots Carousel Controller
+        const track = document.getElementById("showcaseTrack");
+        const prevBtn = document.getElementById("sliderPrev");
+        const nextBtn = document.getElementById("sliderNext");
+        const tabs = document.querySelectorAll(".showcase-tab");
+        const cards = document.querySelectorAll(".showcase-card");
+
+        if (track && prevBtn && nextBtn && cards.length > 0) {
+            const getCardStep = () => {
+                const card = cards[0];
+                return card ? card.offsetWidth + 24 : 334;
+            };
+
+            prevBtn.addEventListener("click", () => {
+                track.scrollBy({ left: -getCardStep(), behavior: "smooth" });
+            });
+
+            nextBtn.addEventListener("click", () => {
+                track.scrollBy({ left: getCardStep(), behavior: "smooth" });
+            });
+
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    const idx = parseInt(tab.getAttribute("data-index"), 10);
+                    if (cards[idx]) {
+                        cards[idx].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+                    }
+                });
+            });
+
+            // Update active tab on scroll
+            let scrollTimeout;
+            track.addEventListener("scroll", () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const trackRect = track.getBoundingClientRect();
+                    const trackCenter = trackRect.left + trackRect.width / 2;
+                    let closestIdx = 0;
+                    let minDiff = Infinity;
+
+                    cards.forEach((card, i) => {
+                        const cardRect = card.getBoundingClientRect();
+                        const cardCenter = cardRect.left + cardRect.width / 2;
+                        const diff = Math.abs(trackCenter - cardCenter);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIdx = i;
+                        }
+                    });
+
+                    tabs.forEach((t, i) => {
+                        t.classList.toggle("active", i === closestIdx);
+                    });
+                }, 60);
+            }, { passive: true });
+        }
     </script>
 </body>
 </html>
