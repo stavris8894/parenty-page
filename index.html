@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty – Family Health & Medication Tracker</title>
-    <meta name="description" content="Parenty is the essential companion for parents to track children's medicine doses, fever logs, and health schedules with zero stress." />
+    <meta name="description" content="Parenty helps parents and caregivers track children's medicine doses, fevers, symptoms and doctor visits — and keep everyone in sync so no dose is missed or doubled." />
     <meta name="theme-color" content="#090d16" />
     <meta name="apple-itunes-app" content="app-id=6757712692" />
     
@@ -61,10 +61,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How does device synchronization work?",
+            "name": "How does sync work between parents and caregivers?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Parenty automatically syncs medicine logs across all signed-in devices in real time so everyone stays updated."
+              "text": "Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone's phone instantly."
             }
           },
           {
@@ -72,15 +72,39 @@
             "name": "Can I manage multiple children?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes! You can create individual profiles for each child with dedicated schedules, dosages, and temperature charts."
+              "text": "Yes. Each child gets their own colour-coded profile, and you can filter medicines, temperatures, symptoms and doctor visits per child. The free plan includes one child profile; Premium unlocks unlimited profiles."
             }
           },
           {
             "@type": "Question",
-            "name": "Troubleshooting Checklist",
+            "name": "What's included for free?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "If notifications aren't appearing, verify that system notification permissions are granted and the app is updated to the latest version."
+              "text": "Medicine and dose tracking, reminders, temperature and symptom logs, one child profile, one doctor with two visits, and cloud backup. Premium adds family sharing, unlimited profiles and doctors, PDF reports, fever charts and alarm settings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which languages does Parenty support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I delete my account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Go to Profile settings and choose Delete Account. Your account and its cloud data are removed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Notifications aren't appearing. What should I check?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Make sure notifications are allowed for Parenty in your phone's settings, that Focus or Do Not Disturb isn't silencing them, and that you're on the latest version of the app."
             }
           }
         ]
@@ -341,6 +365,52 @@
             font-family: 'Outfit', sans-serif;
         }
 
+        /* Promo Video */
+        .video-section {
+            display: flex;
+            justify-content: center;
+            margin: -12px auto 72px;
+            scroll-margin-top: 110px;
+        }
+
+        .video-frame {
+            position: relative;
+            width: min(320px, 100%);
+            aspect-ratio: 9 / 16;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #000;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 50px var(--primary-glow);
+        }
+
+        .video-frame video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .video-sound {
+            position: absolute;
+            right: 14px;
+            bottom: 14px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: rgba(9, 13, 22, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .video-sound:hover {
+            background: var(--primary);
+        }
+
         /* App Showcase & Screenshots Slider */
         .app-showcase {
             position: relative;
@@ -498,7 +568,7 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
             gap: 28px;
         }
 
@@ -688,6 +758,12 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+            .feature-card {
+                padding: 28px;
+            }
+            .video-frame {
+                width: min(280px, 100%);
+            }
             .showcase-card {
                 flex: 0 0 260px;
             }
@@ -768,6 +844,7 @@
             </a>
             
             <ul class="nav-links">
+                <li><a href="#watch">Watch</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#preview">App Showcase</a></li>
                 <li><a href="#support">Support</a></li>
@@ -782,7 +859,7 @@
     <section class="hero" id="download">
         <div class="container">
             <div class="hero-badge">
-                <span>✨ #1 Family Health & Medication Companion</span>
+                <span>✨ Family Health & Medication Companion</span>
             </div>
 
             <h1 class="hero-title">
@@ -816,6 +893,14 @@
                         <span class="large">Google Play</span>
                     </div>
                 </a>
+            </div>
+
+            <!-- Promo Video -->
+            <div class="video-section" id="watch">
+                <div class="video-frame">
+                    <video id="promoVideo" src="video/parenty-ad.mp4" poster="video/parenty-ad-poster.jpg" width="1080" height="1920" autoplay muted loop playsinline preload="metadata" aria-label="Parenty app promo video"></video>
+                    <button class="video-sound" id="videoSound" type="button" aria-label="Turn sound on" aria-pressed="false">🔇</button>
+                </div>
             </div>
 
             <!-- App Screenshots Showcase Section -->
@@ -874,38 +959,56 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⏰</div>
-                    <h3>Smart Dose Reminders</h3>
-                    <p>Receive timely, intelligent notifications so you and your caregivers never miss or double-dose a medication.</p>
+                    <h3>Dose Reminders & Alarms</h3>
+                    <p>Set doses every few hours, for a set number of days, or at specific times. Turn on alarm mode for the doses that can't be missed — even at 3 AM.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Sync</h3>
+                    <p>See who gave the last dose and when. Invite your partner, grandparents or nanny by @username and everyone's phone updates instantly. Free cloud backup for everyone; sharing with Premium.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🌡️</div>
                     <h3>Fever & Symptom Tracking</h3>
-                    <p>Log body temperature readings, symptoms, and medication responses with clear history graphs.</p>
+                    <p>Log temperatures in °C or °F and symptoms with a 1–5 severity scale and notes, so you can see how things are progressing.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                    <h3>Multi-Caregiver Sync</h3>
-                    <p>Keep parents, grandparents, and babysitters in sync with real-time updates across all devices.</p>
+                    <div class="feature-icon">🩺</div>
+                    <h3>Doctors & Visits</h3>
+                    <p>Keep your pediatrician's details one tap away, log visits with notes and follow-up dates, and add appointments to your calendar.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Pediatrician PDF Exports</h3>
-                    <p>Easily generate comprehensive dose logs and temperature trends to share during doctor visits.</p>
+                    <div class="feature-icon">📄</div>
+                    <h3>PDF & CSV Reports</h3>
+                    <p>Export dose history, temperatures, symptoms and visits as a clean PDF summary to share with your doctor or the ER.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">👶</div>
                     <h3>Multiple Child Profiles</h3>
-                    <p>Create distinct profiles for each child with custom dosage rules, weight logs, and allergy alerts.</p>
+                    <p>Give each child a colour-coded profile and filter medicines, logs and visits per child.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Widgets, Live Activities & Siri</h3>
+                    <p>Log a dose from your Home Screen, follow the countdown on the Lock Screen and Dynamic Island, or just ask Siri. Home screen widgets on Android too.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
-                    <h3>Encrypted & Private</h3>
-                    <p>Your family’s medical records are securely encrypted and kept private under strict protection.</p>
+                    <h3>Private & Secure</h3>
+                    <p>Optional Face ID, Touch ID or fingerprint lock, and full account deletion from settings. We never sell your family's data.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>9 Languages</h3>
+                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish, with full right-to-left support.</p>
                 </div>
             </div>
         </div>
@@ -921,18 +1024,33 @@
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h4>How does device synchronization work?</h4>
-                    <p>Parenty automatically syncs medicine logs across all signed-in devices in real time so everyone stays updated.</p>
+                    <h4>How does sync work between parents and caregivers?</h4>
+                    <p>Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone's phone instantly.</p>
                 </div>
 
                 <div class="faq-item">
                     <h4>Can I manage multiple children?</h4>
-                    <p>Yes! You can create individual profiles for each child with dedicated schedules, dosages, and temperature charts.</p>
+                    <p>Yes. Each child gets their own colour-coded profile, and you can filter medicines, temperatures, symptoms and doctor visits per child. The free plan includes one child profile; Premium unlocks unlimited profiles.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h4>Troubleshooting Checklist</h4>
-                    <p>If notifications aren't appearing, verify that system notification permissions are granted and the app is updated to the latest version.</p>
+                    <h4>What's included for free?</h4>
+                    <p>Medicine and dose tracking, reminders, temperature and symptom logs, one child profile, one doctor with two visits, and cloud backup. Premium adds family sharing, unlimited profiles and doctors, PDF reports, fever charts and alarm settings.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Which languages does Parenty support?</h4>
+                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How do I delete my account?</h4>
+                    <p>Go to Profile settings and choose Delete Account. Your account and its cloud data are removed.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Notifications aren't appearing. What should I check?</h4>
+                    <p>Make sure notifications are allowed for Parenty in your phone's settings, that Focus or Do Not Disturb isn't silencing them, and that you're on the latest version of the app.</p>
                 </div>
             </div>
 
@@ -991,6 +1109,7 @@
             </p>
             <p style="margin-top: 10px;">
                 <a href="#">Home</a> |
+                <a href="#watch">Watch</a> |
                 <a href="#features">Features</a> |
                 <a href="#preview">App Showcase</a> |
                 <a href="#download">Download App</a> |
@@ -1002,6 +1121,24 @@
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Promo video: sound toggle; respect reduced motion
+        const video = document.getElementById("promoVideo");
+        const soundBtn = document.getElementById("videoSound");
+        if (video && soundBtn) {
+            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                video.removeAttribute("autoplay");
+                video.pause();
+                video.controls = true;
+            }
+            soundBtn.addEventListener("click", () => {
+                video.muted = !video.muted;
+                if (!video.muted) video.play();
+                soundBtn.textContent = video.muted ? "🔇" : "🔊";
+                soundBtn.setAttribute("aria-label", video.muted ? "Turn sound on" : "Turn sound off");
+                soundBtn.setAttribute("aria-pressed", String(!video.muted));
+            });
+        }
 
         // Screenshots Carousel Controller
         const track = document.getElementById("showcaseTrack");
