@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty – Family Health & Medication Tracker</title>
     <meta name="description" content="Parenty helps parents and caregivers track children's medicine doses, fevers, symptoms and doctor visits — and keep everyone in sync so no dose is missed or doubled." />
-    <meta name="theme-color" content="#090d16" />
+    <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
     <meta name="apple-itunes-app" content="app-id=6757712692" />
     
     <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log" />
@@ -21,13 +23,15 @@
     <meta property="og:url" content="https://parenty.uk/" />
     <meta property="og:title" content="Parenty – Family Health & Medication Tracker" />
     <meta property="og:description" content="Never miss a medicine dose for your family. Smart reminders, fever logs, and multi-caregiver sync." />
-    <meta property="og:image" content="https://parenty.uk/logo.png" />
+    <meta property="og:image" content="https://parenty.uk/og-image.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="500" />
     
     <!-- Twitter / X Meta -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Parenty – Family Health & Medication Tracker" />
     <meta name="twitter:description" content="Never miss a medicine dose for your family. Smart reminders, fever logs, and multi-caregiver sync." />
-    <meta name="twitter:image" content="https://parenty.uk/logo.png" />
+    <meta name="twitter:image" content="https://parenty.uk/og-image.png" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -115,60 +119,95 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #6366f1;
-            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
-            --primary-glow: rgba(99, 102, 241, 0.25);
-            --bg-dark: #090d16;
-            --bg-card: rgba(18, 24, 40, 0.7);
-            --bg-card-hover: rgba(30, 41, 65, 0.8);
-            --border: rgba(255, 255, 255, 0.1);
-            --border-hover: rgba(139, 92, 246, 0.4);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --text-dim: #64748b;
-            --accent-green: #10b981;
-            --accent-pink: #ec4899;
-            --radius-lg: 24px;
-            --radius-md: 16px;
-            --radius-sm: 10px;
+            --bg: #faf8ff;
+            --bg-band: #f2edff;
+            --surface: #ffffff;
+            --border: #e7e0f7;
+            --text: #1d1530;
+            --muted: #5f577a;
+            --accent: #6b46c1;
+            --accent-soft: rgba(107, 70, 193, 0.1);
+            --btn-bg: #6b46c1;
+            --btn-text: #ffffff;
+            --glow: rgba(167, 139, 250, 0.35);
+            --phone-bezel: #ffffff;
+            --phone-edge: rgba(107, 70, 193, 0.2);
+            --shadow: 0 24px 60px -24px rgba(60, 30, 120, 0.35);
+            --radius: 20px;
         }
 
-        html {
-            scroll-behavior: smooth;
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #0d0817;
+                --bg-band: #130c22;
+                --surface: #17112a;
+                --border: rgba(255, 255, 255, 0.08);
+                --text: #f5f3ff;
+                --muted: #a59fbf;
+                --accent: #c9b5ff;
+                --accent-soft: rgba(201, 181, 255, 0.1);
+                --btn-bg: #c9b5ff;
+                --btn-text: #1d1035;
+                --glow: rgba(124, 58, 237, 0.4);
+                --phone-bezel: #1b1724;
+                --phone-edge: rgba(201, 181, 255, 0.3);
+                --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+            }
         }
 
-        section, .app-showcase {
-            scroll-margin-top: 90px;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 80px; }
 
         body {
             font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 85% 65%, rgba(168, 85, 247, 0.15) 0%, transparent 45%);
-            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Container */
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            text-wrap: balance;
+        }
+
         .container {
-            max-width: 1200px;
+            max-width: 1160px;
             margin: 0 auto;
             padding: 0 24px;
         }
+
+        .icon {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+
+        .accent { color: var(--accent); }
 
         /* Navbar */
         .navbar {
@@ -177,1025 +216,931 @@
             left: 0;
             right: 0;
             z-index: 100;
-            background: rgba(9, 13, 22, 0.85);
+            background: color-mix(in srgb, var(--bg) 82%, transparent);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
-            padding: 16px 0;
         }
 
         .nav-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 68px;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             text-decoration: none;
-            color: var(--text-main);
-        }
-
-        .brand-logo {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            box-shadow: 0 4px 14px var(--primary-glow);
-            object-fit: cover;
-            border: 1px solid var(--border);
-        }
-
-        .brand-text {
+            color: var(--text);
             font-family: 'Outfit', sans-serif;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
+        }
+
+        .brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
         }
 
         .nav-links {
             display: flex;
-            align-items: center;
-            gap: 32px;
+            gap: 28px;
             list-style: none;
         }
 
         .nav-links a {
-            color: var(--text-muted);
+            color: var(--muted);
             text-decoration: none;
             font-weight: 500;
             font-size: 15px;
-            transition: all 0.2s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--text-main);
-        }
+        .nav-links a:hover { color: var(--text); }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px 24px;
+            padding: 10px 18px;
             border-radius: 12px;
-            font-weight: 600;
-            font-size: 15px;
-            text-decoration: none;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--primary-gradient);
-            color: #ffffff;
-            box-shadow: 0 4px 20px var(--primary-glow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 160px 0 100px;
-            position: relative;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            border-radius: 30px;
-            background: rgba(99, 102, 241, 0.12);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: #a5b4fc;
+            font-weight: 700;
             font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 24px;
+            text-decoration: none;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            transition: transform 0.2s ease;
         }
 
-        .hero-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 56px;
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -1.5px;
-            margin-bottom: 24px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .btn:hover { transform: translateY(-1px); }
 
-        .hero-title span {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: var(--text-muted);
-            max-width: 720px;
-            margin: 0 auto 40px;
-            font-weight: 400;
-        }
-
-        /* Store Badges */
+        /* Store buttons */
         .store-buttons {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 60px;
         }
 
         .store-btn {
             display: flex;
             align-items: center;
-            gap: 14px;
-            padding: 14px 24px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            color: var(--text-main);
+            gap: 12px;
+            padding: 11px 20px;
+            background: var(--text);
+            color: var(--bg);
+            border-radius: 14px;
             text-decoration: none;
-            transition: all 0.25s ease;
-            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease;
         }
 
-        .store-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--border-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
+        .store-btn:hover { transform: translateY(-2px); }
 
         .store-btn svg {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             fill: currentColor;
         }
 
         .store-btn-text {
             display: flex;
             flex-direction: column;
-            text-align: left;
+            line-height: 1.15;
         }
 
         .store-btn-text .small {
             font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-muted);
+            opacity: 0.8;
         }
 
         .store-btn-text .large {
-            font-size: 17px;
-            font-weight: 700;
             font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            white-space: nowrap;
         }
 
-        /* Promo Video */
-        .video-section {
-            display: flex;
-            justify-content: center;
-            margin: -12px auto 72px;
-            scroll-margin-top: 110px;
+        /* Hero */
+        .hero {
+            padding: 128px 0 88px;
+            background: radial-gradient(ellipse 60% 55% at 78% 40%, var(--glow), transparent 70%);
         }
 
-        .video-frame {
-            position: relative;
-            width: min(320px, 100%);
-            aspect-ratio: 9 / 16;
-            border-radius: 28px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: #000;
-            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 50px var(--primary-glow);
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
         }
 
-        .video-frame video {
+        .hero h1 {
+            font-size: clamp(40px, 5.6vw, 66px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero-sub {
+            font-size: 19px;
+            color: var(--muted);
+            max-width: 540px;
+            margin-bottom: 32px;
+        }
+
+        .hero-meta {
+            margin-top: 22px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* Phone frames */
+        .phone {
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 1206 / 2622;
+            padding: 8px;
+            border-radius: 46px;
+            background: var(--phone-bezel);
+            border: 1px solid var(--phone-edge);
+            box-shadow: var(--shadow);
+            margin: 0 auto;
+        }
+
+        .phone > video,
+        .phone img {
             width: 100%;
             height: 100%;
             display: block;
             object-fit: cover;
+            object-position: top;
+            border-radius: 38px;
+        }
+
+        .phone picture { display: contents; }
+
+        .video-phone {
+            position: relative;
+            aspect-ratio: 9 / 16;
+            max-width: 320px;
+            background: #0d0817;
         }
 
         .video-sound {
             position: absolute;
-            right: 14px;
-            bottom: 14px;
-            width: 44px;
-            height: 44px;
+            right: 20px;
+            bottom: 20px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            border: 1px solid var(--border);
-            background: rgba(9, 13, 22, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(13, 8, 23, 0.7);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.2s ease;
-        }
-
-        .video-sound:hover {
-            background: var(--primary);
-        }
-
-        /* App Showcase & Screenshots Slider */
-        .app-showcase {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 0 10px;
-        }
-
-        .showcase-header {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .showcase-tabs {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
-        }
-
-        .showcase-tab {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 9px 18px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            font-family: inherit;
-        }
-
-        .showcase-tab:hover {
-            color: var(--text-main);
-            border-color: var(--border-hover);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .showcase-tab.active {
-            background: var(--primary-gradient);
-            color: #ffffff;
-            border-color: transparent;
-            box-shadow: 0 4px 15px var(--primary-glow);
-        }
-
-        .showcase-slider-wrapper {
-            position: relative;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .showcase-track {
-            display: flex;
-            gap: 24px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            padding: 16px 20px 36px;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-        }
-
-        .showcase-track::-webkit-scrollbar {
-            display: none;
-        }
-
-        .showcase-card {
-            flex: 0 0 310px;
-            scroll-snap-align: center;
-            border-radius: 28px;
-            overflow: hidden;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.15);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .showcase-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--border-hover);
-            box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.7), 0 0 40px var(--primary-glow);
-        }
-
-        .showcase-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: rgba(18, 24, 40, 0.9);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            font-size: 24px;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            z-index: 10;
-            backdrop-filter: blur(10px);
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
-        .slider-arrow:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            transform: translateY(-50%) scale(1.1);
-        }
+        .video-sound .icon { width: 18px; height: 18px; }
 
-        .slider-arrow.prev {
-            left: -16px;
-        }
+        /* Spotlights */
+        .spotlight { padding: 96px 0; }
 
-        .slider-arrow.next {
-            right: -16px;
-        }
+        .spotlight + .spotlight { padding-top: 0; }
 
-        /* Features Section */
-        .features-section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-
-        .section-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 40px;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
+        .spotlight-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-            gap: 28px;
-        }
-
-        .feature-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 36px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--border-hover);
-            box-shadow: 0 20px 40px -15px var(--primary-glow);
-            background: var(--bg-card-hover);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 18px;
-            background: rgba(99, 102, 241, 0.12);
-            border: 1px solid rgba(99, 102, 241, 0.25);
-            display: flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
             align-items: center;
-            justify-content: center;
-            font-size: 28px;
+        }
+
+        .spotlight.reverse .spotlight-visual { order: -1; }
+
+        .spotlight h2 {
+            font-size: clamp(32px, 4vw, 46px);
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .spotlight p {
+            color: var(--muted);
+            font-size: 17px;
             margin-bottom: 24px;
-            color: #818cf8;
+            max-width: 500px;
         }
 
-        .feature-card h3 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 12px;
+        .checklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
 
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.7;
+        .checklist li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-weight: 500;
         }
 
-        /* Support & Contact Section */
-        .support-section {
-            padding: 90px 0;
-            background: rgba(18, 24, 40, 0.4);
+        .checklist .icon {
+            color: var(--accent);
+            margin-top: 2px;
+        }
+
+        .note {
+            margin-top: 22px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .spotlight-visual { position: relative; }
+
+        .spotlight-visual::before {
+            content: "";
+            position: absolute;
+            inset: 10% 5%;
+            background: radial-gradient(circle, var(--glow), transparent 65%);
+            z-index: -1;
+        }
+
+        /* Features */
+        .features {
+            padding: 96px 0;
+            background: var(--bg-band);
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
 
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto 48px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 24px;
-            transition: all 0.2s ease;
-        }
-
-        .faq-item h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text-main);
-        }
-
-        .faq-item p {
-            color: var(--text-muted);
-            font-size: 15px;
-        }
-
-        .contact-box {
-            max-width: 600px;
-            margin: 0 auto;
+        .section-header {
             text-align: center;
-            background: var(--primary-gradient);
-            border-radius: var(--radius-lg);
-            padding: 40px 32px;
-            box-shadow: 0 20px 40px var(--primary-glow);
+            max-width: 640px;
+            margin: 0 auto 56px;
         }
 
-        .contact-box h3 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 28px;
+        .section-header h2 {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 26px;
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .feature h3 {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: var(--muted);
+            font-size: 14.5px;
+        }
+
+        /* Screenshots */
+        .screens { padding: 96px 0 72px; }
+
+        .screens-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .screens-tab {
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 99px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .screens-tab.active {
+            background: var(--btn-bg);
+            border-color: transparent;
+            color: var(--btn-text);
+        }
+
+        .screens-track {
+            display: flex;
+            gap: 28px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 8px max(24px, calc((100vw - 1112px) / 2)) 40px;
+            scrollbar-width: none;
+        }
+
+        .screens-track::-webkit-scrollbar { display: none; }
+
+        .screens-track figure {
+            flex: 0 0 260px;
+            scroll-snap-align: center;
+        }
+
+        .screens-track .phone { max-width: 260px; border-radius: 40px; padding: 7px; }
+        .screens-track .phone img { border-radius: 33px; }
+
+        .screens-track figcaption {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 96px 0;
+            background: var(--bg-band);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .plan {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+        }
+
+        .plan.premium {
+            border: 2px solid var(--accent);
+            box-shadow: var(--shadow);
+        }
+
+        .plan h3 {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .plan-price {
+            color: var(--muted);
+            font-size: 15px;
+            margin: 6px 0 24px;
+        }
+
+        .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .pricing-note {
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 28px;
+        }
+
+        /* FAQ */
+        .faq { padding: 96px 0; }
+
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-list details { border-bottom: 1px solid var(--border); }
+
+        .faq-list summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding: 22px 4px;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .faq-list summary::-webkit-details-marker { display: none; }
+
+        .faq-list summary .icon {
+            color: var(--muted);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-list details[open] summary .icon { transform: rotate(180deg); }
+
+        .faq-list details p {
+            color: var(--muted);
+            padding: 0 4px 22px;
+            max-width: 680px;
+        }
+
+        .faq-contact {
+            text-align: center;
+            margin-top: 36px;
+            color: var(--muted);
+        }
+
+        .faq-contact a {
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* CTA */
+        .cta { padding: 0 0 96px; }
+
+        .cta-box {
+            text-align: center;
+            padding: 64px 32px;
+            border-radius: 28px;
+            background:
+                radial-gradient(ellipse 70% 90% at 50% 0%, rgba(124, 58, 237, 0.55), transparent 70%),
+                #0d0817;
+            border: 1px solid var(--border);
+            color: #fff;
+        }
+
+        .cta-box img {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(32px, 4.5vw, 48px);
             font-weight: 800;
             margin-bottom: 12px;
         }
 
-        .contact-box p {
-            font-size: 16px;
-            opacity: 0.95;
-            margin-bottom: 24px;
-        }
-
-        .email-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #ffffff;
-            color: #4f46e5;
-            padding: 14px 28px;
-            border-radius: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 16px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.2s ease;
-        }
-
-        .email-link:hover {
-            transform: scale(1.04);
-        }
-
-        /* Bottom CTA Section */
-        .cta-section {
-            padding: 90px 0;
-            text-align: center;
-        }
-
-        .cta-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 56px 32px;
-            max-width: 820px;
-            margin: 0 auto;
-            box-shadow: 0 20px 40px -15px var(--primary-glow);
-            backdrop-filter: blur(20px);
-        }
-
-        .cta-box h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 38px;
-            font-weight: 800;
-            margin: 16px 0 12px;
-            letter-spacing: -1px;
-        }
+        .cta-box h2 span { color: #c9b5ff; }
 
         .cta-box p {
-            color: var(--text-muted);
-            font-size: 17px;
-            max-width: 580px;
-            margin: 0 auto 36px;
+            color: rgba(255, 255, 255, 0.72);
+            margin-bottom: 32px;
         }
+
+        .cta-box .store-buttons { justify-content: center; }
+        .cta-box .store-btn { background: #fff; color: #0d0817; }
 
         /* Footer */
         footer {
-            padding: 40px 0;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
+            padding: 32px 0 40px;
             border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        footer nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         footer a {
-            color: var(--text-muted);
+            color: var(--muted);
             text-decoration: none;
-            margin: 0 12px;
         }
 
-        footer a:hover {
-            color: var(--text-main);
+        footer a:hover { color: var(--text); }
+
+        @media (max-width: 960px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 38px;
-            }
-            .nav-links {
-                display: none;
-            }
-            .hero {
-                padding-top: 120px;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            .feature-card {
-                padding: 28px;
-            }
-            .video-frame {
-                width: min(280px, 100%);
-            }
-            .showcase-card {
-                flex: 0 0 260px;
-            }
-            .slider-arrow {
-                display: none;
-            }
-            .showcase-track {
-                padding: 10px 16px 24px;
-                gap: 16px;
-            }
-            .showcase-tab {
-                padding: 7px 14px;
-                font-size: 13px;
-            }
-            .cta-box {
-                padding: 40px 20px;
-            }
-            .cta-box h2 {
-                font-size: 28px;
-            }
+        @media (max-width: 860px) {
+            .nav-links { display: none; }
+            .hero { padding: 104px 0 64px; }
+            .hero-grid,
+            .spotlight-grid,
+            .plans { grid-template-columns: 1fr; }
+            .hero-grid { gap: 40px; text-align: center; }
+            .hero-sub { margin-left: auto; margin-right: auto; }
+            .hero .store-buttons { justify-content: center; }
+            .video-phone { max-width: 280px; }
+            .spotlight { padding: 64px 0; }
+            .spotlight-grid { gap: 40px; }
+            .spotlight.reverse .spotlight-visual { order: 0; }
+            .spotlight .phone { max-width: 260px; }
+            .features, .screens, .pricing, .faq { padding: 64px 0; }
+            .cta { padding-bottom: 64px; }
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-            .hero-title {
-                font-size: 30px;
-            }
-            .hero-subtitle {
-                font-size: 16px;
-            }
-            .brand-text {
-                font-size: 20px;
-            }
-            .brand-logo {
-                width: 36px;
-                height: 36px;
-            }
-            .btn-primary {
-                padding: 10px 16px;
-                font-size: 13px;
-            }
-            .store-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .contact-box {
-                padding: 32px 16px;
-            }
-            .email-link {
-                padding: 12px 18px;
-                font-size: 14px;
-                word-break: break-all;
-            }
+        @media (max-width: 560px) {
+            .container { padding: 0 16px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .store-btn { flex: 1; justify-content: center; padding: 10px 12px; gap: 10px; }
+            .store-btn-text .large { font-size: 16px; }
+            .screens-track { padding: 8px 16px 32px; gap: 18px; }
+            .screens-track figure { flex-basis: 220px; }
+            .plan { padding: 26px; }
+            .cta-box { padding: 48px 20px; }
+            .footer-content { flex-direction: column; }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition-duration: 0.01ms !important; }
         }
     </style>
 </head>
 <body>
+    <!-- Icon sprite (Lucide, ISC licence) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></symbol>
+        <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+        <symbol id="i-steth" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+        <symbol id="i-baby" viewBox="0 0 24 24"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+        <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+        <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
+        <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.4 18.4a9 9 0 0 0 0-12.7"/></symbol>
+        <symbol id="i-apple" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-14 69.5-34.3z"/></symbol>
+        <symbol id="i-play" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.7c18.1-10.5 18.1-49.7-1.2-60.2zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></symbol>
+    </svg>
 
     <!-- Header Navigation -->
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="brand">
-                <img src="logo.png" alt="Parenty Logo" class="brand-logo" width="44" height="44" />
-                <span class="brand-text">Parenty</span>
+                <img src="logo.png" alt="" width="36" height="36" />
+                Parenty
             </a>
-            
             <ul class="nav-links">
-                <li><a href="#watch">Watch</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#preview">App Showcase</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="#screens">Screenshots</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#support">FAQ</a></li>
             </ul>
-
-            <a href="#download" class="btn btn-primary">Download App</a>
+            <a href="#download" class="btn">Download</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="download">
-        <div class="container">
-            <div class="hero-badge">
-                <span>✨ Family Health & Medication Companion</span>
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">Medicine tracker for families</span>
+                <h1>Never miss — or double — <span class="accent">a dose.</span></h1>
+                <p class="hero-sub">Parenty keeps track of your children's medicines, fevers and doctor visits, and keeps everyone who looks after them in sync. Calm care, even at 3&nbsp;AM.</p>
+
+                <div class="store-buttons">
+                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Download Parenty on the App Store">
+                        <svg><use href="#i-apple"/></svg>
+                        <span class="store-btn-text"><span class="small">Download on the</span><span class="large">App Store</span></span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Get Parenty on Google Play">
+                        <svg><use href="#i-play"/></svg>
+                        <span class="store-btn-text"><span class="small">Get it on</span><span class="large">Google Play</span></span>
+                    </a>
+                </div>
+                <p class="hero-meta">Free to download · iPhone &amp; Android · 9 languages</p>
             </div>
 
-            <h1 class="hero-title">
-                Never Miss a Medicine Dose for <span>Your Family</span>
-            </h1>
-
-            <p class="hero-subtitle">
-                Parenty takes the stress out of pediatric medication management. Track dose schedules, fever temperatures, and symptom recovery together across all family caregivers.
-            </p>
-
-            <!-- App Store & Google Play Buttons -->
-            <div class="store-buttons">
-                <!-- Apple App Store -->
-                <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Download Parenty on the App Store">
-                    <svg viewBox="0 0 384 512">
-                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-14 69.5-34.3z"/>
-                    </svg>
-                    <div class="store-btn-text">
-                        <span class="small">Download on the</span>
-                        <span class="large">App Store</span>
-                    </div>
-                </a>
-
-                <!-- Google Play Store -->
-                <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Get Parenty on Google Play">
-                    <svg viewBox="0 0 512 512">
-                        <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.7c18.1-10.5 18.1-49.7-1.2-60.2zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
-                    </svg>
-                    <div class="store-btn-text">
-                        <span class="small">Get it on</span>
-                        <span class="large">Google Play</span>
-                    </div>
-                </a>
+            <div class="phone video-phone" id="watch">
+                <video id="promoVideo" src="video/parenty-ad.mp4" poster="video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Parenty app promo video"></video>
+                <button class="video-sound" id="videoSound" type="button" aria-label="Turn sound on" aria-pressed="false">
+                    <svg class="icon"><use href="#i-muted"/></svg>
+                </button>
             </div>
+        </div>
+    </section>
 
-            <!-- Promo Video -->
-            <div class="video-section" id="watch">
-                <div class="video-frame">
-                    <video id="promoVideo" src="video/parenty-ad.mp4" poster="video/parenty-ad-poster.jpg" width="1080" height="1920" autoplay muted loop playsinline preload="metadata" aria-label="Parenty app promo video"></video>
-                    <button class="video-sound" id="videoSound" type="button" aria-label="Turn sound on" aria-pressed="false">🔇</button>
-                </div>
+    <!-- Spotlight: family sync -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Family sync</span>
+                <h2>“Did anyone give her the medicine?”</h2>
+                <p>Never ask again. Every dose anyone logs shows up on every phone in the family straight away — with who gave it and when.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Invite your partner, grandparents or nanny by @username</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>See who gave each dose in the history</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Everyone's phone updates instantly</li>
+                </ul>
+                <p class="note">Cloud backup is free for everyone. Sharing with family is part of Premium.</p>
             </div>
-
-            <!-- App Screenshots Showcase Section -->
-            <div class="app-showcase" id="preview">
-                <div class="showcase-header">
-                    <div class="hero-badge" style="margin-bottom: 16px;">
-                        <span>📱 Preview the Experience</span>
-                    </div>
-                    <h2 class="hero-title" style="font-size: 38px; margin-bottom: 12px;">See Parenty <span>in Action</span></h2>
-                    <p class="hero-subtitle" style="margin-bottom: 28px; max-width: 650px;">A thoughtful, calm interface designed to reduce anxiety when your little ones need care.</p>
-                </div>
-
-                <!-- Category Tabs -->
-                <div class="showcase-tabs">
-                    <button class="showcase-tab active" data-index="0">🏠 Overview</button>
-                    <button class="showcase-tab" data-index="1">⏰ Dose Reminders</button>
-                    <button class="showcase-tab" data-index="2">🌡️ Symptom Tracker</button>
-                    <button class="showcase-tab" data-index="3">🩺 Doctor Visits</button>
-                    <button class="showcase-tab" data-index="4">📊 History & Reports</button>
-                </div>
-
-                <!-- Slider Track -->
-                <div class="showcase-slider-wrapper">
-                    <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous screenshot">‹</button>
-                    <div class="showcase-track" id="showcaseTrack">
-                        <div class="showcase-card">
-                            <img src="screenshots/screenshot-1.png" alt="Parenty Dashboard – Everything your child needs, at a glance" loading="eager" width="1260" height="2736" />
-                        </div>
-                        <div class="showcase-card">
-                            <img src="screenshots/screenshot-2.png" alt="Parenty Medication Scheduler – Set up reminders in seconds" loading="lazy" width="1260" height="2736" />
-                        </div>
-                        <div class="showcase-card">
-                            <img src="screenshots/screenshot-3.png" alt="Parenty Symptom Tracker – Monitor symptoms and progress" loading="lazy" width="1260" height="2736" />
-                        </div>
-                        <div class="showcase-card">
-                            <img src="screenshots/screenshot-4.png" alt="Parenty Doctor Directory – Don't miss an appointment with a doctor" loading="lazy" width="1260" height="2736" />
-                        </div>
-                        <div class="showcase-card">
-                            <img src="screenshots/screenshot-5.png" alt="Parenty Medical Reports – Share clear history with doctor" loading="lazy" width="1260" height="2736" />
-                        </div>
-                    </div>
-                    <button class="slider-arrow next" id="sliderNext" aria-label="Next screenshot">›</button>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="screenshots/light/history.jpg" alt="Dose history showing which doses were given by Maria" loading="lazy" width="600" height="1304">
+                    </picture>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
+    <!-- Spotlight: double-dose guard -->
+    <section class="spotlight reverse">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Peace of mind</span>
+                <h2>No more double doses at 3&nbsp;AM.</h2>
+                <p>Tired and not sure if it's time yet? Parenty warns you when it's too early for the next dose, and shows exactly when it's due.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Reminders every few hours, at set times, or as loud alarms</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>A warning before a dose that's too early</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Overdue, in progress and done — at a glance</li>
+                </ul>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="screenshots/light/too-early.jpg" alt="Log Dose screen warning that it is too early for the next dose" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Designed for Busy Parents</h2>
-                <p class="section-subtitle">Everything you need to manage medications, temperatures, and family health securely.</p>
+                <h2>Everything in one calm place</h2>
+                <p>Built for tired parents: big, clear and quick to use, day or night.</p>
             </div>
-
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
-                    <h3>Dose Reminders & Alarms</h3>
-                    <p>Set doses every few hours, for a set number of days, or at specific times. Turn on alarm mode for the doses that can't be missed — even at 3 AM.</p>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-alarm"/></svg></div>
+                    <h3>Reminders &amp; alarms</h3>
+                    <p>Doses every few hours, for a set number of days, or at specific times. Alarm mode for the ones that can't be missed.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                    <h3>Family Sync</h3>
-                    <p>See who gave the last dose and when. Invite your partner, grandparents or nanny by @username and everyone's phone updates instantly. Free cloud backup for everyone; sharing with Premium.</p>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-thermo"/></svg></div>
+                    <h3>Fever &amp; symptoms</h3>
+                    <p>Log temperatures in °C or °F and symptoms on a 1–5 scale, with notes and times.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🌡️</div>
-                    <h3>Fever & Symptom Tracking</h3>
-                    <p>Log temperatures in °C or °F and symptoms with a 1–5 severity scale and notes, so you can see how things are progressing.</p>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
+                    <h3>Doctors &amp; visits</h3>
+                    <p>Your pediatrician one tap away. Log visits and follow-ups and add them to your calendar.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🩺</div>
-                    <h3>Doctors & Visits</h3>
-                    <p>Keep your pediatrician's details one tap away, log visits with notes and follow-up dates, and add appointments to your calendar.</p>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></div>
+                    <h3>PDF &amp; CSV reports</h3>
+                    <p>Share a clean summary of doses, temperatures, symptoms and visits with your doctor or the ER.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📄</div>
-                    <h3>PDF & CSV Reports</h3>
-                    <p>Export dose history, temperatures, symptoms and visits as a clean PDF summary to share with your doctor or the ER.</p>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-baby"/></svg></div>
+                    <h3>Every child</h3>
+                    <p>A colour-coded profile per child, and filters for medicines, logs and visits.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">👶</div>
-                    <h3>Multiple Child Profiles</h3>
-                    <p>Give each child a colour-coded profile and filter medicines, logs and visits per child.</p>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
+                    <h3>Widgets &amp; Siri</h3>
+                    <p>Log a dose from the Home Screen, follow the countdown on the Lock Screen, or ask Siri. Widgets on Android too.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Widgets, Live Activities & Siri</h3>
-                    <p>Log a dose from your Home Screen, follow the countdown on the Lock Screen and Dynamic Island, or just ask Siri. Home screen widgets on Android too.</p>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
+                    <h3>Private &amp; secure</h3>
+                    <p>Optional Face ID, Touch ID or fingerprint lock. Delete your account any time. We never sell your data.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Private & Secure</h3>
-                    <p>Optional Face ID, Touch ID or fingerprint lock, and full account deletion from settings. We never sell your family's data.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>9 Languages</h3>
-                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish, with full right-to-left support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support & Contact Section -->
-    <section class="support-section" id="support">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Help & Support</h2>
-                <p class="section-subtitle">Have questions or need assistance? We're here to help.</p>
-            </div>
-
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>How does sync work between parents and caregivers?</h4>
-                    <p>Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone's phone instantly.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>Can I manage multiple children?</h4>
-                    <p>Yes. Each child gets their own colour-coded profile, and you can filter medicines, temperatures, symptoms and doctor visits per child. The free plan includes one child profile; Premium unlocks unlimited profiles.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>What's included for free?</h4>
-                    <p>Medicine and dose tracking, reminders, temperature and symptom logs, one child profile, one doctor with two visits, and cloud backup. Premium adds family sharing, unlimited profiles and doctors, PDF reports, fever charts and alarm settings.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>Which languages does Parenty support?</h4>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
+                    <h3>9 languages</h3>
                     <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
                 </div>
-
-                <div class="faq-item">
-                    <h4>How do I delete my account?</h4>
-                    <p>Go to Profile settings and choose Delete Account. Your account and its cloud data are removed.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>Notifications aren't appearing. What should I check?</h4>
-                    <p>Make sure notifications are allowed for Parenty in your phone's settings, that Focus or Do Not Disturb isn't silencing them, and that you're on the latest version of the app.</p>
-                </div>
-            </div>
-
-            <div class="contact-box">
-                <h3>Need Direct Assistance?</h3>
-                <p>Our support team is available to help resolve any questions or issues.</p>
-                <a href="mailto:info@parenty.uk" class="email-link">
-                    ✉️ Contact Support (info@parenty.uk)
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Bottom Download CTA Section -->
-    <section class="cta-section">
+    <!-- Screenshots -->
+    <section class="screens" id="screens">
+        <div class="container">
+            <div class="section-header">
+                <h2>See Parenty in action</h2>
+                <p>Light or dark, it follows your phone.</p>
+            </div>
+            <div class="screens-tabs">
+                <button class="screens-tab active" data-index="0">Home</button>
+                <button class="screens-tab" data-index="1">Schedule</button>
+                <button class="screens-tab" data-index="2">Fever log</button>
+                <button class="screens-tab" data-index="3">History</button>
+                <button class="screens-tab" data-index="4">Dose check</button>
+            </div>
+        </div>
+        <div class="screens-track" id="screensTrack">
+            <figure>
+                <div class="phone"><picture><source srcset="screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/home.jpg" alt="Home screen with medicines due for Emma" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Every dose, at a glance</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/schedule.jpg" alt="Schedule Medicine screen with a dose timeline preview" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Set up a schedule in seconds</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/symptoms.jpg" alt="Symptoms screen with a list of temperature logs" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Track fevers over time</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/history.jpg" alt="Dose history showing who gave each dose" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>See who gave it, and when</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/too-early.jpg" alt="Too early warning when logging a dose" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>No more double doses</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Free to start. Premium to share.</h2>
+                <p>Everything you need for one child is free. Premium is for families who share the care.</p>
+            </div>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Free</h3>
+                    <p class="plan-price">Free forever</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Medicine schedules, reminders and dose checks</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Temperature and symptom logs</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>1 child profile</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>1 doctor and 2 visits</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Cloud backup across your own devices</li>
+                    </ul>
+                </div>
+                <div class="plan premium">
+                    <h3>Premium</h3>
+                    <p class="plan-price">Monthly, yearly or a one-time lifetime purchase</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Everything in Free</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Share with your partner, family and carers — live sync</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Unlimited children, doctors and visits</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>PDF reports and fever charts</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Alarm settings</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="pricing-note">Prices are shown in the app in your local currency.</p>
+        </div>
+    </section>
+
+    <!-- FAQ & Support -->
+    <section class="faq" id="support">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions &amp; support</h2>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>How does sync work between parents and caregivers?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone&#x27;s phone instantly.</p>
+                </details>
+                <details>
+                    <summary>Can I manage multiple children?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Yes. Each child gets their own colour-coded profile, and you can filter medicines, temperatures, symptoms and doctor visits per child. The free plan includes one child profile; Premium unlocks unlimited profiles.</p>
+                </details>
+                <details>
+                    <summary>What&#x27;s included for free?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Medicine and dose tracking, reminders, temperature and symptom logs, one child profile, one doctor with two visits, and cloud backup. Premium adds family sharing, unlimited profiles and doctors, PDF reports, fever charts and alarm settings.</p>
+                </details>
+                <details>
+                    <summary>Which languages does Parenty support?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
+                </details>
+                <details>
+                    <summary>How do I delete my account?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Go to Profile settings and choose Delete Account. Your account and its cloud data are removed.</p>
+                </details>
+                <details>
+                    <summary>Notifications aren&#x27;t appearing. What should I check?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Make sure notifications are allowed for Parenty in your phone&#x27;s settings, that Focus or Do Not Disturb isn&#x27;t silencing them, and that you&#x27;re on the latest version of the app.</p>
+                </details>
+            </div>
+            <p class="faq-contact">Still need help? Email <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
         <div class="container">
             <div class="cta-box">
-                <div class="hero-badge">
-                    <span>✨ Get Started with Parenty</span>
-                </div>
-                <h2>Simplify Your Family's Health</h2>
-                <p>Never miss a medicine dose, track fevers with ease, and keep every caregiver in sync across all devices.</p>
-                
-                <div class="store-buttons" style="margin-bottom: 0;">
-                    <!-- Apple App Store -->
+                <img src="logo.png" alt="" width="64" height="64" />
+                <h2>Calm care, <span>even at 3&nbsp;AM.</span></h2>
+                <p>Free to download on iPhone and Android.</p>
+                <div class="store-buttons">
                     <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Download Parenty on the App Store">
-                        <svg viewBox="0 0 384 512">
-                            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-14 69.5-34.3z"/>
-                        </svg>
-                        <div class="store-btn-text">
-                            <span class="small">Download on the</span>
-                            <span class="large">App Store</span>
-                        </div>
+                        <svg><use href="#i-apple"/></svg>
+                        <span class="store-btn-text"><span class="small">Download on the</span><span class="large">App Store</span></span>
                     </a>
-
-                    <!-- Google Play Store -->
                     <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Get Parenty on Google Play">
-                        <svg viewBox="0 0 512 512">
-                            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.7c18.1-10.5 18.1-49.7-1.2-60.2zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
-                        </svg>
-                        <div class="store-btn-text">
-                            <span class="small">Get it on</span>
-                            <span class="large">Google Play</span>
-                        </div>
+                        <svg><use href="#i-play"/></svg>
+                        <span class="store-btn-text"><span class="small">Get it on</span><span class="large">Google Play</span></span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>
-                © <span id="year"></span> Parenty • Developed by Stavros Georgiou • All rights reserved.
-            </p>
-            <p style="margin-top: 10px;">
-                <a href="#">Home</a> |
-                <a href="#watch">Watch</a> |
-                <a href="#features">Features</a> |
-                <a href="#preview">App Showcase</a> |
-                <a href="#download">Download App</a> |
-                <a href="#support">Support</a> |
+        <div class="container footer-content">
+            <p>© <span id="year"></span> Parenty · Developed by Stavros Georgiou</p>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#support">Support</a>
                 <a href="privacy.html">Privacy Policy</a>
-            </p>
+            </nav>
         </div>
     </footer>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Promo video: sound toggle; respect reduced motion
+        // Promo video: sound toggle; no autoplay with reduced motion
         const video = document.getElementById("promoVideo");
         const soundBtn = document.getElementById("videoSound");
-        if (video && soundBtn) {
-            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-                video.removeAttribute("autoplay");
-                video.pause();
-                video.controls = true;
-            }
-            soundBtn.addEventListener("click", () => {
-                video.muted = !video.muted;
-                if (!video.muted) video.play();
-                soundBtn.textContent = video.muted ? "🔇" : "🔊";
-                soundBtn.setAttribute("aria-label", video.muted ? "Turn sound on" : "Turn sound off");
-                soundBtn.setAttribute("aria-pressed", String(!video.muted));
-            });
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            video.removeAttribute("autoplay");
+            video.pause();
+            video.controls = true;
         }
+        soundBtn.addEventListener("click", () => {
+            video.muted = !video.muted;
+            if (!video.muted) video.play();
+            soundBtn.querySelector("use").setAttribute("href", video.muted ? "#i-muted" : "#i-sound");
+            soundBtn.setAttribute("aria-label", video.muted ? "Turn sound on" : "Turn sound off");
+            soundBtn.setAttribute("aria-pressed", String(!video.muted));
+        });
 
-        // Screenshots Carousel Controller
-        const track = document.getElementById("showcaseTrack");
-        const prevBtn = document.getElementById("sliderPrev");
-        const nextBtn = document.getElementById("sliderNext");
-        const tabs = document.querySelectorAll(".showcase-tab");
-        const cards = document.querySelectorAll(".showcase-card");
-
-        if (track && prevBtn && nextBtn && cards.length > 0) {
-            const getCardStep = () => {
-                const card = cards[0];
-                return card ? card.offsetWidth + 24 : 334;
-            };
-
-            prevBtn.addEventListener("click", () => {
-                track.scrollBy({ left: -getCardStep(), behavior: "smooth" });
+        // Screenshot tabs <-> track
+        const track = document.getElementById("screensTrack");
+        const figures = track.querySelectorAll("figure");
+        const tabs = document.querySelectorAll(".screens-tab");
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                const fig = figures[Number(tab.dataset.index)];
+                track.scrollTo({ left: fig.offsetLeft - (track.clientWidth - fig.offsetWidth) / 2, behavior: "smooth" });
             });
-
-            nextBtn.addEventListener("click", () => {
-                track.scrollBy({ left: getCardStep(), behavior: "smooth" });
-            });
-
-            tabs.forEach((tab) => {
-                tab.addEventListener("click", () => {
-                    const idx = parseInt(tab.getAttribute("data-index"), 10);
-                    if (cards[idx]) {
-                        cards[idx].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-                    }
+        });
+        let scrollTimeout;
+        track.addEventListener("scroll", () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const center = track.scrollLeft + track.clientWidth / 2;
+                let closest = 0;
+                figures.forEach((fig, i) => {
+                    const d = Math.abs(fig.offsetLeft + fig.offsetWidth / 2 - center);
+                    const best = Math.abs(figures[closest].offsetLeft + figures[closest].offsetWidth / 2 - center);
+                    if (d < best) closest = i;
                 });
-            });
-
-            // Update active tab on scroll
-            let scrollTimeout;
-            track.addEventListener("scroll", () => {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    const trackRect = track.getBoundingClientRect();
-                    const trackCenter = trackRect.left + trackRect.width / 2;
-                    let closestIdx = 0;
-                    let minDiff = Infinity;
-
-                    cards.forEach((card, i) => {
-                        const cardRect = card.getBoundingClientRect();
-                        const cardCenter = cardRect.left + cardRect.width / 2;
-                        const diff = Math.abs(trackCenter - cardCenter);
-                        if (diff < minDiff) {
-                            minDiff = diff;
-                            closestIdx = i;
-                        }
-                    });
-
-                    tabs.forEach((t, i) => {
-                        t.classList.toggle("active", i === closestIdx);
-                    });
-                }, 60);
-            }, { passive: true });
-        }
+                tabs.forEach((t, i) => t.classList.toggle("active", i === closest));
+            }, 60);
+        }, { passive: true });
     </script>
 </body>
 </html>
