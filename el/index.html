@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el" dir="ltr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parenty: Medicine Tracker for Kids – Dose Reminders &amp; Fever Log</title>
-    <meta name="description" content="Parenty helps parents and caregivers track children's medicine doses, fevers, symptoms and doctor visits — and keep everyone in sync so no dose is missed or doubled." />
+    <title>Parenty: Παρακολούθηση φαρμάκων για παιδιά – Υπενθυμίσεις δόσεων &amp; πυρετός</title>
+    <meta name="description" content="Το Parenty βοηθά γονείς και φροντιστές να καταγράφουν τις δόσεις φαρμάκων, τον πυρετό, τα συμπτώματα και τις επισκέψεις στον γιατρό των παιδιών τους — και κρατά όλους συγχρονισμένους, ώστε καμία δόση να μη χαθεί ή να μη δοθεί διπλή." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -20,7 +20,7 @@
     <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log" />
     <meta name="robots" content="index, follow" />
     
-    <link rel="canonical" href="https://parenty.uk/" />
+    <link rel="canonical" href="https://parenty.uk/el/" />
     <link rel="alternate" hreflang="en" href="https://parenty.uk/" />
     <link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
     <link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
@@ -31,15 +31,15 @@
     <link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
     <link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
     <link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
-    <link rel="icon" href="favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="icon" href="../favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Parenty" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:locale:alternate" content="el_GR" />
+    <meta property="og:locale" content="el_GR" />
+    <meta property="og:locale:alternate" content="en_GB" />
     <meta property="og:locale:alternate" content="de_DE" />
     <meta property="og:locale:alternate" content="es_ES" />
     <meta property="og:locale:alternate" content="fr_FR" />
@@ -47,160 +47,167 @@
     <meta property="og:locale:alternate" content="pt_BR" />
     <meta property="og:locale:alternate" content="tr_TR" />
     <meta property="og:locale:alternate" content="ar_AR" />
-    <meta property="og:url" content="https://parenty.uk/" />
-    <meta property="og:title" content="Parenty – Family Health & Medication Tracker" />
-    <meta property="og:description" content="Never miss a medicine dose for your family. Smart reminders, fever logs, and multi-caregiver sync." />
+    <meta property="og:url" content="https://parenty.uk/el/" />
+    <meta property="og:title" content="Parenty – Φάρμακα και υγεία για όλη την οικογένεια" />
+    <meta property="og:description" content="Μην ξεχάσετε ποτέ δόση φαρμάκου. Έξυπνες υπενθυμίσεις, καταγραφή πυρετού και συγχρονισμός για όλους όσοι φροντίζουν τα παιδιά." />
     <meta property="og:image" content="https://parenty.uk/og-image.png" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="500" />
-    <meta property="og:image:alt" content="Parenty app screens showing medicine doses due and a fever log" />
+    <meta property="og:image:alt" content="Οθόνες της εφαρμογής Parenty με δόσεις φαρμάκων που πλησιάζουν και καταγραφή πυρετού" />
     
     <!-- Twitter / X Meta -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Parenty – Family Health & Medication Tracker" />
-    <meta name="twitter:description" content="Never miss a medicine dose for your family. Smart reminders, fever logs, and multi-caregiver sync." />
+    <meta name="twitter:title" content="Parenty – Φάρμακα και υγεία για όλη την οικογένεια" />
+    <meta name="twitter:description" content="Μην ξεχάσετε ποτέ δόση φαρμάκου. Έξυπνες υπενθυμίσεις, καταγραφή πυρετού και συγχρονισμός για όλους όσοι φροντίζουν τα παιδιά." />
     <meta name="twitter:image" content="https://parenty.uk/og-image.png" />
-    <meta name="twitter:image:alt" content="Parenty app screens showing medicine doses due and a fever log" />
+    <meta name="twitter:image:alt" content="Οθόνες της εφαρμογής Parenty με δόσεις φαρμάκων που πλησιάζουν και καταγραφή πυρετού" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    [
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://parenty.uk/#website",
+    "name": "Parenty",
+    "url": "https://parenty.uk/",
+    "inLanguage": "el",
+    "publisher": {
+      "@id": "https://parenty.uk/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://parenty.uk/#organization",
+    "name": "Parenty",
+    "url": "https://parenty.uk/",
+    "logo": "https://parenty.uk/logo.png",
+    "email": "info@parenty.uk",
+    "founder": {
+      "@type": "Person",
+      "name": "Stavros Georgiou"
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
+      "https://play.google.com/store/apps/details?id=cy.com.parenty"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Parenty",
+    "url": "https://parenty.uk/",
+    "image": "https://parenty.uk/logo.png",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "HealthApplication",
+    "inLanguage": "el",
+    "screenshot": [
+      "https://parenty.uk/screenshots/light/home.jpg",
+      "https://parenty.uk/screenshots/light/history.jpg",
+      "https://parenty.uk/screenshots/light/too-early.jpg"
+    ],
+    "publisher": {
+      "@id": "https://parenty.uk/#organization"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Stavros Georgiou"
+    },
+    "installUrl": [
+      "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
+      "https://play.google.com/store/apps/details?id=cy.com.parenty"
+    ],
+    "description": "Το Parenty βγάζει το άγχος από τα φάρμακα των παιδιών. Καταγράψτε προγράμματα δόσεων, θερμοκρασίες και την πορεία των συμπτωμάτων, μαζί με όλους όσοι φροντίζουν το παιδί."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Parenty – ούτε ξεχασμένη ούτε διπλή δόση",
+    "description": "Μια σύντομη ξενάγηση στο Parenty: καταγράψτε μια δόση με ένα πάτημα, δείτε ποιος την έδωσε και πότε, παρακολουθήστε τον πυρετό και μοιραστείτε μια αναφορά με τον γιατρό.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-ad.mp4",
+    "uploadDate": "2026-10-04T18:50:00+03:00",
+    "duration": "PT18S"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Το Parenty με το Siri και βοηθούς Android",
+    "description": "Καταγράψτε μια δόση, ρωτήστε τι ακολουθεί και καταγράψτε πυρετό χωρίς χέρια, με το Siri στο iPhone ή με βοηθό στο Android.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-voice-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-voice-ad.mp4",
+    "uploadDate": "2026-10-09T08:46:00+03:00",
+    "duration": "PT30S"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
       {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://parenty.uk/#website",
-        "name": "Parenty",
-        "url": "https://parenty.uk/",
-        "inLanguage": "en",
-        "publisher": { "@id": "https://parenty.uk/#organization" }
+        "@type": "Question",
+        "name": "Πώς λειτουργεί ο συγχρονισμός μεταξύ γονέων και φροντιστών;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Κάθε συνδεδεμένος λογαριασμός έχει δωρεάν αντίγραφο ασφαλείας στο cloud, ώστε τα δεδομένα σας να περνούν σε νέο κινητό και να μένουν ενημερωμένα σε όλες τις συσκευές σας. Με το Premium μπορείτε να προσκαλέσετε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username τους, και κάθε δόση που καταγράφουν εμφανίζεται αμέσως στα κινητά όλων."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://parenty.uk/#organization",
-        "name": "Parenty",
-        "url": "https://parenty.uk/",
-        "logo": "https://parenty.uk/logo.png",
-        "email": "info@parenty.uk",
-        "founder": { "@type": "Person", "name": "Stavros Georgiou" },
-        "sameAs": [
-          "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
-          "https://play.google.com/store/apps/details?id=cy.com.parenty"
-        ]
+        "@type": "Question",
+        "name": "Μπορώ να διαχειριστώ πολλά παιδιά;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ναι. Κάθε παιδί έχει το δικό του προφίλ με χρώμα, και μπορείτε να φιλτράρετε φάρμακα, θερμοκρασίες, συμπτώματα και επισκέψεις ανά παιδί. Το δωρεάν πρόγραμμα περιλαμβάνει ένα προφίλ παιδιού· το Premium ξεκλειδώνει απεριόριστα προφίλ."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Parenty",
-        "url": "https://parenty.uk/",
-        "image": "https://parenty.uk/logo.png",
-        "operatingSystem": "iOS, Android",
-        "applicationCategory": "HealthApplication",
-        "inLanguage": "en",
-        "screenshot": [
-          "https://parenty.uk/screenshots/light/home.jpg",
-          "https://parenty.uk/screenshots/light/history.jpg",
-          "https://parenty.uk/screenshots/light/too-early.jpg"
-        ],
-        "publisher": { "@id": "https://parenty.uk/#organization" },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Stavros Georgiou"
-        },
-        "installUrl": [
-          "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
-          "https://play.google.com/store/apps/details?id=cy.com.parenty"
-        ],
-        "description": "Parenty takes the stress out of pediatric medication management. Track dose schedules, fever temperatures, and symptom recovery across all family caregivers."
+        "@type": "Question",
+        "name": "Τι περιλαμβάνεται δωρεάν;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Παρακολούθηση φαρμάκων και δόσεων, υπενθυμίσεις, καταγραφές θερμοκρασίας και συμπτωμάτων, ένα προφίλ παιδιού, ένας γιατρός με δύο επισκέψεις και αντίγραφο ασφαλείας στο cloud. Το Premium προσθέτει κοινή χρήση με την οικογένεια, απεριόριστα προφίλ και γιατρούς, αναφορές PDF, γραφήματα πυρετού και ρυθμίσεις ξυπνητηριού."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Parenty – never miss or double a dose",
-        "description": "A short tour of Parenty: log a dose in one tap, see who gave it and when, track fevers and share a one-tap report with the doctor.",
-        "thumbnailUrl": "https://parenty.uk/video/parenty-ad-poster.jpg",
-        "contentUrl": "https://parenty.uk/video/parenty-ad.mp4",
-        "uploadDate": "2026-10-04T18:50:00+03:00",
-        "duration": "PT18S"
+        "@type": "Question",
+        "name": "Μπορώ να χρησιμοποιήσω το Parenty με το Siri ή τον βοηθό μου στο Android;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ναι. Στο iPhone, πείτε στο Siri στα αγγλικά φράσεις όπως “Log Ibuprofen in Parenty” ή “What's due next in Parenty?” — χωρίς ρυθμίσεις. Σε Android 16 και νεότερα, οι βοηθοί που υποστηρίζουν ενέργειες εφαρμογών μπορούν να καταγράφουν δόσεις, θερμοκρασίες, βάρος και ύψος και να ελέγχουν τι ακολουθεί. Το Parenty εξακολουθεί να σας προειδοποιεί για δόση που είναι πολύ νωρίς, και όλα μοιράζονται με την οικογένειά σας όπως πάντα."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Parenty with Siri and Android assistants",
-        "description": "Log a dose, ask what's due next and log a fever hands-free with Siri on iPhone or an assistant on Android.",
-        "thumbnailUrl": "https://parenty.uk/video/parenty-voice-ad-poster.jpg",
-        "contentUrl": "https://parenty.uk/video/parenty-voice-ad.mp4",
-        "uploadDate": "2026-10-09T08:46:00+03:00",
-        "duration": "PT30S"
+        "@type": "Question",
+        "name": "Ποιες γλώσσες υποστηρίζει το Parenty;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Αγγλικά, αραβικά, γερμανικά, ελληνικά, ισπανικά, γαλλικά, ιταλικά, πορτογαλικά και τουρκικά."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How does sync work between parents and caregivers?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone's phone instantly."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I manage multiple children?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Each child gets their own colour-coded profile, and you can filter medicines, temperatures, symptoms and doctor visits per child. The free plan includes one child profile; Premium unlocks unlimited profiles."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What's included for free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Medicine and dose tracking, reminders, temperature and symptom logs, one child profile, one doctor with two visits, and cloud backup. Premium adds family sharing, unlimited profiles and doctors, PDF reports, fever charts and alarm settings."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I use Parenty with Siri or my Android assistant?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. On iPhone, say things like \u201cLog Ibuprofen in Parenty\u201d or \u201cWhat's due next in Parenty?\u201d to Siri; no setup needed. On Android 16 and later, assistants that support app actions can log doses, temperatures, weight and height and check what's due. Parenty still warns you about a dose that's too early, and everything is shared with your family as usual."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which languages does Parenty support?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I delete my account?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Go to Profile settings and choose Delete Account. Your account and its cloud data are removed."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Notifications aren't appearing. What should I check?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Make sure notifications are allowed for Parenty in your phone's settings, that Focus or Do Not Disturb isn't silencing them, and that you're on the latest version of the app."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "Πώς διαγράφω τον λογαριασμό μου;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Μεταβείτε στις Ρυθμίσεις προφίλ και επιλέξτε Διαγραφή λογαριασμού. Ο λογαριασμός σας και τα δεδομένα του στο cloud διαγράφονται."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Δεν εμφανίζονται ειδοποιήσεις. Τι να ελέγξω;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Βεβαιωθείτε ότι οι ειδοποιήσεις επιτρέπονται για το Parenty στις ρυθμίσεις του κινητού σας, ότι η Εστίαση ή το «Μην ενοχλείτε» δεν τις σιγάζει, και ότι έχετε την τελευταία έκδοση της εφαρμογής."
+        }
       }
     ]
+  }
+]
     </script>
 
     <!-- Google Fonts -->
@@ -1011,21 +1018,21 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="brand">
-                <img src="logo.png" alt="" width="36" height="36" />
+                <img src="../logo.png" alt="" width="36" height="36" />
                 Parenty
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#screens">Screenshots</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#support">FAQ</a></li>
+                <li><a href="#features">Λειτουργίες</a></li>
+                <li><a href="#screens">Οθόνες</a></li>
+                <li><a href="#pricing">Τιμές</a></li>
+                <li><a href="#support">Ερωτήσεις</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Αλλαγή σε σκούρο θέμα">
                 <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
             </button>
-                <a href="#download" class="btn">Download</a>
+                <a href="#download" class="btn">Λήψη</a>
             </div>
         </div>
     </nav>
@@ -1034,31 +1041,31 @@
     <section class="hero" id="download">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">Medicine tracker for families</span>
-                <h1>Never miss — or double — <span class="accent">a dose.</span></h1>
-                <p class="hero-sub">Parenty keeps track of your children's medicines, fevers and doctor visits, and keeps everyone who looks after them in sync. Calm care, even at 3&nbsp;AM.</p>
+                <span class="eyebrow">Παρακολούθηση φαρμάκων για οικογένειες</span>
+                <h1>Ούτε ξεχασμένη — ούτε διπλή — <span class="accent">δόση.</span></h1>
+                <p class="hero-sub">Το Parenty καταγράφει τα φάρμακα, τον πυρετό και τις επισκέψεις στον γιατρό των παιδιών σας και κρατά συγχρονισμένους όλους όσοι τα φροντίζουν. Ήρεμη φροντίδα, ακόμα και στις 3&nbsp;τα ξημερώματα.</p>
 
                 <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Download Parenty on the App Store">
+                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Κατεβάστε το Parenty από το App Store">
                         <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">Download on the</span><span class="large">App Store</span></span>
+                        <span class="store-btn-text"><span class="small">Λήψη από το</span><span class="large">App Store</span></span>
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Get Parenty on Google Play">
+                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Αποκτήστε το Parenty στο Google Play">
                         <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Get it on</span><span class="large">Google Play</span></span>
+                        <span class="store-btn-text"><span class="small">Διαθέσιμο στο</span><span class="large">Google Play</span></span>
                     </a>
                 </div>
-                <p class="hero-meta">Free to download · iPhone &amp; Android · 9 languages</p>
+                <p class="hero-meta">Δωρεάν λήψη · iPhone &amp; Android · 9 γλώσσες</p>
 
-                <a class="hero-qr" href="get.html">
+                <a class="hero-qr" href="../get.html">
                     <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
-                    <span><strong>On your computer?</strong><br>Scan with your phone's camera to get Parenty.</span>
+                    <span><strong>Είστε σε υπολογιστή;</strong><br>Σκανάρετε με την κάμερα του κινητού σας για να κατεβάσετε το Parenty.</span>
                 </a>
             </div>
 
             <div class="phone video-phone" id="watch">
-                <video src="video/parenty-ad.mp4" poster="video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Parenty app promo video"></video>
-                <button class="video-sound" type="button" aria-label="Turn sound on" aria-pressed="false">
+                <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Βίντεο παρουσίασης της εφαρμογής Parenty"></video>
+                <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
                     <svg class="icon"><use href="#i-muted"/></svg>
                 </button>
             </div>
@@ -1069,20 +1076,20 @@
     <section class="spotlight reverse" id="voice">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">New · Hands-free</span>
-                <h2>Baby in one arm? Just ask.</h2>
-                <p>Log a dose or a fever without unlocking your phone or opening the app. Say it to Siri on iPhone, or to your assistant on Android, and Parenty shares it with the family.</p>
+                <span class="eyebrow">Νέο · Χωρίς χέρια</span>
+                <h2>Μωρό στην αγκαλιά; Απλώς ζητήστε το.</h2>
+                <p>Καταγράψτε μια δόση ή πυρετό χωρίς να ξεκλειδώσετε το κινητό ή να ανοίξετε την εφαρμογή. Πείτε το στο Siri στο iPhone ή στον βοηθό σας στο Android, και το Parenty το μοιράζεται με την οικογένεια.</p>
                 <ul class="checklist">
                     <li><svg class="icon"><use href="#i-check"/></svg>“Log Ibuprofen in Parenty”</li>
                     <li><svg class="icon"><use href="#i-check"/></svg>“What's due next in Parenty?”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Log fevers, weight and height, and check the last dose</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Καταγράψτε πυρετό, βάρος και ύψος και δείτε την τελευταία δόση</li>
                 </ul>
-                <p class="note">Siri works with no setup. On Android, works with assistants that support app actions on Android 16 and later.</p>
+                <p class="note">Το Siri δεν μιλά ελληνικά, οπότε μιλήστε του στα αγγλικά — χωρίς καμία ρύθμιση. Στο Android, λειτουργεί με βοηθούς που υποστηρίζουν ενέργειες εφαρμογών σε Android 16 και νεότερα.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone video-phone">
-                    <video src="video/parenty-voice-ad.mp4" poster="video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty voice commands video: logging a dose with Siri and a fever with an Android assistant"></video>
-                    <button class="video-sound" type="button" aria-label="Turn sound on" aria-pressed="false">
+                    <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Βίντεο φωνητικών εντολών του Parenty: καταγραφή δόσης με το Siri και πυρετού με βοηθό Android"></video>
+                    <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
                         <svg class="icon"><use href="#i-muted"/></svg>
                     </button>
                 </div>
@@ -1094,21 +1101,21 @@
     <section class="spotlight">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Family sync</span>
-                <h2>“Did anyone give her the medicine?”</h2>
-                <p>Never ask again. Every dose anyone logs shows up on every phone in the family straight away — with who gave it and when.</p>
+                <span class="eyebrow">Οικογενειακός συγχρονισμός</span>
+                <h2>«Της έδωσε κανείς το φάρμακο;»</h2>
+                <p>Μην το ξαναρωτήσετε. Κάθε δόση που καταγράφει οποιοσδήποτε εμφανίζεται αμέσως σε κάθε κινητό της οικογένειας — μαζί με το ποιος την έδωσε και πότε.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Invite your partner, grandparents or nanny by @username</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>See who gave each dose in the history</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Everyone's phone updates instantly</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Προσκαλέστε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Δείτε ποιος έδωσε κάθε δόση στο ιστορικό</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Τα κινητά όλων ενημερώνονται αμέσως</li>
                 </ul>
-                <p class="note">Cloud backup is free for everyone. Sharing with family is part of Premium.</p>
+                <p class="note">Το αντίγραφο ασφαλείας στο cloud είναι δωρεάν για όλους. Η κοινή χρήση με την οικογένεια ανήκει στο Premium.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone">
                     <picture>
-                        <source srcset="screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="screenshots/light/history.jpg" alt="Dose history showing which doses were given by Maria" loading="lazy" width="600" height="1304">
+                        <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/history.jpg" alt="Ιστορικό δόσεων που δείχνει ποιες δόσεις έδωσε η Maria" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1119,20 +1126,20 @@
     <section class="spotlight reverse">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Peace of mind</span>
-                <h2>No more double doses at 3&nbsp;AM.</h2>
-                <p>Tired and not sure if it's time yet? Parenty warns you when it's too early for the next dose, and shows exactly when it's due.</p>
+                <span class="eyebrow">Ψυχική ηρεμία</span>
+                <h2>Τέλος οι διπλές δόσεις στις 3&nbsp;τα ξημερώματα.</h2>
+                <p>Κουρασμένοι και δεν είστε σίγουροι αν ήρθε η ώρα; Το Parenty σας προειδοποιεί όταν είναι νωρίς για την επόμενη δόση και δείχνει ακριβώς πότε πρέπει να δοθεί.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Reminders every few hours, at set times, or as loud alarms</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>A warning before a dose that's too early</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Overdue, in progress and done — at a glance</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Υπενθυμίσεις ανά λίγες ώρες, σε συγκεκριμένες ώρες ή ως δυνατά ξυπνητήρια</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Προειδοποίηση πριν από μια δόση που είναι πολύ νωρίς</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Εκπρόθεσμα, σε εξέλιξη και ολοκληρωμένα — με μια ματιά</li>
                 </ul>
             </div>
             <div class="spotlight-visual">
                 <div class="phone">
                     <picture>
-                        <source srcset="screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="screenshots/light/too-early.jpg" alt="Log Dose screen warning that it is too early for the next dose" loading="lazy" width="600" height="1304">
+                        <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/too-early.jpg" alt="Οθόνη καταγραφής δόσης που προειδοποιεί ότι είναι νωρίς για την επόμενη δόση" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1140,16 +1147,16 @@
     </section>
 
     <!-- Review -->
-    <section class="review" aria-label="What parents say">
+    <section class="review" aria-label="Τι λένε οι γονείς">
         <div class="container">
             <figure class="review-card">
-                <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+                <div class="review-stars" role="img" aria-label="5 στα 5 αστέρια">
                     <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
                 </div>
                 <blockquote>
                     <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
                 </blockquote>
-                <figcaption><strong>Carolyn Johnson</strong> · Google Play review</figcaption>
+                <figcaption><strong>Carolyn Johnson</strong> · Κριτική στο Google Play</figcaption>
             </figure>
         </div>
     </section>
@@ -1158,49 +1165,49 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2>Everything in one calm place</h2>
-                <p>Built for tired parents: big, clear and quick to use, day or night.</p>
+                <h2>Όλα σε ένα ήρεμο μέρος</h2>
+                <p>Φτιαγμένο για κουρασμένους γονείς: μεγάλο, καθαρό και γρήγορο, μέρα ή νύχτα.</p>
             </div>
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-alarm"/></svg></div>
-                    <h3>Reminders &amp; alarms</h3>
-                    <p>Doses every few hours, for a set number of days, or at specific times. Alarm mode for the ones that can't be missed.</p>
+                    <h3>Υπενθυμίσεις &amp; ξυπνητήρια</h3>
+                    <p>Δόσεις ανά λίγες ώρες, για ορισμένες ημέρες ή σε συγκεκριμένες ώρες. Λειτουργία ξυπνητηριού για όσες δεν πρέπει να χαθούν.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-thermo"/></svg></div>
-                    <h3>Fever &amp; symptoms</h3>
-                    <p>Log temperatures in °C or °F and symptoms on a 1–5 scale, with notes and times.</p>
+                    <h3>Πυρετός &amp; συμπτώματα</h3>
+                    <p>Καταγράψτε θερμοκρασίες σε °C ή °F και συμπτώματα σε κλίμακα 1–5, με σημειώσεις και ώρες.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
-                    <h3>Doctors &amp; visits</h3>
-                    <p>Your pediatrician one tap away. Log visits and follow-ups and add them to your calendar.</p>
+                    <h3>Γιατροί &amp; επισκέψεις</h3>
+                    <p>Ο παιδίατρός σας ένα πάτημα μακριά. Καταγράψτε επισκέψεις και επανελέγχους και προσθέστε τους στο ημερολόγιό σας.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></div>
-                    <h3>PDF &amp; CSV reports</h3>
-                    <p>Share a clean summary of doses, temperatures, symptoms and visits with your doctor or the ER.</p>
+                    <h3>Αναφορές PDF &amp; CSV</h3>
+                    <p>Μοιραστείτε μια καθαρή σύνοψη με δόσεις, θερμοκρασίες, συμπτώματα και επισκέψεις με τον γιατρό σας ή στα επείγοντα.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-baby"/></svg></div>
-                    <h3>Every child</h3>
-                    <p>A colour-coded profile per child, and filters for medicines, logs and visits.</p>
+                    <h3>Κάθε παιδί</h3>
+                    <p>Ένα προφίλ με δικό του χρώμα για κάθε παιδί, και φίλτρα για φάρμακα, καταγραφές και επισκέψεις.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
-                    <h3>Widgets &amp; voice</h3>
-                    <p>Log a dose from the Home Screen, follow the countdown on the Lock Screen, or just ask Siri or your Android assistant.</p>
+                    <h3>Widgets &amp; φωνή</h3>
+                    <p>Καταγράψτε μια δόση από την οθόνη Αφετηρίας, δείτε την αντίστροφη μέτρηση στην οθόνη κλειδώματος ή απλώς ρωτήστε το Siri ή τον βοηθό σας στο Android.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
-                    <h3>Private &amp; secure</h3>
-                    <p>Optional Face ID, Touch ID or fingerprint lock. Delete your account any time. We never sell your data.</p>
+                    <h3>Ιδιωτικό &amp; ασφαλές</h3>
+                    <p>Προαιρετικό κλείδωμα με Face ID, Touch ID ή δακτυλικό αποτύπωμα. Διαγράψτε τον λογαριασμό σας όποτε θέλετε. Δεν πουλάμε ποτέ τα δεδομένα σας.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>9 languages</h3>
-                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
+                    <h3>9 γλώσσες</h3>
+                    <p>Αγγλικά, αραβικά, γερμανικά, ελληνικά, ισπανικά, γαλλικά, ιταλικά, πορτογαλικά και τουρκικά.</p>
                 </div>
             </div>
         </div>
@@ -1210,37 +1217,37 @@
     <section class="screens" id="screens">
         <div class="container">
             <div class="section-header">
-                <h2>See Parenty in action</h2>
-                <p>Light or dark, it follows your phone.</p>
+                <h2>Δείτε το Parenty στην πράξη</h2>
+                <p>Φωτεινό ή σκούρο, ακολουθεί το κινητό σας.</p>
             </div>
             <div class="screens-tabs">
-                <button class="screens-tab active" data-index="0">Home</button>
-                <button class="screens-tab" data-index="1">Schedule</button>
-                <button class="screens-tab" data-index="2">Fever log</button>
-                <button class="screens-tab" data-index="3">History</button>
-                <button class="screens-tab" data-index="4">Dose check</button>
+                <button class="screens-tab active" data-index="0">Αρχική</button>
+                <button class="screens-tab" data-index="1">Πρόγραμμα</button>
+                <button class="screens-tab" data-index="2">Πυρετός</button>
+                <button class="screens-tab" data-index="3">Ιστορικό</button>
+                <button class="screens-tab" data-index="4">Έλεγχος δόσης</button>
             </div>
         </div>
         <div class="screens-track" id="screensTrack">
             <figure>
-                <div class="phone"><picture><source srcset="screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/home.jpg" alt="Home screen with medicines due for Emma" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Every dose, at a glance</figcaption>
+                <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="Αρχική οθόνη με τα φάρμακα που πρέπει να πάρει η Emma" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Κάθε δόση, με μια ματιά</figcaption>
             </figure>
             <figure>
-                <div class="phone"><picture><source srcset="screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/schedule.jpg" alt="Schedule Medicine screen with a dose timeline preview" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Set up a schedule in seconds</figcaption>
+                <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="Οθόνη προγραμματισμού φαρμάκου με προεπισκόπηση των δόσεων" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Ορίστε πρόγραμμα σε δευτερόλεπτα</figcaption>
             </figure>
             <figure>
-                <div class="phone"><picture><source srcset="screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/symptoms.jpg" alt="Symptoms screen with a list of temperature logs" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Track fevers over time</figcaption>
+                <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="Οθόνη συμπτωμάτων με λίστα καταγραφών θερμοκρασίας" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Παρακολουθήστε τον πυρετό με τον καιρό</figcaption>
             </figure>
             <figure>
-                <div class="phone"><picture><source srcset="screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/history.jpg" alt="Dose history showing who gave each dose" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>See who gave it, and when</figcaption>
+                <div class="phone"><picture><source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/history.jpg" alt="Ιστορικό δόσεων που δείχνει ποιος έδωσε κάθε δόση" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Δείτε ποιος την έδωσε και πότε</figcaption>
             </figure>
             <figure>
-                <div class="phone"><picture><source srcset="screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/too-early.jpg" alt="Too early warning when logging a dose" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>No more double doses</figcaption>
+                <div class="phone"><picture><source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/too-early.jpg" alt="Προειδοποίηση «πολύ νωρίς» κατά την καταγραφή δόσης" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>Τέλος οι διπλές δόσεις</figcaption>
             </figure>
         </div>
     </section>
@@ -1249,34 +1256,34 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2>Free to start. Premium to share.</h2>
-                <p>Everything you need for one child is free. Premium is for families who share the care.</p>
+                <h2>Δωρεάν για αρχή. Premium για κοινή χρήση.</h2>
+                <p>Ό,τι χρειάζεστε για ένα παιδί είναι δωρεάν. Το Premium είναι για οικογένειες που μοιράζονται τη φροντίδα.</p>
             </div>
             <div class="plans">
                 <div class="plan">
-                    <h3>Free</h3>
-                    <p class="plan-price">Free forever</p>
+                    <h3>Δωρεάν</h3>
+                    <p class="plan-price">Δωρεάν για πάντα</p>
                     <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Medicine schedules, reminders and dose checks</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Temperature and symptom logs</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 child profile</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 doctor and 2 visits</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Cloud backup across your own devices</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Προγράμματα φαρμάκων, υπενθυμίσεις και έλεγχοι δόσεων</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Καταγραφές θερμοκρασίας και συμπτωμάτων</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>1 προφίλ παιδιού</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>1 γιατρός και 2 επισκέψεις</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Αντίγραφο ασφαλείας στο cloud για τις δικές σας συσκευές</li>
                     </ul>
                 </div>
                 <div class="plan premium">
                     <h3>Premium</h3>
-                    <p class="plan-price">Monthly, yearly or a one-time lifetime purchase</p>
+                    <p class="plan-price">Μηνιαία, ετήσια ή εφάπαξ αγορά για πάντα</p>
                     <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Everything in Free</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Share with your partner, family and carers — live sync</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Unlimited children, doctors and visits</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>PDF reports and fever charts</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Alarm settings</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Ό,τι έχει το Δωρεάν</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Κοινή χρήση με σύντροφο, οικογένεια και φροντιστές — ζωντανός συγχρονισμός</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Απεριόριστα παιδιά, γιατροί και επισκέψεις</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Αναφορές PDF και γραφήματα πυρετού</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Ρυθμίσεις ξυπνητηριού</li>
                     </ul>
                 </div>
             </div>
-            <p class="pricing-note">Prices are shown in the app in your local currency.</p>
+            <p class="pricing-note">Οι τιμές εμφανίζονται στην εφαρμογή στο τοπικό σας νόμισμα.</p>
         </div>
     </section>
 
@@ -1284,39 +1291,39 @@
     <section class="faq" id="support">
         <div class="container">
             <div class="section-header">
-                <h2>Questions &amp; support</h2>
+                <h2>Ερωτήσεις &amp; υποστήριξη</h2>
             </div>
             <div class="faq-list">
                 <details>
-                    <summary>How does sync work between parents and caregivers?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone&#x27;s phone instantly.</p>
+                    <summary>Πώς λειτουργεί ο συγχρονισμός μεταξύ γονέων και φροντιστών;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Κάθε συνδεδεμένος λογαριασμός έχει δωρεάν αντίγραφο ασφαλείας στο cloud, ώστε τα δεδομένα σας να περνούν σε νέο κινητό και να μένουν ενημερωμένα σε όλες τις συσκευές σας. Με το Premium μπορείτε να προσκαλέσετε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username τους, και κάθε δόση που καταγράφουν εμφανίζεται αμέσως στα κινητά όλων.</p>
                 </details>
                 <details>
-                    <summary>Can I manage multiple children?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Yes. Each child gets their own colour-coded profile, and you can filter medicines, temperatures, symptoms and doctor visits per child. The free plan includes one child profile; Premium unlocks unlimited profiles.</p>
+                    <summary>Μπορώ να διαχειριστώ πολλά παιδιά;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Ναι. Κάθε παιδί έχει το δικό του προφίλ με χρώμα, και μπορείτε να φιλτράρετε φάρμακα, θερμοκρασίες, συμπτώματα και επισκέψεις ανά παιδί. Το δωρεάν πρόγραμμα περιλαμβάνει ένα προφίλ παιδιού· το Premium ξεκλειδώνει απεριόριστα προφίλ.</p>
                 </details>
                 <details>
-                    <summary>What&#x27;s included for free?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Medicine and dose tracking, reminders, temperature and symptom logs, one child profile, one doctor with two visits, and cloud backup. Premium adds family sharing, unlimited profiles and doctors, PDF reports, fever charts and alarm settings.</p>
+                    <summary>Τι περιλαμβάνεται δωρεάν;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Παρακολούθηση φαρμάκων και δόσεων, υπενθυμίσεις, καταγραφές θερμοκρασίας και συμπτωμάτων, ένα προφίλ παιδιού, ένας γιατρός με δύο επισκέψεις και αντίγραφο ασφαλείας στο cloud. Το Premium προσθέτει κοινή χρήση με την οικογένεια, απεριόριστα προφίλ και γιατρούς, αναφορές PDF, γραφήματα πυρετού και ρυθμίσεις ξυπνητηριού.</p>
                 </details>
                 <details>
-                    <summary>Can I use Parenty with Siri or my Android assistant?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Yes. On iPhone, say things like “Log Ibuprofen in Parenty” or “What&#x27;s due next in Parenty?” to Siri; no setup needed. On Android 16 and later, assistants that support app actions can log doses, temperatures, weight and height and check what&#x27;s due. Parenty still warns you about a dose that&#x27;s too early, and everything is shared with your family as usual.</p>
+                    <summary>Μπορώ να χρησιμοποιήσω το Parenty με το Siri ή τον βοηθό μου στο Android;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Ναι. Στο iPhone, πείτε στο Siri στα αγγλικά φράσεις όπως “Log Ibuprofen in Parenty” ή “What's due next in Parenty?” — χωρίς ρυθμίσεις. Σε Android 16 και νεότερα, οι βοηθοί που υποστηρίζουν ενέργειες εφαρμογών μπορούν να καταγράφουν δόσεις, θερμοκρασίες, βάρος και ύψος και να ελέγχουν τι ακολουθεί. Το Parenty εξακολουθεί να σας προειδοποιεί για δόση που είναι πολύ νωρίς, και όλα μοιράζονται με την οικογένειά σας όπως πάντα.</p>
                 </details>
                 <details>
-                    <summary>Which languages does Parenty support?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
+                    <summary>Ποιες γλώσσες υποστηρίζει το Parenty;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Αγγλικά, αραβικά, γερμανικά, ελληνικά, ισπανικά, γαλλικά, ιταλικά, πορτογαλικά και τουρκικά.</p>
                 </details>
                 <details>
-                    <summary>How do I delete my account?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Go to Profile settings and choose Delete Account. Your account and its cloud data are removed.</p>
+                    <summary>Πώς διαγράφω τον λογαριασμό μου;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Μεταβείτε στις Ρυθμίσεις προφίλ και επιλέξτε Διαγραφή λογαριασμού. Ο λογαριασμός σας και τα δεδομένα του στο cloud διαγράφονται.</p>
                 </details>
                 <details>
-                    <summary>Notifications aren&#x27;t appearing. What should I check?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Make sure notifications are allowed for Parenty in your phone&#x27;s settings, that Focus or Do Not Disturb isn&#x27;t silencing them, and that you&#x27;re on the latest version of the app.</p>
+                    <summary>Δεν εμφανίζονται ειδοποιήσεις. Τι να ελέγξω;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Βεβαιωθείτε ότι οι ειδοποιήσεις επιτρέπονται για το Parenty στις ρυθμίσεις του κινητού σας, ότι η Εστίαση ή το «Μην ενοχλείτε» δεν τις σιγάζει, και ότι έχετε την τελευταία έκδοση της εφαρμογής.</p>
                 </details>
             </div>
-            <p class="faq-contact">Still need help? Email <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
+            <p class="faq-contact">Χρειάζεστε ακόμα βοήθεια; Γράψτε μας στο <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
         </div>
     </section>
 
@@ -1324,17 +1331,17 @@
     <section class="cta">
         <div class="container">
             <div class="cta-box">
-                <img src="logo.png" alt="" width="64" height="64" />
-                <h2>Calm care, <span>even at 3&nbsp;AM.</span></h2>
-                <p>Free to download on iPhone and Android.</p>
+                <img src="../logo.png" alt="" width="64" height="64" />
+                <h2>Ήρεμη φροντίδα, <span>ακόμα και στις 3&nbsp;τα ξημερώματα.</span></h2>
+                <p>Δωρεάν λήψη για iPhone και Android.</p>
                 <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Download Parenty on the App Store">
+                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Κατεβάστε το Parenty από το App Store">
                         <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">Download on the</span><span class="large">App Store</span></span>
+                        <span class="store-btn-text"><span class="small">Λήψη από το</span><span class="large">App Store</span></span>
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Get Parenty on Google Play">
+                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Αποκτήστε το Parenty στο Google Play">
                         <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Get it on</span><span class="large">Google Play</span></span>
+                        <span class="store-btn-text"><span class="small">Διαθέσιμο στο</span><span class="large">Google Play</span></span>
                     </a>
                 </div>
             </div>
@@ -1343,24 +1350,24 @@
 
     <footer>
         <div class="container footer-content">
-            <p>© <span id="year"></span> Parenty · Developed by Stavros Georgiou</p>
+            <p>© <span id="year"></span> Parenty · Ανάπτυξη: Stavros Georgiou</p>
             <nav>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#support">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
+                <a href="#features">Λειτουργίες</a>
+                <a href="#pricing">Τιμές</a>
+                <a href="#support">Υποστήριξη</a>
+                <a href="../privacy.html">Πολιτική απορρήτου</a>
+                <a href="../terms.html">Όροι χρήσης</a>
             </nav>
-            <nav class="langs" aria-label="Language" translate="no">
-                <a hreflang="en" lang="en" href="./" aria-current="page">English</a>
-                <a hreflang="el" lang="el" href="el/">Ελληνικά</a>
-                <a hreflang="de" lang="de" href="de/">Deutsch</a>
-                <a hreflang="es" lang="es" href="es/">Español</a>
-                <a hreflang="fr" lang="fr" href="fr/">Français</a>
-                <a hreflang="it" lang="it" href="it/">Italiano</a>
-                <a hreflang="pt" lang="pt" href="pt/">Português</a>
-                <a hreflang="tr" lang="tr" href="tr/">Türkçe</a>
-                <a hreflang="ar" lang="ar" href="ar/">العربية</a>
+            <nav class="langs" aria-label="Γλώσσα" translate="no">
+                <a hreflang="en" lang="en" href="../">English</a>
+                <a hreflang="el" lang="el" href="../el/" aria-current="page">Ελληνικά</a>
+                <a hreflang="de" lang="de" href="../de/">Deutsch</a>
+                <a hreflang="es" lang="es" href="../es/">Español</a>
+                <a hreflang="fr" lang="fr" href="../fr/">Français</a>
+                <a hreflang="it" lang="it" href="../it/">Italiano</a>
+                <a hreflang="pt" lang="pt" href="../pt/">Português</a>
+                <a hreflang="tr" lang="tr" href="../tr/">Türkçe</a>
+                <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
             </nav>
         </div>
     </footer>
@@ -1379,10 +1386,10 @@
             document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.content = dark ? "#0d0817" : "#faf8ff");
             themeToggle.querySelector(".icon-sun").style.display = dark ? "" : "none";
             themeToggle.querySelector(".icon-moon").style.display = dark ? "none" : "";
-            themeToggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+            themeToggle.setAttribute("aria-label", dark ? "Αλλαγή σε φωτεινό θέμα" : "Αλλαγή σε σκούρο θέμα");
         };
         themeToggle.addEventListener("click", () => {
-            const next = themeToggle.getAttribute("aria-label").includes("light") ? "light" : "dark";
+            const next = themeToggle.getAttribute("aria-label") === "Αλλαγή σε φωτεινό θέμα" ? "light" : "dark";
             document.documentElement.dataset.theme = next;
             try { localStorage.setItem("theme", next); } catch (e) {}
             applyTheme();
@@ -1399,7 +1406,7 @@
         const setMuted = ({ video, button }, muted) => {
             video.muted = muted;
             button.querySelector("use").setAttribute("href", muted ? "#i-muted" : "#i-sound");
-            button.setAttribute("aria-label", muted ? "Turn sound on" : "Turn sound off");
+            button.setAttribute("aria-label", muted ? "Ενεργοποίηση ήχου" : "Απενεργοποίηση ήχου");
             button.setAttribute("aria-pressed", String(!muted));
         };
         players.forEach((player) => {

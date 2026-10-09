@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Parenty</title>
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="https://parenty.uk/" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <script>
+        // Target of the QR code on the home page: send phones straight to their store
+        (function () {
+            var ua = navigator.userAgent;
+            var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+            if (ios) location.replace("https://apps.apple.com/app/parenty-medicine-tracker/id6757712692");
+            else if (/Android/.test(ua)) location.replace("https://play.google.com/store/apps/details?id=cy.com.parenty");
+        })();
+    </script>
+    <style>
+        :root { --bg: #faf8ff; --text: #1d1530; --muted: #5f577a; --btn: #1d1530; --btn-text: #fff; }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg: #0d0817; --text: #f5f3ff; --muted: #a59fbf; --btn: #f5f3ff; --btn-text: #1d1530; }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 24px 16px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, sans-serif;
+            text-align: center;
+        }
+        img { width: 88px; height: 88px; border-radius: 20px; }
+        h1 { font-size: 28px; }
+        p { color: var(--muted); }
+        .stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .stores a {
+            padding: 14px 22px;
+            border-radius: 14px;
+            background: var(--btn);
+            color: var(--btn-text);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .home { color: var(--muted); font-size: 14px; }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="" width="88" height="88" />
+    <h1>Get Parenty</h1>
+    <p>Free to download for iPhone and Android.</p>
+    <div class="stores">
+        <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=cy.com.parenty">Google Play</a>
+    </div>
+    <a class="home" href="index.html">Back to parenty.uk</a>
+</body>
+</html>

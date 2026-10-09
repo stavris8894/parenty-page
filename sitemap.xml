@@ -1,14 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://parenty.uk/</loc>
     <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/el/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/de/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/es/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/fr/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/it/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/pt/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/tr/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+  </url>
+  <url>
+    <loc>https://parenty.uk/ar/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
   </url>
   <url>
     <loc>https://parenty.uk/privacy.html</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://parenty.uk/terms.html</loc>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
