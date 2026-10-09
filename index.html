@@ -89,6 +89,14 @@
           },
           {
             "@type": "Question",
+            "name": "Can I use Parenty with Siri or my Android assistant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. On iPhone, say things like \u201cLog Ibuprofen in Parenty\u201d or \u201cWhat's due next in Parenty?\u201d to Siri; no setup needed. On Android 16 and later, assistants that support app actions can log doses, temperatures, weight and height and check what's due. Parenty still warns you about a dose that's too early, and everything is shared with your family as usual."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Which languages does Parenty support?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -846,10 +854,35 @@
             </div>
 
             <div class="phone video-phone" id="watch">
-                <video id="promoVideo" src="video/parenty-ad.mp4" poster="video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Parenty app promo video"></video>
-                <button class="video-sound" id="videoSound" type="button" aria-label="Turn sound on" aria-pressed="false">
+                <video src="video/parenty-ad.mp4" poster="video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Parenty app promo video"></video>
+                <button class="video-sound" type="button" aria-label="Turn sound on" aria-pressed="false">
                     <svg class="icon"><use href="#i-muted"/></svg>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: voice (Siri / Android assistants) -->
+    <section class="spotlight reverse" id="voice">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">New · Hands-free</span>
+                <h2>Baby in one arm? Just ask.</h2>
+                <p>Log a dose or a fever without unlocking your phone or opening the app. Say it to Siri on iPhone, or to your assistant on Android, and Parenty shares it with the family.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>“Log Ibuprofen in Parenty”</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>“What's due next in Parenty?”</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Log fevers, weight and height, and check the last dose</li>
+                </ul>
+                <p class="note">Siri works with no setup. On Android, works with assistants that support app actions on Android 16 and later.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="video/parenty-voice-ad.mp4" poster="video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty voice commands video: logging a dose with Siri and a fever with an Android assistant"></video>
+                    <button class="video-sound" type="button" aria-label="Turn sound on" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -938,8 +971,8 @@
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
-                    <h3>Widgets &amp; Siri</h3>
-                    <p>Log a dose from the Home Screen, follow the countdown on the Lock Screen, or ask Siri. Widgets on Android too.</p>
+                    <h3>Widgets &amp; voice</h3>
+                    <p>Log a dose from the Home Screen, follow the countdown on the Lock Screen, or just ask Siri or your Android assistant.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
@@ -1049,6 +1082,10 @@
                     <p>Medicine and dose tracking, reminders, temperature and symptom logs, one child profile, one doctor with two visits, and cloud backup. Premium adds family sharing, unlimited profiles and doctors, PDF reports, fever charts and alarm settings.</p>
                 </details>
                 <details>
+                    <summary>Can I use Parenty with Siri or my Android assistant?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Yes. On iPhone, say things like “Log Ibuprofen in Parenty” or “What&#x27;s due next in Parenty?” to Siri; no setup needed. On Android 16 and later, assistants that support app actions can log doses, temperatures, weight and height and check what&#x27;s due. Parenty still warns you about a dose that&#x27;s too early, and everything is shared with your family as usual.</p>
+                </details>
+                <details>
                     <summary>Which languages does Parenty support?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
                 </details>
@@ -1101,21 +1138,41 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Promo video: sound toggle; no autoplay with reduced motion
-        const video = document.getElementById("promoVideo");
-        const soundBtn = document.getElementById("videoSound");
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            video.removeAttribute("autoplay");
-            video.pause();
-            video.controls = true;
-        }
-        soundBtn.addEventListener("click", () => {
-            video.muted = !video.muted;
-            if (!video.muted) video.play();
-            soundBtn.querySelector("use").setAttribute("href", video.muted ? "#i-muted" : "#i-sound");
-            soundBtn.setAttribute("aria-label", video.muted ? "Turn sound on" : "Turn sound off");
-            soundBtn.setAttribute("aria-pressed", String(!video.muted));
+        // Promo videos: play while on screen (not with reduced motion), one with sound at a time
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const players = [...document.querySelectorAll(".video-phone")].map((box) => ({
+            video: box.querySelector("video"),
+            button: box.querySelector(".video-sound"),
+        }));
+        const setMuted = ({ video, button }, muted) => {
+            video.muted = muted;
+            button.querySelector("use").setAttribute("href", muted ? "#i-muted" : "#i-sound");
+            button.setAttribute("aria-label", muted ? "Turn sound on" : "Turn sound off");
+            button.setAttribute("aria-pressed", String(!muted));
+        };
+        players.forEach((player) => {
+            const { video, button } = player;
+            if (reducedMotion) {
+                video.removeAttribute("autoplay");
+                video.pause();
+                video.controls = true;
+            }
+            button.addEventListener("click", () => {
+                const muted = !video.muted;
+                if (!muted) players.forEach((other) => other !== player && setMuted(other, true));
+                setMuted(player, muted);
+                if (!muted) video.play();
+            });
         });
+        if (!reducedMotion && "IntersectionObserver" in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(({ target, isIntersecting }) => {
+                    if (isIntersecting) target.play().catch(() => {});
+                    else target.pause();
+                });
+            }, { threshold: 0.4 });
+            players.forEach(({ video }) => observer.observe(video));
+        }
 
         // Screenshot tabs <-> track
         const track = document.getElementById("screensTrack");
