@@ -8,6 +8,13 @@
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
+    <script>
+        // Apply a saved theme choice before first paint; otherwise the system setting applies
+        try {
+            const saved = localStorage.getItem("theme");
+            if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+    </script>
     <link rel="canonical" href="https://parenty.uk/privacy.html" />
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="apple-touch-icon" href="logo.png" />
@@ -33,6 +40,15 @@
                 --accent: #c9b5ff;
             }
         }
+
+        :root[data-theme="dark"] {
+                --bg: #0d0817;
+                --surface: #17112a;
+                --border: rgba(255, 255, 255, 0.08);
+                --text: #f5f3ff;
+                --muted: #a59fbf;
+                --accent: #c9b5ff;
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -49,6 +65,20 @@
             align-items: center;
             justify-content: space-between;
         }
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .nav-actions { display: flex; align-items: center; gap: 10px; }
         .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
         .brand-logo { width: 36px; height: 36px; border-radius: 10px; }
         .brand-text { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; }
@@ -77,7 +107,13 @@
             <img src="logo.png" alt="Parenty" class="brand-logo" width="36" height="36" />
             <span class="brand-text">Parenty</span>
         </a>
-        <a href="index.html" style="color: var(--muted); text-decoration: none; font-weight: 600;">← Back to Home</a>
+        <div class="nav-actions">
+            <a href="index.html" style="color: var(--muted); text-decoration: none; font-weight: 600;">← Back to Home</a>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        </div>
     </nav>
 
     <div class="container">
@@ -132,6 +168,28 @@
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Theme toggle: the visitor's saved choice wins over the system setting
+        const themeToggle = document.getElementById("themeToggle");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+        const darkSources = document.querySelectorAll('source[media="(prefers-color-scheme: dark)"]');
+        const applyTheme = () => {
+            const dark = (document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light")) === "dark";
+            // Screenshots pick their dark/light image through <source media>, so steer that too
+            darkSources.forEach((source) => source.media = dark ? "all" : "not all");
+            document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.content = dark ? "#0d0817" : "#faf8ff");
+            themeToggle.querySelector(".icon-sun").style.display = dark ? "" : "none";
+            themeToggle.querySelector(".icon-moon").style.display = dark ? "none" : "";
+            themeToggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+        };
+        themeToggle.addEventListener("click", () => {
+            const next = themeToggle.getAttribute("aria-label").includes("light") ? "light" : "dark";
+            document.documentElement.dataset.theme = next;
+            try { localStorage.setItem("theme", next); } catch (e) {}
+            applyTheme();
+        });
+        systemDark.addEventListener("change", applyTheme);
+        applyTheme();
     </script>
 </body>
 </html>
