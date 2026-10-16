@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: Medicine Tracker for Kids – Dose Reminders &amp; Fever Log</title>
-    <meta name="description" content="Parenty helps parents and caregivers track children's medicine doses, fevers, symptoms and doctor visits — and keep everyone in sync so no dose is missed or doubled." />
+    <meta name="description" content="Parenty helps parents and caregivers track children's medicine doses, fevers, symptoms and doctor visits — and keep everyone in sync, daycare included, so no dose is missed or doubled." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -148,6 +148,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone's phone instantly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can my daycare or babysitter use Parenty?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. With Premium, go to Settings \u2192 Account \u2192 Daycare access and invite them by their @username. Choose which children they see and for how long. They see those children's medicines and when the last dose was given, and can log what they give; they don't see growth, doctor visits, reports or your notes. Their doses appear in your history with their name, and you can end access any time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I run a daycare. How do I use Daycare mode?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Create a free account, then switch to Daycare mode: tap the title at the top of the screen, or go to Settings \u2192 App mode. Give parents your @username so they can invite you. Daycare mode is free for one family; Parenty Daycare lets you look after as many families as you like and includes Premium for your own family. Daycare mode needs an internet connection."
             }
           },
           {
@@ -784,9 +800,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -814,6 +830,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -948,6 +966,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1015,6 +1034,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Daycare</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#screens">Screenshots</a></li>
                 <li><a href="#pricing">Pricing</a></li>
@@ -1109,6 +1129,56 @@
                     <picture>
                         <source srcset="screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="screenshots/light/history.jpg" alt="Dose history showing which doses were given by Maria" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">New · Daycare</span>
+                <h2>Medicine care that follows them to daycare.</h2>
+                <p>Invite your daycare, babysitter or grandparent by their @username. They see what medicine is due and when the last dose was given, and every dose they log shows up in your history with their name.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Only the children you choose, for 2 weeks up to a year, or until you remove it</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>A warning before they give a dose that's too early</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>No growth, doctor visits or notes: just medicines and what they gave</li>
+                </ul>
+                <p class="note">Inviting a daycare is part of Premium. Extend or end access any time.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="video/parenty-daycare-ad.mp4" poster="video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty Daycare video: a parent invites the daycare, the daycare sees what's due and logs a dose, and the parent sees it in their history"></video>
+                    <button class="video-sound" type="button" aria-label="Turn sound on" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">For daycares &amp; carers</span>
+                <h2>Look after other families' children?</h2>
+                <p>Switch Parenty to Daycare mode. Every family that invited you is in one list, with only the children they chose and the medicines that are due today.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Log a dose in one tap, and parents see it in their history</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Your own history of every dose you gave, for every family</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Your own family stays separate: switch back from the title at the top</li>
+                </ul>
+                <p class="note">Free for one family. Parenty Daycare is for as many families as you look after, and includes Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="screenshots/light/daycare-family.jpg" alt="Daycare mode showing Emma's medicines, when the next Ibuprofen dose is allowed and a Log dose button" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1250,7 +1320,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Free to start. Premium to share.</h2>
-                <p>Everything you need for one child is free. Premium is for families who share the care.</p>
+                <p>Everything you need for one child is free. Premium is for families who share the care, and Parenty Daycare for those who care for many families.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1273,7 +1343,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Unlimited children, doctors and visits</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>PDF reports and fever charts</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Alarm settings</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Invite your daycare</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Daycare</h3>
+                    <p class="plan-price">For daycares and carers · monthly or yearly</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Everything in Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>As many families as you look after</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Log doses for each family's children</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Your own history of every dose you gave</li>
+                    </ul>
+                    <p class="plan-foot">Daycare mode is free for one family.</p>
                 </div>
             </div>
             <p class="pricing-note">Prices are shown in the app in your local currency.</p>
@@ -1290,6 +1372,14 @@
                 <details>
                     <summary>How does sync work between parents and caregivers?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Every signed-in account is backed up to the cloud for free, so your data survives a new phone and stays in step across your own devices. With Premium you can invite your partner, grandparents or a nanny by their @username, and every dose they log shows up on everyone&#x27;s phone instantly.</p>
+                </details>
+                <details>
+                    <summary>Can my daycare or babysitter use Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Yes. With Premium, go to Settings → Account → Daycare access and invite them by their @username. Choose which children they see and for how long. They see those children's medicines and when the last dose was given, and can log what they give; they don't see growth, doctor visits, reports or your notes. Their doses appear in your history with their name, and you can end access any time.</p>
+                </details>
+                <details>
+                    <summary>I run a daycare. How do I use Daycare mode?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Create a free account, then switch to Daycare mode: tap the title at the top of the screen, or go to Settings → App mode. Give parents your @username so they can invite you. Daycare mode is free for one family; Parenty Daycare lets you look after as many families as you like and includes Premium for your own family. Daycare mode needs an internet connection.</p>
                 </details>
                 <details>
                     <summary>Can I manage multiple children?<svg class="icon"><use href="#i-chevron"/></svg></summary>

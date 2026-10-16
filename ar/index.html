@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: متابعة أدوية الأطفال – تذكير بالجرعات &amp; سجل الحرارة</title>
-    <meta name="description" content="يساعد Parenty الآباء ومقدّمي الرعاية على تسجيل جرعات أدوية الأطفال والحرارة والأعراض وزيارات الطبيب، ويُبقي الجميع متزامنين حتى لا تُنسى أي جرعة أو تُعطى مرتين." />
+    <meta name="description" content="يساعد Parenty الآباء ومقدّمي الرعاية على متابعة جرعات أدوية الأطفال والحرارة والأعراض وزيارات الطبيب — ويُبقي الجميع على اطلاع، بما في ذلك الحضانة، حتى لا تُنسى أي جرعة أو تتكرر." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -155,6 +155,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "يُنسخ كل حساب مسجَّل الدخول احتياطيًا إلى السحابة مجانًا، فتنتقل بياناتك إلى أي هاتف جديد وتبقى محدّثة على كل أجهزتك. ومع Premium يمكنك دعوة شريكك أو الأجداد أو المربية باستخدام @اسم_المستخدم، وكل جرعة يسجّلونها تظهر فورًا على هواتف الجميع."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل يمكن لحضانتي أو المربية استخدام Parenty؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم. مع Premium، انتقل إلى الإعدادات ← الحساب ← وصول الحضانة وادعُهم باسم المستخدم @ الخاص بهم. اختر الأطفال الذين يرونهم والمدة. يرون أدوية هؤلاء الأطفال ومتى أُعطيت آخر جرعة، ويمكنهم تسجيل ما يعطونه؛ ولا يرون النمو أو زيارات الطبيب أو التقارير أو ملاحظاتك. تظهر جرعاتهم في سجلك باسمهم، ويمكنك إنهاء الوصول في أي وقت."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "أدير حضانة. كيف أستخدم وضع الحضانة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "أنشئ حسابًا مجانيًا، ثم انتقل إلى وضع الحضانة: اضغط على العنوان أعلى الشاشة، أو انتقل إلى الإعدادات ← وضع التطبيق. أعطِ الآباء اسم المستخدم @ الخاص بك ليدعوك. وضع الحضانة مجاني لعائلة واحدة؛ ومع Parenty للحضانات تعتني بعدد العائلات الذي تريده، ويتضمن Premium لعائلتك. يحتاج وضع الحضانة إلى اتصال بالإنترنت."
         }
       },
       {
@@ -791,9 +807,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -821,6 +837,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -955,6 +973,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1022,6 +1041,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">الحضانة</a></li>
                 <li><a href="#features">المزايا</a></li>
                 <li><a href="#screens">لقطات الشاشة</a></li>
                 <li><a href="#pricing">الأسعار</a></li>
@@ -1116,6 +1136,56 @@
                     <picture>
                         <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="../screenshots/light/history.jpg" alt="سجل الجرعات يوضّح الجرعات التي أعطتها Maria" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">جديد · الحضانة</span>
+                <h2>رعاية الأدوية ترافقهم إلى الحضانة.</h2>
+                <p>ادعُ الحضانة أو المربية أو الأجداد باسم المستخدم @ الخاص بهم. يرون الدواء المستحق ومتى أُعطيت آخر جرعة، وكل جرعة يسجّلونها تظهر في سجلك باسمهم.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>الأطفال الذين تختارهم فقط، من أسبوعين حتى سنة، أو حتى تُلغيه</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>تنبيه قبل إعطاء جرعة مبكرة جدًا</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>لا نمو ولا زيارات طبيب ولا ملاحظات: الأدوية فقط وما أعطوه</li>
+                </ul>
+                <p class="note">دعوة الحضانة جزء من Premium. مدّد الوصول أو أنهِه في أي وقت.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="فيديو Parenty للحضانات: أحد الوالدين يدعو الحضانة، فترى الحضانة الدواء المستحق وتسجّل جرعة، ويراها الوالد في سجله"></video>
+                    <button class="video-sound" type="button" aria-label="تشغيل الصوت" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">للحضانات &amp; مقدّمي الرعاية</span>
+                <h2>تعتني بأطفال عائلات أخرى؟</h2>
+                <p>حوّل Parenty إلى وضع الحضانة. كل عائلة دعتك في قائمة واحدة، مع الأطفال الذين اختارتهم فقط والأدوية المستحقة اليوم.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>سجّل جرعة بلمسة واحدة، ويراها الوالدان في سجلهما</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>سجلك الخاص لكل جرعة أعطيتها، لكل عائلة</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>عائلتك تبقى منفصلة: عُد إليها من العنوان في الأعلى</li>
+                </ul>
+                <p class="note">مجاني لعائلة واحدة. Parenty للحضانات لكل العائلات التي تعتني بها، ويتضمن Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="وضع الحضانة يعرض أدوية Emma، ومتى تُسمح الجرعة التالية من الإيبوبروفين، وزر تسجيل الجرعة" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1257,7 +1327,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>مجاني للبدء. Premium للمشاركة.</h2>
-                <p>كل ما تحتاجه لطفل واحد مجاني. Premium للعائلات التي تتشارك الرعاية.</p>
+                <p>كل ما تحتاجه لطفل واحد مجاني. Premium للعائلات التي تتشارك الرعاية، وParenty للحضانات لمن يعتني بعائلات كثيرة.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,7 +1350,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>عدد غير محدود من الأطفال والأطباء والزيارات</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>تقارير PDF ومخططات الحرارة</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>إعدادات المنبّه</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>ادعُ حضانتك</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty للحضانات</h3>
+                    <p class="plan-price">للحضانات ومقدّمي الرعاية · شهريًا أو سنويًا</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>كل ما في Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>كل العائلات التي تعتني بها</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>تسجيل الجرعات لأطفال كل عائلة</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>سجلك الخاص لكل جرعة أعطيتها</li>
+                    </ul>
+                    <p class="plan-foot">وضع الحضانة مجاني لعائلة واحدة.</p>
                 </div>
             </div>
             <p class="pricing-note">تظهر الأسعار في التطبيق بعملتك المحلية.</p>
@@ -1297,6 +1379,14 @@
                 <details>
                     <summary>كيف تعمل المزامنة بين الآباء ومقدّمي الرعاية؟<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>يُنسخ كل حساب مسجَّل الدخول احتياطيًا إلى السحابة مجانًا، فتنتقل بياناتك إلى أي هاتف جديد وتبقى محدّثة على كل أجهزتك. ومع Premium يمكنك دعوة شريكك أو الأجداد أو المربية باستخدام @اسم_المستخدم، وكل جرعة يسجّلونها تظهر فورًا على هواتف الجميع.</p>
+                </details>
+                <details>
+                    <summary>هل يمكن لحضانتي أو المربية استخدام Parenty؟<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>نعم. مع Premium، انتقل إلى الإعدادات ← الحساب ← وصول الحضانة وادعُهم باسم المستخدم @ الخاص بهم. اختر الأطفال الذين يرونهم والمدة. يرون أدوية هؤلاء الأطفال ومتى أُعطيت آخر جرعة، ويمكنهم تسجيل ما يعطونه؛ ولا يرون النمو أو زيارات الطبيب أو التقارير أو ملاحظاتك. تظهر جرعاتهم في سجلك باسمهم، ويمكنك إنهاء الوصول في أي وقت.</p>
+                </details>
+                <details>
+                    <summary>أدير حضانة. كيف أستخدم وضع الحضانة؟<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>أنشئ حسابًا مجانيًا، ثم انتقل إلى وضع الحضانة: اضغط على العنوان أعلى الشاشة، أو انتقل إلى الإعدادات ← وضع التطبيق. أعطِ الآباء اسم المستخدم @ الخاص بك ليدعوك. وضع الحضانة مجاني لعائلة واحدة؛ ومع Parenty للحضانات تعتني بعدد العائلات الذي تريده، ويتضمن Premium لعائلتك. يحتاج وضع الحضانة إلى اتصال بالإنترنت.</p>
                 </details>
                 <details>
                     <summary>هل يمكنني إدارة أكثر من طفل؟<svg class="icon"><use href="#i-chevron"/></svg></summary>

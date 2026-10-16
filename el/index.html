@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: Παρακολούθηση φαρμάκων για παιδιά – Υπενθυμίσεις δόσεων &amp; πυρετός</title>
-    <meta name="description" content="Το Parenty βοηθά γονείς και φροντιστές να καταγράφουν τις δόσεις φαρμάκων, τον πυρετό, τα συμπτώματα και τις επισκέψεις στον γιατρό των παιδιών τους — και κρατά όλους συγχρονισμένους, ώστε καμία δόση να μη χαθεί ή να μη δοθεί διπλή." />
+    <meta name="description" content="Το Parenty βοηθά γονείς και φροντιστές να καταγράφουν δόσεις φαρμάκων, πυρετό, συμπτώματα και επισκέψεις στον γιατρό των παιδιών — και κρατά όλους συγχρονισμένους, μαζί και τον παιδικό σταθμό, ώστε καμία δόση να μη χάνεται ή να μη διπλασιάζεται." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -155,6 +155,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Κάθε συνδεδεμένος λογαριασμός έχει δωρεάν αντίγραφο ασφαλείας στο cloud, ώστε τα δεδομένα σας να περνούν σε νέο κινητό και να μένουν ενημερωμένα σε όλες τις συσκευές σας. Με το Premium μπορείτε να προσκαλέσετε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username τους, και κάθε δόση που καταγράφουν εμφανίζεται αμέσως στα κινητά όλων."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Μπορεί ο παιδικός σταθμός ή η νταντά να χρησιμοποιήσει το Parenty;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ναι. Με Premium, πηγαίνετε στις Ρυθμίσεις → Λογαριασμός → Πρόσβαση παιδικού σταθμού και προσκαλέστε τους με το @username τους. Διαλέξτε ποια παιδιά βλέπουν και για πόσο. Βλέπουν τα φάρμακα αυτών των παιδιών και πότε δόθηκε η τελευταία δόση, και μπορούν να καταγράφουν ό,τι δίνουν· δεν βλέπουν ανάπτυξη, επισκέψεις γιατρού, αναφορές ή τις σημειώσεις σας. Οι δόσεις τους εμφανίζονται στο ιστορικό σας με το όνομά τους και μπορείτε να τερματίσετε την πρόσβαση όποτε θέλετε."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Έχω παιδικό σταθμό. Πώς χρησιμοποιώ τη λειτουργία παιδικού σταθμού;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Δημιουργήστε δωρεάν λογαριασμό και γυρίστε σε λειτουργία παιδικού σταθμού: πατήστε τον τίτλο στο πάνω μέρος της οθόνης ή πηγαίνετε στις Ρυθμίσεις → Λειτουργία εφαρμογής. Δώστε στους γονείς το @username σας για να σας προσκαλέσουν. Η λειτουργία παιδικού σταθμού είναι δωρεάν για μία οικογένεια· το Parenty Παιδικός Σταθμός σάς επιτρέπει να φροντίζετε όσες οικογένειες θέλετε και περιλαμβάνει το Premium για τη δική σας οικογένεια. Η λειτουργία παιδικού σταθμού χρειάζεται σύνδεση στο διαδίκτυο."
         }
       },
       {
@@ -791,9 +807,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -821,6 +837,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -955,6 +973,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1022,6 +1041,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Παιδικός σταθμός</a></li>
                 <li><a href="#features">Λειτουργίες</a></li>
                 <li><a href="#screens">Οθόνες</a></li>
                 <li><a href="#pricing">Τιμές</a></li>
@@ -1116,6 +1136,56 @@
                     <picture>
                         <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="../screenshots/light/history.jpg" alt="Ιστορικό δόσεων που δείχνει ποιες δόσεις έδωσε η Maria" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Νέο · Παιδικός σταθμός</span>
+                <h2>Η φροντίδα των φαρμάκων τα ακολουθεί και στον παιδικό σταθμό.</h2>
+                <p>Προσκαλέστε τον παιδικό σταθμό, τη νταντά ή τον παππού με το @username τους. Βλέπουν ποιο φάρμακο πρέπει να δοθεί και πότε δόθηκε η τελευταία δόση, και κάθε δόση που καταγράφουν εμφανίζεται στο ιστορικό σας με το όνομά τους.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Μόνο τα παιδιά που διαλέγετε, από 2 εβδομάδες έως ένα έτος ή μέχρι να το αφαιρέσετε</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Προειδοποίηση πριν δώσουν μια δόση πολύ νωρίς</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Χωρίς ανάπτυξη, επισκέψεις γιατρού ή σημειώσεις: μόνο τα φάρμακα και ό,τι έδωσαν</li>
+                </ul>
+                <p class="note">Η πρόσκληση παιδικού σταθμού ανήκει στο Premium. Παρατείνετε ή τερματίστε την πρόσβαση όποτε θέλετε.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Βίντεο Parenty Παιδικός Σταθμός: ένας γονιός προσκαλεί τον παιδικό σταθμό, ο σταθμός βλέπει τι πρέπει να δοθεί και καταγράφει μια δόση, και ο γονιός τη βλέπει στο ιστορικό του"></video>
+                    <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Για παιδικούς σταθμούς &amp; φροντιστές</span>
+                <h2>Φροντίζετε παιδιά άλλων οικογενειών;</h2>
+                <p>Γυρίστε το Parenty σε λειτουργία παιδικού σταθμού. Κάθε οικογένεια που σας προσκάλεσε είναι σε μία λίστα, μόνο με τα παιδιά που επέλεξε και τα φάρμακα που πρέπει να δοθούν σήμερα.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Καταγράψτε μια δόση με ένα πάτημα και οι γονείς τη βλέπουν στο ιστορικό τους</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Το δικό σας ιστορικό για κάθε δόση που δώσατε, για κάθε οικογένεια</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Η δική σας οικογένεια μένει χωριστά: επιστρέψτε από τον τίτλο στο πάνω μέρος</li>
+                </ul>
+                <p class="note">Δωρεάν για μία οικογένεια. Το Parenty Παιδικός Σταθμός είναι για όσες οικογένειες φροντίζετε και περιλαμβάνει το Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Λειτουργία παιδικού σταθμού με τα φάρμακα της Emma, πότε επιτρέπεται η επόμενη δόση Ibuprofen και ένα κουμπί καταγραφής δόσης" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1257,7 +1327,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Δωρεάν για αρχή. Premium για κοινή χρήση.</h2>
-                <p>Ό,τι χρειάζεστε για ένα παιδί είναι δωρεάν. Το Premium είναι για οικογένειες που μοιράζονται τη φροντίδα.</p>
+                <p>Ό,τι χρειάζεστε για ένα παιδί είναι δωρεάν. Το Premium είναι για οικογένειες που μοιράζονται τη φροντίδα, και το Parenty Παιδικός Σταθμός για όσους φροντίζουν πολλές οικογένειες.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,7 +1350,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Απεριόριστα παιδιά, γιατροί και επισκέψεις</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Αναφορές PDF και γραφήματα πυρετού</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Ρυθμίσεις ξυπνητηριού</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Πρόσκληση του παιδικού σας σταθμού</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Παιδικός Σταθμός</h3>
+                    <p class="plan-price">Για παιδικούς σταθμούς και φροντιστές · μηνιαία ή ετήσια</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Όλα όσα έχει το Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Όσες οικογένειες φροντίζετε</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Καταγραφή δόσεων για τα παιδιά κάθε οικογένειας</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Το δικό σας ιστορικό για κάθε δόση που δώσατε</li>
+                    </ul>
+                    <p class="plan-foot">Η λειτουργία παιδικού σταθμού είναι δωρεάν για μία οικογένεια.</p>
                 </div>
             </div>
             <p class="pricing-note">Οι τιμές εμφανίζονται στην εφαρμογή στο τοπικό σας νόμισμα.</p>
@@ -1297,6 +1379,14 @@
                 <details>
                     <summary>Πώς λειτουργεί ο συγχρονισμός μεταξύ γονέων και φροντιστών;<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Κάθε συνδεδεμένος λογαριασμός έχει δωρεάν αντίγραφο ασφαλείας στο cloud, ώστε τα δεδομένα σας να περνούν σε νέο κινητό και να μένουν ενημερωμένα σε όλες τις συσκευές σας. Με το Premium μπορείτε να προσκαλέσετε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username τους, και κάθε δόση που καταγράφουν εμφανίζεται αμέσως στα κινητά όλων.</p>
+                </details>
+                <details>
+                    <summary>Μπορεί ο παιδικός σταθμός ή η νταντά να χρησιμοποιήσει το Parenty;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Ναι. Με Premium, πηγαίνετε στις Ρυθμίσεις → Λογαριασμός → Πρόσβαση παιδικού σταθμού και προσκαλέστε τους με το @username τους. Διαλέξτε ποια παιδιά βλέπουν και για πόσο. Βλέπουν τα φάρμακα αυτών των παιδιών και πότε δόθηκε η τελευταία δόση, και μπορούν να καταγράφουν ό,τι δίνουν· δεν βλέπουν ανάπτυξη, επισκέψεις γιατρού, αναφορές ή τις σημειώσεις σας. Οι δόσεις τους εμφανίζονται στο ιστορικό σας με το όνομά τους και μπορείτε να τερματίσετε την πρόσβαση όποτε θέλετε.</p>
+                </details>
+                <details>
+                    <summary>Έχω παιδικό σταθμό. Πώς χρησιμοποιώ τη λειτουργία παιδικού σταθμού;<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Δημιουργήστε δωρεάν λογαριασμό και γυρίστε σε λειτουργία παιδικού σταθμού: πατήστε τον τίτλο στο πάνω μέρος της οθόνης ή πηγαίνετε στις Ρυθμίσεις → Λειτουργία εφαρμογής. Δώστε στους γονείς το @username σας για να σας προσκαλέσουν. Η λειτουργία παιδικού σταθμού είναι δωρεάν για μία οικογένεια· το Parenty Παιδικός Σταθμός σάς επιτρέπει να φροντίζετε όσες οικογένειες θέλετε και περιλαμβάνει το Premium για τη δική σας οικογένεια. Η λειτουργία παιδικού σταθμού χρειάζεται σύνδεση στο διαδίκτυο.</p>
                 </details>
                 <details>
                     <summary>Μπορώ να διαχειριστώ πολλά παιδιά;<svg class="icon"><use href="#i-chevron"/></svg></summary>

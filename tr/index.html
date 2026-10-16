@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: Çocuklar için İlaç Takibi – Doz Hatırlatıcı &amp; Ateş Kaydı</title>
-    <meta name="description" content="Parenty, ebeveynlerin ve bakıcıların çocukların ilaç dozlarını, ateşini, belirtilerini ve doktor ziyaretlerini takip etmesine yardımcı olur ve herkesi senkronize tutar; böylece hiçbir doz unutulmaz ya da iki kez verilmez." />
+    <meta name="description" content="Parenty, ebeveynlerin ve bakıcıların çocukların ilaç dozlarını, ateşini, belirtilerini ve doktor ziyaretlerini takip etmesine yardım eder — ve kreş dahil herkesi senkronize tutar, böylece hiçbir doz atlanmaz ya da iki kez verilmez." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -155,6 +155,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Oturum açmış her hesap ücretsiz olarak buluta yedeklenir; böylece verileriniz yeni bir telefona taşınır ve tüm cihazlarınızda güncel kalır. Premium ile eşinizi, büyükanne ve büyükbabaları ya da bakıcıyı @kullanıcıadı ile davet edebilirsiniz; kaydettikleri her doz herkesin telefonunda anında görünür."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kreşim ya da bakıcım Parenty'yi kullanabilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet. Premium ile Ayarlar → Hesap → Kreş erişimi bölümüne gidin ve onları @kullanıcı adlarıyla davet edin. Hangi çocukları ve ne kadar süre göreceklerini seçin. Bu çocukların ilaçlarını ve son dozun ne zaman verildiğini görür, verdiklerini kaydedebilirler; büyümeyi, doktor ziyaretlerini, raporları ya da notlarınızı görmezler. Dozları adlarıyla birlikte geçmişinizde görünür ve erişimi istediğiniz zaman sonlandırabilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bir kreş işletiyorum. Kreş modunu nasıl kullanırım?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ücretsiz bir hesap oluşturun, sonra Kreş moduna geçin: ekranın üstündeki başlığa dokunun ya da Ayarlar → Uygulama modu bölümüne gidin. Sizi davet edebilmeleri için ebeveynlere @kullanıcı adınızı verin. Kreş modu bir aile için ücretsizdir; Parenty Kreş ile istediğiniz kadar aileye bakabilir ve kendi aileniz için Premium'a sahip olursunuz. Kreş modu internet bağlantısı gerektirir."
         }
       },
       {
@@ -791,9 +807,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -821,6 +837,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -955,6 +973,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1022,6 +1041,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Kreş</a></li>
                 <li><a href="#features">Özellikler</a></li>
                 <li><a href="#screens">Ekranlar</a></li>
                 <li><a href="#pricing">Fiyatlar</a></li>
@@ -1116,6 +1136,56 @@
                     <picture>
                         <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="../screenshots/light/history.jpg" alt="Maria'nın hangi dozları verdiğini gösteren doz geçmişi" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Yeni · Kreş</span>
+                <h2>İlaç takibi kreşte de devam eder.</h2>
+                <p>Kreşinizi, bakıcınızı ya da büyükanne ve büyükbabayı @kullanıcı adlarıyla davet edin. Hangi ilacın zamanı geldiğini ve son dozun ne zaman verildiğini görürler; kaydettikleri her doz, adlarıyla birlikte geçmişinizde görünür.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Yalnızca seçtiğiniz çocuklar; 2 haftadan bir yıla kadar ya da siz kaldırana dek</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Çok erken bir doz vermeden önce uyarı</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Büyüme, doktor ziyaretleri ya da notlar yok: yalnızca ilaçlar ve verdikleri</li>
+                </ul>
+                <p class="note">Kreş davet etmek Premium'a dahildir. Erişimi istediğiniz zaman uzatın ya da sonlandırın.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty Kreş videosu: bir ebeveyn kreşi davet eder, kreş zamanı gelen ilacı görür ve bir doz kaydeder, ebeveyn de bunu geçmişinde görür"></video>
+                    <button class="video-sound" type="button" aria-label="Sesi aç" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Kreşler &amp; bakıcılar için</span>
+                <h2>Başka ailelerin çocuklarına mı bakıyorsunuz?</h2>
+                <p>Parenty'yi Kreş moduna geçirin. Sizi davet eden her aile tek bir listede; yalnızca seçtikleri çocuklar ve bugün zamanı gelen ilaçlarla.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Tek dokunuşla doz kaydedin, ebeveynler geçmişlerinde görsün</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Her aile için verdiğiniz her dozun kendi geçmişiniz</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Kendi aileniz ayrı kalır: üstteki başlıktan geri dönün</li>
+                </ul>
+                <p class="note">Bir aile için ücretsiz. Parenty Kreş, baktığınız tüm aileler içindir ve Premium'u içerir.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Emma'nın ilaçlarını, bir sonraki İbuprofen dozunun ne zaman verilebileceğini ve doz kaydetme düğmesini gösteren Kreş modu" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1257,7 +1327,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Başlamak ücretsiz. Paylaşmak için Premium.</h2>
-                <p>Bir çocuk için gereken her şey ücretsiz. Premium, bakımı paylaşan aileler içindir.</p>
+                <p>Bir çocuk için gereken her şey ücretsiz. Premium bakımı paylaşan aileler için, Parenty Kreş ise birçok aileye bakanlar için.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,7 +1350,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Sınırsız çocuk, doktor ve ziyaret</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>PDF raporları ve ateş grafikleri</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Alarm ayarları</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Kreşinizi davet edin</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Kreş</h3>
+                    <p class="plan-price">Kreşler ve bakıcılar için · aylık ya da yıllık</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Premium'daki her şey</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Baktığınız tüm aileler</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Her ailenin çocukları için doz kaydı</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Verdiğiniz her dozun kendi geçmişiniz</li>
+                    </ul>
+                    <p class="plan-foot">Kreş modu bir aile için ücretsizdir.</p>
                 </div>
             </div>
             <p class="pricing-note">Fiyatlar uygulamada yerel para biriminizde gösterilir.</p>
@@ -1297,6 +1379,14 @@
                 <details>
                     <summary>Ebeveynler ve bakıcılar arasında senkronizasyon nasıl çalışır?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Oturum açmış her hesap ücretsiz olarak buluta yedeklenir; böylece verileriniz yeni bir telefona taşınır ve tüm cihazlarınızda güncel kalır. Premium ile eşinizi, büyükanne ve büyükbabaları ya da bakıcıyı @kullanıcıadı ile davet edebilirsiniz; kaydettikleri her doz herkesin telefonunda anında görünür.</p>
+                </details>
+                <details>
+                    <summary>Kreşim ya da bakıcım Parenty'yi kullanabilir mi?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Evet. Premium ile Ayarlar → Hesap → Kreş erişimi bölümüne gidin ve onları @kullanıcı adlarıyla davet edin. Hangi çocukları ve ne kadar süre göreceklerini seçin. Bu çocukların ilaçlarını ve son dozun ne zaman verildiğini görür, verdiklerini kaydedebilirler; büyümeyi, doktor ziyaretlerini, raporları ya da notlarınızı görmezler. Dozları adlarıyla birlikte geçmişinizde görünür ve erişimi istediğiniz zaman sonlandırabilirsiniz.</p>
+                </details>
+                <details>
+                    <summary>Bir kreş işletiyorum. Kreş modunu nasıl kullanırım?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Ücretsiz bir hesap oluşturun, sonra Kreş moduna geçin: ekranın üstündeki başlığa dokunun ya da Ayarlar → Uygulama modu bölümüne gidin. Sizi davet edebilmeleri için ebeveynlere @kullanıcı adınızı verin. Kreş modu bir aile için ücretsizdir; Parenty Kreş ile istediğiniz kadar aileye bakabilir ve kendi aileniz için Premium'a sahip olursunuz. Kreş modu internet bağlantısı gerektirir.</p>
                 </details>
                 <details>
                     <summary>Birden fazla çocuğu yönetebilir miyim?<svg class="icon"><use href="#i-chevron"/></svg></summary>

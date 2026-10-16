@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: controle de remédios para crianças – Lembretes de dose &amp; registro de febre</title>
-    <meta name="description" content="O Parenty ajuda pais e cuidadores a registrar as doses de remédios, a febre, os sintomas e as consultas médicas das crianças, e mantém todos sincronizados para que nenhuma dose seja esquecida ou repetida." />
+    <meta name="description" content="O Parenty ajuda pais e cuidadores a registrar doses de remédios, febre, sintomas e consultas dos filhos — e mantém todos sincronizados, creche incluída, para que nenhuma dose seja esquecida ou repetida." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -155,6 +155,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Toda conta conectada tem backup gratuito na nuvem, então seus dados sobrevivem a um celular novo e ficam atualizados em todos os seus aparelhos. Com o Premium você pode convidar seu parceiro, os avós ou a babá pelo @usuário deles, e cada dose que registram aparece na hora no celular de todos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Minha creche ou babá pode usar o Parenty?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Com o Premium, vá em Configurações → Conta → Acesso de creche e convide-os pelo @usuário. Escolha quais filhos eles veem e por quanto tempo. Eles veem os remédios desses filhos e quando foi a última dose, e podem registrar o que dão; não veem crescimento, consultas, relatórios nem suas anotações. As doses deles aparecem no seu histórico com o nome deles, e você pode encerrar o acesso quando quiser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tenho uma creche. Como uso o Modo creche?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crie uma conta grátis e mude para o Modo creche: toque no título no topo da tela ou vá em Configurações → Modo do app. Passe seu @usuário para os pais convidarem você. O Modo creche é grátis para uma família; com o Parenty Creche você cuida de quantas famílias quiser e tem o Premium para a sua própria família. O Modo creche precisa de conexão com a internet."
         }
       },
       {
@@ -791,9 +807,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -821,6 +837,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -955,6 +973,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1022,6 +1041,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Creche</a></li>
                 <li><a href="#features">Recursos</a></li>
                 <li><a href="#screens">Telas</a></li>
                 <li><a href="#pricing">Preços</a></li>
@@ -1116,6 +1136,56 @@
                     <picture>
                         <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="../screenshots/light/history.jpg" alt="Histórico de doses mostrando quais doses a Maria deu" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Novo · Creche</span>
+                <h2>Os remédios deles, acompanhados também na creche.</h2>
+                <p>Convide a creche, a babá ou os avós pelo @usuário. Eles veem qual remédio está na hora e quando foi a última dose, e cada dose que registram aparece no seu histórico com o nome deles.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Só os filhos que você escolher, de 2 semanas a um ano, ou até você remover</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Um aviso antes de dar uma dose cedo demais</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Sem crescimento, consultas ou anotações: só os remédios e o que deram</li>
+                </ul>
+                <p class="note">Convidar uma creche faz parte do Premium. Estenda ou encerre o acesso quando quiser.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Vídeo do Parenty Creche: um pai convida a creche, a creche vê o que está na hora e registra uma dose, e o pai vê no histórico dele"></video>
+                    <button class="video-sound" type="button" aria-label="Ativar som" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Para creches &amp; cuidadores</span>
+                <h2>Cuida de filhos de outras famílias?</h2>
+                <p>Mude o Parenty para o Modo creche. Cada família que convidou você fica em uma lista, só com os filhos que escolheu e os remédios de hoje.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Registre uma dose com um toque, e os pais veem no histórico deles</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Seu próprio histórico de cada dose que você deu, para cada família</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Sua própria família fica separada: volte pelo título no topo</li>
+                </ul>
+                <p class="note">Grátis para uma família. O Parenty Creche é para quantas famílias você cuidar e inclui o Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Modo creche mostrando os remédios da Emma, quando a próxima dose de Ibuprofeno é permitida e um botão para registrar dose" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1257,7 +1327,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Grátis para começar. Premium para compartilhar.</h2>
-                <p>Tudo o que você precisa para uma criança é grátis. O Premium é para famílias que dividem o cuidado.</p>
+                <p>Tudo o que você precisa para um filho é grátis. O Premium é para famílias que dividem o cuidado, e o Parenty Creche para quem cuida de muitas famílias.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,7 +1350,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Crianças, médicos e consultas ilimitados</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Relatórios em PDF e gráficos de febre</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Configurações de alarme</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Convide sua creche</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Creche</h3>
+                    <p class="plan-price">Para creches e cuidadores · mensal ou anual</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Tudo do Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Quantas famílias você cuidar</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Registre doses para os filhos de cada família</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Seu próprio histórico de cada dose que você deu</li>
+                    </ul>
+                    <p class="plan-foot">O Modo creche é grátis para uma família.</p>
                 </div>
             </div>
             <p class="pricing-note">Os preços aparecem no app na sua moeda local.</p>
@@ -1297,6 +1379,14 @@
                 <details>
                     <summary>Como funciona a sincronização entre pais e cuidadores?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Toda conta conectada tem backup gratuito na nuvem, então seus dados sobrevivem a um celular novo e ficam atualizados em todos os seus aparelhos. Com o Premium você pode convidar seu parceiro, os avós ou a babá pelo @usuário deles, e cada dose que registram aparece na hora no celular de todos.</p>
+                </details>
+                <details>
+                    <summary>Minha creche ou babá pode usar o Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Sim. Com o Premium, vá em Configurações → Conta → Acesso de creche e convide-os pelo @usuário. Escolha quais filhos eles veem e por quanto tempo. Eles veem os remédios desses filhos e quando foi a última dose, e podem registrar o que dão; não veem crescimento, consultas, relatórios nem suas anotações. As doses deles aparecem no seu histórico com o nome deles, e você pode encerrar o acesso quando quiser.</p>
+                </details>
+                <details>
+                    <summary>Tenho uma creche. Como uso o Modo creche?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Crie uma conta grátis e mude para o Modo creche: toque no título no topo da tela ou vá em Configurações → Modo do app. Passe seu @usuário para os pais convidarem você. O Modo creche é grátis para uma família; com o Parenty Creche você cuida de quantas famílias quiser e tem o Premium para a sua própria família. O Modo creche precisa de conexão com a internet.</p>
                 </details>
                 <details>
                     <summary>Posso cuidar de várias crianças?<svg class="icon"><use href="#i-chevron"/></svg></summary>

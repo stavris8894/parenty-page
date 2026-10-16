@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: promemoria dei farmaci per bambini – Dosi, promemoria &amp; registro della febbre</title>
-    <meta name="description" content="Parenty aiuta genitori e chi si prende cura dei bambini a registrare le dosi dei farmaci, la febbre, i sintomi e le visite mediche, e tiene tutti sincronizzati perché nessuna dose venga dimenticata o data due volte." />
+    <meta name="description" content="Parenty aiuta genitori e chi si prende cura dei bambini a registrare dosi di medicine, febbre, sintomi e visite mediche dei figli — e tiene tutti sincronizzati, asilo compreso, così nessuna dose viene saltata o ripetuta." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -155,6 +155,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Ogni account connesso ha un backup gratuito nel cloud, così i tuoi dati sopravvivono a un nuovo telefono e restano aggiornati su tutti i tuoi dispositivi. Con Premium puoi invitare il partner, i nonni o la babysitter con il loro @nomeutente, e ogni dose che registrano compare subito sui telefoni di tutti."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Il mio asilo o la tata possono usare Parenty?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. Con Premium, vai su Impostazioni → Account → Accesso asilo e invitali con il loro @username. Scegli quali figli vedono e per quanto tempo. Vedono le medicine di quei figli e quando è stata data l'ultima dose, e possono registrare ciò che danno; non vedono crescita, visite mediche, report o le tue note. Le loro dosi compaiono nella tua cronologia con il loro nome, e puoi terminare l'accesso quando vuoi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gestisco un asilo. Come uso la Modalità asilo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crea un account gratuito, poi passa alla Modalità asilo: tocca il titolo in cima allo schermo o vai su Impostazioni → Modalità app. Dai ai genitori il tuo @username perché ti invitino. La Modalità asilo è gratis per una famiglia; con Parenty Asilo ti occupi di tutte le famiglie che vuoi e hai Premium per la tua famiglia. La Modalità asilo ha bisogno di una connessione a internet."
         }
       },
       {
@@ -791,9 +807,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -821,6 +837,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -955,6 +973,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1022,6 +1041,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Asilo</a></li>
                 <li><a href="#features">Funzioni</a></li>
                 <li><a href="#screens">Schermate</a></li>
                 <li><a href="#pricing">Prezzi</a></li>
@@ -1116,6 +1136,56 @@
                     <picture>
                         <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="../screenshots/light/history.jpg" alt="Cronologia delle dosi che mostra quelle date da Maria" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Novità · Asilo</span>
+                <h2>Le sue medicine, sotto controllo anche all'asilo.</h2>
+                <p>Invita l'asilo, la tata o i nonni con il loro @username. Vedono quale medicina va data e quando è stata data l'ultima dose, e ogni dose che registrano compare nella tua cronologia con il loro nome.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Solo i figli che scegli, da 2 settimane a un anno, o finché non lo rimuovi</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Un avviso prima di dare una dose troppo presto</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Niente crescita, visite mediche o note: solo le medicine e ciò che hanno dato</li>
+                </ul>
+                <p class="note">Invitare un asilo fa parte di Premium. Estendi o termina l'accesso quando vuoi.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Video Parenty Asilo: un genitore invita l'asilo, l'asilo vede cosa va dato e registra una dose, e il genitore la vede nella sua cronologia"></video>
+                    <button class="video-sound" type="button" aria-label="Attiva l'audio" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Per asili &amp; chi si prende cura dei bambini</span>
+                <h2>Ti occupi dei bambini di altre famiglie?</h2>
+                <p>Passa Parenty alla Modalità asilo. Ogni famiglia che ti ha invitato è in un'unica lista, solo con i figli che ha scelto e le medicine da dare oggi.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Registra una dose con un tocco, e i genitori la vedono nella loro cronologia</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>La tua cronologia di ogni dose data, per ogni famiglia</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>La tua famiglia resta separata: torna indietro dal titolo in alto</li>
+                </ul>
+                <p class="note">Gratis per una famiglia. Parenty Asilo è per tutte le famiglie di cui ti occupi e include Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Modalità asilo con le medicine di Emma, quando è consentita la prossima dose di Ibuprofene e un pulsante per registrare la dose" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1257,7 +1327,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Gratis per iniziare. Premium per condividere.</h2>
-                <p>Tutto ciò che serve per un figlio è gratis. Premium è per le famiglie che condividono le cure.</p>
+                <p>Tutto ciò che serve per un figlio è gratis. Premium è per le famiglie che condividono la cura, e Parenty Asilo per chi si occupa di molte famiglie.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,7 +1350,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Figli, medici e visite illimitati</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Report PDF e grafici della febbre</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Impostazioni delle sveglie</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Invita il tuo asilo</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Asilo</h3>
+                    <p class="plan-price">Per asili e chi si prende cura dei bambini · mensile o annuale</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Tutto Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Tutte le famiglie di cui ti occupi</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Registra le dosi per i figli di ogni famiglia</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>La tua cronologia di ogni dose data</li>
+                    </ul>
+                    <p class="plan-foot">La Modalità asilo è gratis per una famiglia.</p>
                 </div>
             </div>
             <p class="pricing-note">I prezzi sono mostrati nell'app nella tua valuta locale.</p>
@@ -1297,6 +1379,14 @@
                 <details>
                     <summary>Come funziona la sincronizzazione tra genitori e chi si prende cura dei bambini?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Ogni account connesso ha un backup gratuito nel cloud, così i tuoi dati sopravvivono a un nuovo telefono e restano aggiornati su tutti i tuoi dispositivi. Con Premium puoi invitare il partner, i nonni o la babysitter con il loro @nomeutente, e ogni dose che registrano compare subito sui telefoni di tutti.</p>
+                </details>
+                <details>
+                    <summary>Il mio asilo o la tata possono usare Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Sì. Con Premium, vai su Impostazioni → Account → Accesso asilo e invitali con il loro @username. Scegli quali figli vedono e per quanto tempo. Vedono le medicine di quei figli e quando è stata data l'ultima dose, e possono registrare ciò che danno; non vedono crescita, visite mediche, report o le tue note. Le loro dosi compaiono nella tua cronologia con il loro nome, e puoi terminare l'accesso quando vuoi.</p>
+                </details>
+                <details>
+                    <summary>Gestisco un asilo. Come uso la Modalità asilo?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Crea un account gratuito, poi passa alla Modalità asilo: tocca il titolo in cima allo schermo o vai su Impostazioni → Modalità app. Dai ai genitori il tuo @username perché ti invitino. La Modalità asilo è gratis per una famiglia; con Parenty Asilo ti occupi di tutte le famiglie che vuoi e hai Premium per la tua famiglia. La Modalità asilo ha bisogno di una connessione a internet.</p>
                 </details>
                 <details>
                     <summary>Posso gestire più figli?<svg class="icon"><use href="#i-chevron"/></svg></summary>

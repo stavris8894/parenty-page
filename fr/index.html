@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty : suivi des médicaments pour enfants – Rappels de doses &amp; suivi de la fièvre</title>
-    <meta name="description" content="Parenty aide les parents et les proches à suivre les doses de médicaments, la fièvre, les symptômes et les rendez-vous médicaux des enfants, et garde tout le monde synchronisé pour qu'aucune dose ne soit oubliée ni donnée deux fois." />
+    <meta name="description" content="Parenty aide les parents et les aidants à suivre les doses de médicaments, la fièvre, les symptômes et les visites chez le médecin des enfants — et garde tout le monde synchronisé, garderie comprise, pour qu'aucune dose ne soit oubliée ni doublée." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -155,6 +155,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Chaque compte connecté est sauvegardé gratuitement dans le cloud : vos données survivent à un nouveau téléphone et restent à jour sur tous vos appareils. Avec Premium, vous pouvez inviter votre conjoint, les grands-parents ou la nounou grâce à leur @nomdutilisateur, et chaque dose qu'ils enregistrent apparaît aussitôt sur le téléphone de chacun."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ma garderie ou ma nounou peut-elle utiliser Parenty ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Avec Premium, allez dans Paramètres → Compte → Accès garderie et invitez-la avec son @nom d'utilisateur. Choisissez les enfants qu'elle voit et pour combien de temps. Elle voit les médicaments de ces enfants et l'heure de la dernière dose, et peut noter ce qu'elle donne ; elle ne voit ni la croissance, ni les visites chez le médecin, ni les rapports, ni vos notes. Ses doses apparaissent dans votre historique avec son nom, et vous pouvez arrêter l'accès à tout moment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Je gère une garderie. Comment utiliser le Mode garderie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Créez un compte gratuit, puis passez en Mode garderie : touchez le titre en haut de l'écran, ou allez dans Paramètres → Mode de l'app. Donnez votre @nom d'utilisateur aux parents pour qu'ils vous invitent. Le Mode garderie est gratuit pour une famille ; Parenty Crèche vous permet de garder autant de familles que vous voulez et inclut Premium pour votre propre famille. Le Mode garderie a besoin d'une connexion internet."
         }
       },
       {
@@ -791,9 +807,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -821,6 +837,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -955,6 +973,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1022,6 +1041,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Garderie</a></li>
                 <li><a href="#features">Fonctionnalités</a></li>
                 <li><a href="#screens">Captures</a></li>
                 <li><a href="#pricing">Tarifs</a></li>
@@ -1116,6 +1136,56 @@
                     <picture>
                         <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="../screenshots/light/history.jpg" alt="Historique des doses montrant celles données par Maria" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Nouveau · Garderie</span>
+                <h2>Leurs médicaments, suivis jusqu'à la garderie.</h2>
+                <p>Invitez votre garderie, votre nounou ou les grands-parents avec leur @nom d'utilisateur. Ils voient quel médicament est à donner et quand la dernière dose a été donnée, et chaque dose qu'ils notent apparaît dans votre historique avec leur nom.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Seulement les enfants que vous choisissez, de 2 semaines à un an, ou jusqu'à ce que vous l'arrêtiez</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Un avertissement avant une dose donnée trop tôt</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Pas de croissance, de visites ni de notes : seulement les médicaments et ce qu'ils ont donné</li>
+                </ul>
+                <p class="note">Inviter une garderie fait partie de Premium. Prolongez ou arrêtez l'accès à tout moment.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Vidéo Parenty Crèche : un parent invite la garderie, la garderie voit ce qui est à donner et note une dose, et le parent la voit dans son historique"></video>
+                    <button class="video-sound" type="button" aria-label="Activer le son" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Pour les garderies &amp; les aidants</span>
+                <h2>Vous gardez les enfants d'autres familles ?</h2>
+                <p>Passez Parenty en Mode garderie. Chaque famille qui vous a invité figure dans une seule liste, avec seulement les enfants qu'elle a choisis et les médicaments à donner aujourd'hui.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Notez une dose d'un geste, et les parents la voient dans leur historique</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Votre propre historique de chaque dose donnée, pour chaque famille</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Votre propre famille reste à part : revenez-y depuis le titre en haut</li>
+                </ul>
+                <p class="note">Gratuit pour une famille. Parenty Crèche est fait pour autant de familles que vous en gardez, et inclut Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Mode garderie montrant les médicaments d'Emma, l'heure à laquelle la prochaine dose d'Ibuprofène est permise et un bouton pour noter une dose" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1257,7 +1327,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Gratuit pour commencer. Premium pour partager.</h2>
-                <p>Tout ce qu'il faut pour un enfant est gratuit. Premium est pour les familles qui partagent les soins.</p>
+                <p>Tout ce qu'il faut pour un enfant est gratuit. Premium est pour les familles qui partagent les soins, et Parenty Crèche pour ceux qui s'occupent de nombreuses familles.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,7 +1350,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Enfants, médecins et rendez-vous illimités</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Rapports PDF et courbes de fièvre</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Réglages des alarmes</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Invitez votre garderie</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Crèche</h3>
+                    <p class="plan-price">Pour les garderies et les aidants · mensuel ou annuel</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Tout Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Autant de familles que vous en gardez</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Notez les doses des enfants de chaque famille</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Votre propre historique de chaque dose donnée</li>
+                    </ul>
+                    <p class="plan-foot">Le Mode garderie est gratuit pour une famille.</p>
                 </div>
             </div>
             <p class="pricing-note">Les prix sont affichés dans l'app dans votre monnaie locale.</p>
@@ -1297,6 +1379,14 @@
                 <details>
                     <summary>Comment fonctionne la synchronisation entre parents et proches ?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Chaque compte connecté est sauvegardé gratuitement dans le cloud : vos données survivent à un nouveau téléphone et restent à jour sur tous vos appareils. Avec Premium, vous pouvez inviter votre conjoint, les grands-parents ou la nounou grâce à leur @nomdutilisateur, et chaque dose qu'ils enregistrent apparaît aussitôt sur le téléphone de chacun.</p>
+                </details>
+                <details>
+                    <summary>Ma garderie ou ma nounou peut-elle utiliser Parenty ?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Oui. Avec Premium, allez dans Paramètres → Compte → Accès garderie et invitez-la avec son @nom d'utilisateur. Choisissez les enfants qu'elle voit et pour combien de temps. Elle voit les médicaments de ces enfants et l'heure de la dernière dose, et peut noter ce qu'elle donne ; elle ne voit ni la croissance, ni les visites chez le médecin, ni les rapports, ni vos notes. Ses doses apparaissent dans votre historique avec son nom, et vous pouvez arrêter l'accès à tout moment.</p>
+                </details>
+                <details>
+                    <summary>Je gère une garderie. Comment utiliser le Mode garderie ?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Créez un compte gratuit, puis passez en Mode garderie : touchez le titre en haut de l'écran, ou allez dans Paramètres → Mode de l'app. Donnez votre @nom d'utilisateur aux parents pour qu'ils vous invitent. Le Mode garderie est gratuit pour une famille ; Parenty Crèche vous permet de garder autant de familles que vous voulez et inclut Premium pour votre propre famille. Le Mode garderie a besoin d'une connexion internet.</p>
                 </details>
                 <details>
                     <summary>Puis-je gérer plusieurs enfants ?<svg class="icon"><use href="#i-chevron"/></svg></summary>

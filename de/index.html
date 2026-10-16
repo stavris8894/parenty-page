@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: Medikamenten-Tracker für Kinder – Dosis-Erinnerungen &amp; Fieberprotokoll</title>
-    <meta name="description" content="Mit Parenty behalten Eltern und Betreuungspersonen die Medikamente, das Fieber, die Symptome und die Arztbesuche ihrer Kinder im Blick – und alle bleiben synchron, damit keine Dosis vergessen oder doppelt gegeben wird." />
+    <meta name="description" content="Parenty hilft Eltern und Betreuungspersonen, Medikamentendosen, Fieber, Symptome und Arztbesuche ihrer Kinder festzuhalten – und hält alle auf dem gleichen Stand, auch die Kita, damit keine Dosis vergessen oder doppelt gegeben wird." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
@@ -155,6 +155,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Jedes angemeldete Konto wird kostenlos in der Cloud gesichert, sodass deine Daten ein neues Handy überstehen und auf all deinen Geräten aktuell bleiben. Mit Premium kannst du Partner, Großeltern oder die Nanny per @Benutzername einladen, und jede Dosis, die sie eintragen, erscheint sofort auf allen Handys."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann meine Kita oder mein Babysitter Parenty nutzen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Gehe mit Premium zu Einstellungen → Konto → Kita-Zugang und lade sie über ihren @Benutzernamen ein. Wähle, welche Kinder sie sehen und wie lange. Sie sehen die Medikamente dieser Kinder und wann die letzte Dosis gegeben wurde, und können eintragen, was sie geben; Wachstum, Arztbesuche, Berichte und deine Notizen sehen sie nicht. Ihre Dosen erscheinen in deinem Verlauf mit ihrem Namen, und du kannst den Zugang jederzeit beenden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ich leite eine Kita. Wie nutze ich den Kita-Modus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Erstelle ein kostenloses Konto und wechsle in den Kita-Modus: Tippe oben auf dem Bildschirm auf den Titel oder gehe zu Einstellungen → App-Modus. Gib den Eltern deinen @Benutzernamen, damit sie dich einladen können. Der Kita-Modus ist für eine Familie kostenlos; mit Parenty Betreuung betreust du so viele Familien, wie du möchtest, und hast Premium für deine eigene Familie. Der Kita-Modus braucht eine Internetverbindung."
         }
       },
       {
@@ -791,9 +807,9 @@
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 860px;
+            max-width: 1120px;
             margin: 0 auto;
         }
 
@@ -821,6 +837,8 @@
         }
 
         .plan .checklist { gap: 12px; font-size: 15px; }
+
+        .plan-foot { color: var(--muted); font-size: 14px; margin-top: 18px; }
 
         .pricing-note {
             text-align: center;
@@ -955,6 +973,7 @@
 
         @media (max-width: 960px) {
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .plans { grid-template-columns: 1fr; max-width: 560px; }
         }
 
         @media (max-width: 860px) {
@@ -1022,6 +1041,7 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Kita</a></li>
                 <li><a href="#features">Funktionen</a></li>
                 <li><a href="#screens">Screenshots</a></li>
                 <li><a href="#pricing">Preise</a></li>
@@ -1116,6 +1136,56 @@
                     <picture>
                         <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
                         <img src="../screenshots/light/history.jpg" alt="Dosisverlauf, der zeigt, welche Dosen Maria gegeben hat" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight reverse" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Neu · Kita</span>
+                <h2>Die Medikamente deines Kindes – auch in der Kita im Blick.</h2>
+                <p>Lade deine Kita, Babysitter oder Großeltern über ihren @Benutzernamen ein. Sie sehen, welches Medikament fällig ist und wann die letzte Dosis gegeben wurde, und jede Dosis, die sie eintragen, erscheint in deinem Verlauf mit ihrem Namen.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Nur die Kinder, die du auswählst, für 2 Wochen bis zu einem Jahr oder bis du es beendest</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Eine Warnung, bevor sie eine Dosis zu früh geben</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Kein Wachstum, keine Arztbesuche, keine Notizen: nur Medikamente und was sie gegeben haben</li>
+                </ul>
+                <p class="note">Eine Kita einzuladen gehört zu Premium. Verlängere oder beende den Zugang jederzeit.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty Betreuung Video: Ein Elternteil lädt die Kita ein, die Kita sieht, was fällig ist, und trägt eine Dosis ein, und der Elternteil sieht sie in seinem Verlauf"></video>
+                    <button class="video-sound" type="button" aria-label="Ton einschalten" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare mode, for daycares -->
+    <section class="spotlight">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Für Kitas &amp; Betreuungspersonen</span>
+                <h2>Du betreust die Kinder anderer Familien?</h2>
+                <p>Schalte Parenty in den Kita-Modus. Jede Familie, die dich eingeladen hat, steht in einer Liste – nur mit den Kindern, die sie ausgewählt hat, und den Medikamenten, die heute fällig sind.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Eine Dosis mit einem Tippen eintragen – die Eltern sehen sie in ihrem Verlauf</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Dein eigener Verlauf jeder gegebenen Dosis, für jede Familie</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Deine eigene Familie bleibt getrennt: wechsle über den Titel oben zurück</li>
+                </ul>
+                <p class="note">Kostenlos für eine Familie. Parenty Betreuung ist für so viele Familien, wie du betreust, und enthält Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Kita-Modus mit Emmas Medikamenten, wann die nächste Ibuprofen-Dosis erlaubt ist, und einer Schaltfläche zum Eintragen einer Dosis" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1257,7 +1327,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Kostenlos starten. Mit Premium teilen.</h2>
-                <p>Alles, was du für ein Kind brauchst, ist kostenlos. Premium ist für Familien, die sich die Betreuung teilen.</p>
+                <p>Alles, was du für ein Kind brauchst, ist kostenlos. Premium ist für Familien, die sich die Pflege teilen, und Parenty Betreuung für alle, die viele Familien betreuen.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,7 +1350,19 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Unbegrenzt Kinder, Ärzte und Besuche</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>PDF-Berichte und Fieberkurven</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Alarmeinstellungen</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Deine Kita einladen</li>
                     </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Betreuung</h3>
+                    <p class="plan-price">Für Kitas und Betreuungspersonen · monatlich oder jährlich</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Alles aus Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>So viele Familien, wie du betreust</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Dosen für die Kinder jeder Familie eintragen</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Dein eigener Verlauf jeder gegebenen Dosis</li>
+                    </ul>
+                    <p class="plan-foot">Der Kita-Modus ist für eine Familie kostenlos.</p>
                 </div>
             </div>
             <p class="pricing-note">Die Preise werden in der App in deiner Landeswährung angezeigt.</p>
@@ -1297,6 +1379,14 @@
                 <details>
                     <summary>Wie funktioniert die Synchronisierung zwischen Eltern und Betreuungspersonen?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Jedes angemeldete Konto wird kostenlos in der Cloud gesichert, sodass deine Daten ein neues Handy überstehen und auf all deinen Geräten aktuell bleiben. Mit Premium kannst du Partner, Großeltern oder die Nanny per @Benutzername einladen, und jede Dosis, die sie eintragen, erscheint sofort auf allen Handys.</p>
+                </details>
+                <details>
+                    <summary>Kann meine Kita oder mein Babysitter Parenty nutzen?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Ja. Gehe mit Premium zu Einstellungen → Konto → Kita-Zugang und lade sie über ihren @Benutzernamen ein. Wähle, welche Kinder sie sehen und wie lange. Sie sehen die Medikamente dieser Kinder und wann die letzte Dosis gegeben wurde, und können eintragen, was sie geben; Wachstum, Arztbesuche, Berichte und deine Notizen sehen sie nicht. Ihre Dosen erscheinen in deinem Verlauf mit ihrem Namen, und du kannst den Zugang jederzeit beenden.</p>
+                </details>
+                <details>
+                    <summary>Ich leite eine Kita. Wie nutze ich den Kita-Modus?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Erstelle ein kostenloses Konto und wechsle in den Kita-Modus: Tippe oben auf dem Bildschirm auf den Titel oder gehe zu Einstellungen → App-Modus. Gib den Eltern deinen @Benutzernamen, damit sie dich einladen können. Der Kita-Modus ist für eine Familie kostenlos; mit Parenty Betreuung betreust du so viele Familien, wie du möchtest, und hast Premium für deine eigene Familie. Der Kita-Modus braucht eine Internetverbindung.</p>
                 </details>
                 <details>
                     <summary>Kann ich mehrere Kinder verwalten?<svg class="icon"><use href="#i-chevron"/></svg></summary>
