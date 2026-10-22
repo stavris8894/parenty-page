@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parenty: מעקב תרופות לילדים – תזכורות למינונים ויומן חום</title>
+    <meta name="description" content="Parenty עוזרת להורים ולמטפלים לעקוב אחרי מנות התרופה, החום, התסמינים והביקורים אצל הרופא של הילדים — ולשמור את כולם מעודכנים, כולל הגן, כך שאף מנה לא תידלג ולא תינתן פעמיים." />
+    <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+        // Apply a saved theme choice before first paint; otherwise the system setting applies
+        document.documentElement.classList.add("js");
+        try {
+            const saved = localStorage.getItem("theme");
+            if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+    </script>
+    <meta name="apple-itunes-app" content="app-id=6757712692" />
+    
+    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
+    <meta name="robots" content="index, follow" />
+    
+    <link rel="canonical" href="https://parenty.uk/he/" />
+    <link rel="alternate" hreflang="en" href="https://parenty.uk/" />
+    <link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
+    <link rel="alternate" hreflang="de" href="https://parenty.uk/de/" />
+    <link rel="alternate" hreflang="es" href="https://parenty.uk/es/" />
+    <link rel="alternate" hreflang="fr" href="https://parenty.uk/fr/" />
+    <link rel="alternate" hreflang="it" href="https://parenty.uk/it/" />
+    <link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
+    <link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
+    <link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <link rel="alternate" hreflang="he" href="https://parenty.uk/he/" />
+    <link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
+    <link rel="icon" href="../favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Parenty" />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:locale:alternate" content="el_GR" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta property="og:locale:alternate" content="ar_AR" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:url" content="https://parenty.uk/he/" />
+    <meta property="og:title" content="Parenty – מעקב בריאות ותרופות למשפחה" />
+    <meta property="og:description" content="לעולם לא לפספס מנת תרופה במשפחה. תזכורות חכמות, יומן חום וסנכרון בין כל המטפלים." />
+    <meta property="og:image" content="https://parenty.uk/og-image.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:alt" content="מסכי האפליקציה Parenty עם מנות תרופה שצריך לתת ויומן חום" />
+    
+    <!-- Twitter / X Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Parenty – מעקב בריאות ותרופות למשפחה" />
+    <meta name="twitter:description" content="לעולם לא לפספס מנת תרופה במשפחה. תזכורות חכמות, יומן חום וסנכרון בין כל המטפלים." />
+    <meta name="twitter:image" content="https://parenty.uk/og-image.png" />
+    <meta name="twitter:image:alt" content="מסכי האפליקציה Parenty עם מנות תרופה שצריך לתת ויומן חום" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://parenty.uk/#website",
+    "name": "Parenty",
+    "url": "https://parenty.uk/",
+    "inLanguage": "he",
+    "publisher": {
+      "@id": "https://parenty.uk/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://parenty.uk/#organization",
+    "name": "Parenty",
+    "url": "https://parenty.uk/",
+    "logo": "https://parenty.uk/logo.png",
+    "email": "info@parenty.uk",
+    "founder": {
+      "@type": "Person",
+      "name": "Stavros Georgiou"
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
+      "https://play.google.com/store/apps/details?id=cy.com.parenty"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Parenty",
+    "url": "https://parenty.uk/",
+    "image": "https://parenty.uk/logo.png",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "HealthApplication",
+    "inLanguage": "he",
+    "screenshot": [
+      "https://parenty.uk/screenshots/light/home.jpg",
+      "https://parenty.uk/screenshots/light/history.jpg",
+      "https://parenty.uk/screenshots/light/too-early.jpg",
+      "https://parenty.uk/screenshots/light/daycare-today.jpg"
+    ],
+    "publisher": {
+      "@id": "https://parenty.uk/#organization"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Stavros Georgiou"
+    },
+    "installUrl": [
+      "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
+      "https://play.google.com/store/apps/details?id=cy.com.parenty"
+    ],
+    "description": "Parenty מורידה את הלחץ מניהול תרופות לילדים. עקבו אחרי לוחות מנות, מדידות חום והתקדמות תסמינים עם כל המטפלים במשפחה, וראו את היום של הילד בגן."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Parenty – לא לפספס ולא לתת פעמיים",
+    "description": "סיור קצר ב־Parenty: רישום מנה בנגיעה, לראות מי נתן ומתי, מעקב חום ושיתוף דוח לרופא בנגיעה.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-ad.mp4",
+    "uploadDate": "2026-10-04T18:50:00+03:00",
+    "duration": "PT18S"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Parenty עם Siri ועוזרי Android",
+    "description": "רשמו מנה, שאלו מה הבא בתור ורשמו חום בלי ידיים עם Siri ב־iPhone או עם עוזר ב־Android.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-voice-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-voice-ad.mp4",
+    "uploadDate": "2026-10-09T08:46:00+03:00",
+    "duration": "PT30S"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "מצב גן ב־Parenty: יום בגן",
+    "description": "הגן רושם ארוחה, תנומה וחום מוגבר, וההורה רואה את כל היום במסך הבית וכציר זמן.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
+    "uploadDate": "2026-10-22T20:34:00+03:00",
+    "duration": "PT30S"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "איך עובד הסנכרון בין הורים למטפלים?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כל חשבון מחובר מגובה בענן בחינם, כך שהמידע שורד טלפון חדש ונשאר מעודכן בכל המכשירים שלכם. עם Premium אפשר להזמין את בן או בת הזוג, סבא וסבתא או מטפלת לפי ה־@שם משתמש שלהם, וכל מנה שהם רושמים מופיעה מיד בטלפון של כולם."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "הגן או הבייביסיטר יכולים להשתמש ב־Parenty?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. עם Premium, היכנסו להגדרות → חשבון → גישה לגן והזמינו אותם לפי שם המשתמש של הגן, או סרקו את קוד ה־QR שהם מראים לכם. בחרו אילו ילדים הם רואים ולכמה זמן: שבועיים, חודש, 3 חודשים, שנה או עד שתסירו. הם רואים את התרופות של הילדים האלה, מתי ניתנה המנה האחרונה ומתי מותרת הבאה, ויכולים לרשום מנות, חום, תסמינים, גדילה ואת היום עצמו: ארוחות, שתייה, תנומות, חיתולים, סיר, מצב רוח והערות. אתם רואים את זה במסך הבית תחת „היום ב־” הגן שלכם, בכל רשומה מופיע מי רשם אותה, ואפשר להאריך או לסיים את הגישה בכל עת."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "מה גן יכול לראות?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "רק את הילדים שבחרתם ואת התרופות שלהם, עם מתי ניתנה המנה האחרונה ומתי מותרת הבאה: לא מי נתן אותה, ובלי הערות. גן אף פעם לא רואה את מדידות החום, התסמינים, הגדילה, הביקורים אצל הרופא, הדוחות או ההערות שלכם, ולא יכול להוסיף, לשנות או למחוק את התרופות או הילדים שלכם. מצב גן לא שומר שום דבר על המשפחה שלכם בטלפון של הגן, והגישה נעצרת בתאריך שבחרתם."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "אני מנהל/ת גן. איך משתמשים במצב גן?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "צרו חשבון חינם ועברו למצב גן: הקישו על הכותרת בראש המסך, או היכנסו להגדרות → מצב האפליקציה. הגדירו את שם הגן ושם המשתמש, ואז תנו להורים את שם המשתמש או הראו להם את קוד ה־QR. המשפחות רואות את שם הגן, אף פעם לא את החשבון האישי שלכם. גן בחינם יכול לטפל במשפחה אחת שהזמין הורה עם Premium; ‏Parenty Daycare ‏(9.99 € לחודש או 99.99 € לשנה) מיועד לכמה משפחות שתטפלו בהן וכולל Premium למשפחה שלכם. מצב גן דורש חיבור לאינטרנט."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "אפשר לנהל כמה ילדים?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. לכל ילד פרופיל בצבע משלו, ואפשר לסנן תרופות, חום, תסמינים וביקורים אצל הרופא לפי ילד. התוכנית החינמית כוללת פרופיל ילד אחד; Premium פותח פרופילים ללא הגבלה."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "מה כלול בחינם?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "מעקב תרופות ומנות, תזכורות, רישום חום ותסמינים, פרופיל ילד אחד, רופא אחד עם שני ביקורים, וגיבוי בענן. Premium מוסיף שיתוף משפחתי, פרופילים ורופאים ללא הגבלה, דוחות PDF, גרפי חום והגדרות התראה."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "אפשר להשתמש ב־Parenty עם Siri או עם העוזר ב־Android?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. ב־iPhone, אמרו ל־Siri באנגלית משפטים כמו “Log Ibuprofen in Parenty” או “What's due next in Parenty?” — בלי הגדרות. ב־Android 16 ואילך, עוזרים שתומכים בפעולות אפליקציה יכולים לרשום מנות, חום, משקל וגובה ולבדוק מה הבא בתור. Parenty עדיין מזהירה ממנה מוקדמת מדי, והכול משותף עם המשפחה כרגיל."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "באילו שפות Parenty זמינה?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "אנגלית, ערבית, גרמנית, יוונית, ספרדית, צרפתית, עברית, איטלקית, פורטוגזית וטורקית."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "איך מוחקים את החשבון?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "היכנסו להגדרות הפרופיל ובחרו מחיקת חשבון. החשבון והמידע שלו בענן יימחקו."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "התראות לא מופיעות. מה לבדוק?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ודאו שההתראות של Parenty מותרות בהגדרות הטלפון, שמצב ריכוז או „נא לא להפריע” לא משתיק אותן, ושיש לכם את הגרסה האחרונה של האפליקציה."
+        }
+      }
+    ]
+  }
+]
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../site.css" />
+</head>
+<body>
+    <!-- Icon sprite (Lucide, ISC licence) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></symbol>
+        <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+        <symbol id="i-steth" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+        <symbol id="i-baby" viewBox="0 0 24 24"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+        <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+        <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
+        <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+        <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+        <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
+        <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.4 18.4a9 9 0 0 0 0-12.7"/></symbol>
+        <symbol id="i-apple" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-14 69.5-34.3z"/></symbol>
+        <symbol id="i-play" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.7c18.1-10.5 18.1-49.7-1.2-60.2zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></symbol>
+    </svg>
+
+    <!-- Header Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="brand">
+                <img src="../logo.png" alt="" width="36" height="36" />
+                Parenty
+            </a>
+            <ul class="nav-links">
+                <li><a href="#daycare">גן</a></li>
+                <li><a href="daycare.html">לגנים</a></li>
+                <li><a href="#features">תכונות</a></li>
+                <li><a href="#pricing">מחירים</a></li>
+                <li><a href="#support">שאלות נפוצות</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="מעבר לערכת נושא כהה">
+                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+                <a href="#download" class="btn">הורדה</a>
+            </div>
+        </div>
+        <ul class="nav-chips" aria-label="מעבר אל">
+            <li><a href="#daycare">גן</a></li>
+            <li><a href="daycare.html">לגנים</a></li>
+            <li><a href="#features">תכונות</a></li>
+            <li><a href="#pricing">מחירים</a></li>
+            <li><a href="#support">שאלות נפוצות</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero: one page, two audiences. The switch (shown only with JavaScript) swaps the copy and the phone. -->
+    <section class="hero" id="download" data-audience="families">
+        <div class="container hero-grid">
+            <div>
+                <a class="new-pill" href="#daycare"><span>חדש</span>הכירו את מצב גן<svg class="icon"><use href="#i-arrow"/></svg></a>
+                <div class="audience-switch" role="group" aria-label="למי Parenty מיועדת?">
+                    <button type="button" data-audience="families" aria-pressed="true">למשפחות</button>
+                    <button type="button" data-audience="daycares" aria-pressed="false">לגנים</button>
+                </div>
+                <div class="for-families">
+                    <h1>לא לפספס — ולא לתת פעמיים — <span class="accent">אף מנה.</span></h1>
+                    <p class="hero-sub">Parenty עוקבת אחרי התרופות, החום והביקורים אצל הרופא של הילדים שלכם, ושומרת את כל מי שמטפל בהם מסונכרן, כולל הגן. טיפול רגוע, גם ב־3&nbsp;לפנות בוקר.</p>
+                </div>
+                <div class="for-daycares">
+                    <p class="hero-title">התרופות והיום של כל ילד, <span class="accent">ברשימה אחת.</span></p>
+                    <p class="hero-sub">ראו מה צריך לתת לילדים של כל משפחה, רשמו מנות, חום, ארוחות ותנומות, וההורים רואים את זה מיד. <a href="daycare.html">Parenty לגנים</a></p>
+                </div>
+
+                <div class="store-buttons">
+                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="הורידו את Parenty מה־App Store">
+                        <svg><use href="#i-apple"/></svg>
+                        <span class="store-btn-text"><span class="small">הורדה מה־</span><span class="large">App Store</span></span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="השיגו את Parenty ב־Google Play">
+                        <svg><use href="#i-play"/></svg>
+                        <span class="store-btn-text"><span class="small">זמינה ב־</span><span class="large">Google Play</span></span>
+                    </a>
+                </div>
+                <p class="hero-meta">הורדה חינם · ל־iPhone, ל־iPad ול־Android · ‏10 שפות</p>
+
+                <a class="hero-qr" href="../get.html">
+                    <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
+                    <span><strong>על המחשב?</strong><br>סרקו עם מצלמת הטלפון כדי להוריד את Parenty.</span>
+                </a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="phone video-phone for-families" id="watch">
+                    <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="סרטון תדמית של Parenty"></video>
+                    <button class="video-sound" type="button" aria-label="הפעלת סאונד" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+                <div class="phone for-daycares">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-families.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-families.jpg" alt="מצב גן עם שלוש משפחות, משפחת מילר, משפחת פטל ומשפחת נובאק, וכמה זמן נמשכת הגישה של כל אחת" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof strip -->
+    <section class="proof" aria-label="למה הורים סומכים על Parenty">
+        <ul class="container proof-list">
+            <li><svg class="icon"><use href="#i-check"/></svg>הורדה חינם</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>בלי פרסומות, אף פעם</li>
+            <li><svg class="icon"><use href="#i-lock"/></svg>אנחנו אף פעם לא מוכרים את המידע שלכם</li>
+            <li><svg class="icon"><use href="#i-phone"/></svg>נעילה עם Face ID או טביעת אצבע</li>
+            <li><svg class="icon"><use href="#i-globe"/></svg>10 שפות</li>
+        </ul>
+    </section>
+
+    <!-- Chapter: At home -->
+    <section class="chapter-head" id="at-home">
+        <div class="container">
+            <span class="eyebrow">לכל משפחה</span>
+            <h2>בבית</h2>
+            <p>כל מה שהמשפחה צריכה כדי לתת את המנה הנכונה בזמן הנכון, משותף עם כל מי שעוזר.</p>
+        </div>
+    </section>
+
+    <!-- Spotlight: double-dose guard -->
+    <section class="spotlight" id="dose-check">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">שקט נפשי</span>
+                <h2>לא עוד מנות כפולות ב־3&nbsp;לפנות בוקר.</h2>
+                <p>עייפים ולא בטוחים אם כבר הגיע הזמן? Parenty מזהירה כשמוקדם מדי למנה הבאה, ומראה בדיוק מתי מגיע הזמן.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>תזכורות כל כמה שעות, בשעות קבועות, או כהתראות חזקות</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>אזהרה לפני מנה מוקדמת מדי</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>באיחור, בתהליך והושלם — במבט אחד</li>
+                </ul>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/too-early.jpg" alt="מסך רישום מנה שמזהיר שמוקדם מדי למנה הבאה" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: family sync -->
+    <section class="spotlight reverse" id="sync">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">סנכרון משפחתי</span>
+                <h2>„מישהו נתן לה את התרופה?”</h2>
+                <p>לא תצטרכו לשאול שוב. כל מנה שמישהו רושם מופיעה מיד בכל הטלפונים במשפחה — עם מי נתן ומתי.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>הזמינו את בן או בת הזוג, סבא וסבתא או המטפלת לפי @שם משתמש</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>ראו מי נתן כל מנה בהיסטוריה</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>הטלפון של כולם מתעדכן מיד</li>
+                </ul>
+                <p class="note">גיבוי בענן חינם לכולם. שיתוף עם המשפחה הוא חלק מ־Premium.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/history.jpg" alt="היסטוריית מנות שמראה אילו מנות נתנה מריה" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight: voice (Siri / Android assistants) -->
+    <section class="spotlight" id="voice">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">חדש · בלי ידיים</span>
+                <h2>תינוק על יד אחת? פשוט תבקשו.</h2>
+                <p>רשמו מנה או חום בלי לפתוח את הטלפון או את האפליקציה. אמרו את זה ל־Siri ב־iPhone, או לעוזר ב־Android, ו־Parenty תשתף את זה עם המשפחה.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>“Log Ibuprofen in Parenty”</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>“What's due next in Parenty?”</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>רשמו חום, משקל וגובה, ובדקו את המנה האחרונה</li>
+                </ul>
+                <p class="note">Siri עדיין לא מדברת עברית עם Parenty, אז דברו איתה באנגלית — בלי שום הגדרה. ב־Android, עובד עם עוזרים שתומכים בפעולות אפליקציה ב־Android 16 ואילך.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="סרטון פקודות קוליות של Parenty: רישום מנה עם Siri ורישום חום עם עוזר Android"></video>
+                    <button class="video-sound" type="button" aria-label="הפעלת סאונד" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter: At daycare -->
+    <section class="chapter-head" id="at-daycare">
+        <div class="container">
+            <span class="eyebrow">חדש ב־Parenty 2.0</span>
+            <h2>בגן</h2>
+            <p>הגן, המטפלת או סבא וסבתא רושמים את היום, ואתם רואים אותו בטלפון ברגע שזה קורה.</p>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">להורים</span>
+                <h2>דעו איך עבר היום, עוד לפני האיסוף.</h2>
+                <p>הזמינו את הגן, המטפלת או סבא וסבתא לפי שם המשתמש או בסריקת קוד ה־QR שלהם. הם רושמים תרופות, חום, ארוחות ותנומות, ואתם רואים את היום במסך הבית ברגע שזה קורה.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>רק הילדים שתבחרו, לשבועיים, חודש, 3 חודשים, שנה או עד שתסירו</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>„היום ב־” הגן שלכם במסך הבית, והיום שלהם כציר זמן</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>„נרשם על ידי” בכל מנה, חום, תסמין ומדידת גדילה</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>אזהרה לפני שהם נותנים מנה מוקדמת מדי, גם כזו שנתתם בבית</li>
+                </ul>
+                <p class="note">הזמנת גן היא חלק מ־Premium. אפשר להאריך או לסיים את הגישה בכל עת.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-day-ad.mp4" poster="../video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="סרטון Parenty לגנים: הגן רושם את הארוחה של אמה, את התנומה שלה וחום מוגבר, וההורה רואה את כל היום בטלפון"></video>
+                    <button class="video-sound" type="button" aria-label="הפעלת סאונד" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daycare: how it works, and privacy -->
+    <section class="daycare-steps">
+        <div class="container">
+            <div class="section-header">
+                <h2>איך עובד מצב גן</h2>
+                <p>מגדירים בדקה, בבוקר בגן. אתם מחליטים מי רואה מה, ולכמה זמן.</p>
+            </div>
+            <ol class="steps">
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-invite.jpg" alt="מסך גישה לגן שמזמין את ‎@sunflowerdaycare לראות את אמה לחודש" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>הזמינו את הגן</h3>
+                    <p>הקלידו את שם המשתמש של הגן או סרקו את קוד ה־QR שלו. בחרו אילו ילדים הוא רואה ולכמה זמן.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-today.jpg" alt="מסך הבית עם כרטיס „היום ב־Sunflower Daycare”: ‏37.8 °C, אכלה את רוב הארוחה, תנומה 12:10 עד 13:30, 2 חיתולים, שמחה" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>היום במבט אחד</h3>
+                    <p>כרטיס „היום ב־” במסך הבית מסכם את היום: חום, ארוחות, תנומות, חיתולים ומצב רוח.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-day.jpg" alt="היום של אמה בגן כציר זמן: חיתול, ארוחה, מצב רוח, תנומה וחום מוגבר עם הערה" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>פתחו את כל היום</h3>
+                    <p>כל מה שהם רשמו, לפי הסדר, עם הערות. חזרו אחורה יום אחר יום.</p>
+                </li>
+            </ol>
+            <ul class="privacy-points">
+                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>רק הילדים שתבחרו.</strong> אף פעם לא המדידות שלכם, הגדילה, הביקורים אצל הרופא, הדוחות או ההערות.</span></li>
+                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>שום דבר לא נשמר בטלפון שלהם.</strong> מצב גן קורא בזמן אמת ולא שומר מידע של המשפחה במכשיר.</span></li>
+                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>הגישה מסתיימת בתאריך שבחרתם.</strong> היא נעצרת באותו יום, גם אם אף אחד לא פותח את האפליקציה.</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- For daycares: teaser for daycare.html -->
+    <section class="teaser">
+        <div class="container">
+            <a class="teaser-card" href="daycare.html">
+                <span class="teaser-icon"><svg class="icon"><use href="#i-home"/></svg></span>
+                <span class="teaser-text"><strong>מנהלים גן, או שומרים על ילדים של משפחות אחרות?</strong>ראו את התרופות של כל משפחה ורשמו את היום שלהם במצב גן. חינם למשפחה אחת.</span>
+                <span class="teaser-cta">Parenty לגנים<svg class="icon"><use href="#i-arrow"/></svg></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>הכול במקום אחד ורגוע</h2>
+                <p>נבנתה להורים עייפים: גדולה, ברורה ומהירה, ביום ובלילה.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-alarm"/></svg></div>
+                    <h3>תזכורות &amp; התראות</h3>
+                    <p>מנות כל כמה שעות, למספר ימים מוגדר, או בשעות קבועות. מצב התראה לאלה שאסור לפספס.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-thermo"/></svg></div>
+                    <h3>חום &amp; תסמינים</h3>
+                    <p>רשמו חום ב־°C או ב־°F ותסמינים בסולם 1–5, עם הערות ושעות.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
+                    <h3>מצב גן<span class="tag-new">חדש</span></h3>
+                    <p>הזמינו את הגן לפי שם משתמש או קוד QR, וראו את היום של הילד במסך הבית.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
+                    <h3>סינון רשומות<span class="tag-new">חדש</span></h3>
+                    <p>סננו רשומות לפי מי רשם אותן, אתם או כל גן, לפי יום או טווח תאריכים, מקובצות לפי ילד.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
+                    <h3>גדילה &amp; עקומות</h3>
+                    <p>משקל וגובה לכל ילד, עם עקומות הגדילה של ארגון הבריאות העולמי.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
+                    <h3>רופאים &amp; ביקורים</h3>
+                    <p>רופא הילדים במרחק נגיעה. רשמו ביקורים ומעקבים והוסיפו אותם ליומן.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></div>
+                    <h3>דוחות PDF &amp; CSV</h3>
+                    <p>שתפו סיכום נקי של מנות, חום, תסמינים וביקורים עם הרופא או בחדר המיון.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-baby"/></svg></div>
+                    <h3>כל ילד</h3>
+                    <p>פרופיל בצבע משלו לכל ילד, וסינון לתרופות, רשומות וביקורים.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
+                    <h3>ווידג'טים &amp; קול</h3>
+                    <p>רשמו מנה ממסך הבית, עקבו אחרי הספירה לאחור במסך הנעילה, או פשוט בקשו מ־Siri או מהעוזר ב־Android.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
+                    <h3>iPad &amp; iPhone Duo<span class="tag-new">חדש</span></h3>
+                    <p>סרגל צד ב־iPad, שני המסכים ב־iPhone Duo, והגדרות זו לצד זו במסך הגדול.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
+                    <h3>פרטי &amp; מאובטח</h3>
+                    <p>נעילה אופציונלית עם Face ID,‏ Touch ID או טביעת אצבע. מחיקת החשבון בכל עת. אנחנו אף פעם לא מוכרים את המידע שלכם.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
+                    <h3>10 שפות</h3>
+                    <p>אנגלית, ערבית, גרמנית, יוונית, ספרדית, צרפתית, עברית, איטלקית, פורטוגזית וטורקית.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screens" id="screens">
+        <div class="container">
+            <div class="section-header">
+                <h2>ראו את Parenty בפעולה</h2>
+                <p>בהיר או כהה, לפי הטלפון שלכם.</p>
+            </div>
+            <div class="screens-tabs">
+                <button class="screens-tab active" data-index="0">בית</button>
+                <button class="screens-tab" data-index="1">תזמון</button>
+                <button class="screens-tab" data-index="2">יומן חום</button>
+                <button class="screens-tab" data-index="3">היסטוריה</button>
+                <button class="screens-tab" data-index="4">בדיקת מנה</button>
+            </div>
+        </div>
+        <div class="screens-track" id="screensTrack">
+            <figure>
+                <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="מסך הבית עם תרופות שצריך לתת לאמה" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>כל מנה, במבט אחד</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="מסך תזמון תרופה עם תצוגה מקדימה של ציר המנות" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>תזמון תוך שניות</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="מסך תסמינים עם רשימת מדידות חום" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>מעקב חום לאורך זמן</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/history.jpg" alt="היסטוריית מנות שמראה מי נתן כל מנה" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>ראו מי נתן, ומתי</figcaption>
+            </figure>
+            <figure>
+                <div class="phone"><picture><source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/too-early.jpg" alt="אזהרת „מוקדם מדי” ברישום מנה" loading="lazy" width="600" height="1304"></picture></div>
+                <figcaption>לא עוד מנות כפולות</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Review -->
+    <section class="review" aria-label="מה הורים אומרים">
+        <div class="container">
+            <figure class="review-card">
+                <div class="review-stars" role="img" aria-label="5 מתוך 5 כוכבים">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+                </div>
+                <blockquote>
+                    <p>„חיפשתי בהרבה אפליקציות למעקב תרופות משהו שמראה בבירור מתי נלקחה התרופה בפעם האחרונה ומתי מגיע הזמן שוב. אחרי שניסיתי כמעט 20, מצאתי את Parenty והיא כמעט בדיוק מה שחיפשתי. המפתח גם פתוח מאוד למשוב ומגיב מהר.”</p>
+                </blockquote>
+                <figcaption><strong>Carolyn Johnson</strong> · ביקורת ב־Google Play</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>חינם להתחלה. Premium לשיתוף.</h2>
+                <p>כל מה שצריך לילד אחד חינם. Premium למשפחות שמתחלקות בטיפול, ו־Parenty Daycare למי שמטפל בהרבה משפחות.</p>
+            </div>
+            <div class="plans">
+                <div class="plan">
+                    <h3>חינם</h3>
+                    <p class="plan-price">חינם לתמיד</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>תזמון תרופות, תזכורות ובדיקות מנה</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>רישום חום ותסמינים</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>פרופיל ילד אחד</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>רופא אחד ו־2 ביקורים</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>גיבוי בענן בין המכשירים שלכם</li>
+                    </ul>
+                </div>
+                <div class="plan premium">
+                    <h3>Premium</h3>
+                    <p class="plan-price">חודשי או רכישה חד־פעמית לכל החיים</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>כל מה שיש בחינם</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>שיתוף עם בן או בת הזוג, המשפחה והמטפלים — סנכרון חי</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>ילדים, רופאים וביקורים ללא הגבלה</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>דוחות PDF וגרפי חום</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>הגדרות התראה</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>הזמינו את הגן וראו את היום</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h3>Parenty Daycare</h3>
+                    <p class="plan-price">‏9.99 € לחודש או 99.99 € לשנה · לגנים ולמטפלים</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>כל מה שיש ב־Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>כמה משפחות שתטפלו בהן</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>רישום תרופות, חום, תסמינים, גדילה וטיפול יומי</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>שם, שם משתמש וקוד QR משלו לגן שלכם</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>היסטוריה של כל מה שרשמתם</li>
+                    </ul>
+                    <p class="plan-foot">מצב גן חינם למשפחה אחת שהזמין הורה עם Premium.</p>
+                </div>
+            </div>
+            <p class="pricing-note">האפליקציה מציגה מחירים במטבע המקומי שלכם.</p>
+        </div>
+    </section>
+
+    <!-- FAQ & Support -->
+    <section class="faq" id="support">
+        <div class="container">
+            <div class="section-header">
+                <h2>שאלות &amp; תמיכה</h2>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>איך עובד הסנכרון בין הורים למטפלים?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>כל חשבון מחובר מגובה בענן בחינם, כך שהמידע שורד טלפון חדש ונשאר מעודכן בכל המכשירים שלכם. עם Premium אפשר להזמין את בן או בת הזוג, סבא וסבתא או מטפלת לפי ה־@שם משתמש שלהם, וכל מנה שהם רושמים מופיעה מיד בטלפון של כולם.</p>
+                </details>
+                <details>
+                    <summary>הגן או הבייביסיטר יכולים להשתמש ב־Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>כן. עם Premium, היכנסו להגדרות → חשבון → גישה לגן והזמינו אותם לפי שם המשתמש של הגן, או סרקו את קוד ה־QR שהם מראים לכם. בחרו אילו ילדים הם רואים ולכמה זמן: שבועיים, חודש, 3 חודשים, שנה או עד שתסירו. הם רואים את התרופות של הילדים האלה, מתי ניתנה המנה האחרונה ומתי מותרת הבאה, ויכולים לרשום מנות, חום, תסמינים, גדילה ואת היום עצמו: ארוחות, שתייה, תנומות, חיתולים, סיר, מצב רוח והערות. אתם רואים את זה במסך הבית תחת „היום ב־” הגן שלכם, בכל רשומה מופיע מי רשם אותה, ואפשר להאריך או לסיים את הגישה בכל עת.</p>
+                </details>
+                <details>
+                    <summary>מה גן יכול לראות?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>רק את הילדים שבחרתם ואת התרופות שלהם, עם מתי ניתנה המנה האחרונה ומתי מותרת הבאה: לא מי נתן אותה, ובלי הערות. גן אף פעם לא רואה את מדידות החום, התסמינים, הגדילה, הביקורים אצל הרופא, הדוחות או ההערות שלכם, ולא יכול להוסיף, לשנות או למחוק את התרופות או הילדים שלכם. מצב גן לא שומר שום דבר על המשפחה שלכם בטלפון של הגן, והגישה נעצרת בתאריך שבחרתם.</p>
+                </details>
+                <details>
+                    <summary>אני מנהל/ת גן. איך משתמשים במצב גן?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>צרו חשבון חינם ועברו למצב גן: הקישו על הכותרת בראש המסך, או היכנסו להגדרות → מצב האפליקציה. הגדירו את שם הגן ושם המשתמש, ואז תנו להורים את שם המשתמש או הראו להם את קוד ה־QR. המשפחות רואות את שם הגן, אף פעם לא את החשבון האישי שלכם. גן בחינם יכול לטפל במשפחה אחת שהזמין הורה עם Premium; ‏Parenty Daycare ‏(9.99 € לחודש או 99.99 € לשנה) מיועד לכמה משפחות שתטפלו בהן וכולל Premium למשפחה שלכם. מצב גן דורש חיבור לאינטרנט.</p>
+                </details>
+                <details>
+                    <summary>אפשר לנהל כמה ילדים?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>כן. לכל ילד פרופיל בצבע משלו, ואפשר לסנן תרופות, חום, תסמינים וביקורים אצל הרופא לפי ילד. התוכנית החינמית כוללת פרופיל ילד אחד; Premium פותח פרופילים ללא הגבלה.</p>
+                </details>
+                <details>
+                    <summary>מה כלול בחינם?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>מעקב תרופות ומנות, תזכורות, רישום חום ותסמינים, פרופיל ילד אחד, רופא אחד עם שני ביקורים, וגיבוי בענן. Premium מוסיף שיתוף משפחתי, פרופילים ורופאים ללא הגבלה, דוחות PDF, גרפי חום והגדרות התראה.</p>
+                </details>
+                <details>
+                    <summary>אפשר להשתמש ב־Parenty עם Siri או עם העוזר ב־Android?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>כן. ב־iPhone, אמרו ל־Siri באנגלית משפטים כמו “Log Ibuprofen in Parenty” או “What's due next in Parenty?” — בלי הגדרות. ב־Android 16 ואילך, עוזרים שתומכים בפעולות אפליקציה יכולים לרשום מנות, חום, משקל וגובה ולבדוק מה הבא בתור. Parenty עדיין מזהירה ממנה מוקדמת מדי, והכול משותף עם המשפחה כרגיל.</p>
+                </details>
+                <details>
+                    <summary>באילו שפות Parenty זמינה?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>אנגלית, ערבית, גרמנית, יוונית, ספרדית, צרפתית, עברית, איטלקית, פורטוגזית וטורקית.</p>
+                </details>
+                <details>
+                    <summary>איך מוחקים את החשבון?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>היכנסו להגדרות הפרופיל ובחרו מחיקת חשבון. החשבון והמידע שלו בענן יימחקו.</p>
+                </details>
+                <details>
+                    <summary>התראות לא מופיעות. מה לבדוק?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>ודאו שההתראות של Parenty מותרות בהגדרות הטלפון, שמצב ריכוז או „נא לא להפריע” לא משתיק אותן, ושיש לכם את הגרסה האחרונה של האפליקציה.</p>
+                </details>
+            </div>
+            <p class="faq-contact">עדיין צריכים עזרה? כתבו ל־<a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-box">
+                <img src="../logo.png" alt="" width="64" height="64" />
+                <h2>טיפול רגוע, <span>גם ב־3&nbsp;לפנות בוקר.</span></h2>
+                <p>הורדה חינם ל־iPhone ול־Android.</p>
+                <div class="store-buttons">
+                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="הורידו את Parenty מה־App Store">
+                        <svg><use href="#i-apple"/></svg>
+                        <span class="store-btn-text"><span class="small">הורדה מה־</span><span class="large">App Store</span></span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="השיגו את Parenty ב־Google Play">
+                        <svg><use href="#i-play"/></svg>
+                        <span class="store-btn-text"><span class="small">זמינה ב־</span><span class="large">Google Play</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phones: a download bar that appears after the hero and hides at the closing call to action -->
+    <a class="sticky-get" href="../get.html">
+        <img src="../logo.png" alt="" width="32" height="32" />
+        <span><strong>Parenty</strong>חינם ל־iPhone ול־Android</span>
+        <span class="btn">להורדת האפליקציה</span>
+    </a>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© <span id="year"></span> Parenty · פותחה על ידי Stavros Georgiou</p>
+            <nav>
+                <a href="#features">תכונות</a>
+                <a href="#pricing">מחירים</a>
+                <a href="#support">תמיכה</a>
+                <a href="../privacy.html">מדיניות פרטיות</a>
+                <a href="../terms.html">תנאי שימוש</a>
+            </nav>
+            <nav class="langs" aria-label="שפה" translate="no">
+                <a hreflang="en" lang="en" href="../">English</a>
+                <a hreflang="el" lang="el" href="../el/">Ελληνικά</a>
+                <a hreflang="de" lang="de" href="../de/">Deutsch</a>
+                <a hreflang="es" lang="es" href="../es/">Español</a>
+                <a hreflang="fr" lang="fr" href="../fr/">Français</a>
+                <a hreflang="it" lang="it" href="../it/">Italiano</a>
+                <a hreflang="pt" lang="pt" href="../pt/">Português</a>
+                <a hreflang="tr" lang="tr" href="../tr/">Türkçe</a>
+                <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
+                <a hreflang="he" lang="he" href="../he/" aria-current="page">עברית</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Theme toggle: the visitor's saved choice wins over the system setting
+        const themeToggle = document.getElementById("themeToggle");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+        const darkSources = document.querySelectorAll('source[media="(prefers-color-scheme: dark)"]');
+        const applyTheme = () => {
+            const dark = (document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light")) === "dark";
+            // Screenshots pick their dark/light image through <source media>, so steer that too
+            darkSources.forEach((source) => source.media = dark ? "all" : "not all");
+            document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.content = dark ? "#0d0817" : "#faf8ff");
+            themeToggle.querySelector(".icon-sun").style.display = dark ? "" : "none";
+            themeToggle.querySelector(".icon-moon").style.display = dark ? "none" : "";
+            themeToggle.setAttribute("aria-label", dark ? "מעבר לערכת נושא בהירה" : "מעבר לערכת נושא כהה");
+        };
+        themeToggle.addEventListener("click", () => {
+            const next = themeToggle.getAttribute("aria-label") === "מעבר לערכת נושא בהירה" ? "light" : "dark";
+            document.documentElement.dataset.theme = next;
+            try { localStorage.setItem("theme", next); } catch (e) {}
+            applyTheme();
+        });
+        systemDark.addEventListener("change", applyTheme);
+        applyTheme();
+
+        // Promo videos: play while on screen (not with reduced motion), one with sound at a time
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const players = [...document.querySelectorAll(".video-phone")].map((box) => ({
+            video: box.querySelector("video"),
+            button: box.querySelector(".video-sound"),
+        }));
+        const setMuted = ({ video, button }, muted) => {
+            video.muted = muted;
+            button.querySelector("use").setAttribute("href", muted ? "#i-muted" : "#i-sound");
+            button.setAttribute("aria-label", muted ? "הפעלת סאונד" : "השתקת סאונד");
+            button.setAttribute("aria-pressed", String(!muted));
+        };
+        players.forEach((player) => {
+            const { video, button } = player;
+            if (reducedMotion) {
+                video.removeAttribute("autoplay");
+                video.pause();
+                video.controls = true;
+            }
+            button.addEventListener("click", () => {
+                const muted = !video.muted;
+                if (!muted) players.forEach((other) => other !== player && setMuted(other, true));
+                setMuted(player, muted);
+                if (!muted) video.play();
+            });
+        });
+        if (!reducedMotion && "IntersectionObserver" in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(({ target, isIntersecting }) => {
+                    if (isIntersecting) target.play().catch(() => {});
+                    else target.pause();
+                });
+            }, { threshold: 0.4 });
+            players.forEach(({ video }) => observer.observe(video));
+        }
+
+        // Hero: "For families" / "For daycares" swaps the copy and the phone
+        const hero = document.querySelector(".hero");
+        const audienceButtons = hero.querySelectorAll(".audience-switch button");
+        audienceButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                hero.dataset.audience = button.dataset.audience;
+                audienceButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+            });
+        });
+
+        // Phones: show the download bar once the hero's store buttons scroll away, hide it at the closing call to action
+        const stickyGet = document.querySelector(".sticky-get");
+        if (stickyGet && "IntersectionObserver" in window) {
+            const seen = new Map();
+            const watched = [document.querySelector(".hero .store-buttons"), document.querySelector(".cta"), document.querySelector("footer")];
+            const stickyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(({ target, isIntersecting }) => seen.set(target, isIntersecting));
+                const heroGone = seen.get(watched[0]) === false && watched[0].getBoundingClientRect().top < 0;
+                stickyGet.classList.toggle("show", heroGone && !seen.get(watched[1]) && !seen.get(watched[2]));
+            });
+            watched.forEach((el) => stickyObserver.observe(el));
+        }
+
+        // Screenshot tabs <-> track
+        const track = document.getElementById("screensTrack");
+        const figures = track.querySelectorAll("figure");
+        const tabs = document.querySelectorAll(".screens-tab");
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                const fig = figures[Number(tab.dataset.index)];
+                track.scrollTo({ left: fig.offsetLeft - (track.clientWidth - fig.offsetWidth) / 2, behavior: "smooth" });
+            });
+        });
+        let scrollTimeout;
+        track.addEventListener("scroll", () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const center = track.scrollLeft + track.clientWidth / 2;
+                let closest = 0;
+                figures.forEach((fig, i) => {
+                    const d = Math.abs(fig.offsetLeft + fig.offsetWidth / 2 - center);
+                    const best = Math.abs(figures[closest].offsetLeft + figures[closest].offsetWidth / 2 - center);
+                    if (d < best) closest = i;
+                });
+                tabs.forEach((t, i) => t.classList.toggle("active", i === closest));
+            }, 60);
+        }, { passive: true });
+    </script>
+</body>
+</html>
