@@ -17,7 +17,7 @@
     </script>
     <meta name="apple-itunes-app" content="app-id=6757712692" />
     
-    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log" />
+    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
     <meta name="robots" content="index, follow" />
     
     <link rel="canonical" href="https://parenty.uk/pt/" />
@@ -105,7 +105,8 @@
     "screenshot": [
       "https://parenty.uk/screenshots/light/home.jpg",
       "https://parenty.uk/screenshots/light/history.jpg",
-      "https://parenty.uk/screenshots/light/too-early.jpg"
+      "https://parenty.uk/screenshots/light/too-early.jpg",
+      "https://parenty.uk/screenshots/light/daycare-today.jpg"
     ],
     "publisher": {
       "@id": "https://parenty.uk/#organization"
@@ -123,7 +124,7 @@
       "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
       "https://play.google.com/store/apps/details?id=cy.com.parenty"
     ],
-    "description": "O Parenty tira o estresse de cuidar dos remédios das crianças. Registre agendas de doses, temperaturas e a evolução dos sintomas com todos os cuidadores da família."
+    "description": "O Parenty tira o estresse de cuidar dos remédios das crianças. Registre agendas de doses, temperaturas e a evolução dos sintomas com todos os cuidadores da família, e veja o dia do seu filho na creche."
   },
   {
     "@context": "https://schema.org",
@@ -147,6 +148,16 @@
   },
   {
     "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Modo creche do Parenty: um dia na creche",
+    "description": "A creche registra uma refeição, uma soneca e uma temperatura elevada, e o pai ou a mãe vê o dia inteiro na tela inicial e como linha do tempo.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
+    "uploadDate": "2026-10-22T20:34:00+03:00",
+    "duration": "PT30S"
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -162,7 +173,15 @@
         "name": "Minha creche ou babá pode usar o Parenty?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. Com o Premium, vá em Configurações → Conta → Acesso de creche e convide-os pelo @usuário. Escolha quais filhos eles veem e por quanto tempo. Eles veem os remédios desses filhos e quando foi a última dose, e podem registrar o que dão; não veem crescimento, consultas, relatórios nem suas anotações. As doses deles aparecem no seu histórico com o nome deles, e você pode encerrar o acesso quando quiser."
+          "text": "Sim. Com o Premium, vá em Ajustes → Conta → Acesso de creche e convide pelo nome de usuário da creche, ou escaneie o QR code que mostrarem. Escolha quais crianças eles veem e por quanto tempo: 2 semanas, 1 mês, 3 meses, 1 ano ou até você remover. Eles veem os remédios dessas crianças, quando foi dada a última dose e quando a próxima é permitida, e podem registrar doses, temperaturas, sintomas, crescimento e o próprio dia: refeições, bebidas, sonecas, fraldas, penico, humor e notas. Você vê tudo na tela inicial como “Hoje na” sua creche, cada registro mostra quem o fez, e você pode estender ou encerrar o acesso quando quiser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que uma creche vê?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Só as crianças que você escolheu e os remédios delas, com quando foi dada a última dose e quando a próxima é permitida: não quem deu, nem notas. Uma creche nunca vê suas próprias temperaturas, sintomas, crescimento, consultas, relatórios ou notas, e não pode adicionar, alterar ou apagar seus remédios ou filhos. O modo creche não guarda nada da sua família no celular da creche, e o acesso termina na data que você escolheu."
         }
       },
       {
@@ -170,7 +189,7 @@
         "name": "Tenho uma creche. Como uso o Modo creche?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Crie uma conta grátis e mude para o Modo creche: toque no título no topo da tela ou vá em Configurações → Modo do app. Passe seu @usuário para os pais convidarem você. O Modo creche é grátis para uma família; com o Parenty Creche você cuida de quantas famílias quiser e tem o Premium para a sua própria família. O Modo creche precisa de conexão com a internet."
+          "text": "Crie uma conta grátis e mude para o modo creche: toque no título no topo da tela ou vá em Ajustes → Modo do app. Configure o nome e o nome de usuário da sua creche e passe o nome de usuário aos pais ou mostre seu QR code. As famílias veem o nome da sua creche, nunca sua conta pessoal. Uma creche grátis pode atender uma família convidada por um pai ou mãe com Premium; o Parenty Creche (€ 9,99 por mês ou € 99,99 por ano) é para todas as famílias que você atende e inclui o Premium para a sua própria família. O modo creche precisa de conexão com a internet."
         }
       },
       {
@@ -202,7 +221,7 @@
         "name": "Em quais idiomas o Parenty está disponível?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Inglês, árabe, alemão, grego, espanhol, francês, italiano, português e turco."
+          "text": "Inglês, árabe, alemão, grego, espanhol, francês, hebraico, italiano, português e turco."
         }
       },
       {
@@ -640,6 +659,88 @@
             z-index: -1;
         }
 
+        /* Daycare: how it works */
+        .daycare-steps { padding: 0 0 96px; }
+
+        .steps {
+            list-style: none;
+            counter-reset: step;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .step { counter-increment: step; text-align: center; }
+
+        .step .phone { max-width: 240px; border-radius: 38px; padding: 7px; margin-bottom: 24px; }
+        .step .phone img { border-radius: 31px; }
+
+        .step h3 {
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step h3::before {
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-inline-end: 10px;
+            border-radius: 50%;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            font-size: 15px;
+            vertical-align: 2px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 15.5px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .privacy-points {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .privacy-points li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 22px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--muted);
+            font-size: 14.5px;
+        }
+
+        .privacy-points .icon { color: var(--accent); margin-top: 2px; }
+        .privacy-points strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 2px; }
+
+        .tag-new {
+            display: inline-block;
+            margin-inline-start: 8px;
+            padding: 2px 8px;
+            border-radius: 99px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            vertical-align: 3px;
+        }
+
         /* Review */
         .review { padding: 0 0 96px; }
 
@@ -990,6 +1091,10 @@
             .spotlight-grid { gap: 40px; }
             .spotlight.reverse .spotlight-visual { order: 0; }
             .spotlight .phone { max-width: 260px; }
+            .steps, .privacy-points { grid-template-columns: 1fr; }
+            .steps { gap: 48px; }
+            .privacy-points { margin-top: 48px; gap: 12px; }
+            .daycare-steps { padding-bottom: 64px; }
             .features, .screens, .pricing, .faq { padding: 64px 0; }
             .cta { padding-bottom: 64px; }
         }
@@ -1026,6 +1131,10 @@
         <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+        <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+        <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
+        <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
         <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
         <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.4 18.4a9 9 0 0 0 0-12.7"/></symbol>
@@ -1075,7 +1184,7 @@
                         <span class="store-btn-text"><span class="small">Disponível no</span><span class="large">Google Play</span></span>
                     </a>
                 </div>
-                <p class="hero-meta">Download gratuito · iPhone e Android · 9 idiomas</p>
+                <p class="hero-meta">Download gratuito · iPhone e Android · 10 idiomas</p>
 
                 <a class="hero-qr" href="../get.html">
                     <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
@@ -1146,19 +1255,20 @@
     <section class="spotlight reverse" id="daycare">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Novo · Creche</span>
-                <h2>Os remédios deles, acompanhados também na creche.</h2>
-                <p>Convide a creche, a babá ou os avós pelo @usuário. Eles veem qual remédio está na hora e quando foi a última dose, e cada dose que registram aparece no seu histórico com o nome deles.</p>
+                <span class="eyebrow">Novo · Modo creche</span>
+                <h2>Saiba como foi o dia antes de buscar.</h2>
+                <p>Convide sua creche, babá ou os avós pelo nome de usuário ou escaneando o QR code deles. Eles registram remédios, temperaturas, refeições e sonecas, e você vê o dia na tela inicial na hora.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Só os filhos que você escolher, de 2 semanas a um ano, ou até você remover</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Um aviso antes de dar uma dose cedo demais</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Sem crescimento, consultas ou anotações: só os remédios e o que deram</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Só as crianças que você escolher, por 2 semanas, 1 mês, 3 meses, 1 ano ou até você remover</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>“Hoje na” sua creche na tela inicial, e o dia como uma linha do tempo</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>“Registrado por” em cada dose, temperatura, sintoma e medida de crescimento</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Um aviso antes de darem uma dose cedo demais, mesmo uma que você deu em casa</li>
                 </ul>
                 <p class="note">Convidar uma creche faz parte do Premium. Estenda ou encerre o acesso quando quiser.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone video-phone">
-                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Vídeo do Parenty Creche: um pai convida a creche, a creche vê o que está na hora e registra uma dose, e o pai vê no histórico dele"></video>
+                    <video src="../video/parenty-daycare-day-ad.mp4" poster="../video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Vídeo do Parenty Creche: a creche registra a refeição da Emma, a soneca e uma temperatura elevada, e quem cuida dela vê o dia inteiro no celular"></video>
                     <button class="video-sound" type="button" aria-label="Ativar som" aria-pressed="false">
                         <svg class="icon"><use href="#i-muted"/></svg>
                     </button>
@@ -1167,25 +1277,58 @@
         </div>
     </section>
 
+    <!-- Daycare: how it works, and privacy -->
+    <section class="daycare-steps">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como funciona o modo creche</h2>
+                <p>Configurado em um minuto na hora de deixar. Você decide quem vê o quê, e por quanto tempo.</p>
+            </div>
+            <ol class="steps">
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-invite.jpg" alt="Tela de acesso de creche convidando @sunflowerdaycare para ver a Emma por 1 mês" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Convide sua creche</h3>
+                    <p>Digite o nome de usuário da creche ou escaneie o QR code. Escolha quais crianças ela vê e por quanto tempo.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-today.jpg" alt="Tela inicial com um card “Hoje na Sunflower Daycare”: 37,8 °C, comeu quase tudo, soneca das 12:10 às 13:30, 2 fraldas, feliz" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>O dia num relance</h3>
+                    <p>Um card “Hoje na” na tela inicial resume o dia: temperatura, refeições, sonecas, fraldas e humor.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-day.jpg" alt="O dia da Emma na creche como linha do tempo: fralda, refeição, humor, soneca e uma temperatura elevada com uma nota" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Abra o dia inteiro</h3>
+                    <p>Tudo o que registraram, em ordem, com notas. Volte um dia de cada vez.</p>
+                </li>
+            </ol>
+            <ul class="privacy-points">
+                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>Só as crianças que você escolher.</strong> Nunca suas próprias temperaturas, crescimento, consultas, relatórios ou notas.</span></li>
+                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>Nada salvo no celular deles.</strong> O modo creche lê ao vivo e não guarda dados da família no aparelho.</span></li>
+                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>O acesso termina na data que você escolheu.</strong> Ele para nesse dia, mesmo que ninguém abra o app.</span></li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Spotlight: Daycare mode, for daycares -->
-    <section class="spotlight">
+    <section class="spotlight" id="for-daycares">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Para creches &amp; cuidadores</span>
+                <span class="eyebrow">Para creches, babás &amp; avós</span>
                 <h2>Cuida de filhos de outras famílias?</h2>
-                <p>Mude o Parenty para o Modo creche. Cada família que convidou você fica em uma lista, só com os filhos que escolheu e os remédios de hoje.</p>
+                <p>Mude o Parenty para o modo creche e dê à sua creche um nome e nome de usuário próprios. Todas as famílias que convidaram você ficam em uma lista, só com as crianças que escolheram.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Registre uma dose com um toque, e os pais veem no histórico deles</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Seu próprio histórico de cada dose que você deu, para cada família</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Sua própria família fica separada: volte pelo título no topo</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Veja quais remédios estão na hora, quando foi dada a última dose e quando a próxima é permitida</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Registre doses, temperaturas, sintomas e crescimento</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Registre o dia: refeições, bebidas, sonecas, fraldas, penico, humor e notas</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Um histórico de tudo o que você registrou, para cada família</li>
                 </ul>
-                <p class="note">Grátis para uma família. O Parenty Creche é para quantas famílias você cuidar e inclui o Premium.</p>
+                <p class="note">Grátis para uma família convidada por um pai ou mãe com Premium. O Parenty Creche é para todas as famílias que você atende e inclui o Premium.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone">
                     <picture>
                         <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/daycare-family.jpg" alt="Modo creche mostrando os remédios da Emma, quando a próxima dose de Ibuprofeno é permitida e um botão para registrar dose" loading="lazy" width="600" height="1304">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Modo creche com a amoxicilina da Emma, que pode ser dada agora, um botão para registrar a dose e botões de Temperatura, Sintoma, Crescimento e Cuidados do dia" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1250,6 +1393,21 @@
                     <p>Registre temperaturas em °C ou °F e sintomas numa escala de 1 a 5, com notas e horários.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
+                    <h3>Modo creche<span class="tag-new">Novo</span></h3>
+                    <p>Convide sua creche por nome de usuário ou QR code e veja o dia do seu filho na tela inicial.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
+                    <h3>Filtros de registros<span class="tag-new">Novo</span></h3>
+                    <p>Filtre registros por quem os fez, você ou cada creche, por dia ou período, agrupados por criança.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
+                    <h3>Crescimento &amp; gráficos</h3>
+                    <p>Peso e altura de cada criança, com as curvas de crescimento da OMS.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
                     <h3>Médicos e consultas</h3>
                     <p>Seu pediatra a um toque. Registre consultas e retornos e adicione-os à sua agenda.</p>
@@ -1270,14 +1428,19 @@
                     <p>Registre uma dose pela Tela de Início, acompanhe a contagem regressiva na Tela Bloqueada ou simplesmente pergunte à Siri ou ao seu assistente do Android.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
+                    <h3>iPad &amp; iPhone Duo<span class="tag-new">Novo</span></h3>
+                    <p>Uma barra lateral no iPad, as duas telas no iPhone Duo e os ajustes lado a lado na tela grande.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
                     <h3>Privado e seguro</h3>
                     <p>Bloqueio opcional com Face ID, Touch ID ou impressão digital. Exclua sua conta quando quiser. Nunca vendemos seus dados.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>9 idiomas</h3>
-                    <p>Inglês, árabe, alemão, grego, espanhol, francês, italiano, português e turco.</p>
+                    <h3>10 idiomas</h3>
+                    <p>Inglês, árabe, alemão, grego, espanhol, francês, hebraico, italiano, português e turco.</p>
                 </div>
             </div>
         </div>
@@ -1350,22 +1513,23 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Crianças, médicos e consultas ilimitados</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Relatórios em PDF e gráficos de febre</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Configurações de alarme</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Convide sua creche</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Convide sua creche e veja o dia</li>
                     </ul>
                 </div>
                 <div class="plan">
                     <h3>Parenty Creche</h3>
-                    <p class="plan-price">Para creches e cuidadores · mensal ou anual</p>
+                    <p class="plan-price">€ 9,99 por mês ou € 99,99 por ano · para creches e cuidadores</p>
                     <ul class="checklist">
                         <li><svg class="icon"><use href="#i-check"/></svg>Tudo do Premium</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Quantas famílias você cuidar</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Registre doses para os filhos de cada família</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Seu próprio histórico de cada dose que você deu</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Registre remédios, temperaturas, sintomas, crescimento e cuidados do dia</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Nome, nome de usuário e QR code próprios para sua creche</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Um histórico de tudo o que você registrou</li>
                     </ul>
-                    <p class="plan-foot">O Modo creche é grátis para uma família.</p>
+                    <p class="plan-foot">O modo creche é grátis para uma família convidada por um pai ou mãe com Premium.</p>
                 </div>
             </div>
-            <p class="pricing-note">Os preços aparecem no app na sua moeda local.</p>
+            <p class="pricing-note">O app mostra os preços na sua moeda local.</p>
         </div>
     </section>
 
@@ -1382,11 +1546,15 @@
                 </details>
                 <details>
                     <summary>Minha creche ou babá pode usar o Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Sim. Com o Premium, vá em Configurações → Conta → Acesso de creche e convide-os pelo @usuário. Escolha quais filhos eles veem e por quanto tempo. Eles veem os remédios desses filhos e quando foi a última dose, e podem registrar o que dão; não veem crescimento, consultas, relatórios nem suas anotações. As doses deles aparecem no seu histórico com o nome deles, e você pode encerrar o acesso quando quiser.</p>
+                    <p>Sim. Com o Premium, vá em Ajustes → Conta → Acesso de creche e convide pelo nome de usuário da creche, ou escaneie o QR code que mostrarem. Escolha quais crianças eles veem e por quanto tempo: 2 semanas, 1 mês, 3 meses, 1 ano ou até você remover. Eles veem os remédios dessas crianças, quando foi dada a última dose e quando a próxima é permitida, e podem registrar doses, temperaturas, sintomas, crescimento e o próprio dia: refeições, bebidas, sonecas, fraldas, penico, humor e notas. Você vê tudo na tela inicial como “Hoje na” sua creche, cada registro mostra quem o fez, e você pode estender ou encerrar o acesso quando quiser.</p>
+                </details>
+                <details>
+                    <summary>O que uma creche vê?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Só as crianças que você escolheu e os remédios delas, com quando foi dada a última dose e quando a próxima é permitida: não quem deu, nem notas. Uma creche nunca vê suas próprias temperaturas, sintomas, crescimento, consultas, relatórios ou notas, e não pode adicionar, alterar ou apagar seus remédios ou filhos. O modo creche não guarda nada da sua família no celular da creche, e o acesso termina na data que você escolheu.</p>
                 </details>
                 <details>
                     <summary>Tenho uma creche. Como uso o Modo creche?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Crie uma conta grátis e mude para o Modo creche: toque no título no topo da tela ou vá em Configurações → Modo do app. Passe seu @usuário para os pais convidarem você. O Modo creche é grátis para uma família; com o Parenty Creche você cuida de quantas famílias quiser e tem o Premium para a sua própria família. O Modo creche precisa de conexão com a internet.</p>
+                    <p>Crie uma conta grátis e mude para o modo creche: toque no título no topo da tela ou vá em Ajustes → Modo do app. Configure o nome e o nome de usuário da sua creche e passe o nome de usuário aos pais ou mostre seu QR code. As famílias veem o nome da sua creche, nunca sua conta pessoal. Uma creche grátis pode atender uma família convidada por um pai ou mãe com Premium; o Parenty Creche (€ 9,99 por mês ou € 99,99 por ano) é para todas as famílias que você atende e inclui o Premium para a sua própria família. O modo creche precisa de conexão com a internet.</p>
                 </details>
                 <details>
                     <summary>Posso cuidar de várias crianças?<svg class="icon"><use href="#i-chevron"/></svg></summary>
@@ -1402,7 +1570,7 @@
                 </details>
                 <details>
                     <summary>Em quais idiomas o Parenty está disponível?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Inglês, árabe, alemão, grego, espanhol, francês, italiano, português e turco.</p>
+                    <p>Inglês, árabe, alemão, grego, espanhol, francês, hebraico, italiano, português e turco.</p>
                 </details>
                 <details>
                     <summary>Como excluo minha conta?<svg class="icon"><use href="#i-chevron"/></svg></summary>

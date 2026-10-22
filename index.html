@@ -17,7 +17,7 @@
     </script>
     <meta name="apple-itunes-app" content="app-id=6757712692" />
     
-    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log" />
+    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
     <meta name="robots" content="index, follow" />
     
     <link rel="canonical" href="https://parenty.uk/" />
@@ -100,7 +100,8 @@
         "screenshot": [
           "https://parenty.uk/screenshots/light/home.jpg",
           "https://parenty.uk/screenshots/light/history.jpg",
-          "https://parenty.uk/screenshots/light/too-early.jpg"
+          "https://parenty.uk/screenshots/light/too-early.jpg",
+          "https://parenty.uk/screenshots/light/daycare-today.jpg"
         ],
         "publisher": { "@id": "https://parenty.uk/#organization" },
         "offers": {
@@ -116,7 +117,7 @@
           "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
           "https://play.google.com/store/apps/details?id=cy.com.parenty"
         ],
-        "description": "Parenty takes the stress out of pediatric medication management. Track dose schedules, fever temperatures, and symptom recovery across all family caregivers."
+        "description": "Parenty takes the stress out of pediatric medication management. Track dose schedules, fever temperatures, and symptom recovery across all family caregivers, and see your child's day at daycare."
       },
       {
         "@context": "https://schema.org",
@@ -140,6 +141,16 @@
       },
       {
         "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Parenty Daycare mode: a day at daycare",
+        "description": "The daycare logs a meal, a nap and a raised temperature, and the parent sees the whole day on Home and as a timeline.",
+        "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
+        "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
+        "uploadDate": "2026-10-22T20:34:00+03:00",
+        "duration": "PT30S"
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -155,7 +166,15 @@
             "name": "Can my daycare or babysitter use Parenty?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. With Premium, go to Settings \u2192 Account \u2192 Daycare access and invite them by their @username. Choose which children they see and for how long. They see those children's medicines and when the last dose was given, and can log what they give; they don't see growth, doctor visits, reports or your notes. Their doses appear in your history with their name, and you can end access any time."
+              "text": "Yes. With Premium, go to Settings \u2192 Account \u2192 Daycare access and invite them by their daycare username, or scan the QR code they show you. Choose which children they see and for how long: 2 weeks, 1 month, 3 months, 1 year or until you remove them. They see those children's medicines with when the last dose was given and when the next one is allowed, and can log doses, temperatures, symptoms, growth and the day itself: meals, drinks, naps, diapers, potty, mood and notes. You see it on Home as \u201cToday at\u201d your daycare, every entry shows who logged it, and you can extend or end access any time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What can a daycare see?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only the children you chose and their medicines, with when the last dose was given and when the next one is allowed: not who gave it, and no notes. A daycare never sees your own temperatures, symptoms, growth, doctor visits, reports or notes, and can't add, change or delete your medicines or children. Daycare mode keeps nothing about your family on the daycare's phone, and access stops on the date you chose."
             }
           },
           {
@@ -163,7 +182,7 @@
             "name": "I run a daycare. How do I use Daycare mode?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Create a free account, then switch to Daycare mode: tap the title at the top of the screen, or go to Settings \u2192 App mode. Give parents your @username so they can invite you. Daycare mode is free for one family; Parenty Daycare lets you look after as many families as you like and includes Premium for your own family. Daycare mode needs an internet connection."
+              "text": "Create a free account, then switch to Daycare mode: tap the title at the top of the screen, or go to Settings \u2192 App mode. Set up your daycare's name and username, then give parents the username or show them your QR code. Families see your daycare's name, never your personal account. A free daycare can look after one family invited by a Premium parent; Parenty Daycare (\u20ac9.99 a month or \u20ac99.99 a year) is for as many families as you look after and includes Premium for your own family. Daycare mode needs an internet connection."
             }
           },
           {
@@ -195,7 +214,7 @@
             "name": "Which languages does Parenty support?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish."
+              "text": "English, Arabic, German, Greek, Spanish, French, Hebrew, Italian, Portuguese and Turkish."
             }
           },
           {
@@ -633,6 +652,88 @@
             z-index: -1;
         }
 
+        /* Daycare: how it works */
+        .daycare-steps { padding: 0 0 96px; }
+
+        .steps {
+            list-style: none;
+            counter-reset: step;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .step { counter-increment: step; text-align: center; }
+
+        .step .phone { max-width: 240px; border-radius: 38px; padding: 7px; margin-bottom: 24px; }
+        .step .phone img { border-radius: 31px; }
+
+        .step h3 {
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step h3::before {
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-inline-end: 10px;
+            border-radius: 50%;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            font-size: 15px;
+            vertical-align: 2px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 15.5px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .privacy-points {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .privacy-points li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 22px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--muted);
+            font-size: 14.5px;
+        }
+
+        .privacy-points .icon { color: var(--accent); margin-top: 2px; }
+        .privacy-points strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 2px; }
+
+        .tag-new {
+            display: inline-block;
+            margin-inline-start: 8px;
+            padding: 2px 8px;
+            border-radius: 99px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            vertical-align: 3px;
+        }
+
         /* Review */
         .review { padding: 0 0 96px; }
 
@@ -983,6 +1084,10 @@
             .spotlight-grid { gap: 40px; }
             .spotlight.reverse .spotlight-visual { order: 0; }
             .spotlight .phone { max-width: 260px; }
+            .steps, .privacy-points { grid-template-columns: 1fr; }
+            .steps { gap: 48px; }
+            .privacy-points { margin-top: 48px; gap: 12px; }
+            .daycare-steps { padding-bottom: 64px; }
             .features, .screens, .pricing, .faq { padding: 64px 0; }
             .cta { padding-bottom: 64px; }
         }
@@ -1019,6 +1124,10 @@
         <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+        <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+        <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
+        <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
         <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
         <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.4 18.4a9 9 0 0 0 0-12.7"/></symbol>
@@ -1068,7 +1177,7 @@
                         <span class="store-btn-text"><span class="small">Get it on</span><span class="large">Google Play</span></span>
                     </a>
                 </div>
-                <p class="hero-meta">Free to download · iPhone &amp; Android · 9 languages</p>
+                <p class="hero-meta">Free to download · iPhone &amp; Android · 10 languages</p>
 
                 <a class="hero-qr" href="get.html">
                     <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
@@ -1139,19 +1248,20 @@
     <section class="spotlight reverse" id="daycare">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">New · Daycare</span>
-                <h2>Medicine care that follows them to daycare.</h2>
-                <p>Invite your daycare, babysitter or grandparent by their @username. They see what medicine is due and when the last dose was given, and every dose they log shows up in your history with their name.</p>
+                <span class="eyebrow">New · Daycare mode</span>
+                <h2>Know how their day went, before pick-up.</h2>
+                <p>Invite your daycare, nanny or grandparent by their username or by scanning their QR code. They log medicines, temperatures, meals and naps, and you see the day on your Home screen as it happens.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Only the children you choose, for 2 weeks up to a year, or until you remove it</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>A warning before they give a dose that's too early</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>No growth, doctor visits or notes: just medicines and what they gave</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Only the children you choose, for 2 weeks, 1 month, 3 months, 1 year or until you remove them</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>“Today at” your daycare on Home, and their day as a timeline</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>“Logged by” on every dose, temperature, symptom and growth entry</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>A warning before they give a dose that's too early, even one you gave at home</li>
                 </ul>
                 <p class="note">Inviting a daycare is part of Premium. Extend or end access any time.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone video-phone">
-                    <video src="video/parenty-daycare-ad.mp4" poster="video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty Daycare video: a parent invites the daycare, the daycare sees what's due and logs a dose, and the parent sees it in their history"></video>
+                    <video src="video/parenty-daycare-day-ad.mp4" poster="video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty Daycare video: the daycare logs Emma's meal, her nap and a raised temperature, and her parent sees the whole day on their phone"></video>
                     <button class="video-sound" type="button" aria-label="Turn sound on" aria-pressed="false">
                         <svg class="icon"><use href="#i-muted"/></svg>
                     </button>
@@ -1160,25 +1270,58 @@
         </div>
     </section>
 
+    <!-- Daycare: how it works, and privacy -->
+    <section class="daycare-steps">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Daycare mode works</h2>
+                <p>Set up in a minute at drop-off. You decide who sees what, and for how long.</p>
+            </div>
+            <ol class="steps">
+                <li class="step">
+                    <div class="phone"><picture><source srcset="screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/daycare-invite.jpg" alt="Daycare access screen inviting @sunflowerdaycare to see Emma for 1 month" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Invite your daycare</h3>
+                    <p>Type their daycare username or scan their QR code. Choose the children they can see and for how long.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/daycare-today.jpg" alt="Home screen with a Today at Sunflower Daycare card: 37.8 °C, ate most, nap 12:10 to 1:30 PM, 2 diapers, happy" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>See today at a glance</h3>
+                    <p>A “Today at” card on Home sums up the day: temperature, meals, naps, diapers and mood.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="screenshots/light/daycare-day.jpg" alt="Emma's day at daycare as a timeline: diaper, meal, mood, nap and a raised temperature with a note" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Open their whole day</h3>
+                    <p>Everything they logged, in order, with notes. Go back a day at a time.</p>
+                </li>
+            </ol>
+            <ul class="privacy-points">
+                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>Only the children you choose.</strong> Never your own temperatures, growth, doctor visits, reports or notes.</span></li>
+                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>Nothing stored on their phone.</strong> Daycare mode reads live and keeps no family data on the device.</span></li>
+                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>Access ends on the date you chose.</strong> It stops on the day, even if nobody opens the app.</span></li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Spotlight: Daycare mode, for daycares -->
-    <section class="spotlight">
+    <section class="spotlight" id="for-daycares">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">For daycares &amp; carers</span>
+                <span class="eyebrow">For daycares, nannies &amp; grandparents</span>
                 <h2>Look after other families' children?</h2>
-                <p>Switch Parenty to Daycare mode. Every family that invited you is in one list, with only the children they chose and the medicines that are due today.</p>
+                <p>Switch Parenty to Daycare mode and give your daycare its own name and username. Every family that invited you is in one list, with only the children they chose.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Log a dose in one tap, and parents see it in their history</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Your own history of every dose you gave, for every family</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Your own family stays separate: switch back from the title at the top</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>See which medicines are due, when the last dose was given and when the next one is allowed</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Log doses, temperatures, symptoms and growth</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Log the day: meals, drinks, naps, diapers, potty, mood and notes</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>A History of everything you logged, for every family</li>
                 </ul>
-                <p class="note">Free for one family. Parenty Daycare is for as many families as you look after, and includes Premium.</p>
+                <p class="note">Free for one family invited by a Premium parent. Parenty Daycare is for as many families as you look after, and includes Premium.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone">
                     <picture>
                         <source srcset="screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="screenshots/light/daycare-family.jpg" alt="Daycare mode showing Emma's medicines, when the next Ibuprofen dose is allowed and a Log dose button" loading="lazy" width="600" height="1304">
+                        <img src="screenshots/light/daycare-family.jpg" alt="Daycare mode showing Emma's Amoxicillin that can be given now, a Log dose button, and buttons for Temperature, Symptom, Growth and Daily care" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1243,6 +1386,21 @@
                     <p>Log temperatures in °C or °F and symptoms on a 1–5 scale, with notes and times.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
+                    <h3>Daycare mode<span class="tag-new">New</span></h3>
+                    <p>Invite your daycare by username or QR code, and see their day with your child on Home.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
+                    <h3>Records filters<span class="tag-new">New</span></h3>
+                    <p>Filter records by who logged them, you or each daycare, by day or date range, grouped by child.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
+                    <h3>Growth &amp; charts</h3>
+                    <p>Weight and height for every child, with WHO growth charts.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
                     <h3>Doctors &amp; visits</h3>
                     <p>Your pediatrician one tap away. Log visits and follow-ups and add them to your calendar.</p>
@@ -1263,14 +1421,19 @@
                     <p>Log a dose from the Home Screen, follow the countdown on the Lock Screen, or just ask Siri or your Android assistant.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
+                    <h3>iPad &amp; iPhone Duo<span class="tag-new">New</span></h3>
+                    <p>A sidebar on iPad, both displays on iPhone Duo, and settings side by side on the bigger screen.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
                     <h3>Private &amp; secure</h3>
                     <p>Optional Face ID, Touch ID or fingerprint lock. Delete your account any time. We never sell your data.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>9 languages</h3>
-                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
+                    <h3>10 languages</h3>
+                    <p>English, Arabic, German, Greek, Spanish, French, Hebrew, Italian, Portuguese and Turkish.</p>
                 </div>
             </div>
         </div>
@@ -1343,22 +1506,23 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Unlimited children, doctors and visits</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>PDF reports and fever charts</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Alarm settings</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Invite your daycare</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Invite your daycare and see their day</li>
                     </ul>
                 </div>
                 <div class="plan">
                     <h3>Parenty Daycare</h3>
-                    <p class="plan-price">For daycares and carers · monthly or yearly</p>
+                    <p class="plan-price">€9.99 a month or €99.99 a year · for daycares and carers</p>
                     <ul class="checklist">
                         <li><svg class="icon"><use href="#i-check"/></svg>Everything in Premium</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>As many families as you look after</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Log doses for each family's children</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Your own history of every dose you gave</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Log medicines, temperatures, symptoms, growth and daily care</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Your daycare's own name, username and QR code</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>A History of everything you logged</li>
                     </ul>
-                    <p class="plan-foot">Daycare mode is free for one family.</p>
+                    <p class="plan-foot">Daycare mode is free for one family invited by a Premium parent.</p>
                 </div>
             </div>
-            <p class="pricing-note">Prices are shown in the app in your local currency.</p>
+            <p class="pricing-note">The app shows prices in your local currency.</p>
         </div>
     </section>
 
@@ -1375,11 +1539,15 @@
                 </details>
                 <details>
                     <summary>Can my daycare or babysitter use Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Yes. With Premium, go to Settings → Account → Daycare access and invite them by their @username. Choose which children they see and for how long. They see those children's medicines and when the last dose was given, and can log what they give; they don't see growth, doctor visits, reports or your notes. Their doses appear in your history with their name, and you can end access any time.</p>
+                    <p>Yes. With Premium, go to Settings → Account → Daycare access and invite them by their daycare username, or scan the QR code they show you. Choose which children they see and for how long: 2 weeks, 1 month, 3 months, 1 year or until you remove them. They see those children's medicines with when the last dose was given and when the next one is allowed, and can log doses, temperatures, symptoms, growth and the day itself: meals, drinks, naps, diapers, potty, mood and notes. You see it on Home as “Today at” your daycare, every entry shows who logged it, and you can extend or end access any time.</p>
+                </details>
+                <details>
+                    <summary>What can a daycare see?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Only the children you chose and their medicines, with when the last dose was given and when the next one is allowed: not who gave it, and no notes. A daycare never sees your own temperatures, symptoms, growth, doctor visits, reports or notes, and can't add, change or delete your medicines or children. Daycare mode keeps nothing about your family on the daycare's phone, and access stops on the date you chose.</p>
                 </details>
                 <details>
                     <summary>I run a daycare. How do I use Daycare mode?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Create a free account, then switch to Daycare mode: tap the title at the top of the screen, or go to Settings → App mode. Give parents your @username so they can invite you. Daycare mode is free for one family; Parenty Daycare lets you look after as many families as you like and includes Premium for your own family. Daycare mode needs an internet connection.</p>
+                    <p>Create a free account, then switch to Daycare mode: tap the title at the top of the screen, or go to Settings → App mode. Set up your daycare's name and username, then give parents the username or show them your QR code. Families see your daycare's name, never your personal account. A free daycare can look after one family invited by a Premium parent; Parenty Daycare (€9.99 a month or €99.99 a year) is for as many families as you look after and includes Premium for your own family. Daycare mode needs an internet connection.</p>
                 </details>
                 <details>
                     <summary>Can I manage multiple children?<svg class="icon"><use href="#i-chevron"/></svg></summary>
@@ -1395,7 +1563,7 @@
                 </details>
                 <details>
                     <summary>Which languages does Parenty support?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>English, Arabic, German, Greek, Spanish, French, Italian, Portuguese and Turkish.</p>
+                    <p>English, Arabic, German, Greek, Spanish, French, Hebrew, Italian, Portuguese and Turkish.</p>
                 </details>
                 <details>
                     <summary>How do I delete my account?<svg class="icon"><use href="#i-chevron"/></svg></summary>

@@ -17,7 +17,7 @@
     </script>
     <meta name="apple-itunes-app" content="app-id=6757712692" />
     
-    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log" />
+    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
     <meta name="robots" content="index, follow" />
     
     <link rel="canonical" href="https://parenty.uk/es/" />
@@ -105,7 +105,8 @@
     "screenshot": [
       "https://parenty.uk/screenshots/light/home.jpg",
       "https://parenty.uk/screenshots/light/history.jpg",
-      "https://parenty.uk/screenshots/light/too-early.jpg"
+      "https://parenty.uk/screenshots/light/too-early.jpg",
+      "https://parenty.uk/screenshots/light/daycare-today.jpg"
     ],
     "publisher": {
       "@id": "https://parenty.uk/#organization"
@@ -123,7 +124,7 @@
       "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
       "https://play.google.com/store/apps/details?id=cy.com.parenty"
     ],
-    "description": "Parenty quita el estrés de dar medicamentos a los niños. Registra pautas de dosis, temperaturas y la evolución de los síntomas entre todos los cuidadores de la familia."
+    "description": "Parenty quita el estrés de dar medicamentos a los niños. Registra pautas de dosis, temperaturas y la evolución de los síntomas entre todos los cuidadores de la familia, y ve el día de tu hijo en la guardería."
   },
   {
     "@context": "https://schema.org",
@@ -147,6 +148,16 @@
   },
   {
     "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Modo guardería de Parenty: un día en la guardería",
+    "description": "La guardería registra una comida, una siesta y una temperatura elevada, y el padre o la madre ve todo el día en Inicio y como línea de tiempo.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
+    "uploadDate": "2026-10-22T20:34:00+03:00",
+    "duration": "PT30S"
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -162,7 +173,15 @@
         "name": "¿Puede mi guardería o niñera usar Parenty?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí. Con Premium, ve a Ajustes → Cuenta → Acceso de guardería e invítalos con su @usuario. Elige qué hijos ven y durante cuánto tiempo. Ven las medicinas de esos hijos y cuándo se dio la última dosis, y pueden registrar lo que dan; no ven el crecimiento, las visitas al médico, los informes ni tus notas. Sus dosis aparecen en tu historial con su nombre, y puedes terminar el acceso cuando quieras."
+          "text": "Sí. Con Premium, ve a Ajustes → Cuenta → Acceso de guardería e invítales con el nombre de usuario de la guardería, o escanea el código QR que te muestren. Elige qué niños ven y durante cuánto tiempo: 2 semanas, 1 mes, 3 meses, 1 año o hasta que lo quites. Ven las medicinas de esos niños, cuándo se dio la última dosis y cuándo se permite la siguiente, y pueden registrar dosis, temperaturas, síntomas, crecimiento y el propio día: comidas, bebidas, siestas, pañales, orinal, estado de ánimo y notas. Lo ves en Inicio como «Hoy en» tu guardería, cada registro muestra quién lo hizo, y puedes ampliar o terminar el acceso cuando quieras."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué puede ver una guardería?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Solo los niños que elegiste y sus medicinas, con cuándo se dio la última dosis y cuándo se permite la siguiente: no quién la dio, ni notas. Una guardería nunca ve tus propias temperaturas, síntomas, crecimiento, visitas al médico, informes ni notas, y no puede añadir, cambiar ni borrar tus medicinas ni tus hijos. El modo guardería no guarda nada de tu familia en el móvil de la guardería, y el acceso termina en la fecha que elegiste."
         }
       },
       {
@@ -170,7 +189,7 @@
         "name": "Tengo una guardería. ¿Cómo uso el Modo guardería?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Crea una cuenta gratis y cambia al Modo guardería: toca el título en la parte superior de la pantalla o ve a Ajustes → Modo de la app. Da a los padres tu @usuario para que te inviten. El Modo guardería es gratis para una familia; con Parenty Guardería cuidas a todas las familias que quieras e incluye Premium para tu propia familia. El Modo guardería necesita conexión a internet."
+          "text": "Crea una cuenta gratis y cambia al modo guardería: toca el título en la parte superior de la pantalla o ve a Ajustes → Modo de la app. Configura el nombre y el nombre de usuario de tu guardería, y da a los padres el nombre de usuario o enséñales tu código QR. Las familias ven el nombre de tu guardería, nunca tu cuenta personal. Una guardería gratis puede cuidar de una familia invitada por un padre o madre con Premium; Parenty Guardería (9,99 € al mes o 99,99 € al año) es para todas las familias que cuides e incluye Premium para tu propia familia. El modo guardería necesita conexión a internet."
         }
       },
       {
@@ -202,7 +221,7 @@
         "name": "¿En qué idiomas está Parenty?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Inglés, árabe, alemán, griego, español, francés, italiano, portugués y turco."
+          "text": "Inglés, árabe, alemán, griego, español, francés, hebreo, italiano, portugués y turco."
         }
       },
       {
@@ -640,6 +659,88 @@
             z-index: -1;
         }
 
+        /* Daycare: how it works */
+        .daycare-steps { padding: 0 0 96px; }
+
+        .steps {
+            list-style: none;
+            counter-reset: step;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .step { counter-increment: step; text-align: center; }
+
+        .step .phone { max-width: 240px; border-radius: 38px; padding: 7px; margin-bottom: 24px; }
+        .step .phone img { border-radius: 31px; }
+
+        .step h3 {
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step h3::before {
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-inline-end: 10px;
+            border-radius: 50%;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            font-size: 15px;
+            vertical-align: 2px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 15.5px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .privacy-points {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .privacy-points li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 22px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--muted);
+            font-size: 14.5px;
+        }
+
+        .privacy-points .icon { color: var(--accent); margin-top: 2px; }
+        .privacy-points strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 2px; }
+
+        .tag-new {
+            display: inline-block;
+            margin-inline-start: 8px;
+            padding: 2px 8px;
+            border-radius: 99px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            vertical-align: 3px;
+        }
+
         /* Review */
         .review { padding: 0 0 96px; }
 
@@ -990,6 +1091,10 @@
             .spotlight-grid { gap: 40px; }
             .spotlight.reverse .spotlight-visual { order: 0; }
             .spotlight .phone { max-width: 260px; }
+            .steps, .privacy-points { grid-template-columns: 1fr; }
+            .steps { gap: 48px; }
+            .privacy-points { margin-top: 48px; gap: 12px; }
+            .daycare-steps { padding-bottom: 64px; }
             .features, .screens, .pricing, .faq { padding: 64px 0; }
             .cta { padding-bottom: 64px; }
         }
@@ -1026,6 +1131,10 @@
         <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+        <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+        <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
+        <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
         <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
         <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.4 18.4a9 9 0 0 0 0-12.7"/></symbol>
@@ -1075,7 +1184,7 @@
                         <span class="store-btn-text"><span class="small">Disponible en</span><span class="large">Google Play</span></span>
                     </a>
                 </div>
-                <p class="hero-meta">Descarga gratuita · iPhone y Android · 9 idiomas</p>
+                <p class="hero-meta">Descarga gratuita · iPhone y Android · 10 idiomas</p>
 
                 <a class="hero-qr" href="../get.html">
                     <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
@@ -1146,19 +1255,20 @@
     <section class="spotlight reverse" id="daycare">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Nuevo · Guardería</span>
-                <h2>Sus medicinas, al día también en la guardería.</h2>
-                <p>Invita a tu guardería, niñera o abuelos con su @usuario. Ven qué medicina toca y cuándo se dio la última dosis, y cada dosis que registran aparece en tu historial con su nombre.</p>
+                <span class="eyebrow">Nuevo · Modo guardería</span>
+                <h2>Sabe cómo fue su día antes de recogerle.</h2>
+                <p>Invita a tu guardería, niñera o a los abuelos con su nombre de usuario o escaneando su código QR. Registran medicinas, temperaturas, comidas y siestas, y tú ves el día en tu pantalla de inicio en el momento.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Solo los hijos que elijas, de 2 semanas a un año, o hasta que lo quites</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Un aviso antes de dar una dosis demasiado pronto</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Sin crecimiento, visitas al médico ni notas: solo las medicinas y lo que dieron</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Solo los niños que elijas, durante 2 semanas, 1 mes, 3 meses, 1 año o hasta que lo quites</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>«Hoy en» tu guardería en Inicio, y su día como una línea de tiempo</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>«Registrado por» en cada dosis, temperatura, síntoma y medida de crecimiento</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Un aviso antes de dar una dosis demasiado pronto, aunque la hayas dado tú en casa</li>
                 </ul>
                 <p class="note">Invitar a una guardería es parte de Premium. Amplía o termina el acceso cuando quieras.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone video-phone">
-                    <video src="../video/parenty-daycare-ad.mp4" poster="../video/parenty-daycare-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Vídeo de Parenty Guardería: un padre invita a la guardería, la guardería ve qué toca y registra una dosis, y el padre la ve en su historial"></video>
+                    <video src="../video/parenty-daycare-day-ad.mp4" poster="../video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Vídeo de Parenty Guardería: la guardería registra la comida de Emma, su siesta y una temperatura elevada, y su madre o padre ve todo el día en el móvil"></video>
                     <button class="video-sound" type="button" aria-label="Activar sonido" aria-pressed="false">
                         <svg class="icon"><use href="#i-muted"/></svg>
                     </button>
@@ -1167,25 +1277,58 @@
         </div>
     </section>
 
+    <!-- Daycare: how it works, and privacy -->
+    <section class="daycare-steps">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cómo funciona el modo guardería</h2>
+                <p>Se configura en un minuto al dejarle. Tú decides quién ve qué y durante cuánto tiempo.</p>
+            </div>
+            <ol class="steps">
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-invite.jpg" alt="Pantalla de acceso de guardería invitando a @sunflowerdaycare a ver a Emma durante 1 mes" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Invita a tu guardería</h3>
+                    <p>Escribe el nombre de usuario de la guardería o escanea su código QR. Elige qué niños pueden ver y durante cuánto tiempo.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-today.jpg" alt="Pantalla de inicio con una tarjeta «Hoy en Sunflower Daycare»: 37,8 °C, comió casi todo, siesta de 12:10 a 13:30, 2 pañales, contenta" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>El día de un vistazo</h3>
+                    <p>Una tarjeta «Hoy en» en Inicio resume el día: temperatura, comidas, siestas, pañales y estado de ánimo.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-day.jpg" alt="El día de Emma en la guardería como línea de tiempo: pañal, comida, ánimo, siesta y una temperatura elevada con una nota" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Abre todo su día</h3>
+                    <p>Todo lo que registraron, en orden y con notas. Vuelve atrás día a día.</p>
+                </li>
+            </ol>
+            <ul class="privacy-points">
+                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>Solo los niños que elijas.</strong> Nunca tus propias temperaturas, crecimiento, visitas al médico, informes ni notas.</span></li>
+                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>Nada guardado en su móvil.</strong> El modo guardería lee en directo y no guarda datos de la familia en el dispositivo.</span></li>
+                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>El acceso termina en la fecha que elegiste.</strong> Se corta ese día, aunque nadie abra la app.</span></li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Spotlight: Daycare mode, for daycares -->
-    <section class="spotlight">
+    <section class="spotlight" id="for-daycares">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Para guarderías y cuidadores</span>
+                <span class="eyebrow">Para guarderías, niñeras y abuelos</span>
                 <h2>¿Cuidas a niños de otras familias?</h2>
-                <p>Cambia Parenty al Modo guardería. Cada familia que te invitó está en una lista, solo con los hijos que eligió y las medicinas que tocan hoy.</p>
+                <p>Cambia Parenty al modo guardería y dale a tu guardería su propio nombre y nombre de usuario. Todas las familias que te invitaron están en una lista, solo con los niños que eligieron.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Registra una dosis con un toque, y los padres la ven en su historial</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Tu propio historial de cada dosis que diste, para cada familia</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Tu propia familia queda aparte: vuelve desde el título de arriba</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Mira qué medicinas tocan, cuándo se dio la última dosis y cuándo se permite la siguiente</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Registra dosis, temperaturas, síntomas y crecimiento</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Registra el día: comidas, bebidas, siestas, pañales, orinal, estado de ánimo y notas</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Un historial de todo lo que registraste, para cada familia</li>
                 </ul>
-                <p class="note">Gratis para una familia. Parenty Guardería es para todas las familias que cuides e incluye Premium.</p>
+                <p class="note">Gratis para una familia invitada por un padre o madre con Premium. Parenty Guardería es para todas las familias que cuides e incluye Premium.</p>
             </div>
             <div class="spotlight-visual">
                 <div class="phone">
                     <picture>
                         <source srcset="../screenshots/dark/daycare-family.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/daycare-family.jpg" alt="Modo guardería con las medicinas de Emma, cuándo se permite la próxima dosis de Ibuprofeno y un botón para registrar dosis" loading="lazy" width="600" height="1304">
+                        <img src="../screenshots/light/daycare-family.jpg" alt="Modo guardería con la amoxicilina de Emma, que se puede dar ahora, un botón para registrar la dosis y botones de Temperatura, Síntoma, Crecimiento y Cuidado diario" loading="lazy" width="600" height="1304">
                     </picture>
                 </div>
             </div>
@@ -1250,6 +1393,21 @@
                     <p>Registra temperaturas en °C o °F y síntomas en una escala del 1 al 5, con notas y horas.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
+                    <h3>Modo guardería<span class="tag-new">Nuevo</span></h3>
+                    <p>Invita a tu guardería por nombre de usuario o código QR, y ve el día de tu hijo en Inicio.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
+                    <h3>Filtros de registros<span class="tag-new">Nuevo</span></h3>
+                    <p>Filtra los registros por quién los hizo, tú o cada guardería, por día o por periodo, agrupados por niño.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
+                    <h3>Crecimiento y gráficas</h3>
+                    <p>Peso y altura de cada niño, con las curvas de crecimiento de la OMS.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
                     <h3>Médicos y visitas</h3>
                     <p>Tu pediatra a un toque. Registra visitas y revisiones y añádelas a tu calendario.</p>
@@ -1270,14 +1428,19 @@
                     <p>Registra una dosis desde la pantalla de inicio, sigue la cuenta atrás en la pantalla de bloqueo o simplemente pregúntale a Siri o a tu asistente de Android.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
+                    <h3>iPad y iPhone Duo<span class="tag-new">Nuevo</span></h3>
+                    <p>Una barra lateral en el iPad, las dos pantallas en el iPhone Duo y los ajustes uno al lado del otro en la pantalla grande.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
                     <h3>Privado y seguro</h3>
                     <p>Bloqueo opcional con Face ID, Touch ID o huella. Elimina tu cuenta cuando quieras. Nunca vendemos tus datos.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>9 idiomas</h3>
-                    <p>Inglés, árabe, alemán, griego, español, francés, italiano, portugués y turco.</p>
+                    <h3>10 idiomas</h3>
+                    <p>Inglés, árabe, alemán, griego, español, francés, hebreo, italiano, portugués y turco.</p>
                 </div>
             </div>
         </div>
@@ -1350,22 +1513,23 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Hijos, médicos y visitas ilimitados</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Informes PDF y gráficas de fiebre</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Ajustes de alarma</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Invita a tu guardería</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Invita a tu guardería y ve su día</li>
                     </ul>
                 </div>
                 <div class="plan">
                     <h3>Parenty Guardería</h3>
-                    <p class="plan-price">Para guarderías y cuidadores · mensual o anual</p>
+                    <p class="plan-price">9,99 € al mes o 99,99 € al año · para guarderías y cuidadores</p>
                     <ul class="checklist">
                         <li><svg class="icon"><use href="#i-check"/></svg>Todo lo de Premium</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Todas las familias que cuides</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Registra dosis para los hijos de cada familia</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Tu propio historial de cada dosis que diste</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Registra medicinas, temperaturas, síntomas, crecimiento y cuidado diario</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Nombre, nombre de usuario y código QR propios para tu guardería</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Un historial de todo lo que registraste</li>
                     </ul>
-                    <p class="plan-foot">El Modo guardería es gratis para una familia.</p>
+                    <p class="plan-foot">El modo guardería es gratis para una familia invitada por un padre o madre con Premium.</p>
                 </div>
             </div>
-            <p class="pricing-note">Los precios se muestran en la app en tu moneda local.</p>
+            <p class="pricing-note">La app muestra los precios en tu moneda local.</p>
         </div>
     </section>
 
@@ -1382,11 +1546,15 @@
                 </details>
                 <details>
                     <summary>¿Puede mi guardería o niñera usar Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Sí. Con Premium, ve a Ajustes → Cuenta → Acceso de guardería e invítalos con su @usuario. Elige qué hijos ven y durante cuánto tiempo. Ven las medicinas de esos hijos y cuándo se dio la última dosis, y pueden registrar lo que dan; no ven el crecimiento, las visitas al médico, los informes ni tus notas. Sus dosis aparecen en tu historial con su nombre, y puedes terminar el acceso cuando quieras.</p>
+                    <p>Sí. Con Premium, ve a Ajustes → Cuenta → Acceso de guardería e invítales con el nombre de usuario de la guardería, o escanea el código QR que te muestren. Elige qué niños ven y durante cuánto tiempo: 2 semanas, 1 mes, 3 meses, 1 año o hasta que lo quites. Ven las medicinas de esos niños, cuándo se dio la última dosis y cuándo se permite la siguiente, y pueden registrar dosis, temperaturas, síntomas, crecimiento y el propio día: comidas, bebidas, siestas, pañales, orinal, estado de ánimo y notas. Lo ves en Inicio como «Hoy en» tu guardería, cada registro muestra quién lo hizo, y puedes ampliar o terminar el acceso cuando quieras.</p>
+                </details>
+                <details>
+                    <summary>¿Qué puede ver una guardería?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Solo los niños que elegiste y sus medicinas, con cuándo se dio la última dosis y cuándo se permite la siguiente: no quién la dio, ni notas. Una guardería nunca ve tus propias temperaturas, síntomas, crecimiento, visitas al médico, informes ni notas, y no puede añadir, cambiar ni borrar tus medicinas ni tus hijos. El modo guardería no guarda nada de tu familia en el móvil de la guardería, y el acceso termina en la fecha que elegiste.</p>
                 </details>
                 <details>
                     <summary>Tengo una guardería. ¿Cómo uso el Modo guardería?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Crea una cuenta gratis y cambia al Modo guardería: toca el título en la parte superior de la pantalla o ve a Ajustes → Modo de la app. Da a los padres tu @usuario para que te inviten. El Modo guardería es gratis para una familia; con Parenty Guardería cuidas a todas las familias que quieras e incluye Premium para tu propia familia. El Modo guardería necesita conexión a internet.</p>
+                    <p>Crea una cuenta gratis y cambia al modo guardería: toca el título en la parte superior de la pantalla o ve a Ajustes → Modo de la app. Configura el nombre y el nombre de usuario de tu guardería, y da a los padres el nombre de usuario o enséñales tu código QR. Las familias ven el nombre de tu guardería, nunca tu cuenta personal. Una guardería gratis puede cuidar de una familia invitada por un padre o madre con Premium; Parenty Guardería (9,99 € al mes o 99,99 € al año) es para todas las familias que cuides e incluye Premium para tu propia familia. El modo guardería necesita conexión a internet.</p>
                 </details>
                 <details>
                     <summary>¿Puedo gestionar varios hijos?<svg class="icon"><use href="#i-chevron"/></svg></summary>
@@ -1402,7 +1570,7 @@
                 </details>
                 <details>
                     <summary>¿En qué idiomas está Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Inglés, árabe, alemán, griego, español, francés, italiano, portugués y turco.</p>
+                    <p>Inglés, árabe, alemán, griego, español, francés, hebreo, italiano, portugués y turco.</p>
                 </details>
                 <details>
                     <summary>¿Cómo elimino mi cuenta?<svg class="icon"><use href="#i-chevron"/></svg></summary>
