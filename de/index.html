@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parenty: Medikamenten-Tracker für Kinder – Dosis-Erinnerungen &amp; Fieberprotokoll</title>
-    <meta name="description" content="Mit Parenty behalten Eltern und Betreuungspersonen die Medikamente, das Fieber, die Symptome und die Arztbesuche ihrer Kinder im Blick – und alle bleiben synchron, damit keine Dosis vergessen oder doppelt gegeben wird." />
+    <meta name="description" content="Parenty hilft Eltern und Betreuungspersonen, Medikamentendosen, Fieber, Symptome und Arztbesuche ihrer Kinder festzuhalten – und hält alle auf dem gleichen Stand, auch die Kita, damit keine Dosis vergessen oder doppelt gegeben wird." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
     <script>
         // Apply a saved theme choice before first paint; otherwise the system setting applies
+        document.documentElement.classList.add("js");
         try {
             const saved = localStorage.getItem("theme");
             if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
@@ -17,7 +18,7 @@
     </script>
     <meta name="apple-itunes-app" content="app-id=6757712692" />
     
-    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log" />
+    <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
     <meta name="robots" content="index, follow" />
     
     <link rel="canonical" href="https://parenty.uk/de/" />
@@ -30,6 +31,7 @@
     <link rel="alternate" hreflang="pt" href="https://parenty.uk/pt/" />
     <link rel="alternate" hreflang="tr" href="https://parenty.uk/tr/" />
     <link rel="alternate" hreflang="ar" href="https://parenty.uk/ar/" />
+    <link rel="alternate" hreflang="he" href="https://parenty.uk/he/" />
     <link rel="alternate" hreflang="x-default" href="https://parenty.uk/" />
     <link rel="icon" href="../favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png" />
@@ -47,6 +49,7 @@
     <meta property="og:locale:alternate" content="pt_BR" />
     <meta property="og:locale:alternate" content="tr_TR" />
     <meta property="og:locale:alternate" content="ar_AR" />
+    <meta property="og:locale:alternate" content="he_IL" />
     <meta property="og:url" content="https://parenty.uk/de/" />
     <meta property="og:title" content="Parenty – Medikamente und Gesundheit für die ganze Familie" />
     <meta property="og:description" content="Nie wieder eine Medikamentendosis vergessen. Intelligente Erinnerungen, Fieberprotokoll und Synchronisierung für alle, die sich kümmern." />
@@ -105,7 +108,8 @@
     "screenshot": [
       "https://parenty.uk/screenshots/light/home.jpg",
       "https://parenty.uk/screenshots/light/history.jpg",
-      "https://parenty.uk/screenshots/light/too-early.jpg"
+      "https://parenty.uk/screenshots/light/too-early.jpg",
+      "https://parenty.uk/screenshots/light/daycare-today.jpg"
     ],
     "publisher": {
       "@id": "https://parenty.uk/#organization"
@@ -123,7 +127,7 @@
       "https://apps.apple.com/app/parenty-medicine-tracker/id6757712692",
       "https://play.google.com/store/apps/details?id=cy.com.parenty"
     ],
-    "description": "Parenty nimmt den Stress aus der Medikamentengabe bei Kindern. Dosierpläne, Fiebermessungen und den Verlauf von Symptomen für alle Betreuungspersonen festhalten."
+    "description": "Parenty nimmt den Stress aus der Medikamentengabe bei Kindern. Dosierpläne, Fiebermessungen und den Verlauf von Symptomen für alle Betreuungspersonen festhalten – und den Tag deines Kindes in der Kita sehen."
   },
   {
     "@context": "https://schema.org",
@@ -147,6 +151,16 @@
   },
   {
     "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Parenty Kita-Modus: ein Tag in der Kita",
+    "description": "Die Kita trägt eine Mahlzeit, einen Mittagsschlaf und eine erhöhte Temperatur ein, und der Elternteil sieht den ganzen Tag auf dem Startbildschirm und als Zeitleiste.",
+    "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
+    "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
+    "uploadDate": "2026-10-22T20:34:00+03:00",
+    "duration": "PT30S"
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -155,6 +169,30 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Jedes angemeldete Konto wird kostenlos in der Cloud gesichert, sodass deine Daten ein neues Handy überstehen und auf all deinen Geräten aktuell bleiben. Mit Premium kannst du Partner, Großeltern oder die Nanny per @Benutzername einladen, und jede Dosis, die sie eintragen, erscheint sofort auf allen Handys."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann meine Kita oder mein Babysitter Parenty nutzen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Gehe mit Premium zu Einstellungen → Konto → Kita-Zugang und lade sie über ihren Kita-Benutzernamen ein oder scanne den QR-Code, den sie dir zeigen. Wähle, welche Kinder sie sehen und wie lange: 2 Wochen, 1 Monat, 3 Monate, 1 Jahr oder bis du den Zugang entfernst. Sie sehen die Medikamente dieser Kinder, wann die letzte Dosis gegeben wurde und wann die nächste erlaubt ist, und können Dosen, Temperatur, Symptome, Wachstum und den Tag selbst eintragen: Mahlzeiten, Getränke, Schlaf, Windeln, Töpfchen, Stimmung und Notizen. Du siehst es auf dem Startbildschirm unter „Heute in“ deiner Kita, bei jedem Eintrag steht, wer ihn erfasst hat, und du kannst den Zugang jederzeit verlängern oder beenden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was sieht eine Kita?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nur die Kinder, die du ausgewählt hast, und ihre Medikamente – mit dem Zeitpunkt der letzten Dosis und wann die nächste erlaubt ist, aber nicht, wer sie gegeben hat, und keine Notizen. Eine Kita sieht nie deine eigenen Temperaturen, Symptome, Wachstumsdaten, Arztbesuche, Berichte oder Notizen und kann deine Medikamente oder Kinder weder hinzufügen noch ändern oder löschen. Der Kita-Modus speichert nichts über deine Familie auf dem Handy der Kita, und der Zugang endet am gewählten Datum."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ich leite eine Kita. Wie nutze ich den Kita-Modus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Erstelle ein kostenloses Konto und wechsle in den Kita-Modus: Tippe oben auf dem Bildschirm auf den Titel oder gehe zu Einstellungen → App-Modus. Richte den Namen und Benutzernamen deiner Kita ein und gib den Eltern den Benutzernamen oder zeige ihnen deinen QR-Code. Familien sehen den Namen deiner Kita, nie dein persönliches Konto. Eine kostenlose Kita kann eine Familie betreuen, die von einem Premium-Elternteil eingeladen wurde; Parenty Betreuung (9,99 € im Monat oder 99,99 € im Jahr) ist für so viele Familien, wie du betreust, und enthält Premium für deine eigene Familie. Der Kita-Modus braucht eine Internetverbindung."
         }
       },
       {
@@ -186,7 +224,7 @@
         "name": "Welche Sprachen unterstützt Parenty?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Englisch, Arabisch, Deutsch, Griechisch, Spanisch, Französisch, Italienisch, Portugiesisch und Türkisch."
+          "text": "Englisch, Arabisch, Deutsch, Griechisch, Spanisch, Französisch, Hebräisch, Italienisch, Portugiesisch und Türkisch."
         }
       },
       {
@@ -215,785 +253,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --bg: #faf8ff;
-            --bg-band: #f2edff;
-            --surface: #ffffff;
-            --border: #e7e0f7;
-            --text: #1d1530;
-            --muted: #5f577a;
-            --accent: #6b46c1;
-            --accent-soft: rgba(107, 70, 193, 0.1);
-            --btn-bg: #6b46c1;
-            --btn-text: #ffffff;
-            --glow: rgba(167, 139, 250, 0.35);
-            --phone-bezel: #ffffff;
-            --phone-edge: rgba(107, 70, 193, 0.2);
-            --shadow: 0 24px 60px -24px rgba(60, 30, 120, 0.35);
-            --radius: 20px;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root:not([data-theme="light"]) {
-                --bg: #0d0817;
-                --bg-band: #130c22;
-                --surface: #17112a;
-                --border: rgba(255, 255, 255, 0.08);
-                --text: #f5f3ff;
-                --muted: #a59fbf;
-                --accent: #c9b5ff;
-                --accent-soft: rgba(201, 181, 255, 0.1);
-                --btn-bg: #c9b5ff;
-                --btn-text: #1d1035;
-                --glow: rgba(124, 58, 237, 0.4);
-                --phone-bezel: #1b1724;
-                --phone-edge: rgba(201, 181, 255, 0.3);
-                --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
-            }
-        }
-
-        :root[data-theme="dark"] {
-            --bg: #0d0817;
-            --bg-band: #130c22;
-            --surface: #17112a;
-            --border: rgba(255, 255, 255, 0.08);
-            --text: #f5f3ff;
-            --muted: #a59fbf;
-            --accent: #c9b5ff;
-            --accent-soft: rgba(201, 181, 255, 0.1);
-            --btn-bg: #c9b5ff;
-            --btn-text: #1d1035;
-            --glow: rgba(124, 58, 237, 0.4);
-            --phone-bezel: #1b1724;
-            --phone-edge: rgba(201, 181, 255, 0.3);
-            --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        html { scroll-behavior: smooth; }
-        section { scroll-margin-top: 80px; }
-
-        body {
-            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            text-wrap: balance;
-        }
-
-        .container {
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .icon {
-            width: 22px;
-            height: 22px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            flex-shrink: 0;
-        }
-
-        .eyebrow {
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 14px;
-        }
-
-        .accent { color: var(--accent); }
-
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: color-mix(in srgb, var(--bg) 82%, transparent);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 68px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text);
-            font-family: 'Outfit', sans-serif;
-            font-size: 22px;
-            font-weight: 800;
-        }
-
-        .brand img {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover { color: var(--text); }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 14px;
-            text-decoration: none;
-            background: var(--btn-bg);
-            color: var(--btn-text);
-            transition: transform 0.2s ease;
-        }
-
-        .btn:hover { transform: translateY(-1px); }
-
-        .theme-toggle {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-        .nav-actions { display: flex; align-items: center; gap: 10px; }
-
-        /* Store buttons */
-        .store-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .store-btn {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 11px 20px;
-            background: var(--text);
-            color: var(--bg);
-            border-radius: 14px;
-            text-decoration: none;
-            transition: transform 0.2s ease;
-        }
-
-        .store-btn:hover { transform: translateY(-2px); }
-
-        .store-btn svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        .store-btn-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.15;
-        }
-
-        .store-btn-text .small {
-            font-size: 11px;
-            opacity: 0.8;
-        }
-
-        .store-btn-text .large {
-            font-family: 'Outfit', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            white-space: nowrap;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 128px 0 88px;
-            background: radial-gradient(ellipse 60% 55% at 78% 40%, var(--glow), transparent 70%);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 48px;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: clamp(40px, 5.6vw, 66px);
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .hero-sub {
-            font-size: 19px;
-            color: var(--muted);
-            max-width: 540px;
-            margin-bottom: 32px;
-        }
-
-        .hero-meta {
-            margin-top: 22px;
-            font-size: 14px;
-            color: var(--muted);
-        }
-
-        /* Phone frames */
-        .phone {
-            width: 100%;
-            max-width: 300px;
-            aspect-ratio: 1206 / 2622;
-            padding: 8px;
-            border-radius: 46px;
-            background: var(--phone-bezel);
-            border: 1px solid var(--phone-edge);
-            box-shadow: var(--shadow);
-            margin: 0 auto;
-        }
-
-        .phone > video,
-        .phone img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            object-position: top;
-            border-radius: 38px;
-        }
-
-        .phone picture { display: contents; }
-
-        .video-phone {
-            position: relative;
-            aspect-ratio: 9 / 16;
-            max-width: 320px;
-            background: #0d0817;
-        }
-
-        .video-sound {
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(13, 8, 23, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .video-sound .icon { width: 18px; height: 18px; }
-
-        /* Scan-to-download, for desktop visitors only */
-        .hero-qr {
-            display: inline-flex;
-            align-items: center;
-            gap: 16px;
-            margin-top: 28px;
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.5;
-            text-decoration: none;
-        }
-
-        .hero-qr strong { color: var(--text); }
-
-        .qr-tile {
-            flex-shrink: 0;
-            width: 96px;
-            height: 96px;
-            padding: 9px;
-            background: #fff;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-        }
-
-        .qr-tile svg { display: block; width: 100%; height: 100%; }
-
-        @media (max-width: 860px), (hover: none) {
-            .hero-qr { display: none; }
-        }
-
-        /* Spotlights */
-        .spotlight { padding: 96px 0; }
-
-        .spotlight + .spotlight { padding-top: 0; }
-
-        .spotlight-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .spotlight.reverse .spotlight-visual { order: -1; }
-
-        .spotlight h2 {
-            font-size: clamp(32px, 4vw, 46px);
-            font-weight: 800;
-            margin-bottom: 18px;
-        }
-
-        .spotlight p {
-            color: var(--muted);
-            font-size: 17px;
-            margin-bottom: 24px;
-            max-width: 500px;
-        }
-
-        .checklist {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .checklist li {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            font-weight: 500;
-        }
-
-        .checklist .icon {
-            color: var(--accent);
-            margin-top: 2px;
-        }
-
-        .note {
-            margin-top: 22px;
-            font-size: 14px;
-            color: var(--muted);
-        }
-
-        .spotlight-visual { position: relative; }
-
-        .spotlight-visual::before {
-            content: "";
-            position: absolute;
-            inset: 10% 5%;
-            background: radial-gradient(circle, var(--glow), transparent 65%);
-            z-index: -1;
-        }
-
-        /* Review */
-        .review { padding: 0 0 96px; }
-
-        .review-card {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 44px 48px;
-            text-align: center;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            box-shadow: var(--shadow);
-        }
-
-        .review-stars {
-            display: flex;
-            justify-content: center;
-            gap: 4px;
-            color: #f5b301;
-            margin-bottom: 20px;
-        }
-
-        .review-stars svg { width: 22px; height: 22px; fill: currentColor; }
-
-        .review-card blockquote p {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(20px, 2.4vw, 26px);
-            font-weight: 600;
-            line-height: 1.45;
-            letter-spacing: -0.01em;
-        }
-
-        .review-card figcaption {
-            margin-top: 22px;
-            color: var(--muted);
-            font-size: 15px;
-        }
-
-        .review-card figcaption strong { color: var(--text); font-weight: 700; }
-
-        /* Features */
-        .features {
-            padding: 96px 0;
-            background: var(--bg-band);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 56px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(32px, 4vw, 44px);
-            font-weight: 800;
-            margin-bottom: 14px;
-        }
-
-        .section-header p {
-            color: var(--muted);
-            font-size: 17px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .feature {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 26px;
-        }
-
-        .feature-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: var(--accent-soft);
-            color: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 18px;
-        }
-
-        .feature h3 {
-            font-size: 19px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .feature p {
-            color: var(--muted);
-            font-size: 14.5px;
-        }
-
-        /* Screenshots */
-        .screens { padding: 96px 0 72px; }
-
-        .screens-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 36px;
-        }
-
-        .screens-tab {
-            font: inherit;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 99px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--muted);
-            cursor: pointer;
-        }
-
-        .screens-tab.active {
-            background: var(--btn-bg);
-            border-color: transparent;
-            color: var(--btn-text);
-        }
-
-        .screens-track {
-            display: flex;
-            gap: 28px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding: 8px max(24px, calc((100vw - 1112px) / 2)) 40px;
-            scrollbar-width: none;
-        }
-
-        .screens-track::-webkit-scrollbar { display: none; }
-
-        .screens-track figure {
-            flex: 0 0 260px;
-            scroll-snap-align: center;
-        }
-
-        .screens-track .phone { max-width: 260px; border-radius: 40px; padding: 7px; }
-        .screens-track .phone img { border-radius: 33px; }
-
-        .screens-track figcaption {
-            text-align: center;
-            margin-top: 16px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--muted);
-        }
-
-        /* Pricing */
-        .pricing {
-            padding: 96px 0;
-            background: var(--bg-band);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .plans {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .plan {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px;
-        }
-
-        .plan.premium {
-            border: 2px solid var(--accent);
-            box-shadow: var(--shadow);
-        }
-
-        .plan h3 {
-            font-size: 26px;
-            font-weight: 800;
-        }
-
-        .plan-price {
-            color: var(--muted);
-            font-size: 15px;
-            margin: 6px 0 24px;
-        }
-
-        .plan .checklist { gap: 12px; font-size: 15px; }
-
-        .pricing-note {
-            text-align: center;
-            color: var(--muted);
-            font-size: 14px;
-            margin-top: 28px;
-        }
-
-        /* FAQ */
-        .faq { padding: 96px 0; }
-
-        .faq-list {
-            max-width: 760px;
-            margin: 0 auto;
-            border-top: 1px solid var(--border);
-        }
-
-        .faq-list details { border-bottom: 1px solid var(--border); }
-
-        .faq-list summary {
-            list-style: none;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            padding: 22px 4px;
-            font-weight: 700;
-            font-size: 17px;
-        }
-
-        .faq-list summary::-webkit-details-marker { display: none; }
-
-        .faq-list summary .icon {
-            color: var(--muted);
-            transition: transform 0.2s ease;
-        }
-
-        .faq-list details[open] summary .icon { transform: rotate(180deg); }
-
-        .faq-list details p {
-            color: var(--muted);
-            padding: 0 4px 22px;
-            max-width: 680px;
-        }
-
-        .faq-contact {
-            text-align: center;
-            margin-top: 36px;
-            color: var(--muted);
-        }
-
-        .faq-contact a {
-            color: var(--accent);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        /* CTA */
-        .cta { padding: 0 0 96px; }
-
-        .cta-box {
-            text-align: center;
-            padding: 64px 32px;
-            border-radius: 28px;
-            background:
-                radial-gradient(ellipse 70% 90% at 50% 0%, rgba(124, 58, 237, 0.55), transparent 70%),
-                #0d0817;
-            border: 1px solid var(--border);
-            color: #fff;
-        }
-
-        .cta-box img {
-            width: 64px;
-            height: 64px;
-            border-radius: 16px;
-            margin-bottom: 20px;
-        }
-
-        .cta-box h2 {
-            font-size: clamp(32px, 4.5vw, 48px);
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-
-        .cta-box h2 span { color: #c9b5ff; }
-
-        .cta-box p {
-            color: rgba(255, 255, 255, 0.72);
-            margin-bottom: 32px;
-        }
-
-        .cta-box .store-buttons { justify-content: center; }
-        .cta-box .store-btn { background: #fff; color: #0d0817; }
-
-        /* Footer */
-        footer {
-            padding: 32px 0 40px;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .langs {
-            flex-basis: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px 16px;
-        }
-
-        .langs a[aria-current="page"] { color: var(--text); font-weight: 700; }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        footer nav {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        footer a {
-            color: var(--muted);
-            text-decoration: none;
-        }
-
-        footer a:hover { color: var(--text); }
-
-        @media (max-width: 960px) {
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 860px) {
-            .nav-links { display: none; }
-            .hero { padding: 104px 0 64px; }
-            .hero-grid,
-            .spotlight-grid,
-            .plans { grid-template-columns: 1fr; }
-            .hero-grid { gap: 40px; text-align: center; }
-            .hero-sub { margin-left: auto; margin-right: auto; }
-            .hero .store-buttons { justify-content: center; }
-            .video-phone { max-width: 280px; }
-            .spotlight { padding: 64px 0; }
-            .spotlight-grid { gap: 40px; }
-            .spotlight.reverse .spotlight-visual { order: 0; }
-            .spotlight .phone { max-width: 260px; }
-            .features, .screens, .pricing, .faq { padding: 64px 0; }
-            .cta { padding-bottom: 64px; }
-        }
-
-        @media (max-width: 560px) {
-            .review { padding-bottom: 64px; }
-            .review-card { padding: 32px 24px; }
-            .container { padding: 0 16px; }
-            .features-grid { grid-template-columns: 1fr; }
-            .store-btn { flex: 1; justify-content: center; padding: 10px 12px; gap: 10px; }
-            .store-btn-text .large { font-size: 16px; }
-            .screens-track { padding: 8px 16px 32px; gap: 18px; }
-            .screens-track figure { flex-basis: 220px; }
-            .plan { padding: 26px; }
-            .cta-box { padding: 48px 20px; }
-            .footer-content { flex-direction: column; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            *, *::before, *::after { transition-duration: 0.01ms !important; }
-        }
-    </style>
+    <link rel="stylesheet" href="../site.css" />
 </head>
 <body>
     <!-- Icon sprite (Lucide, ISC licence) -->
@@ -1007,6 +267,11 @@
         <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+        <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+        <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
+        <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
         <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
         <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.4 18.4a9 9 0 0 0 0-12.7"/></symbol>
@@ -1022,8 +287,9 @@
                 Parenty
             </a>
             <ul class="nav-links">
+                <li><a href="#daycare">Kita</a></li>
+                <li><a href="daycare.html">Für Kitas</a></li>
                 <li><a href="#features">Funktionen</a></li>
-                <li><a href="#screens">Screenshots</a></li>
                 <li><a href="#pricing">Preise</a></li>
                 <li><a href="#support">FAQ</a></li>
             </ul>
@@ -1035,15 +301,32 @@
                 <a href="#download" class="btn">Laden</a>
             </div>
         </div>
+        <ul class="nav-chips" aria-label="Springe zu">
+            <li><a href="#daycare">Kita</a></li>
+            <li><a href="daycare.html">Für Kitas</a></li>
+            <li><a href="#features">Funktionen</a></li>
+            <li><a href="#pricing">Preise</a></li>
+            <li><a href="#support">FAQ</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="download">
+    <!-- Hero: one page, two audiences. The switch (shown only with JavaScript) swaps the copy and the phone. -->
+    <section class="hero" id="download" data-audience="families">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">Medikamenten-Tracker für Familien</span>
-                <h1>Keine Dosis vergessen – <span class="accent">keine doppelt geben.</span></h1>
-                <p class="hero-sub">Parenty behält die Medikamente, das Fieber und die Arztbesuche deiner Kinder im Blick und hält alle, die sich um sie kümmern, auf dem gleichen Stand. Gelassen bleiben, selbst um 3&nbsp;Uhr nachts.</p>
+                <a class="new-pill" href="#daycare"><span>Neu</span>Der Kita-Modus ist da<svg class="icon"><use href="#i-arrow"/></svg></a>
+                <div class="audience-switch" role="group" aria-label="Für wen ist Parenty?">
+                    <button type="button" data-audience="families" aria-pressed="true">Für Familien</button>
+                    <button type="button" data-audience="daycares" aria-pressed="false">Für Kitas</button>
+                </div>
+                <div class="for-families">
+                    <h1>Keine Dosis vergessen – <span class="accent">keine doppelt geben.</span></h1>
+                    <p class="hero-sub">Parenty behält die Medikamente, das Fieber und die Arztbesuche deiner Kinder im Blick und hält alle, die sich um sie kümmern, auf dem gleichen Stand – auch die Kita. Gelassen, selbst um 3&nbsp;Uhr nachts.</p>
+                </div>
+                <div class="for-daycares">
+                    <p class="hero-title">Die Medikamente und der Tag jedes Kindes, <span class="accent">in einer Liste.</span></p>
+                    <p class="hero-sub">Sieh, was bei den Kindern jeder Familie fällig ist, trage Dosen, Temperatur, Mahlzeiten und Schlaf ein, und die Eltern sehen es sofort. <a href="daycare.html">Parenty für Kitas</a></p>
+                </div>
 
                 <div class="store-buttons">
                     <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty im App Store laden">
@@ -1055,7 +338,7 @@
                         <span class="store-btn-text"><span class="small">Jetzt bei</span><span class="large">Google Play</span></span>
                     </a>
                 </div>
-                <p class="hero-meta">Kostenlos · iPhone &amp; Android · 9 Sprachen</p>
+                <p class="hero-meta">Kostenlos · iPhone, iPad &amp; Android · 10 Sprachen</p>
 
                 <a class="hero-qr" href="../get.html">
                     <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
@@ -1063,42 +346,69 @@
                 </a>
             </div>
 
-            <div class="phone video-phone" id="watch">
-                <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Werbevideo der Parenty-App"></video>
-                <button class="video-sound" type="button" aria-label="Ton einschalten" aria-pressed="false">
-                    <svg class="icon"><use href="#i-muted"/></svg>
-                </button>
+            <div class="hero-visual">
+                <div class="phone video-phone for-families" id="watch">
+                    <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Werbevideo der Parenty-App"></video>
+                    <button class="video-sound" type="button" aria-label="Ton einschalten" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
+                </div>
+                <div class="phone for-daycares">
+                    <picture>
+                        <source srcset="../screenshots/dark/daycare-families.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/daycare-families.jpg" alt="Kita-Modus mit drei Familien, den Millers, den Patels und den Novaks, und wie lange der Zugang jeweils gilt" loading="lazy" width="600" height="1304">
+                    </picture>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Spotlight: voice (Siri / Android assistants) -->
-    <section class="spotlight reverse" id="voice">
+    <!-- Proof strip -->
+    <section class="proof" aria-label="Warum Eltern Parenty vertrauen">
+        <ul class="container proof-list">
+            <li><svg class="icon"><use href="#i-check"/></svg>Kostenlos herunterladen</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Keine Werbung, niemals</li>
+            <li><svg class="icon"><use href="#i-lock"/></svg>Wir verkaufen deine Daten nie</li>
+            <li><svg class="icon"><use href="#i-phone"/></svg>Face ID oder Fingerabdruck-Sperre</li>
+            <li><svg class="icon"><use href="#i-globe"/></svg>10 Sprachen</li>
+        </ul>
+    </section>
+
+    <!-- Chapter: At home -->
+    <section class="chapter-head" id="at-home">
+        <div class="container">
+            <span class="eyebrow">Für jede Familie</span>
+            <h2>Zu Hause</h2>
+            <p>Alles, was deine Familie braucht, um die richtige Dosis zur richtigen Zeit zu geben – geteilt mit allen, die helfen.</p>
+        </div>
+    </section>
+
+    <!-- Spotlight: double-dose guard -->
+    <section class="spotlight" id="dose-check">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Neu · Freihändig</span>
-                <h2>Baby auf dem Arm? Einfach fragen.</h2>
-                <p>Trage eine Dosis oder Fieber ein, ohne das Handy zu entsperren oder die App zu öffnen. Sag es Siri auf dem iPhone oder deinem Assistenten auf Android – Parenty teilt es mit der Familie.</p>
+                <span class="eyebrow">Sicherheit</span>
+                <h2>Keine doppelten Dosen mehr um 3&nbsp;Uhr nachts.</h2>
+                <p>Müde und unsicher, ob es schon Zeit ist? Parenty warnt dich, wenn es für die nächste Dosis zu früh ist, und zeigt genau, wann sie fällig ist.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>„Ibuprofen in Parenty eintragen“</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>„Welches Medikament ist als Nächstes in Parenty fällig?“</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Fieber, Gewicht und Größe eintragen und die letzte Dosis abfragen</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Erinnerungen alle paar Stunden, zu festen Zeiten oder als lauter Alarm</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Eine Warnung vor einer zu frühen Dosis</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Überfällig, laufend und erledigt – auf einen Blick</li>
                 </ul>
-                <p class="note">Siri funktioniert ohne Einrichtung. Auf Android klappt es mit Assistenten, die App-Aktionen unterstützen, ab Android 16.</p>
             </div>
             <div class="spotlight-visual">
-                <div class="phone video-phone">
-                    <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Video zu Parentys Sprachbefehlen: eine Dosis mit Siri und Fieber mit einem Android-Assistenten eintragen"></video>
-                    <button class="video-sound" type="button" aria-label="Ton einschalten" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
-                    </button>
+                <div class="phone">
+                    <picture>
+                        <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
+                        <img src="../screenshots/light/too-early.jpg" alt="Bildschirm „Dosis eintragen“ mit der Warnung, dass es für die nächste Dosis zu früh ist" loading="lazy" width="600" height="1304">
+                    </picture>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Spotlight: family sync -->
-    <section class="spotlight">
+    <section class="spotlight reverse" id="sync">
         <div class="container spotlight-grid">
             <div>
                 <span class="eyebrow">Familien-Sync</span>
@@ -1122,42 +432,106 @@
         </div>
     </section>
 
-    <!-- Spotlight: double-dose guard -->
-    <section class="spotlight reverse">
+    <!-- Spotlight: voice (Siri / Android assistants) -->
+    <section class="spotlight" id="voice">
         <div class="container spotlight-grid">
             <div>
-                <span class="eyebrow">Sicherheit</span>
-                <h2>Keine doppelten Dosen mehr um 3&nbsp;Uhr nachts.</h2>
-                <p>Müde und unsicher, ob es schon Zeit ist? Parenty warnt dich, wenn es für die nächste Dosis zu früh ist, und zeigt genau, wann sie fällig ist.</p>
+                <span class="eyebrow">Neu · Freihändig</span>
+                <h2>Baby auf dem Arm? Einfach fragen.</h2>
+                <p>Trage eine Dosis oder Fieber ein, ohne das Handy zu entsperren oder die App zu öffnen. Sag es Siri auf dem iPhone oder deinem Assistenten auf Android – Parenty teilt es mit der Familie.</p>
                 <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Erinnerungen alle paar Stunden, zu festen Zeiten oder als lauter Alarm</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Eine Warnung vor einer zu frühen Dosis</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Überfällig, laufend und erledigt – auf einen Blick</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>„Ibuprofen in Parenty eintragen“</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>„Welches Medikament ist als Nächstes in Parenty fällig?“</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Fieber, Gewicht und Größe eintragen und die letzte Dosis abfragen</li>
                 </ul>
+                <p class="note">Siri funktioniert ohne Einrichtung. Auf Android klappt es mit Assistenten, die App-Aktionen unterstützen, ab Android 16.</p>
             </div>
             <div class="spotlight-visual">
-                <div class="phone">
-                    <picture>
-                        <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/too-early.jpg" alt="Bildschirm „Dosis eintragen“ mit der Warnung, dass es für die nächste Dosis zu früh ist" loading="lazy" width="600" height="1304">
-                    </picture>
+                <div class="phone video-phone">
+                    <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Video zu Parentys Sprachbefehlen: eine Dosis mit Siri und Fieber mit einem Android-Assistenten eintragen"></video>
+                    <button class="video-sound" type="button" aria-label="Ton einschalten" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Review -->
-    <section class="review" aria-label="Was Eltern sagen">
+    <!-- Chapter: At daycare -->
+    <section class="chapter-head" id="at-daycare">
         <div class="container">
-            <figure class="review-card">
-                <div class="review-stars" role="img" aria-label="5 von 5 Sternen">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+            <span class="eyebrow">Neu in Parenty 2.0</span>
+            <h2>In der Kita</h2>
+            <p>Deine Kita, Nanny oder die Großeltern tragen den Tag ein, und du siehst ihn live auf deinem Handy.</p>
+        </div>
+    </section>
+
+    <!-- Spotlight: Daycare, for parents -->
+    <section class="spotlight" id="daycare">
+        <div class="container spotlight-grid">
+            <div>
+                <span class="eyebrow">Für Eltern</span>
+                <h2>Wisse, wie der Tag war – schon vor dem Abholen.</h2>
+                <p>Lade deine Kita, Nanny oder Großeltern über ihren Benutzernamen ein oder scanne ihren QR-Code. Sie tragen Medikamente, Temperatur, Mahlzeiten und Schlaf ein, und du siehst den Tag live auf deinem Startbildschirm.</p>
+                <ul class="checklist">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Nur die Kinder, die du auswählst – für 2 Wochen, 1 Monat, 3 Monate, 1 Jahr oder bis du den Zugang entfernst</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>„Heute in“ deiner Kita auf dem Startbildschirm, und ihr Tag als Zeitleiste</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>„Erfasst von“ bei jeder Dosis, Temperatur, jedem Symptom und jeder Wachstumsmessung</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Eine Warnung, bevor sie eine Dosis zu früh geben – auch wenn du sie zu Hause gegeben hast</li>
+                </ul>
+                <p class="note">Eine Kita einzuladen gehört zu Premium. Verlängere oder beende den Zugang jederzeit.</p>
+            </div>
+            <div class="spotlight-visual">
+                <div class="phone video-phone">
+                    <video src="../video/parenty-daycare-day-ad.mp4" poster="../video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty Kita-Video: Die Kita trägt Emmas Mahlzeit, ihren Mittagsschlaf und eine erhöhte Temperatur ein, und ihr Elternteil sieht den ganzen Tag auf dem Handy"></video>
+                    <button class="video-sound" type="button" aria-label="Ton einschalten" aria-pressed="false">
+                        <svg class="icon"><use href="#i-muted"/></svg>
+                    </button>
                 </div>
-                <blockquote>
-                    <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
-                </blockquote>
-                <figcaption><strong>Carolyn Johnson</strong> · Bewertung bei Google Play</figcaption>
-            </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daycare: how it works, and privacy -->
+    <section class="daycare-steps">
+        <div class="container">
+            <div class="section-header">
+                <h2>So funktioniert der Kita-Modus</h2>
+                <p>In einer Minute beim Bringen eingerichtet. Du entscheidest, wer was sieht und wie lange.</p>
+            </div>
+            <ol class="steps">
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-invite.jpg" alt="Kita-Zugang: @sunflowerdaycare wird eingeladen, Emma 1 Monat lang zu sehen" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Deine Kita einladen</h3>
+                    <p>Gib den Kita-Benutzernamen ein oder scanne ihren QR-Code. Wähle die Kinder, die sie sehen, und wie lange.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-today.jpg" alt="Startbildschirm mit der Karte „Heute in Sunflower Daycare“: 37,8 °C, fast alles gegessen, Schlaf 12:10 bis 13:30, 2 Windeln, fröhlich" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Der Tag auf einen Blick</h3>
+                    <p>Eine „Heute in“-Karte auf dem Startbildschirm fasst den Tag zusammen: Temperatur, Mahlzeiten, Schlaf, Windeln und Stimmung.</p>
+                </li>
+                <li class="step">
+                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-day.jpg" alt="Emmas Tag in der Kita als Zeitleiste: Windel, Mahlzeit, Stimmung, Mittagsschlaf und eine erhöhte Temperatur mit Notiz" loading="lazy" width="600" height="1304"></picture></div>
+                    <h3>Den ganzen Tag öffnen</h3>
+                    <p>Alles, was sie eingetragen haben, der Reihe nach und mit Notizen. Blättere Tag für Tag zurück.</p>
+                </li>
+            </ol>
+            <ul class="privacy-points">
+                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>Nur die Kinder, die du auswählst.</strong> Nie deine eigenen Temperaturen, Wachstumsdaten, Arztbesuche, Berichte oder Notizen.</span></li>
+                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>Nichts auf ihrem Handy gespeichert.</strong> Der Kita-Modus liest live und speichert keine Familiendaten auf dem Gerät.</span></li>
+                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>Der Zugang endet am gewählten Datum.</strong> Er endet pünktlich, auch wenn niemand die App öffnet.</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- For daycares: teaser for daycare.html -->
+    <section class="teaser">
+        <div class="container">
+            <a class="teaser-card" href="daycare.html">
+                <span class="teaser-icon"><svg class="icon"><use href="#i-home"/></svg></span>
+                <span class="teaser-text"><strong>Du leitest eine Kita oder betreust Kinder anderer Familien?</strong>Sieh die Medikamente jeder Familie und trage ihren Tag im Kita-Modus ein. Kostenlos für eine Familie.</span>
+                <span class="teaser-cta">Parenty für Kitas<svg class="icon"><use href="#i-arrow"/></svg></span>
+            </a>
         </div>
     </section>
 
@@ -1180,6 +554,21 @@
                     <p>Temperaturen in °C oder °F und Symptome auf einer Skala von 1–5 eintragen, mit Notizen und Uhrzeiten.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
+                    <h3>Kita-Modus<span class="tag-new">Neu</span></h3>
+                    <p>Lade deine Kita per Benutzername oder QR-Code ein und sieh den Tag deines Kindes auf dem Startbildschirm.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
+                    <h3>Filter für Einträge<span class="tag-new">Neu</span></h3>
+                    <p>Filtere Einträge danach, wer sie erfasst hat – du oder jede Kita –, nach Tag oder Zeitraum, gruppiert nach Kind.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
+                    <h3>Wachstum &amp; Kurven</h3>
+                    <p>Gewicht und Größe für jedes Kind, mit WHO-Wachstumskurven.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
                     <h3>Ärzte &amp; Besuche</h3>
                     <p>Deine Kinderärztin oder dein Kinderarzt nur einen Tipp entfernt. Besuche und Nachkontrollen eintragen und in den Kalender übernehmen.</p>
@@ -1200,14 +589,19 @@
                     <p>Eine Dosis vom Home-Bildschirm eintragen, den Countdown auf dem Sperrbildschirm verfolgen oder einfach Siri oder deinen Android-Assistenten fragen.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
+                    <h3>iPad &amp; iPhone Duo<span class="tag-new">Neu</span></h3>
+                    <p>Eine Seitenleiste auf dem iPad, beide Displays auf dem iPhone Duo und Einstellungen nebeneinander auf dem großen Bildschirm.</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
                     <h3>Privat &amp; sicher</h3>
                     <p>Optionale Sperre mit Face ID, Touch ID oder Fingerabdruck. Lösche dein Konto jederzeit. Wir verkaufen deine Daten niemals.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>9 Sprachen</h3>
-                    <p>Englisch, Arabisch, Deutsch, Griechisch, Spanisch, Französisch, Italienisch, Portugiesisch und Türkisch.</p>
+                    <h3>10 Sprachen</h3>
+                    <p>Englisch, Arabisch, Deutsch, Griechisch, Spanisch, Französisch, Hebräisch, Italienisch, Portugiesisch und Türkisch.</p>
                 </div>
             </div>
         </div>
@@ -1252,12 +646,27 @@
         </div>
     </section>
 
+    <!-- Review -->
+    <section class="review" aria-label="Was Eltern sagen">
+        <div class="container">
+            <figure class="review-card">
+                <div class="review-stars" role="img" aria-label="5 von 5 Sternen">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+                </div>
+                <blockquote>
+                    <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
+                </blockquote>
+                <figcaption><strong>Carolyn Johnson</strong> · Bewertung bei Google Play</figcaption>
+            </figure>
+        </div>
+    </section>
+
     <!-- Pricing -->
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
                 <h2>Kostenlos starten. Mit Premium teilen.</h2>
-                <p>Alles, was du für ein Kind brauchst, ist kostenlos. Premium ist für Familien, die sich die Betreuung teilen.</p>
+                <p>Alles, was du für ein Kind brauchst, ist kostenlos. Premium ist für Familien, die sich die Pflege teilen, und Parenty Betreuung für alle, die viele Familien betreuen.</p>
             </div>
             <div class="plans">
                 <div class="plan">
@@ -1280,10 +689,23 @@
                         <li><svg class="icon"><use href="#i-check"/></svg>Unbegrenzt Kinder, Ärzte und Besuche</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>PDF-Berichte und Fieberkurven</li>
                         <li><svg class="icon"><use href="#i-check"/></svg>Alarmeinstellungen</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Deine Kita einladen und ihren Tag sehen</li>
                     </ul>
                 </div>
+                <div class="plan">
+                    <h3>Parenty Betreuung</h3>
+                    <p class="plan-price">9,99 € im Monat oder 99,99 € im Jahr · für Kitas und Betreuungspersonen</p>
+                    <ul class="checklist">
+                        <li><svg class="icon"><use href="#i-check"/></svg>Alles aus Premium</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>So viele Familien, wie du betreust</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Medikamente, Temperatur, Symptome, Wachstum und Tagesablauf eintragen</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Eigener Name, Benutzername und QR-Code für deine Kita</li>
+                        <li><svg class="icon"><use href="#i-check"/></svg>Ein Verlauf von allem, was du eingetragen hast</li>
+                    </ul>
+                    <p class="plan-foot">Der Kita-Modus ist kostenlos für eine Familie, die von einem Premium-Elternteil eingeladen wurde.</p>
+                </div>
             </div>
-            <p class="pricing-note">Die Preise werden in der App in deiner Landeswährung angezeigt.</p>
+            <p class="pricing-note">Die App zeigt die Preise in deiner Landeswährung.</p>
         </div>
     </section>
 
@@ -1299,6 +721,18 @@
                     <p>Jedes angemeldete Konto wird kostenlos in der Cloud gesichert, sodass deine Daten ein neues Handy überstehen und auf all deinen Geräten aktuell bleiben. Mit Premium kannst du Partner, Großeltern oder die Nanny per @Benutzername einladen, und jede Dosis, die sie eintragen, erscheint sofort auf allen Handys.</p>
                 </details>
                 <details>
+                    <summary>Kann meine Kita oder mein Babysitter Parenty nutzen?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Ja. Gehe mit Premium zu Einstellungen → Konto → Kita-Zugang und lade sie über ihren Kita-Benutzernamen ein oder scanne den QR-Code, den sie dir zeigen. Wähle, welche Kinder sie sehen und wie lange: 2 Wochen, 1 Monat, 3 Monate, 1 Jahr oder bis du den Zugang entfernst. Sie sehen die Medikamente dieser Kinder, wann die letzte Dosis gegeben wurde und wann die nächste erlaubt ist, und können Dosen, Temperatur, Symptome, Wachstum und den Tag selbst eintragen: Mahlzeiten, Getränke, Schlaf, Windeln, Töpfchen, Stimmung und Notizen. Du siehst es auf dem Startbildschirm unter „Heute in“ deiner Kita, bei jedem Eintrag steht, wer ihn erfasst hat, und du kannst den Zugang jederzeit verlängern oder beenden.</p>
+                </details>
+                <details>
+                    <summary>Was sieht eine Kita?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Nur die Kinder, die du ausgewählt hast, und ihre Medikamente – mit dem Zeitpunkt der letzten Dosis und wann die nächste erlaubt ist, aber nicht, wer sie gegeben hat, und keine Notizen. Eine Kita sieht nie deine eigenen Temperaturen, Symptome, Wachstumsdaten, Arztbesuche, Berichte oder Notizen und kann deine Medikamente oder Kinder weder hinzufügen noch ändern oder löschen. Der Kita-Modus speichert nichts über deine Familie auf dem Handy der Kita, und der Zugang endet am gewählten Datum.</p>
+                </details>
+                <details>
+                    <summary>Ich leite eine Kita. Wie nutze ich den Kita-Modus?<svg class="icon"><use href="#i-chevron"/></svg></summary>
+                    <p>Erstelle ein kostenloses Konto und wechsle in den Kita-Modus: Tippe oben auf dem Bildschirm auf den Titel oder gehe zu Einstellungen → App-Modus. Richte den Namen und Benutzernamen deiner Kita ein und gib den Eltern den Benutzernamen oder zeige ihnen deinen QR-Code. Familien sehen den Namen deiner Kita, nie dein persönliches Konto. Eine kostenlose Kita kann eine Familie betreuen, die von einem Premium-Elternteil eingeladen wurde; Parenty Betreuung (9,99 € im Monat oder 99,99 € im Jahr) ist für so viele Familien, wie du betreust, und enthält Premium für deine eigene Familie. Der Kita-Modus braucht eine Internetverbindung.</p>
+                </details>
+                <details>
                     <summary>Kann ich mehrere Kinder verwalten?<svg class="icon"><use href="#i-chevron"/></svg></summary>
                     <p>Ja. Jedes Kind bekommt ein eigenes farbiges Profil, und du kannst Medikamente, Temperaturen, Symptome und Arztbesuche pro Kind filtern. Der kostenlose Plan enthält ein Kinderprofil; Premium schaltet unbegrenzt viele Profile frei.</p>
                 </details>
@@ -1312,7 +746,7 @@
                 </details>
                 <details>
                     <summary>Welche Sprachen unterstützt Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Englisch, Arabisch, Deutsch, Griechisch, Spanisch, Französisch, Italienisch, Portugiesisch und Türkisch.</p>
+                    <p>Englisch, Arabisch, Deutsch, Griechisch, Spanisch, Französisch, Hebräisch, Italienisch, Portugiesisch und Türkisch.</p>
                 </details>
                 <details>
                     <summary>Wie lösche ich mein Konto?<svg class="icon"><use href="#i-chevron"/></svg></summary>
@@ -1348,6 +782,13 @@
         </div>
     </section>
 
+    <!-- Phones: a download bar that appears after the hero and hides at the closing call to action -->
+    <a class="sticky-get" href="../get.html">
+        <img src="../logo.png" alt="" width="32" height="32" />
+        <span><strong>Parenty</strong>Kostenlos für iPhone und Android</span>
+        <span class="btn">App holen</span>
+    </a>
+
     <footer>
         <div class="container footer-content">
             <p>© <span id="year"></span> Parenty · Entwickelt von Stavros Georgiou</p>
@@ -1368,6 +809,7 @@
                 <a hreflang="pt" lang="pt" href="../pt/">Português</a>
                 <a hreflang="tr" lang="tr" href="../tr/">Türkçe</a>
                 <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
+                <a hreflang="he" lang="he" href="../he/">עברית</a>
             </nav>
         </div>
     </footer>
@@ -1431,6 +873,29 @@
                 });
             }, { threshold: 0.4 });
             players.forEach(({ video }) => observer.observe(video));
+        }
+
+        // Hero: "For families" / "For daycares" swaps the copy and the phone
+        const hero = document.querySelector(".hero");
+        const audienceButtons = hero.querySelectorAll(".audience-switch button");
+        audienceButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                hero.dataset.audience = button.dataset.audience;
+                audienceButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+            });
+        });
+
+        // Phones: show the download bar once the hero's store buttons scroll away, hide it at the closing call to action
+        const stickyGet = document.querySelector(".sticky-get");
+        if (stickyGet && "IntersectionObserver" in window) {
+            const seen = new Map();
+            const watched = [document.querySelector(".hero .store-buttons"), document.querySelector(".cta"), document.querySelector("footer")];
+            const stickyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(({ target, isIntersecting }) => seen.set(target, isIntersecting));
+                const heroGone = seen.get(watched[0]) === false && watched[0].getBoundingClientRect().top < 0;
+                stickyGet.classList.toggle("show", heroGone && !seen.get(watched[1]) && !seen.get(watched[2]));
+            });
+            watched.forEach((el) => stickyObserver.observe(el));
         }
 
         // Screenshot tabs <-> track

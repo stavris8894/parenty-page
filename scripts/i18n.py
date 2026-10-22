@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Builds the translated home pages (el/, de/, …) from index.html and i18n/<lang>.json.
+"""Builds the translated pages (el/index.html, el/daycare.html, …) from the English pages and i18n/<lang>.json.
 
-index.html (English) is the only page to edit. Then:
+index.html and daycare.html (English) are the only pages to edit. Then:
   python3 scripts/i18n.py extract   # writes i18n/strings.json: every text to translate
   python3 scripts/i18n.py build     # writes <lang>/index.html for every i18n/<lang>.json
 
@@ -21,7 +21,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "index.html"
+# The English pages; each is built into every language folder under the same name
+SOURCES = ("index.html", "daycare.html")
 I18N = ROOT / "i18n"
 SITE = "https://parenty.uk/"
 
@@ -36,6 +37,7 @@ LANGUAGES = {
     "pt": ("Português", "pt_BR", "ltr"),
     "tr": ("Türkçe", "tr_TR", "ltr"),
     "ar": ("العربية", "ar_AR", "rtl"),
+    "he": ("עברית", "he_IL", "rtl"),
 }
 
 TRANSLATABLE_ATTRS = ("alt", "aria-label", "title", "placeholder")
@@ -204,21 +206,27 @@ def catalog(source):
 
 
 def extract():
-    source = SOURCE.read_text()
-    strings = catalog(source)
+    strings = []
+    for page in SOURCES:
+        strings += [s for s in catalog((ROOT / page).read_text()) if s not in strings]
     I18N.mkdir(exist_ok=True)
     (I18N / "strings.json").write_text(json.dumps(strings, ensure_ascii=False, indent=2) + "\n")
     print(f"{len(strings)} strings -> i18n/strings.json")
 
 
-def relative_url(url):
-    """A link or asset URL as seen from a page one folder down (el/index.html)."""
+def relative_url(url, page_link=False):
+    """A link or asset URL as seen from a page one folder down (el/index.html).
+
+    Links between the translated pages (./ and daycare.html) stay in the language folder, unless
+    page_link is False because the link belongs to the language switcher."""
     if re.match(r"^(#|[a-z]+:|/|data:)", url):
+        return url
+    if page_link and re.match(r"^(\./|%s)(#.*)?$" % "|".join(re.escape(p) for p in SOURCES), url):
         return url
     return "../" + (url[2:] if url.startswith("./") else url)
 
 
-def localize(source, lang, translations):
+def localize(source, page, lang, translations):
     name, locale, direction = LANGUAGES[lang]
 
     # 1. Text and attributes, replaced from the end so earlier offsets stay valid
@@ -260,14 +268,20 @@ def localize(source, lang, translations):
 
     # 4. Language, direction, URLs
     source = source.replace('<html lang="en">', f'<html lang="{lang}" dir="{direction}">', 1)
-    page_url = f"{SITE}{lang}/"
-    source = source.replace('<link rel="canonical" href="https://parenty.uk/" />', f'<link rel="canonical" href="{page_url}" />')
-    source = source.replace('<meta property="og:url" content="https://parenty.uk/" />', f'<meta property="og:url" content="{page_url}" />')
+    path = "" if page == "index.html" else page
+    page_url = f"{SITE}{lang}/{path}"
+    source = source.replace(f'<link rel="canonical" href="{SITE}{path}" />', f'<link rel="canonical" href="{page_url}" />')
+    source = source.replace(f'<meta property="og:url" content="{SITE}{path}" />', f'<meta property="og:url" content="{page_url}" />')
     source = re.sub(r'<meta property="og:locale" content="[^"]*" />', f'<meta property="og:locale" content="{locale}" />', source)
     # The English page lists every other locale; here English takes this page's place
     source = source.replace(f'<meta property="og:locale:alternate" content="{locale}" />',
                             f'<meta property="og:locale:alternate" content="{LANGUAGES["en"][1]}" />')
-    source = re.sub(r'(\s(?:href|src|srcset|poster)=")([^"]+)(")', lambda m: m.group(1) + relative_url(m.group(2)) + m.group(3), source)
+    # Language switcher links have hreflang and always leave the folder; other page links stay in it
+    def fix_tag(tag):
+        page_link = "hreflang=" not in tag.group(0)
+        return re.sub(r'(\s(?:href|src|srcset|poster)=")([^"]+)(")',
+                      lambda m: m.group(1) + relative_url(m.group(2), page_link) + m.group(3), tag.group(0))
+    source = re.sub(r"<(?:a|img|source|video|link|script)\b[^>]*>", fix_tag, source)
     # The language switcher marks the current page
     source = source.replace(' aria-current="page"', "")
     source = re.sub(rf'(<a hreflang="{lang}"[^>]*?)>', r'\1 aria-current="page">', source, count=1)
@@ -275,8 +289,10 @@ def localize(source, lang, translations):
 
 
 def build():
-    source = SOURCE.read_text()
-    strings = catalog(source)
+    sources = {page: (ROOT / page).read_text() for page in SOURCES}
+    strings = []
+    for source in sources.values():
+        strings += [s for s in catalog(source) if s not in strings]
     failed = False
     for path in sorted(I18N.glob("*.json")):
         lang = path.stem
@@ -290,11 +306,11 @@ def build():
             for s in missing:
                 print("   ", json.dumps(s, ensure_ascii=False))
             continue
-        out = ROOT / lang / "index.html"
-        out.parent.mkdir(exist_ok=True)
-        out.write_text(localize(source, lang, translations))
+        (ROOT / lang).mkdir(exist_ok=True)
+        for page, source in sources.items():
+            (ROOT / lang / page).write_text(localize(source, page, lang, translations))
         unused = len(set(translations) - set(strings))
-        print(f"{lang}: wrote {out.relative_to(ROOT)}" + (f" ({unused} unused entries)" if unused else ""))
+        print(f"{lang}: wrote {lang}/{', '.join(SOURCES)}" + (f" ({unused} unused entries)" if unused else ""))
     sys.exit(1 if failed else 0)
 
 
