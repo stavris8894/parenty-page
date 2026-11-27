@@ -277,5 +277,10 @@
   "Can I still use Parenty for my own family?": "Puis-je encore utiliser Parenty pour ma propre famille ?",
   "Yes. One account can be both. Switch between Daycare mode and your own family from the title at the top of the screen. Parenty Daycare includes Premium for your own family.": "Oui. Un seul compte fait les deux. Passez du mode garderie à votre propre famille depuis le titre en haut de l'écran. Parenty Crèche inclut Premium pour votre propre famille.",
   "Every family's day, <span>in one list.</span>": "La journée de chaque famille, <span>dans une seule liste.</span>",
-  "Parenty for families": "Parenty pour les familles"
+  "Parenty for families": "Parenty pour les familles",
+  "Cookie settings": "Paramètres des cookies",
+  "Cookie preferences": "Préférences des cookies",
+  "We use optional analytics cookies to understand how visitors use this site. <a href=\"privacy.html\">Privacy Policy</a>": "Nous utilisons des cookies analytiques facultatifs pour comprendre comment les visiteurs utilisent ce site. <a href=\"privacy.html\">Politique de confidentialité</a>",
+  "Decline": "Refuser",
+  "Accept": "Accepter"
 }

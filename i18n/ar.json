@@ -277,5 +277,10 @@
   "Can I still use Parenty for my own family?": "هل يمكنني استخدام Parenty لعائلتي أيضًا؟",
   "Yes. One account can be both. Switch between Daycare mode and your own family from the title at the top of the screen. Parenty Daycare includes Premium for your own family.": "نعم. حساب واحد يكفي للأمرين. بدّل بين وضع الحضانة وعائلتك من العنوان أعلى الشاشة. يشمل Parenty للحضانات اشتراك Premium لعائلتك.",
   "Every family's day, <span>in one list.</span>": "يوم كل عائلة، <span>في قائمة واحدة.</span>",
-  "Parenty for families": "Parenty للعائلات"
+  "Parenty for families": "Parenty للعائلات",
+  "Cookie settings": "إعدادات ملفات تعريف الارتباط",
+  "Cookie preferences": "تفضيلات ملفات تعريف الارتباط",
+  "We use optional analytics cookies to understand how visitors use this site. <a href=\"privacy.html\">Privacy Policy</a>": "نستخدم ملفات تعريف ارتباط تحليلية اختيارية لفهم كيفية استخدام الزوار لهذا الموقع. <a href=\"privacy.html\">سياسة الخصوصية</a>",
+  "Decline": "رفض",
+  "Accept": "قبول"
 }

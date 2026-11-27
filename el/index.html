@@ -8,6 +8,8 @@
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
+    <script src="../analytics.js"></script>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TK4KS8P7"></script>
     <script>
         // Apply a saved theme choice before first paint; otherwise the system setting applies
         document.documentElement.classList.add("js");
@@ -798,6 +800,7 @@
                 <a href="#support">Υποστήριξη</a>
                 <a href="../privacy.html">Πολιτική απορρήτου</a>
                 <a href="../terms.html">Όροι χρήσης</a>
+                <button type="button" class="footer-link-btn" data-cookie-settings>Ρυθμίσεις cookies</button>
             </nav>
             <nav class="langs" aria-label="Γλώσσα" translate="no">
                 <a hreflang="en" lang="en" href="../">English</a>
@@ -813,6 +816,14 @@
             </nav>
         </div>
     </footer>
+
+    <aside class="cookie-banner" id="cookieBanner" role="region" aria-label="Προτιμήσεις cookies" hidden>
+        <p class="cookie-banner-text">Χρησιμοποιούμε προαιρετικά cookies ανάλυσης για να κατανοούμε πώς χρησιμοποιούν οι επισκέπτες αυτόν τον ιστότοπο. <a href="../privacy.html">Πολιτική απορρήτου</a></p>
+        <div class="cookie-banner-actions">
+            <button type="button" class="cookie-btn cookie-decline" id="cookieDecline">Απόρριψη</button>
+            <button type="button" class="cookie-btn cookie-accept" id="cookieAccept">Αποδοχή</button>
+        </div>
+    </aside>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();

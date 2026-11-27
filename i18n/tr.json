@@ -277,5 +277,10 @@
   "Can I still use Parenty for my own family?": "Parenty'yi kendi ailem için de kullanabilir miyim?",
   "Yes. One account can be both. Switch between Daycare mode and your own family from the title at the top of the screen. Parenty Daycare includes Premium for your own family.": "Evet. Tek hesap ikisini de yapar. Ekranın üstündeki başlıktan Kreş modu ile kendi aileniz arasında geçiş yapın. Parenty Kreş, kendi aileniz için Premium'u içerir.",
   "Every family's day, <span>in one list.</span>": "Her ailenin günü <span>tek listede.</span>",
-  "Parenty for families": "Aileler için Parenty"
+  "Parenty for families": "Aileler için Parenty",
+  "Cookie settings": "Çerez ayarları",
+  "Cookie preferences": "Çerez tercihleri",
+  "We use optional analytics cookies to understand how visitors use this site. <a href=\"privacy.html\">Privacy Policy</a>": "Ziyaretçilerin bu siteyi nasıl kullandığını anlamak için isteğe bağlı analiz çerezleri kullanıyoruz. <a href=\"privacy.html\">Gizlilik Politikası</a>",
+  "Decline": "Reddet",
+  "Accept": "Kabul et"
 }

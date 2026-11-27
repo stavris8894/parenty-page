@@ -8,6 +8,8 @@
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0817" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
+    <script src="../analytics.js"></script>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TK4KS8P7"></script>
     <script>
         // Apply a saved theme choice before first paint; otherwise the system setting applies
         document.documentElement.classList.add("js");
@@ -798,6 +800,7 @@
                 <a href="#support">Assistenza</a>
                 <a href="../privacy.html">Informativa sulla privacy</a>
                 <a href="../terms.html">Condizioni d'uso</a>
+                <button type="button" class="footer-link-btn" data-cookie-settings>Impostazioni cookie</button>
             </nav>
             <nav class="langs" aria-label="Lingua" translate="no">
                 <a hreflang="en" lang="en" href="../">English</a>
@@ -813,6 +816,14 @@
             </nav>
         </div>
     </footer>
+
+    <aside class="cookie-banner" id="cookieBanner" role="region" aria-label="Preferenze cookie" hidden>
+        <p class="cookie-banner-text">Utilizziamo cookie analitici facoltativi per capire come i visitatori utilizzano questo sito. <a href="../privacy.html">Informativa sulla privacy</a></p>
+        <div class="cookie-banner-actions">
+            <button type="button" class="cookie-btn cookie-decline" id="cookieDecline">Rifiuta</button>
+            <button type="button" class="cookie-btn cookie-accept" id="cookieAccept">Accetta</button>
+        </div>
+    </aside>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();

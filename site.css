@@ -1120,3 +1120,92 @@ footer a:hover { color: var(--text); }
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+/* Cookie preferences banner (non-modal, privacy-protective by default) */
+.footer-link-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: var(--muted);
+    cursor: pointer;
+}
+.footer-link-btn:hover { color: var(--text); }
+
+.cookie-banner {
+    position: fixed;
+    inset-block-end: max(16px, env(safe-area-inset-bottom, 0px));
+    inset-inline: 16px;
+    max-inline-size: 680px;
+    margin-inline: auto;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    color: var(--text);
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+.cookie-banner-text a {
+    color: var(--accent, #6b46c1);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+.cookie-banner-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.cookie-btn {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    min-block-size: 38px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+}
+.cookie-decline {
+    background: transparent;
+    color: var(--text);
+}
+.cookie-decline:hover {
+    background: rgba(128, 128, 128, 0.1);
+}
+.cookie-accept {
+    background: var(--text);
+    color: var(--bg);
+    border-color: transparent;
+}
+.cookie-accept:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 860px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        inset-block-end: max(84px, calc(72px + env(safe-area-inset-bottom, 0px)));
+    }
+    .cookie-banner-actions {
+        justify-content: flex-end;
+    }
+    .cookie-btn {
+        min-block-size: 44px;
+        flex: 1;
+    }
+}
