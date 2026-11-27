@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Privacy Policy – Parenty: Medicine Tracker</title>
     <meta name="description" content="Privacy Policy for Parenty – Learn how your family's medication and health data is securely protected." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
@@ -18,169 +18,138 @@
         } catch (e) {}
     </script>
     <link rel="canonical" href="https://parenty.uk/privacy.html" />
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="icon" href="favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #faf8ff;
-            --surface: #ffffff;
-            --border: #e7e0f7;
-            --text: #1d1530;
-            --muted: #5f577a;
-            --accent: #6b46c1;
-        }
-        @media (prefers-color-scheme: dark) {
-            :root:not([data-theme="light"]) {
-                --bg: #0d0817;
-                --surface: #17112a;
-                --border: rgba(255, 255, 255, 0.08);
-                --text: #f5f3ff;
-                --muted: #a59fbf;
-                --accent: #c9b5ff;
-            }
-        }
-
-        :root[data-theme="dark"] {
-            --bg: #0d0817;
-            --surface: #17112a;
-            --border: rgba(255, 255, 255, 0.08);
-            --text: #f5f3ff;
-            --muted: #a59fbf;
-            --accent: #c9b5ff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            padding-bottom: 60px;
-            -webkit-font-smoothing: antialiased;
-        }
-        .navbar {
-            padding: 16px 24px;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .theme-toggle {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-        .nav-actions { display: flex; align-items: center; gap: 10px; }
-        .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
-        .brand-logo { width: 36px; height: 36px; border-radius: 10px; }
-        .brand-text { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; }
-        .container { max-width: 760px; margin: 40px auto; padding: 0 24px; }
-        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 40px; margin-bottom: 24px; }
-        h1 { font-family: 'Outfit', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
-        h2 { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700; margin: 28px 0 12px; }
-        p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
-        ul { color: var(--muted); padding-left: 20px; margin-bottom: 16px; font-size: 15px; }
-        li { margin-bottom: 8px; }
-        strong { color: var(--text); }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 40px; }
-        footer a { color: var(--muted); }
-        @media (max-width: 560px) {
-            .container { padding: 0 16px; margin-top: 24px; }
-            .card { padding: 24px; }
-            h1 { font-size: 30px; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="brand">
-            <img src="logo.png" alt="Parenty" class="brand-logo" width="36" height="36" />
-            <span class="brand-text">Parenty</span>
-        </a>
-        <div class="nav-actions">
-            <a href="index.html" style="color: var(--muted); text-decoration: none; font-weight: 600;">← Back to Home</a>
-            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
-                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            </button>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+    </svg>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="nav-start">
+                <a href="./" class="brand">
+                    <img src="logo.png" alt="" width="34" height="34" />
+                    <span>Parenty</span>
+                </a>
+                <nav class="mode-switch" aria-label="Who is Parenty for?">
+                    <a href="./" data-audience="families">Families</a>
+                    <a href="daycare.html" data-audience="daycares">Daycares</a>
+                </nav>
+            </div>
+
+            <nav class="site-nav" aria-label="Primary">
+                <ul class="nav-links">
+                    <li><a href="./#features">Features</a></li>
+                    <li><a href="./#pricing">Pricing</a></li>
+                    <li><a href="./#support">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
+                <a href="./#download" class="btn nav-cta">Download</a>
+                <div class="popover-wrap mobile-menu-wrap">
+                    <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" popovertargetaction="toggle" aria-label="Menu" aria-controls="mobile-nav">
+                        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+                    </button>
+                    <nav id="mobile-nav" class="nav-popover mobile-popover" popover="auto" aria-label="Menu">
+                        <a href="./#features">Features</a>
+                        <a href="./#pricing">Pricing</a>
+                        <a href="./#support">FAQ</a>
+                        <a href="./#download" class="btn">Download</a>
+                    </nav>
+                </div>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="container">
-        <div class="card">
-            <h1>Privacy Policy</h1>
-            <p>Last updated: November 2026</p>
+    <main class="legal-main">
+        <div class="legal-container">
+            <article class="legal-card">
+                <h1>Privacy Policy</h1>
+                <p>Last updated: November 2026</p>
 
-            <p>At <strong>Parenty</strong>, operated by Stavros Georgiou ("we", "us", "our"), protecting your family's personal health information is our highest priority. This Privacy Policy explains how data is collected, used, and safeguarded when using the Parenty application.</p>
+                <p>At <strong>Parenty</strong>, operated by Stavros Georgiou ("we", "us", "our"), protecting your family's personal health information is our highest priority. This Privacy Policy explains how data is collected, used, and safeguarded when using the Parenty application.</p>
 
-            <h2>1. Information We Collect</h2>
-            <p>To provide medication scheduling and health tracking, Parenty collects:</p>
-            <ul>
-                <li><strong>Profile Information:</strong> Child names or display pseudonyms and profile colours, and your @username if you use family sharing.</li>
-                <li><strong>Medication & Health Data:</strong> Medicine names, dosage schedules, doses given, temperature readings, symptoms and notes, and doctor contacts and visit details you choose to add.</li>
-                <li><strong>Account Information:</strong> Your name and email address from Sign in with Google or Sign in with Apple, used for authentication, backup and synchronization. We never see your Google or Apple password.</li>
-                <li><strong>Diagnostics:</strong> Anonymous usage analytics and crash reports (Firebase Analytics and Crashlytics) that help us fix bugs and improve the app.</li>
-                <li><strong>Website Analytics &amp; Ads Measurement:</strong> On <strong>parenty.uk</strong>, we use Google Tag Manager and Google Analytics 4 with Google Consent Mode v2 to measure aggregate page views, app store link clicks, and ad campaign performance. Optional analytics and ads measurement cookies are disabled by default in the EEA, UK, and Switzerland and are only enabled if you click <em>Accept</em> in the cookie banner; you can change your choice at any time from <em>Cookie settings</em> in the footer. Health data entered in the Parenty mobile app is never used for advertising.</li>
-                <li><strong>Purchases:</strong> Premium purchases are processed by the App Store or Google Play and managed through RevenueCat. We never receive your payment card details.</li>
-            </ul>
+                <h2>1. Information We Collect</h2>
+                <p>To provide medication scheduling and health tracking, Parenty collects:</p>
+                <ul>
+                    <li><strong>Profile Information:</strong> Child names or display pseudonyms and profile colours, and your @username if you use family sharing.</li>
+                    <li><strong>Medication &amp; Health Data:</strong> Medicine names, dosage schedules, doses given, temperature readings, symptoms and notes, and doctor contacts and visit details you choose to add.</li>
+                    <li><strong>Account Information:</strong> Your name and email address from Sign in with Google or Sign in with Apple, used for authentication, backup and synchronization. We never see your Google or Apple password.</li>
+                    <li><strong>Diagnostics:</strong> Anonymous usage analytics and crash reports (Firebase Analytics and Crashlytics) that help us fix bugs and improve the app.</li>
+                    <li><strong>Website Analytics &amp; Ads Measurement:</strong> On <strong>parenty.uk</strong>, we use Google Tag Manager and Google Analytics 4 with Google Consent Mode v2 to measure aggregate page views, app store link clicks, and ad campaign performance. Optional analytics and ads measurement cookies are disabled by default in the EEA, UK, and Switzerland and are only enabled if you click <em>Accept</em> in the cookie banner; you can change your choice at any time from <em>Cookie settings</em> in the footer. Health data entered in the Parenty mobile app is never used for advertising.</li>
+                    <li><strong>Purchases:</strong> Premium purchases are processed by the App Store or Google Play and managed through RevenueCat. We never receive your payment card details.</li>
+                </ul>
 
-            <h2>2. How We Use Your Information</h2>
-            <p>Your information is used strictly to provide and improve the app's functionality:</p>
-            <ul>
-                <li>Sending timely dose reminder alerts and notifications.</li>
-                <li>Backing up your data and syncing it across your devices and the family members you invite.</li>
-                <li>Generating exportable health reports for your family and pediatrician.</li>
-            </ul>
+                <h2>2. How We Use Your Information</h2>
+                <p>Your information is used strictly to provide and improve the app's functionality:</p>
+                <ul>
+                    <li>Sending timely dose reminder alerts and notifications.</li>
+                    <li>Backing up your data and syncing it across your devices and the family members you invite.</li>
+                    <li>Generating exportable health reports for your family and pediatrician.</li>
+                </ul>
 
-            <h2>3. Data Protection & Security</h2>
-            <p>Your data is stored with Google Firebase (Cloud Firestore), encrypted in transit (TLS) and at rest. Access is restricted by security rules so that only you and the family members you invite can read your family's records. You can also lock the app with Face ID, Touch ID or your fingerprint.</p>
+                <h2>3. Data Protection &amp; Security</h2>
+                <p>Your data is stored with Google Firebase (Cloud Firestore), encrypted in transit (TLS) and at rest. Access is restricted by security rules so that only you and the family members you invite can read your family's records. You can also lock the app with Face ID, Touch ID or your fingerprint.</p>
 
-            <h2>4. Third-Party Sharing</h2>
-            <p>We do <strong>NOT</strong> sell, trade, or rent your personal or health data to advertisers or third parties under any circumstances. We only use the service providers named above (Google Firebase, Apple, Google Play and RevenueCat) to run the app.</p>
+                <h2>4. Third-Party Sharing</h2>
+                <p>We do <strong>NOT</strong> sell, trade, or rent your personal or health data to advertisers or third parties under any circumstances. We only use the service providers named above (Google Firebase, Apple, Google Play and RevenueCat) to run the app.</p>
 
-            <h2>5. Deleting Your Data</h2>
-            <p>You can delete your account at any time from Profile settings in the app. This deletes your account and its cloud data. You can also email us to request deletion.</p>
+                <h2>5. Deleting Your Data</h2>
+                <p>You can delete your account at any time from Profile settings in the app. This deletes your account and its cloud data. You can also email us to request deletion.</p>
 
-            <h2>6. Contact Us</h2>
-            <p>If you have any questions regarding this Privacy Policy, please contact us at:</p>
-            <p><strong>Email:</strong> <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions regarding this Privacy Policy, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
+            </article>
         </div>
+    </main>
 
-        <footer>
-            <p>© <span id="year"></span> Parenty • All rights reserved.</p>
-            <p style="margin-top: 10px;">
-                <a href="index.html">Home</a> |
-                <a href="index.html#features">Features</a> |
-                <a href="index.html#download">Download App</a> |
-                <a href="terms.html">Terms of Use</a> |
+    <footer>
+        <div class="container footer-content">
+            <p>© <span id="year"></span> Parenty · Developed by Stavros Georgiou</p>
+            <nav aria-label="Footer">
+                <a href="./">Home</a>
+                <a href="daycare.html">Parenty for daycares</a>
+                <a href="privacy.html" aria-current="page">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
                 <a href="mailto:info@parenty.uk">Support</a>
-            </p>
-        </footer>
-    </div>
+                <button type="button" class="footer-link-btn" data-cookie-settings>Cookie settings</button>
+            </nav>
+        </div>
+    </footer>
 
+    <aside class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie preferences" hidden>
+        <p class="cookie-banner-text">We use optional analytics and ads measurement cookies to understand how visitors use this site. <a href="privacy.html">Privacy Policy</a></p>
+        <div class="cookie-banner-actions">
+            <button type="button" class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+            <button type="button" class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
+        </div>
+    </aside>
+
+    <script type="module">
+        if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
+            import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js");
+        }
+    </script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Theme toggle: the visitor's saved choice wins over the system setting
         const themeToggle = document.getElementById("themeToggle");
         const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
-        const darkSources = document.querySelectorAll('source[media="(prefers-color-scheme: dark)"]');
         const applyTheme = () => {
             const dark = (document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light")) === "dark";
-            // Screenshots pick their dark/light image through <source media>, so steer that too
-            darkSources.forEach((source) => source.media = dark ? "all" : "not all");
             document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.content = dark ? "#0d0817" : "#faf8ff");
             themeToggle.querySelector(".icon-sun").style.display = dark ? "" : "none";
             themeToggle.querySelector(".icon-moon").style.display = dark ? "none" : "";

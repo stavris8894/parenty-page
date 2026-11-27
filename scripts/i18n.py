@@ -282,9 +282,11 @@ def localize(source, page, lang, translations):
         return re.sub(r'(\s(?:href|src|srcset|poster)=")([^"]+)(")',
                       lambda m: m.group(1) + relative_url(m.group(2), page_link) + m.group(3), tag.group(0))
     source = re.sub(r"<(?:a|img|source|video|link|script)\b[^>]*>", fix_tag, source)
-    # The language switcher marks the current page
-    source = source.replace(' aria-current="page"', "")
-    source = re.sub(rf'(<a hreflang="{lang}"[^>]*?)>', r'\1 aria-current="page">', source, count=1)
+    # The language switcher marks the current page and language code (without touching nav aria-current)
+    source = re.sub(r'(<a hreflang="[^"]*"[^>]*?)\s+aria-current="page"', r'\1', source)
+    source = re.sub(rf'(<a hreflang="{lang}"[^>]*?)>', r'\1 aria-current="page">', source)
+    source = source.replace('<span class="lang-code" translate="no">EN</span>',
+                            f'<span class="lang-code" translate="no">{lang.upper()}</span>')
     return source
 
 

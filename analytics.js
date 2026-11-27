@@ -105,8 +105,8 @@
                 }
             }
 
-            var audBtn = event.target && event.target.closest ? event.target.closest(".audience-switch button[data-audience]") : null;
-            if (audBtn) {
+            var audBtn = event.target && event.target.closest ? event.target.closest(".mode-switch [data-audience], .audience-switch [data-audience]") : null;
+            if (audBtn && audBtn.getAttribute("aria-current") !== "page") {
                 window.dataLayer.push({
                     event: "audience_switch",
                     audience: audBtn.dataset.audience || "",

@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Parenty: promemoria dei farmaci per bambini – Dosi, promemoria &amp; registro della febbre</title>
     <meta name="description" content="Parenty aiuta genitori e chi si prende cura dei bambini a registrare dosi di medicine, febbre, sintomi e visite mediche dei figli — e tiene tutti sincronizzati, asilo compreso, così nessuna dose viene saltata o ripetuta." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
@@ -12,17 +12,16 @@
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TK4KS8P7"></script>
     <script>
         // Apply a saved theme choice before first paint; otherwise the system setting applies
-        document.documentElement.classList.add("js");
         try {
             const saved = localStorage.getItem("theme");
             if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
         } catch (e) {}
     </script>
     <meta name="apple-itunes-app" content="app-id=6757712692" />
-    
+
     <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
     <meta name="robots" content="index, follow" />
-    
+
     <link rel="canonical" href="https://parenty.uk/it/" />
     <link rel="alternate" hreflang="en" href="https://parenty.uk/" />
     <link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
@@ -59,7 +58,7 @@
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="500" />
     <meta property="og:image:alt" content="Schermate dell'app Parenty con le dosi in arrivo e un registro della febbre" />
-    
+
     <!-- Twitter / X Meta -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Parenty – Farmaci e salute per tutta la famiglia" />
@@ -111,7 +110,7 @@
       "https://parenty.uk/screenshots/light/home.jpg",
       "https://parenty.uk/screenshots/light/history.jpg",
       "https://parenty.uk/screenshots/light/too-early.jpg",
-      "https://parenty.uk/screenshots/light/daycare-today.jpg"
+      "https://parenty.uk/screenshots/light/schedule.jpg"
     ],
     "publisher": {
       "@id": "https://parenty.uk/#organization"
@@ -153,16 +152,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Modalità asilo di Parenty: una giornata all'asilo",
-    "description": "L'asilo registra un pasto, un sonnellino e una temperatura alta, e il genitore vede tutta la giornata nella Home e come cronologia.",
-    "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
-    "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
-    "uploadDate": "2026-10-22T20:34:00+03:00",
-    "duration": "PT30S"
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -175,26 +164,10 @@
       },
       {
         "@type": "Question",
-        "name": "Il mio asilo o la tata possono usare Parenty?",
+        "name": "Cosa è incluso gratis?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sì. Con Premium, vai su Impostazioni → Account → Accesso asilo e invitali con il nome utente dell'asilo, oppure scansiona il codice QR che ti mostrano. Scegli quali bambini vedono e per quanto tempo: 2 settimane, 1 mese, 3 mesi, 1 anno o finché non rimuovi l'accesso. Vedono i farmaci di quei bambini, quando è stata data l'ultima dose e quando è consentita la prossima, e possono registrare dosi, temperature, sintomi, crescita e la giornata stessa: pasti, bevande, sonnellini, pannolini, vasino, umore e note. Lo vedi nella Home come «Oggi a» il tuo asilo, ogni voce mostra chi l'ha registrata, e puoi estendere o terminare l'accesso quando vuoi."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Cosa vede un asilo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Solo i bambini che hai scelto e i loro farmaci, con quando è stata data l'ultima dose e quando è consentita la prossima: non chi l'ha data, e nessuna nota. Un asilo non vede mai le tue temperature, i sintomi, la crescita, le visite mediche, i report o le note, e non può aggiungere, modificare o eliminare i tuoi farmaci o i tuoi figli. La modalità asilo non conserva nulla della tua famiglia sul telefono dell'asilo, e l'accesso si ferma nella data che hai scelto."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Gestisco un asilo. Come uso la Modalità asilo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Crea un account gratuito, poi passa alla modalità asilo: tocca il titolo in alto sullo schermo o vai su Impostazioni → Modalità app. Imposta il nome e il nome utente del tuo asilo, poi dai ai genitori il nome utente o mostra loro il tuo codice QR. Le famiglie vedono il nome del tuo asilo, mai il tuo account personale. Un asilo gratuito può occuparsi di una famiglia invitata da un genitore Premium; Parenty Asilo (9,99 € al mese o 99,99 € all'anno) è per tutte le famiglie di cui ti occupi e include Premium per la tua famiglia. La modalità asilo richiede una connessione a internet."
+          "text": "Monitoraggio di farmaci e dosi, promemoria, registro di temperatura e sintomi, un profilo figlio, un medico con due visite e backup nel cloud. Premium aggiunge la condivisione con la famiglia, profili e medici illimitati, report PDF, grafici della febbre e impostazioni delle sveglie."
         }
       },
       {
@@ -207,10 +180,10 @@
       },
       {
         "@type": "Question",
-        "name": "Cosa è incluso gratis?",
+        "name": "Il mio asilo o la tata possono usare Parenty?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Monitoraggio di farmaci e dosi, promemoria, registro di temperatura e sintomi, un profilo figlio, un medico con due visite e backup nel cloud. Premium aggiunge la condivisione con la famiglia, profili e medici illimitati, report PDF, grafici della febbre e impostazioni delle sveglie."
+          "text": "Sì. Con Premium inviti l'asilo o chi si occupa dei bambini tramite username o codice QR, scegli quali bambini vedere e per quanto tempo e segui dosi, pasti e pisolini in diretta nella Home. Non vedono mai i tuoi dati o note private."
         }
       },
       {
@@ -223,26 +196,10 @@
       },
       {
         "@type": "Question",
-        "name": "In quali lingue è disponibile Parenty?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Inglese, arabo, tedesco, greco, spagnolo, francese, ebraico, italiano, portoghese e turco."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Come elimino il mio account?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Vai in Impostazioni profilo e scegli Elimina account. Il tuo account e i suoi dati nel cloud vengono rimossi."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Le notifiche non arrivano. Cosa devo controllare?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Verifica che le notifiche di Parenty siano consentite nelle impostazioni del telefono, che una modalità Full immersion o Non disturbare non le silenzi e di avere l'ultima versione dell'app."
         }
       }
     ]
@@ -261,7 +218,6 @@
     <!-- Icon sprite (Lucide, ISC licence) -->
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
         <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-        <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></symbol>
         <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
         <symbol id="i-steth" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
         <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
@@ -271,8 +227,9 @@
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
         <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
         <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
-        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
         <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-qr" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
         <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
         <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
@@ -281,508 +238,394 @@
         <symbol id="i-play" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.7c18.1-10.5 18.1-49.7-1.2-60.2zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></symbol>
     </svg>
 
-    <!-- Header Navigation -->
-    <nav class="navbar">
+    <!-- Unified Header Navigation -->
+    <header class="navbar">
         <div class="container nav-content">
-            <a href="#" class="brand">
-                <img src="../logo.png" alt="" width="36" height="36" />
-                Parenty
-            </a>
-            <ul class="nav-links">
-                <li><a href="#daycare">Asilo</a></li>
-                <li><a href="daycare.html">Per asili</a></li>
-                <li><a href="#features">Funzioni</a></li>
-                <li><a href="#pricing">Prezzi</a></li>
-                <li><a href="#support">FAQ</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Passa al tema scuro">
-                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            </button>
-                <a href="#download" class="btn">Scarica</a>
-            </div>
-        </div>
-        <ul class="nav-chips" aria-label="Vai a">
-            <li><a href="#daycare">Asilo</a></li>
-            <li><a href="daycare.html">Per asili</a></li>
-            <li><a href="#features">Funzioni</a></li>
-            <li><a href="#pricing">Prezzi</a></li>
-            <li><a href="#support">FAQ</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero: one page, two audiences. The switch (shown only with JavaScript) swaps the copy and the phone. -->
-    <section class="hero" id="download" data-audience="families">
-        <div class="container hero-grid">
-            <div>
-                <a class="new-pill" href="#daycare"><span>Novità</span>Scopri la modalità asilo<svg class="icon"><use href="#i-arrow"/></svg></a>
-                <div class="audience-switch" role="group" aria-label="Per chi è Parenty?">
-                    <button type="button" data-audience="families" aria-pressed="true">Per famiglie</button>
-                    <button type="button" data-audience="daycares" aria-pressed="false">Per asili</button>
-                </div>
-                <div class="for-families">
-                    <h1>Mai più una dose dimenticata — <span class="accent">o ripetuta.</span></h1>
-                    <p class="hero-sub">Parenty tiene traccia di farmaci, febbre e visite mediche dei tuoi figli, e tiene sincronizzati tutti quelli che se ne prendono cura, asilo compreso. Cura serena, anche alle 3&nbsp;di notte.</p>
-                </div>
-                <div class="for-daycares">
-                    <p class="hero-title">I farmaci e la giornata di ogni bambino, <span class="accent">in un'unica lista.</span></p>
-                    <p class="hero-sub">Vedi cosa c'è da dare ai bambini di ogni famiglia, registra dosi, temperature, pasti e sonnellini, e i genitori lo vedono subito. <a href="daycare.html">Parenty per asili</a></p>
-                </div>
-
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty dall'App Store">
-                        <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">Scarica su</span><span class="large">App Store</span></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty su Google Play">
-                        <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Disponibile su</span><span class="large">Google Play</span></span>
-                    </a>
-                </div>
-                <p class="hero-meta">Download gratuito · iPhone, iPad e Android · 10 lingue</p>
-
-                <a class="hero-qr" href="../get.html">
-                    <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
-                    <span><strong>Sei al computer?</strong><br>Inquadra il codice con la fotocamera del telefono per scaricare Parenty.</span>
+            <div class="nav-start">
+                <a href="./" class="brand">
+                    <img src="../logo.png" alt="" width="34" height="34" />
+                    <span>Parenty</span>
                 </a>
+                <nav class="mode-switch" aria-label="Per chi è Parenty?">
+                    <a href="./" data-audience="families" aria-current="page">Famiglie</a>
+                    <a href="daycare.html" data-audience="daycares">Asili</a>
+                </nav>
             </div>
 
-            <div class="hero-visual">
-                <div class="phone video-phone for-families" id="watch">
-                    <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video promozionale dell'app Parenty"></video>
-                    <button class="video-sound" type="button" aria-label="Attiva l'audio" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
+            <nav class="site-nav" aria-label="Navigazione principale">
+                <ul class="nav-links">
+                    <li><a href="#features">Funzioni</a></li>
+                    <li><a href="#pricing">Prezzi</a></li>
+                    <li><a href="#support">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="popover-wrap">
+                    <button class="icon-btn lang-btn" type="button" popovertarget="lang-popover" popovertargetaction="toggle" aria-label="Lingua" aria-controls="lang-popover">
+                        <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+                        <span class="lang-code" translate="no">IT</span>
                     </button>
+                    <nav id="lang-popover" class="nav-popover lang-popover" popover="auto" aria-label="Lingua" translate="no">
+                        <a hreflang="en" lang="en" href="../">English</a>
+                        <a hreflang="el" lang="el" href="../el/">Ελληνικά</a>
+                        <a hreflang="de" lang="de" href="../de/">Deutsch</a>
+                        <a hreflang="es" lang="es" href="../es/">Español</a>
+                        <a hreflang="fr" lang="fr" href="../fr/">Français</a>
+                        <a hreflang="it" lang="it" href="../it/" aria-current="page">Italiano</a>
+                        <a hreflang="pt" lang="pt" href="../pt/">Português</a>
+                        <a hreflang="tr" lang="tr" href="../tr/">Türkçe</a>
+                        <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
+                        <a hreflang="he" lang="he" href="../he/">עברית</a>
+                    </nav>
                 </div>
-                <div class="phone for-daycares">
-                    <picture>
-                        <source srcset="../screenshots/dark/daycare-families.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/daycare-families.jpg" alt="Modalità asilo con tre famiglie, i Miller, i Patel e i Novak, e quanto dura l'accesso di ciascuna" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Proof strip -->
-    <section class="proof" aria-label="Perché i genitori si fidano di Parenty">
-        <ul class="container proof-list">
-            <li><svg class="icon"><use href="#i-check"/></svg>Download gratuito</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Niente pubblicità, mai</li>
-            <li><svg class="icon"><use href="#i-lock"/></svg>Non vendiamo mai i tuoi dati</li>
-            <li><svg class="icon"><use href="#i-phone"/></svg>Blocco con Face ID o impronta</li>
-            <li><svg class="icon"><use href="#i-globe"/></svg>10 lingue</li>
-        </ul>
-    </section>
+                <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Passa al tema scuro">
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
 
-    <!-- Chapter: At home -->
-    <section class="chapter-head" id="at-home">
-        <div class="container">
-            <span class="eyebrow">Per ogni famiglia</span>
-            <h2>A casa</h2>
-            <p>Tutto ciò che serve alla tua famiglia per dare la dose giusta al momento giusto, condiviso con chi aiuta.</p>
-        </div>
-    </section>
+                <a href="#download" class="btn nav-cta">Scarica</a>
 
-    <!-- Spotlight: double-dose guard -->
-    <section class="spotlight" id="dose-check">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Tranquillità</span>
-                <h2>Basta dosi doppie alle 3&nbsp;di notte.</h2>
-                <p>Stanco e non sai se è già ora? Parenty ti avvisa quando è troppo presto per la dose successiva e ti mostra esattamente quando è prevista.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Promemoria ogni poche ore, a orari fissi o come sveglie sonore</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Un avviso prima di una dose troppo anticipata</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>In ritardo, in corso e completati — a colpo d'occhio</li>
-                </ul>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone">
-                    <picture>
-                        <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/too-early.jpg" alt="Schermata di registrazione della dose che avvisa che è troppo presto per la successiva" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spotlight: family sync -->
-    <section class="spotlight reverse" id="sync">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Sincronizzazione familiare</span>
-                <h2>“Qualcuno le ha già dato la medicina?”</h2>
-                <p>Non chiederlo più. Ogni dose registrata da qualcuno compare subito su tutti i telefoni della famiglia — con chi l'ha data e quando.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Invita il partner, i nonni o la babysitter con il loro @nomeutente</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Vedi nella cronologia chi ha dato ogni dose</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>I telefoni di tutti si aggiornano all'istante</li>
-                </ul>
-                <p class="note">Il backup nel cloud è gratuito per tutti. La condivisione con la famiglia fa parte di Premium.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone">
-                    <picture>
-                        <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/history.jpg" alt="Cronologia delle dosi che mostra quelle date da Maria" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spotlight: voice (Siri / Android assistants) -->
-    <section class="spotlight" id="voice">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Novità · Mani libere</span>
-                <h2>Bimbo in braccio? Basta chiedere.</h2>
-                <p>Registra una dose o la febbre senza sbloccare il telefono né aprire l'app. Dillo a Siri su iPhone o al tuo assistente su Android, e Parenty lo condivide con la famiglia.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>“Registra Ibuprofene in Parenty”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>“Quale medicinale è previsto dopo in Parenty?”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Registra febbre, peso e altezza e controlla l'ultima dose</li>
-                </ul>
-                <p class="note">Siri funziona senza configurazione. Su Android funziona con gli assistenti che supportano le azioni delle app, da Android 16 in poi.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone video-phone">
-                    <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Video dei comandi vocali di Parenty: registrare una dose con Siri e la febbre con un assistente Android"></video>
-                    <button class="video-sound" type="button" aria-label="Attiva l'audio" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
+                <div class="popover-wrap mobile-menu-wrap">
+                    <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" popovertargetaction="toggle" aria-label="Menu" aria-controls="mobile-nav">
+                        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
                     </button>
+                    <nav id="mobile-nav" class="nav-popover mobile-popover" popover="auto" aria-label="Menu">
+                        <a href="#features">Funzioni</a>
+                        <a href="#pricing">Prezzi</a>
+                        <a href="#support">FAQ</a>
+                        <a href="#download" class="btn">Scarica</a>
+                    </nav>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Chapter: At daycare -->
-    <section class="chapter-head" id="at-daycare">
-        <div class="container">
-            <span class="eyebrow">Novità di Parenty 2.0</span>
-            <h2>All'asilo</h2>
-            <p>L'asilo, la tata o i nonni registrano la giornata, e tu la vedi sul telefono mentre accade.</p>
-        </div>
-    </section>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="download">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">Per famiglie</span>
+                    <h1>Mai più una dose dimenticata — <span class="accent">o ripetuta.</span></h1>
+                    <p class="hero-sub">Tieni traccia di farmaci, febbre e visite mediche dei tuoi figli in un'app serena — sincronizzata in tempo reale tra genitori, chi li accudisce e asilo.</p>
 
-    <!-- Spotlight: Daycare, for parents -->
-    <section class="spotlight" id="daycare">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Per i genitori</span>
-                <h2>Sai com'è andata la sua giornata, prima di andarlo a prendere.</h2>
-                <p>Invita l'asilo, la tata o i nonni con il loro nome utente o scansionando il loro codice QR. Registrano farmaci, temperature, pasti e sonnellini, e tu vedi la giornata nella schermata Home mentre accade.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Solo i bambini che scegli, per 2 settimane, 1 mese, 3 mesi, 1 anno o finché non rimuovi l'accesso</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>«Oggi a» il tuo asilo nella Home, e la sua giornata come cronologia</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>«Registrato da» su ogni dose, temperatura, sintomo e misura di crescita</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Un avviso prima di dare una dose troppo presto, anche se l'hai data tu a casa</li>
-                </ul>
-                <p class="note">Invitare un asilo fa parte di Premium. Estendi o termina l'accesso quando vuoi.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone video-phone">
-                    <video src="../video/parenty-daycare-day-ad.mp4" poster="../video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Video di Parenty Asilo: l'asilo registra il pasto di Emma, il suo sonnellino e una temperatura alta, e il genitore vede tutta la giornata sul telefono"></video>
-                    <button class="video-sound" type="button" aria-label="Attiva l'audio" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
-                    </button>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty dall'App Store">
+                            <svg aria-hidden="true"><use href="#i-apple"/></svg>
+                            <span class="store-btn-text"><span class="small">Scarica su</span><span class="large">App Store</span></span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty su Google Play">
+                            <svg aria-hidden="true"><use href="#i-play"/></svg>
+                            <span class="store-btn-text"><span class="small">Disponibile su</span><span class="large">Google Play</span></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta-row">
+                        <p class="hero-meta">Download gratuito · iPhone, iPad e Android · 10 lingue</p>
+                        <div class="popover-wrap qr-wrap">
+                            <button class="qr-trigger" type="button" popovertarget="qr-popover" popovertargetaction="toggle" aria-controls="qr-popover">
+                                <svg class="icon" aria-hidden="true"><use href="#i-qr"/></svg>
+                                Scansiona QR
+                            </button>
+                            <div id="qr-popover" class="nav-popover qr-popover" popover="auto">
+                                <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
+                                <p><strong>Sei al computer?</strong><br>Inquadra il codice con la fotocamera del telefono per scaricare Parenty.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="phone video-phone" id="watch">
+                        <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video promozionale dell'app Parenty"></video>
+                        <button class="video-sound" type="button" aria-label="Attiva l'audio" aria-pressed="false">
+                            <svg class="icon" aria-hidden="true"><use href="#i-muted"/></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Daycare: how it works, and privacy -->
-    <section class="daycare-steps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Come funziona la modalità asilo</h2>
-                <p>Si configura in un minuto quando lo lasci. Decidi tu chi vede cosa, e per quanto tempo.</p>
-            </div>
-            <ol class="steps">
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-invite.jpg" alt="Schermata Accesso asilo che invita @sunflowerdaycare a vedere Emma per 1 mese" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Invita il tuo asilo</h3>
-                    <p>Scrivi il nome utente dell'asilo o scansiona il suo codice QR. Scegli quali bambini vede e per quanto tempo.</p>
-                </li>
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-today.jpg" alt="Schermata Home con una scheda «Oggi a Sunflower Daycare»: 37,8 °C, ha mangiato quasi tutto, sonnellino dalle 12:10 alle 13:30, 2 pannolini, felice" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>La giornata a colpo d'occhio</h3>
-                    <p>Una scheda «Oggi a» nella Home riassume la giornata: temperatura, pasti, sonnellini, pannolini e umore.</p>
-                </li>
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-day.jpg" alt="La giornata di Emma all'asilo come cronologia: pannolino, pasto, umore, sonnellino e una temperatura alta con una nota" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Apri tutta la sua giornata</h3>
-                    <p>Tutto quello che hanno registrato, in ordine, con le note. Torna indietro un giorno alla volta.</p>
-                </li>
-            </ol>
-            <ul class="privacy-points">
-                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>Solo i bambini che scegli.</strong> Mai le tue temperature, la crescita, le visite mediche, i report o le note.</span></li>
-                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>Niente salvato sul loro telefono.</strong> La modalità asilo legge in tempo reale e non conserva dati della famiglia sul dispositivo.</span></li>
-                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>L'accesso finisce nella data che hai scelto.</strong> Si ferma quel giorno, anche se nessuno apre l'app.</span></li>
+        <!-- Proof strip -->
+        <section class="proof" aria-label="Perché i genitori si fidano di Parenty">
+            <ul class="container proof-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Download gratuito</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Niente pubblicità, mai</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Non vendiamo mai i tuoi dati</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Blocco con Face ID o impronta</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>10 lingue</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- For daycares: teaser for daycare.html -->
-    <section class="teaser">
-        <div class="container">
-            <a class="teaser-card" href="daycare.html">
-                <span class="teaser-icon"><svg class="icon"><use href="#i-home"/></svg></span>
-                <span class="teaser-text"><strong>Gestisci un asilo o ti occupi dei bambini di altre famiglie?</strong>Vedi i farmaci di ogni famiglia e registra la loro giornata in modalità asilo. Gratis per una famiglia.</span>
-                <span class="teaser-cta">Parenty per asili<svg class="icon"><use href="#i-arrow"/></svg></span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Tutto in un unico posto, con calma</h2>
-                <p>Pensata per genitori stanchi: grande, chiara e veloce da usare, di giorno e di notte.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-alarm"/></svg></div>
-                    <h3>Promemoria e sveglie</h3>
-                    <p>Dosi ogni poche ore, per un certo numero di giorni o a orari precisi. Modalità sveglia per quelle da non saltare.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-thermo"/></svg></div>
-                    <h3>Febbre e sintomi</h3>
-                    <p>Registra le temperature in °C o °F e i sintomi su una scala da 1 a 5, con note e orari.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
-                    <h3>Modalità asilo<span class="tag-new">Novità</span></h3>
-                    <p>Invita il tuo asilo con nome utente o codice QR, e vedi la giornata di tuo figlio nella Home.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
-                    <h3>Filtri dei registri<span class="tag-new">Novità</span></h3>
-                    <p>Filtra i registri per chi li ha inseriti, tu o ciascun asilo, per giorno o periodo, raggruppati per bambino.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
-                    <h3>Crescita &amp; grafici</h3>
-                    <p>Peso e altezza di ogni bambino, con le curve di crescita dell'OMS.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
-                    <h3>Medici e visite</h3>
-                    <p>Il tuo pediatra a portata di tocco. Registra visite e controlli e aggiungili al calendario.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></div>
-                    <h3>Report PDF e CSV</h3>
-                    <p>Condividi un riepilogo chiaro di dosi, temperature, sintomi e visite con il medico o al pronto soccorso.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-baby"/></svg></div>
-                    <h3>Ogni figlio</h3>
-                    <p>Un profilo con il suo colore per ogni figlio, e filtri per farmaci, registrazioni e visite.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
-                    <h3>Widget e voce</h3>
-                    <p>Registra una dose dalla schermata Home, segui il conto alla rovescia sulla schermata di blocco o chiedi semplicemente a Siri o al tuo assistente Android.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
-                    <h3>iPad &amp; iPhone Duo<span class="tag-new">Novità</span></h3>
-                    <p>Una barra laterale su iPad, entrambi gli schermi su iPhone Duo e le impostazioni affiancate sullo schermo grande.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
-                    <h3>Privato e sicuro</h3>
-                    <p>Blocco facoltativo con Face ID, Touch ID o impronta. Elimina il tuo account quando vuoi. Non vendiamo mai i tuoi dati.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>10 lingue</h3>
-                    <p>Inglese, arabo, tedesco, greco, spagnolo, francese, ebraico, italiano, portoghese e turco.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots -->
-    <section class="screens" id="screens">
-        <div class="container">
-            <div class="section-header">
-                <h2>Parenty in azione</h2>
-                <p>Chiaro o scuro, segue il tuo telefono.</p>
-            </div>
-            <div class="screens-tabs">
-                <button class="screens-tab active" data-index="0">Home</button>
-                <button class="screens-tab" data-index="1">Programma</button>
-                <button class="screens-tab" data-index="2">Febbre</button>
-                <button class="screens-tab" data-index="3">Cronologia</button>
-                <button class="screens-tab" data-index="4">Controllo dose</button>
-            </div>
-        </div>
-        <div class="screens-track" id="screensTrack">
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="Schermata Home con i farmaci previsti per Emma" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Ogni dose, a colpo d'occhio</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="Schermata di programmazione del farmaco con un'anteprima delle dosi" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Crea un programma in pochi secondi</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="Schermata dei sintomi con un elenco di temperature registrate" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Segui la febbre nel tempo</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/history.jpg" alt="Cronologia delle dosi che mostra chi ha dato ciascuna" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Chi l'ha data, e quando</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/too-early.jpg" alt="Avviso di troppo presto durante la registrazione di una dose" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Basta dosi doppie</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Review -->
-    <section class="review" aria-label="Cosa dicono i genitori">
-        <div class="container">
-            <figure class="review-card">
-                <div class="review-stars" role="img" aria-label="5 stelle su 5">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
-                </div>
-                <blockquote>
-                    <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
-                </blockquote>
-                <figcaption><strong>Carolyn Johnson</strong> · Recensione su Google Play</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Gratis per iniziare. Premium per condividere.</h2>
-                <p>Tutto ciò che serve per un figlio è gratis. Premium è per le famiglie che condividono la cura, e Parenty Asilo per chi si occupa di molte famiglie.</p>
-            </div>
-            <div class="plans">
-                <div class="plan">
-                    <h3>Gratis</h3>
-                    <p class="plan-price">Gratis per sempre</p>
+        <!-- Spotlight: double-dose guard -->
+        <section class="spotlight" id="dose-check">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Tranquillità</span>
+                    <h2>Basta dosi doppie alle 3&nbsp;di notte.</h2>
+                    <p>Stanco e non sai se è già ora? Parenty ti avvisa quando è troppo presto per la dose successiva e ti mostra esattamente quando è prevista.</p>
                     <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Programmi dei farmaci, promemoria e controllo delle dosi</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Registro di temperatura e sintomi</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 profilo figlio</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 medico e 2 visite</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Backup nel cloud sui tuoi dispositivi</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Promemoria ogni poche ore, a orari fissi o come sveglie sonore</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Un avviso prima di una dose troppo anticipata</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>In ritardo, in corso e completati — a colpo d'occhio</li>
                     </ul>
                 </div>
-                <div class="plan premium">
-                    <h3>Premium</h3>
-                    <p class="plan-price">Mensile o un acquisto unico a vita</p>
-                    <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Tutto di Gratis</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Condividi con partner, famiglia e chi si prende cura dei bambini — sincronizzazione in tempo reale</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Figli, medici e visite illimitati</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Report PDF e grafici della febbre</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Impostazioni delle sveglie</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Invita il tuo asilo e vedi la sua giornata</li>
-                    </ul>
-                </div>
-                <div class="plan">
-                    <h3>Parenty Asilo</h3>
-                    <p class="plan-price">9,99 € al mese o 99,99 € all'anno · per asili e chi si prende cura dei bambini</p>
-                    <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Tutto Premium</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Tutte le famiglie di cui ti occupi</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Registra farmaci, temperature, sintomi, crescita e cura quotidiana</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Nome, nome utente e codice QR propri per il tuo asilo</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Una cronologia di tutto ciò che hai registrato</li>
-                    </ul>
-                    <p class="plan-foot">La modalità asilo è gratis per una famiglia invitata da un genitore Premium.</p>
+                <div class="spotlight-visual">
+                    <div class="phone">
+                        <picture>
+                            <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
+                            <img src="../screenshots/light/too-early.jpg" alt="Schermata di registrazione della dose che avvisa che è troppo presto per la successiva" loading="lazy" width="600" height="1304">
+                        </picture>
+                    </div>
                 </div>
             </div>
-            <p class="pricing-note">L'app mostra i prezzi nella tua valuta locale.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ & Support -->
-    <section class="faq" id="support">
-        <div class="container">
-            <div class="section-header">
-                <h2>Domande e assistenza</h2>
-            </div>
-            <div class="faq-list">
-                <details>
-                    <summary>Come funziona la sincronizzazione tra genitori e chi si prende cura dei bambini?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Ogni account connesso ha un backup gratuito nel cloud, così i tuoi dati sopravvivono a un nuovo telefono e restano aggiornati su tutti i tuoi dispositivi. Con Premium puoi invitare il partner, i nonni o la babysitter con il loro @nomeutente, e ogni dose che registrano compare subito sui telefoni di tutti.</p>
-                </details>
-                <details>
-                    <summary>Il mio asilo o la tata possono usare Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Sì. Con Premium, vai su Impostazioni → Account → Accesso asilo e invitali con il nome utente dell'asilo, oppure scansiona il codice QR che ti mostrano. Scegli quali bambini vedono e per quanto tempo: 2 settimane, 1 mese, 3 mesi, 1 anno o finché non rimuovi l'accesso. Vedono i farmaci di quei bambini, quando è stata data l'ultima dose e quando è consentita la prossima, e possono registrare dosi, temperature, sintomi, crescita e la giornata stessa: pasti, bevande, sonnellini, pannolini, vasino, umore e note. Lo vedi nella Home come «Oggi a» il tuo asilo, ogni voce mostra chi l'ha registrata, e puoi estendere o terminare l'accesso quando vuoi.</p>
-                </details>
-                <details>
-                    <summary>Cosa vede un asilo?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Solo i bambini che hai scelto e i loro farmaci, con quando è stata data l'ultima dose e quando è consentita la prossima: non chi l'ha data, e nessuna nota. Un asilo non vede mai le tue temperature, i sintomi, la crescita, le visite mediche, i report o le note, e non può aggiungere, modificare o eliminare i tuoi farmaci o i tuoi figli. La modalità asilo non conserva nulla della tua famiglia sul telefono dell'asilo, e l'accesso si ferma nella data che hai scelto.</p>
-                </details>
-                <details>
-                    <summary>Gestisco un asilo. Come uso la Modalità asilo?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Crea un account gratuito, poi passa alla modalità asilo: tocca il titolo in alto sullo schermo o vai su Impostazioni → Modalità app. Imposta il nome e il nome utente del tuo asilo, poi dai ai genitori il nome utente o mostra loro il tuo codice QR. Le famiglie vedono il nome del tuo asilo, mai il tuo account personale. Un asilo gratuito può occuparsi di una famiglia invitata da un genitore Premium; Parenty Asilo (9,99 € al mese o 99,99 € all'anno) è per tutte le famiglie di cui ti occupi e include Premium per la tua famiglia. La modalità asilo richiede una connessione a internet.</p>
-                </details>
-                <details>
-                    <summary>Posso gestire più figli?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Sì. Ogni figlio ha il suo profilo colorato, e puoi filtrare farmaci, temperature, sintomi e visite mediche per figlio. Il piano gratuito include un profilo figlio; Premium sblocca profili illimitati.</p>
-                </details>
-                <details>
-                    <summary>Cosa è incluso gratis?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Monitoraggio di farmaci e dosi, promemoria, registro di temperatura e sintomi, un profilo figlio, un medico con due visite e backup nel cloud. Premium aggiunge la condivisione con la famiglia, profili e medici illimitati, report PDF, grafici della febbre e impostazioni delle sveglie.</p>
-                </details>
-                <details>
-                    <summary>Posso usare Parenty con Siri o il mio assistente Android?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Sì. Su iPhone, di' a Siri frasi come “Registra Ibuprofene in Parenty” o “Quale medicinale è previsto dopo in Parenty?”, senza configurazione. Da Android 16 in poi, gli assistenti che supportano le azioni delle app possono registrare dosi, temperature, peso e altezza e controllare cosa è previsto. Parenty ti avvisa comunque di una dose troppo anticipata, e tutto viene condiviso con la tua famiglia come sempre.</p>
-                </details>
-                <details>
-                    <summary>In quali lingue è disponibile Parenty?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Inglese, arabo, tedesco, greco, spagnolo, francese, ebraico, italiano, portoghese e turco.</p>
-                </details>
-                <details>
-                    <summary>Come elimino il mio account?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Vai in Impostazioni profilo e scegli Elimina account. Il tuo account e i suoi dati nel cloud vengono rimossi.</p>
-                </details>
-                <details>
-                    <summary>Le notifiche non arrivano. Cosa devo controllare?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Verifica che le notifiche di Parenty siano consentite nelle impostazioni del telefono, che una modalità Full immersion o Non disturbare non le silenzi e di avere l'ultima versione dell'app.</p>
-                </details>
-            </div>
-            <p class="faq-contact">Serve altro aiuto? Scrivici a <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-box">
-                <img src="../logo.png" alt="" width="64" height="64" />
-                <h2>Cure serene, <span>anche alle 3&nbsp;di notte.</span></h2>
-                <p>Download gratuito per iPhone e Android.</p>
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty dall'App Store">
-                        <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">Scarica su</span><span class="large">App Store</span></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty su Google Play">
-                        <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Disponibile su</span><span class="large">Google Play</span></span>
-                    </a>
+        <!-- Spotlight: family sync -->
+        <section class="spotlight reverse" id="sync">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Sincronizzazione familiare</span>
+                    <h2>“Qualcuno le ha già dato la medicina?”</h2>
+                    <p>Non chiederlo più. Ogni dose registrata da qualcuno compare subito su tutti i telefoni della famiglia — con chi l'ha data e quando.</p>
+                    <ul class="checklist">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Invita il partner, i nonni o la babysitter con il loro @nomeutente</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Vedi nella cronologia chi ha dato ogni dose</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>I telefoni di tutti si aggiornano all'istante</li>
+                    </ul>
+                    <p class="note">Il backup nel cloud è gratuito per tutti. La condivisione con la famiglia fa parte di Premium.</p>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="phone">
+                        <picture>
+                            <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
+                            <img src="../screenshots/light/history.jpg" alt="Cronologia delle dosi che mostra quelle date da Maria" loading="lazy" width="600" height="1304">
+                        </picture>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Spotlight: voice (Siri / Android assistants) -->
+        <section class="spotlight" id="voice">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Mani libere</span>
+                    <h2>Bimbo in braccio? Basta chiedere.</h2>
+                    <p>Registra una dose o la febbre senza sbloccare il telefono né aprire l'app. Dillo a Siri su iPhone o al tuo assistente su Android, e Parenty lo condivide con la famiglia.</p>
+                    <ul class="checklist">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>“Registra Ibuprofene in Parenty”</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>“Quale medicinale è previsto dopo in Parenty?”</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Registra febbre, peso e altezza e controlla l'ultima dose</li>
+                    </ul>
+                    <p class="note">Siri funziona senza configurazione. Su Android funziona con gli assistenti che supportano le azioni delle app, da Android 16 in poi.</p>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="phone video-phone">
+                        <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Video dei comandi vocali di Parenty: registrare una dose con Siri e la febbre con un assistente Android"></video>
+                        <button class="video-sound" type="button" aria-label="Attiva l'audio" aria-pressed="false">
+                            <svg class="icon" aria-hidden="true"><use href="#i-muted"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features (6 focused cards, 3x2 grid) -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tutto in un unico posto, con calma</h2>
+                    <p>Pensata per genitori stanchi: grande, chiara e veloce da usare, di giorno e di notte.</p>
+                </div>
+                <div class="features-grid three-col">
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-thermo"/></svg></div>
+                        <h3>Febbre e sintomi</h3>
+                        <p>Registra le temperature in °C o °F e i sintomi su una scala da 1 a 5, con note e orari.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg></div>
+                        <h3>Crescita &amp; grafici</h3>
+                        <p>Peso e altezza di ogni bambino, con le curve di crescita dell'OMS.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-steth"/></svg></div>
+                        <h3>Medici e visite</h3>
+                        <p>Il tuo pediatra a portata di tocco. Registra visite e controlli e aggiungili al calendario.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div>
+                        <h3>Report PDF e CSV</h3>
+                        <p>Condividi un riepilogo chiaro di dosi, temperature, sintomi e visite con il medico o al pronto soccorso.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg></div>
+                        <h3>Ogni figlio</h3>
+                        <p>Profili a colori per ogni bambino, con filtri per data, figlio o chi ha registrato ogni voce.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-tablet"/></svg></div>
+                        <h3>Widget e iPad</h3>
+                        <p>Registra una dose dalla schermata Home, segui il conto alla rovescia sulla schermata di blocco o usa la barra laterale su iPad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots (3 unique screens, no duplicates from Spotlights) -->
+        <section class="screens" id="screens">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Parenty in azione</h2>
+                    <p>Chiaro o scuro, segue il tuo telefono.</p>
+                </div>
+                <div class="screens-grid">
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="Schermata Home con i farmaci previsti per Emma" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Ogni dose, a colpo d'occhio</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="Schermata di programmazione del farmaco con un'anteprima delle dosi" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Crea un programma in pochi secondi</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="Schermata dei sintomi con un elenco di temperature registrate" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Segui la febbre nel tempo</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single Daycare Cross-Promo Band -->
+        <section class="daycare-callout" id="daycare">
+            <div class="container">
+                <div class="callout-card">
+                    <div class="callout-body">
+                        <span class="eyebrow">Modalità asilo</span>
+                        <h2>Resta connesso anche con l'asilo.</h2>
+                        <p>Invita l'asilo, la tata o i nonni per i bambini e il periodo che scegli. Registrano dosi, pasti e pisolini e vedi la giornata in diretta — mentre i tuoi dati privati restano privati.</p>
+                    </div>
+                    <a class="btn callout-btn" href="daycare.html">Scopri Parenty per asili<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review -->
+        <section class="review" aria-label="Cosa dicono i genitori">
+            <div class="container">
+                <figure class="review-card">
+                    <div class="review-stars" role="img" aria-label="5 stelle su 5">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+                    </div>
+                    <blockquote>
+                        <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
+                    </blockquote>
+                    <figcaption><strong>Carolyn Johnson</strong> · Recensione su Google Play</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Pricing (2 focused family plans + compact Daycare banner) -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Gratis per iniziare. Premium per condividere.</h2>
+                    <p>Tutto ciò che serve per un bambino è gratis. Passa a Premium per condividere in tempo reale con famiglia e asilo.</p>
+                </div>
+                <div class="plans two">
+                    <div class="plan">
+                        <h3>Gratis</h3>
+                        <p class="plan-price">Gratis per sempre</p>
+                        <ul class="checklist">
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Programmi dei farmaci, promemoria e controllo delle dosi</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Registro di temperatura e sintomi</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 profilo figlio</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 medico e 2 visite</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Backup nel cloud sui tuoi dispositivi</li>
+                        </ul>
+                    </div>
+                    <div class="plan premium">
+                        <h3>Premium</h3>
+                        <p class="plan-price">Mensile o un acquisto unico a vita</p>
+                        <ul class="checklist">
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tutto di Gratis</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Condividi con partner, famiglia e chi si prende cura dei bambini — sincronizzazione in tempo reale</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Figli, medici e visite illimitati</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Report PDF e grafici della febbre</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Impostazioni delle sveglie</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Invita il tuo asilo e vedi la sua giornata</li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="pricing-banner" href="daycare.html#pricing">
+                    <span class="pricing-banner-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+                    <span class="pricing-banner-text"><strong>Gestisci un asilo o nido?</strong> Gratis per 1 famiglia, o 9,99 €/mese per famiglie illimitate.</span>
+                    <span class="pricing-banner-cta">Vedi il piano Asilo<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+                </a>
+                <p class="pricing-note">L'app mostra i prezzi nella tua valuta locale.</p>
+            </div>
+        </section>
+
+        <!-- FAQ & Support (6 focused Q&As) -->
+        <section class="faq" id="support" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="faq-heading">Domande e assistenza</h2>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>Come funziona la sincronizzazione tra genitori e chi si prende cura dei bambini?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Ogni account connesso ha un backup gratuito nel cloud, così i tuoi dati sopravvivono a un nuovo telefono e restano aggiornati su tutti i tuoi dispositivi. Con Premium puoi invitare il partner, i nonni o la babysitter con il loro @nomeutente, e ogni dose che registrano compare subito sui telefoni di tutti.</p>
+                    </details>
+                    <details>
+                        <summary>Cosa è incluso gratis?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Monitoraggio di farmaci e dosi, promemoria, registro di temperatura e sintomi, un profilo figlio, un medico con due visite e backup nel cloud. Premium aggiunge la condivisione con la famiglia, profili e medici illimitati, report PDF, grafici della febbre e impostazioni delle sveglie.</p>
+                    </details>
+                    <details>
+                        <summary>Posso gestire più figli?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Sì. Ogni figlio ha il suo profilo colorato, e puoi filtrare farmaci, temperature, sintomi e visite mediche per figlio. Il piano gratuito include un profilo figlio; Premium sblocca profili illimitati.</p>
+                    </details>
+                    <details>
+                        <summary>Il mio asilo o la tata possono usare Parenty?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Sì. Con Premium inviti l'asilo o chi si occupa dei bambini tramite username o codice QR, scegli quali bambini vedere e per quanto tempo e segui dosi, pasti e pisolini in diretta nella Home. Non vedono mai i tuoi dati o note private.</p>
+                    </details>
+                    <details>
+                        <summary>Posso usare Parenty con Siri o il mio assistente Android?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Sì. Su iPhone, di' a Siri frasi come “Registra Ibuprofene in Parenty” o “Quale medicinale è previsto dopo in Parenty?”, senza configurazione. Da Android 16 in poi, gli assistenti che supportano le azioni delle app possono registrare dosi, temperature, peso e altezza e controllare cosa è previsto. Parenty ti avvisa comunque di una dose troppo anticipata, e tutto viene condiviso con la tua famiglia come sempre.</p>
+                    </details>
+                    <details>
+                        <summary>Come elimino il mio account?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Vai in Impostazioni profilo e scegli Elimina account. Il tuo account e i suoi dati nel cloud vengono rimossi.</p>
+                    </details>
+                </div>
+                <p class="faq-contact">Serve altro aiuto? Scrivici a <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <img src="../logo.png" alt="" width="64" height="64" />
+                    <h2>Cure serene, <span>anche alle 3&nbsp;di notte.</span></h2>
+                    <p>Download gratuito per iPhone e Android.</p>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty dall'App Store">
+                            <svg aria-hidden="true"><use href="#i-apple"/></svg>
+                            <span class="store-btn-text"><span class="small">Scarica su</span><span class="large">App Store</span></span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Scarica Parenty su Google Play">
+                            <svg aria-hidden="true"><use href="#i-play"/></svg>
+                            <span class="store-btn-text"><span class="small">Disponibile su</span><span class="large">Google Play</span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Phones: a download bar that appears after the hero and hides at the closing call to action -->
     <a class="sticky-get" href="../get.html">
@@ -794,25 +637,14 @@
     <footer>
         <div class="container footer-content">
             <p>© <span id="year"></span> Parenty · Sviluppata da Stavros Georgiou</p>
-            <nav>
+            <nav aria-label="Piè di pagina">
+                <a href="daycare.html">Parenty per asili</a>
                 <a href="#features">Funzioni</a>
                 <a href="#pricing">Prezzi</a>
                 <a href="#support">Assistenza</a>
                 <a href="../privacy.html">Informativa sulla privacy</a>
                 <a href="../terms.html">Condizioni d'uso</a>
                 <button type="button" class="footer-link-btn" data-cookie-settings>Impostazioni cookie</button>
-            </nav>
-            <nav class="langs" aria-label="Lingua" translate="no">
-                <a hreflang="en" lang="en" href="../">English</a>
-                <a hreflang="el" lang="el" href="../el/">Ελληνικά</a>
-                <a hreflang="de" lang="de" href="../de/">Deutsch</a>
-                <a hreflang="es" lang="es" href="../es/">Español</a>
-                <a hreflang="fr" lang="fr" href="../fr/">Français</a>
-                <a hreflang="it" lang="it" href="../it/" aria-current="page">Italiano</a>
-                <a hreflang="pt" lang="pt" href="../pt/">Português</a>
-                <a hreflang="tr" lang="tr" href="../tr/">Türkçe</a>
-                <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
-                <a hreflang="he" lang="he" href="../he/">עברית</a>
             </nav>
         </div>
     </footer>
@@ -825,6 +657,11 @@
         </div>
     </aside>
 
+    <script type="module">
+        if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
+            import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js");
+        }
+    </script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -834,7 +671,6 @@
         const darkSources = document.querySelectorAll('source[media="(prefers-color-scheme: dark)"]');
         const applyTheme = () => {
             const dark = (document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light")) === "dark";
-            // Screenshots pick their dark/light image through <source media>, so steer that too
             darkSources.forEach((source) => source.media = dark ? "all" : "not all");
             document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.content = dark ? "#0d0817" : "#faf8ff");
             themeToggle.querySelector(".icon-sun").style.display = dark ? "" : "none";
@@ -849,6 +685,16 @@
         });
         systemDark.addEventListener("change", applyTheme);
         applyTheme();
+
+        // Close mobile popover when tapping an in-page link
+        const mobileNav = document.getElementById("mobile-nav");
+        if (mobileNav) {
+            mobileNav.addEventListener("click", (event) => {
+                if (event.target.closest("a") && typeof mobileNav.hidePopover === "function") {
+                    mobileNav.hidePopover();
+                }
+            });
+        }
 
         // Promo videos: play while on screen (not with reduced motion), one with sound at a time
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -886,16 +732,6 @@
             players.forEach(({ video }) => observer.observe(video));
         }
 
-        // Hero: "For families" / "For daycares" swaps the copy and the phone
-        const hero = document.querySelector(".hero");
-        const audienceButtons = hero.querySelectorAll(".audience-switch button");
-        audienceButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                hero.dataset.audience = button.dataset.audience;
-                audienceButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
-            });
-        });
-
         // Phones: show the download bar once the hero's store buttons scroll away, hide it at the closing call to action
         const stickyGet = document.querySelector(".sticky-get");
         if (stickyGet && "IntersectionObserver" in window) {
@@ -908,31 +744,6 @@
             });
             watched.forEach((el) => stickyObserver.observe(el));
         }
-
-        // Screenshot tabs <-> track
-        const track = document.getElementById("screensTrack");
-        const figures = track.querySelectorAll("figure");
-        const tabs = document.querySelectorAll(".screens-tab");
-        tabs.forEach((tab) => {
-            tab.addEventListener("click", () => {
-                const fig = figures[Number(tab.dataset.index)];
-                track.scrollTo({ left: fig.offsetLeft - (track.clientWidth - fig.offsetWidth) / 2, behavior: "smooth" });
-            });
-        });
-        let scrollTimeout;
-        track.addEventListener("scroll", () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                const center = track.scrollLeft + track.clientWidth / 2;
-                let closest = 0;
-                figures.forEach((fig, i) => {
-                    const d = Math.abs(fig.offsetLeft + fig.offsetWidth / 2 - center);
-                    const best = Math.abs(figures[closest].offsetLeft + figures[closest].offsetWidth / 2 - center);
-                    if (d < best) closest = i;
-                });
-                tabs.forEach((t, i) => t.classList.toggle("active", i === closest));
-            }, 60);
-        }, { passive: true });
     </script>
 </body>
 </html>

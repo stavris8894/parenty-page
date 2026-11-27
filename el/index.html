@@ -2,7 +2,7 @@
 <html lang="el" dir="ltr">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Parenty: Παρακολούθηση φαρμάκων για παιδιά – Υπενθυμίσεις δόσεων &amp; πυρετός</title>
     <meta name="description" content="Το Parenty βοηθά γονείς και φροντιστές να καταγράφουν δόσεις φαρμάκων, πυρετό, συμπτώματα και επισκέψεις στον γιατρό των παιδιών — και κρατά όλους συγχρονισμένους, μαζί και τον παιδικό σταθμό, ώστε καμία δόση να μη χάνεται ή να μη διπλασιάζεται." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
@@ -12,17 +12,16 @@
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TK4KS8P7"></script>
     <script>
         // Apply a saved theme choice before first paint; otherwise the system setting applies
-        document.documentElement.classList.add("js");
         try {
             const saved = localStorage.getItem("theme");
             if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
         } catch (e) {}
     </script>
     <meta name="apple-itunes-app" content="app-id=6757712692" />
-    
+
     <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
     <meta name="robots" content="index, follow" />
-    
+
     <link rel="canonical" href="https://parenty.uk/el/" />
     <link rel="alternate" hreflang="en" href="https://parenty.uk/" />
     <link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
@@ -59,7 +58,7 @@
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="500" />
     <meta property="og:image:alt" content="Οθόνες της εφαρμογής Parenty με δόσεις φαρμάκων που πλησιάζουν και καταγραφή πυρετού" />
-    
+
     <!-- Twitter / X Meta -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Parenty – Φάρμακα και υγεία για όλη την οικογένεια" />
@@ -111,7 +110,7 @@
       "https://parenty.uk/screenshots/light/home.jpg",
       "https://parenty.uk/screenshots/light/history.jpg",
       "https://parenty.uk/screenshots/light/too-early.jpg",
-      "https://parenty.uk/screenshots/light/daycare-today.jpg"
+      "https://parenty.uk/screenshots/light/schedule.jpg"
     ],
     "publisher": {
       "@id": "https://parenty.uk/#organization"
@@ -153,16 +152,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Parenty λειτουργία παιδικού σταθμού: μια μέρα στον σταθμό",
-    "description": "Ο σταθμός καταγράφει ένα γεύμα, έναν ύπνο και μια αυξημένη θερμοκρασία, και ο γονιός βλέπει όλη τη μέρα στην αρχική οθόνη και ως χρονολόγιο.",
-    "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
-    "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
-    "uploadDate": "2026-10-22T20:34:00+03:00",
-    "duration": "PT30S"
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -175,26 +164,10 @@
       },
       {
         "@type": "Question",
-        "name": "Μπορεί ο παιδικός σταθμός ή η νταντά να χρησιμοποιήσει το Parenty;",
+        "name": "Τι περιλαμβάνεται δωρεάν;",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ναι. Με Premium, πηγαίνετε στις Ρυθμίσεις → Λογαριασμός → Πρόσβαση παιδικού σταθμού και προσκαλέστε τον με το όνομα χρήστη του σταθμού ή σαρώστε τον κωδικό QR που σας δείχνει. Επιλέξτε ποια παιδιά βλέπει και για πόσο: 2 εβδομάδες, 1 μήνα, 3 μήνες, 1 χρόνο ή μέχρι να την αφαιρέσετε. Βλέπει τα φάρμακα αυτών των παιδιών, πότε δόθηκε η τελευταία δόση και πότε επιτρέπεται η επόμενη, και μπορεί να καταγράφει δόσεις, θερμοκρασίες, συμπτώματα, ανάπτυξη και την ίδια τη μέρα: γεύματα, ροφήματα, ύπνο, πάνες, γιογιό, διάθεση και σημειώσεις. Τα βλέπετε στην αρχική οθόνη ως «Σήμερα στο» σταθμό σας, κάθε καταγραφή δείχνει ποιος την έκανε, και μπορείτε να παρατείνετε ή να τερματίσετε την πρόσβαση όποτε θέλετε."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Τι βλέπει ένας παιδικός σταθμός;",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Μόνο τα παιδιά που επιλέξατε και τα φάρμακά τους, με το πότε δόθηκε η τελευταία δόση και πότε επιτρέπεται η επόμενη: όχι ποιος την έδωσε, και καμία σημείωση. Ένας σταθμός δεν βλέπει ποτέ τις δικές σας θερμοκρασίες, συμπτώματα, ανάπτυξη, επισκέψεις σε γιατρό, αναφορές ή σημειώσεις, και δεν μπορεί να προσθέσει, να αλλάξει ή να διαγράψει τα φάρμακα ή τα παιδιά σας. Η λειτουργία παιδικού σταθμού δεν κρατά τίποτα για την οικογένειά σας στο κινητό του σταθμού, και η πρόσβαση σταματά την ημερομηνία που επιλέξατε."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Έχω παιδικό σταθμό. Πώς χρησιμοποιώ τη λειτουργία παιδικού σταθμού;",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Δημιουργήστε έναν δωρεάν λογαριασμό και γυρίστε σε λειτουργία παιδικού σταθμού: πατήστε τον τίτλο στο πάνω μέρος της οθόνης ή πηγαίνετε στις Ρυθμίσεις → Λειτουργία εφαρμογής. Ορίστε το όνομα και το όνομα χρήστη του σταθμού σας και δώστε στους γονείς το όνομα χρήστη ή δείξτε τους τον κωδικό QR σας. Οι οικογένειες βλέπουν το όνομα του σταθμού σας, ποτέ τον προσωπικό σας λογαριασμό. Ένας δωρεάν σταθμός μπορεί να φροντίζει μία οικογένεια που τον προσκάλεσε γονιός με Premium· το Parenty Παιδικός Σταθμός (9,99 € τον μήνα ή 99,99 € τον χρόνο) είναι για όσες οικογένειες φροντίζετε και περιλαμβάνει το Premium για τη δική σας οικογένεια. Η λειτουργία παιδικού σταθμού χρειάζεται σύνδεση στο διαδίκτυο."
+          "text": "Παρακολούθηση φαρμάκων και δόσεων, υπενθυμίσεις, καταγραφές θερμοκρασίας και συμπτωμάτων, ένα προφίλ παιδιού, ένας γιατρός με δύο επισκέψεις και αντίγραφο ασφαλείας στο cloud. Το Premium προσθέτει κοινή χρήση με την οικογένεια, απεριόριστα προφίλ και γιατρούς, αναφορές PDF, γραφήματα πυρετού και ρυθμίσεις ξυπνητηριού."
         }
       },
       {
@@ -207,10 +180,10 @@
       },
       {
         "@type": "Question",
-        "name": "Τι περιλαμβάνεται δωρεάν;",
+        "name": "Μπορεί ο παιδικός σταθμός ή η νταντά να χρησιμοποιήσει το Parenty;",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Παρακολούθηση φαρμάκων και δόσεων, υπενθυμίσεις, καταγραφές θερμοκρασίας και συμπτωμάτων, ένα προφίλ παιδιού, ένας γιατρός με δύο επισκέψεις και αντίγραφο ασφαλείας στο cloud. Το Premium προσθέτει κοινή χρήση με την οικογένεια, απεριόριστα προφίλ και γιατρούς, αναφορές PDF, γραφήματα πυρετού και ρυθμίσεις ξυπνητηριού."
+          "text": "Ναι. Με το Premium προσκαλείτε τον παιδικό σταθμό ή τον φροντιστή με username ή κωδικό QR, επιλέγετε ποια παιδιά βλέπουν και για πόσο, και παρακολουθείτε δόσεις, γεύματα και ύπνους ζωντανά στην Αρχική. Δεν βλέπουν ποτέ τα προσωπικά σας αρχεία ή σημειώσεις."
         }
       },
       {
@@ -223,26 +196,10 @@
       },
       {
         "@type": "Question",
-        "name": "Ποιες γλώσσες υποστηρίζει το Parenty;",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Αγγλικά, αραβικά, γερμανικά, ελληνικά, ισπανικά, γαλλικά, εβραϊκά, ιταλικά, πορτογαλικά και τουρκικά."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Πώς διαγράφω τον λογαριασμό μου;",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Μεταβείτε στις Ρυθμίσεις προφίλ και επιλέξτε Διαγραφή λογαριασμού. Ο λογαριασμός σας και τα δεδομένα του στο cloud διαγράφονται."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Δεν εμφανίζονται ειδοποιήσεις. Τι να ελέγξω;",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Βεβαιωθείτε ότι οι ειδοποιήσεις επιτρέπονται για το Parenty στις ρυθμίσεις του κινητού σας, ότι η Εστίαση ή το «Μην ενοχλείτε» δεν τις σιγάζει, και ότι έχετε την τελευταία έκδοση της εφαρμογής."
         }
       }
     ]
@@ -261,7 +218,6 @@
     <!-- Icon sprite (Lucide, ISC licence) -->
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
         <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-        <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></symbol>
         <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
         <symbol id="i-steth" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
         <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
@@ -271,8 +227,9 @@
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
         <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
         <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
-        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
         <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-qr" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
         <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
         <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
@@ -281,508 +238,394 @@
         <symbol id="i-play" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.7c18.1-10.5 18.1-49.7-1.2-60.2zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></symbol>
     </svg>
 
-    <!-- Header Navigation -->
-    <nav class="navbar">
+    <!-- Unified Header Navigation -->
+    <header class="navbar">
         <div class="container nav-content">
-            <a href="#" class="brand">
-                <img src="../logo.png" alt="" width="36" height="36" />
-                Parenty
-            </a>
-            <ul class="nav-links">
-                <li><a href="#daycare">Παιδικός σταθμός</a></li>
-                <li><a href="daycare.html">Για παιδικούς σταθμούς</a></li>
-                <li><a href="#features">Λειτουργίες</a></li>
-                <li><a href="#pricing">Τιμές</a></li>
-                <li><a href="#support">Ερωτήσεις</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Αλλαγή σε σκούρο θέμα">
-                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            </button>
-                <a href="#download" class="btn">Λήψη</a>
-            </div>
-        </div>
-        <ul class="nav-chips" aria-label="Μετάβαση σε">
-            <li><a href="#daycare">Παιδικός σταθμός</a></li>
-            <li><a href="daycare.html">Για παιδικούς σταθμούς</a></li>
-            <li><a href="#features">Λειτουργίες</a></li>
-            <li><a href="#pricing">Τιμές</a></li>
-            <li><a href="#support">Ερωτήσεις</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero: one page, two audiences. The switch (shown only with JavaScript) swaps the copy and the phone. -->
-    <section class="hero" id="download" data-audience="families">
-        <div class="container hero-grid">
-            <div>
-                <a class="new-pill" href="#daycare"><span>Νέο</span>Γνωρίστε τη λειτουργία παιδικού σταθμού<svg class="icon"><use href="#i-arrow"/></svg></a>
-                <div class="audience-switch" role="group" aria-label="Για ποιον είναι το Parenty;">
-                    <button type="button" data-audience="families" aria-pressed="true">Για οικογένειες</button>
-                    <button type="button" data-audience="daycares" aria-pressed="false">Για παιδικούς σταθμούς</button>
-                </div>
-                <div class="for-families">
-                    <h1>Ούτε ξεχασμένη — ούτε διπλή — <span class="accent">δόση.</span></h1>
-                    <p class="hero-sub">Το Parenty παρακολουθεί τα φάρμακα, τους πυρετούς και τις επισκέψεις στον γιατρό των παιδιών σας, και κρατά σε συγχρονισμό όλους όσοι τα φροντίζουν, και τον παιδικό σταθμό. Ήρεμη φροντίδα, ακόμη και στις 3&nbsp;π.μ.</p>
-                </div>
-                <div class="for-daycares">
-                    <p class="hero-title">Τα φάρμακα και η μέρα κάθε παιδιού, <span class="accent">σε μία λίστα.</span></p>
-                    <p class="hero-sub">Δείτε τι πρέπει να δοθεί στα παιδιά κάθε οικογένειας, καταγράψτε δόσεις, θερμοκρασίες, γεύματα και ύπνο, και οι γονείς τα βλέπουν αμέσως. <a href="daycare.html">Parenty για παιδικούς σταθμούς</a></p>
-                </div>
-
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Κατεβάστε το Parenty από το App Store">
-                        <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">Λήψη από το</span><span class="large">App Store</span></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Αποκτήστε το Parenty στο Google Play">
-                        <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Διαθέσιμο στο</span><span class="large">Google Play</span></span>
-                    </a>
-                </div>
-                <p class="hero-meta">Δωρεάν λήψη · iPhone, iPad &amp; Android · 10 γλώσσες</p>
-
-                <a class="hero-qr" href="../get.html">
-                    <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
-                    <span><strong>Είστε σε υπολογιστή;</strong><br>Σκανάρετε με την κάμερα του κινητού σας για να κατεβάσετε το Parenty.</span>
+            <div class="nav-start">
+                <a href="./" class="brand">
+                    <img src="../logo.png" alt="" width="34" height="34" />
+                    <span>Parenty</span>
                 </a>
+                <nav class="mode-switch" aria-label="Για ποιον είναι το Parenty;">
+                    <a href="./" data-audience="families" aria-current="page">Οικογένειες</a>
+                    <a href="daycare.html" data-audience="daycares">Παιδικοί σταθμοί</a>
+                </nav>
             </div>
 
-            <div class="hero-visual">
-                <div class="phone video-phone for-families" id="watch">
-                    <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Βίντεο παρουσίασης της εφαρμογής Parenty"></video>
-                    <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
+            <nav class="site-nav" aria-label="Κύρια πλοήγηση">
+                <ul class="nav-links">
+                    <li><a href="#features">Λειτουργίες</a></li>
+                    <li><a href="#pricing">Τιμές</a></li>
+                    <li><a href="#support">Ερωτήσεις</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="popover-wrap">
+                    <button class="icon-btn lang-btn" type="button" popovertarget="lang-popover" popovertargetaction="toggle" aria-label="Γλώσσα" aria-controls="lang-popover">
+                        <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+                        <span class="lang-code" translate="no">EL</span>
                     </button>
+                    <nav id="lang-popover" class="nav-popover lang-popover" popover="auto" aria-label="Γλώσσα" translate="no">
+                        <a hreflang="en" lang="en" href="../">English</a>
+                        <a hreflang="el" lang="el" href="../el/" aria-current="page">Ελληνικά</a>
+                        <a hreflang="de" lang="de" href="../de/">Deutsch</a>
+                        <a hreflang="es" lang="es" href="../es/">Español</a>
+                        <a hreflang="fr" lang="fr" href="../fr/">Français</a>
+                        <a hreflang="it" lang="it" href="../it/">Italiano</a>
+                        <a hreflang="pt" lang="pt" href="../pt/">Português</a>
+                        <a hreflang="tr" lang="tr" href="../tr/">Türkçe</a>
+                        <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
+                        <a hreflang="he" lang="he" href="../he/">עברית</a>
+                    </nav>
                 </div>
-                <div class="phone for-daycares">
-                    <picture>
-                        <source srcset="../screenshots/dark/daycare-families.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/daycare-families.jpg" alt="Λειτουργία παιδικού σταθμού με τρεις οικογένειες, τους Millers, τους Patels και τους Novaks, και για πόσο διαρκεί η πρόσβαση της καθεμιάς" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Proof strip -->
-    <section class="proof" aria-label="Γιατί οι γονείς εμπιστεύονται το Parenty">
-        <ul class="container proof-list">
-            <li><svg class="icon"><use href="#i-check"/></svg>Δωρεάν λήψη</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Χωρίς διαφημίσεις, ποτέ</li>
-            <li><svg class="icon"><use href="#i-lock"/></svg>Δεν πουλάμε ποτέ τα δεδομένα σας</li>
-            <li><svg class="icon"><use href="#i-phone"/></svg>Κλείδωμα με Face ID ή δακτυλικό αποτύπωμα</li>
-            <li><svg class="icon"><use href="#i-globe"/></svg>10 γλώσσες</li>
-        </ul>
-    </section>
+                <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Αλλαγή σε σκούρο θέμα">
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
 
-    <!-- Chapter: At home -->
-    <section class="chapter-head" id="at-home">
-        <div class="container">
-            <span class="eyebrow">Για κάθε οικογένεια</span>
-            <h2>Στο σπίτι</h2>
-            <p>Ό,τι χρειάζεται η οικογένειά σας για να δίνει τη σωστή δόση τη σωστή ώρα, κοινό με όλους όσοι βοηθούν.</p>
-        </div>
-    </section>
+                <a href="#download" class="btn nav-cta">Λήψη</a>
 
-    <!-- Spotlight: double-dose guard -->
-    <section class="spotlight" id="dose-check">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Ψυχική ηρεμία</span>
-                <h2>Τέλος οι διπλές δόσεις στις 3&nbsp;τα ξημερώματα.</h2>
-                <p>Κουρασμένοι και δεν είστε σίγουροι αν ήρθε η ώρα; Το Parenty σας προειδοποιεί όταν είναι νωρίς για την επόμενη δόση και δείχνει ακριβώς πότε πρέπει να δοθεί.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Υπενθυμίσεις ανά λίγες ώρες, σε συγκεκριμένες ώρες ή ως δυνατά ξυπνητήρια</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Προειδοποίηση πριν από μια δόση που είναι πολύ νωρίς</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Εκπρόθεσμα, σε εξέλιξη και ολοκληρωμένα — με μια ματιά</li>
-                </ul>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone">
-                    <picture>
-                        <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/too-early.jpg" alt="Οθόνη καταγραφής δόσης που προειδοποιεί ότι είναι νωρίς για την επόμενη δόση" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spotlight: family sync -->
-    <section class="spotlight reverse" id="sync">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Οικογενειακός συγχρονισμός</span>
-                <h2>«Της έδωσε κανείς το φάρμακο;»</h2>
-                <p>Μην το ξαναρωτήσετε. Κάθε δόση που καταγράφει οποιοσδήποτε εμφανίζεται αμέσως σε κάθε κινητό της οικογένειας — μαζί με το ποιος την έδωσε και πότε.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Προσκαλέστε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Δείτε ποιος έδωσε κάθε δόση στο ιστορικό</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Τα κινητά όλων ενημερώνονται αμέσως</li>
-                </ul>
-                <p class="note">Το αντίγραφο ασφαλείας στο cloud είναι δωρεάν για όλους. Η κοινή χρήση με την οικογένεια ανήκει στο Premium.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone">
-                    <picture>
-                        <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/history.jpg" alt="Ιστορικό δόσεων που δείχνει ποιες δόσεις έδωσε η Maria" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spotlight: voice (Siri / Android assistants) -->
-    <section class="spotlight" id="voice">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Νέο · Χωρίς χέρια</span>
-                <h2>Μωρό στην αγκαλιά; Απλώς ζητήστε το.</h2>
-                <p>Καταγράψτε μια δόση ή πυρετό χωρίς να ξεκλειδώσετε το κινητό ή να ανοίξετε την εφαρμογή. Πείτε το στο Siri στο iPhone ή στον βοηθό σας στο Android, και το Parenty το μοιράζεται με την οικογένεια.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>“Log Ibuprofen in Parenty”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>“What's due next in Parenty?”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Καταγράψτε πυρετό, βάρος και ύψος και δείτε την τελευταία δόση</li>
-                </ul>
-                <p class="note">Το Siri δεν μιλά ελληνικά, οπότε μιλήστε του στα αγγλικά — χωρίς καμία ρύθμιση. Στο Android, λειτουργεί με βοηθούς που υποστηρίζουν ενέργειες εφαρμογών σε Android 16 και νεότερα.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone video-phone">
-                    <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Βίντεο φωνητικών εντολών του Parenty: καταγραφή δόσης με το Siri και πυρετού με βοηθό Android"></video>
-                    <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
+                <div class="popover-wrap mobile-menu-wrap">
+                    <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" popovertargetaction="toggle" aria-label="Μενού" aria-controls="mobile-nav">
+                        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
                     </button>
+                    <nav id="mobile-nav" class="nav-popover mobile-popover" popover="auto" aria-label="Μενού">
+                        <a href="#features">Λειτουργίες</a>
+                        <a href="#pricing">Τιμές</a>
+                        <a href="#support">Ερωτήσεις</a>
+                        <a href="#download" class="btn">Λήψη</a>
+                    </nav>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Chapter: At daycare -->
-    <section class="chapter-head" id="at-daycare">
-        <div class="container">
-            <span class="eyebrow">Νέο στο Parenty 2.0</span>
-            <h2>Στον παιδικό σταθμό</h2>
-            <p>Ο παιδικός σταθμός, η νταντά ή ο παππούς και η γιαγιά καταγράφουν τη μέρα, και τη βλέπετε στο κινητό σας τη στιγμή που συμβαίνει.</p>
-        </div>
-    </section>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="download">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">Για οικογένειες</span>
+                    <h1>Ούτε ξεχασμένη — ούτε διπλή — <span class="accent">δόση.</span></h1>
+                    <p class="hero-sub">Καταγράψτε φάρμακα, πυρετό και επισκέψεις στον γιατρό σε μία ήρεμη εφαρμογή — με ζωντανό συγχρονισμό για γονείς, φροντιστές και παιδικό σταθμό.</p>
 
-    <!-- Spotlight: Daycare, for parents -->
-    <section class="spotlight" id="daycare">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Για γονείς</span>
-                <h2>Μάθετε πώς πέρασε η μέρα του, πριν το πάρετε.</h2>
-                <p>Προσκαλέστε τον παιδικό σταθμό, τη νταντά ή τον παππού και τη γιαγιά με το όνομα χρήστη τους ή σαρώνοντας τον κωδικό QR τους. Καταγράφουν φάρμακα, θερμοκρασίες, γεύματα και ύπνο, και βλέπετε τη μέρα στην αρχική οθόνη τη στιγμή που συμβαίνει.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Μόνο τα παιδιά που επιλέγετε, για 2 εβδομάδες, 1 μήνα, 3 μήνες, 1 χρόνο ή μέχρι να την αφαιρέσετε</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>«Σήμερα στο» σταθμό σας στην αρχική οθόνη, και η μέρα του παιδιού ως χρονολόγιο</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>«Καταγραφή από» σε κάθε δόση, θερμοκρασία, σύμπτωμα και μέτρηση ανάπτυξης</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Προειδοποίηση πριν δώσουν μια δόση πολύ νωρίς, ακόμη κι αν τη δώσατε εσείς στο σπίτι</li>
-                </ul>
-                <p class="note">Η πρόσκληση παιδικού σταθμού ανήκει στο Premium. Παρατείνετε ή τερματίστε την πρόσβαση όποτε θέλετε.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone video-phone">
-                    <video src="../video/parenty-daycare-day-ad.mp4" poster="../video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Βίντεο Parenty Παιδικός Σταθμός: ο σταθμός καταγράφει το γεύμα της Emma, τον ύπνο της και μια αυξημένη θερμοκρασία, και ο γονιός της βλέπει όλη τη μέρα στο κινητό του"></video>
-                    <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
-                    </button>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Κατεβάστε το Parenty από το App Store">
+                            <svg aria-hidden="true"><use href="#i-apple"/></svg>
+                            <span class="store-btn-text"><span class="small">Λήψη από το</span><span class="large">App Store</span></span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Αποκτήστε το Parenty στο Google Play">
+                            <svg aria-hidden="true"><use href="#i-play"/></svg>
+                            <span class="store-btn-text"><span class="small">Διαθέσιμο στο</span><span class="large">Google Play</span></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta-row">
+                        <p class="hero-meta">Δωρεάν λήψη · iPhone, iPad &amp; Android · 10 γλώσσες</p>
+                        <div class="popover-wrap qr-wrap">
+                            <button class="qr-trigger" type="button" popovertarget="qr-popover" popovertargetaction="toggle" aria-controls="qr-popover">
+                                <svg class="icon" aria-hidden="true"><use href="#i-qr"/></svg>
+                                Σάρωση QR
+                            </button>
+                            <div id="qr-popover" class="nav-popover qr-popover" popover="auto">
+                                <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
+                                <p><strong>Είστε σε υπολογιστή;</strong><br>Σκανάρετε με την κάμερα του κινητού σας για να κατεβάσετε το Parenty.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="phone video-phone" id="watch">
+                        <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Βίντεο παρουσίασης της εφαρμογής Parenty"></video>
+                        <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
+                            <svg class="icon" aria-hidden="true"><use href="#i-muted"/></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Daycare: how it works, and privacy -->
-    <section class="daycare-steps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Πώς λειτουργεί η λειτουργία παιδικού σταθμού</h2>
-                <p>Ρυθμίζεται σε ένα λεπτό όταν αφήνετε το παιδί. Εσείς αποφασίζετε ποιος βλέπει τι, και για πόσο.</p>
-            </div>
-            <ol class="steps">
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-invite.jpg" alt="Οθόνη πρόσβασης παιδικού σταθμού με πρόσκληση στο @sunflowerdaycare να βλέπει την Emma για 1 μήνα" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Πρόσκληση του παιδικού σας σταθμού</h3>
-                    <p>Πληκτρολογήστε το όνομα χρήστη του σταθμού ή σαρώστε τον κωδικό QR του. Επιλέξτε ποια παιδιά βλέπει και για πόσο.</p>
-                </li>
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-today.jpg" alt="Αρχική οθόνη με κάρτα «Σήμερα στο Sunflower Daycare»: 37,8 °C, έφαγε τα περισσότερα, ύπνος 12:10 έως 13:30, 2 πάνες, χαρούμενη" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Η μέρα με μια ματιά</h3>
-                    <p>Μια κάρτα «Σήμερα στο» στην αρχική οθόνη συνοψίζει τη μέρα: θερμοκρασία, γεύματα, ύπνο, πάνες και διάθεση.</p>
-                </li>
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-day.jpg" alt="Η μέρα της Emma στον σταθμό ως χρονολόγιο: πάνα, γεύμα, διάθεση, ύπνος και μια αυξημένη θερμοκρασία με σημείωση" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Ανοίξτε όλη τη μέρα</h3>
-                    <p>Ό,τι κατέγραψαν, με τη σειρά και με σημειώσεις. Πηγαίνετε πίσω μέρα με τη μέρα.</p>
-                </li>
-            </ol>
-            <ul class="privacy-points">
-                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>Μόνο τα παιδιά που επιλέγετε.</strong> Ποτέ τις δικές σας θερμοκρασίες, ανάπτυξη, επισκέψεις σε γιατρό, αναφορές ή σημειώσεις.</span></li>
-                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>Τίποτα αποθηκευμένο στο κινητό τους.</strong> Η λειτουργία παιδικού σταθμού διαβάζει ζωντανά και δεν κρατά δεδομένα της οικογένειας στη συσκευή.</span></li>
-                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>Η πρόσβαση λήγει την ημερομηνία που επιλέξατε.</strong> Σταματά εκείνη τη μέρα, ακόμη κι αν δεν ανοίξει κανείς την εφαρμογή.</span></li>
+        <!-- Proof strip -->
+        <section class="proof" aria-label="Γιατί οι γονείς εμπιστεύονται το Parenty">
+            <ul class="container proof-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Δωρεάν λήψη</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Χωρίς διαφημίσεις, ποτέ</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Δεν πουλάμε ποτέ τα δεδομένα σας</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Κλείδωμα με Face ID ή δακτυλικό αποτύπωμα</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>10 γλώσσες</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- For daycares: teaser for daycare.html -->
-    <section class="teaser">
-        <div class="container">
-            <a class="teaser-card" href="daycare.html">
-                <span class="teaser-icon"><svg class="icon"><use href="#i-home"/></svg></span>
-                <span class="teaser-text"><strong>Έχετε παιδικό σταθμό ή φροντίζετε παιδιά άλλων οικογενειών;</strong>Δείτε τα φάρμακα κάθε οικογένειας και καταγράψτε τη μέρα τους στη λειτουργία παιδικού σταθμού. Δωρεάν για μία οικογένεια.</span>
-                <span class="teaser-cta">Parenty για παιδικούς σταθμούς<svg class="icon"><use href="#i-arrow"/></svg></span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Όλα σε ένα ήρεμο μέρος</h2>
-                <p>Φτιαγμένο για κουρασμένους γονείς: μεγάλο, καθαρό και γρήγορο, μέρα ή νύχτα.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-alarm"/></svg></div>
-                    <h3>Υπενθυμίσεις &amp; ξυπνητήρια</h3>
-                    <p>Δόσεις ανά λίγες ώρες, για ορισμένες ημέρες ή σε συγκεκριμένες ώρες. Λειτουργία ξυπνητηριού για όσες δεν πρέπει να χαθούν.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-thermo"/></svg></div>
-                    <h3>Πυρετός &amp; συμπτώματα</h3>
-                    <p>Καταγράψτε θερμοκρασίες σε °C ή °F και συμπτώματα σε κλίμακα 1–5, με σημειώσεις και ώρες.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
-                    <h3>Λειτουργία παιδικού σταθμού<span class="tag-new">Νέο</span></h3>
-                    <p>Προσκαλέστε τον σταθμό σας με όνομα χρήστη ή κωδικό QR και δείτε τη μέρα του παιδιού σας στην αρχική οθόνη.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
-                    <h3>Φίλτρα καταγραφών<span class="tag-new">Νέο</span></h3>
-                    <p>Φιλτράρετε τις καταγραφές με βάση ποιος τις έκανε, εσείς ή κάθε σταθμός, ανά ημέρα ή διάστημα, ομαδοποιημένες ανά παιδί.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
-                    <h3>Ανάπτυξη &amp; καμπύλες</h3>
-                    <p>Βάρος και ύψος για κάθε παιδί, με καμπύλες ανάπτυξης του ΠΟΥ.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
-                    <h3>Γιατροί &amp; επισκέψεις</h3>
-                    <p>Ο παιδίατρός σας ένα πάτημα μακριά. Καταγράψτε επισκέψεις και επανελέγχους και προσθέστε τους στο ημερολόγιό σας.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></div>
-                    <h3>Αναφορές PDF &amp; CSV</h3>
-                    <p>Μοιραστείτε μια καθαρή σύνοψη με δόσεις, θερμοκρασίες, συμπτώματα και επισκέψεις με τον γιατρό σας ή στα επείγοντα.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-baby"/></svg></div>
-                    <h3>Κάθε παιδί</h3>
-                    <p>Ένα προφίλ με δικό του χρώμα για κάθε παιδί, και φίλτρα για φάρμακα, καταγραφές και επισκέψεις.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
-                    <h3>Widgets &amp; φωνή</h3>
-                    <p>Καταγράψτε μια δόση από την οθόνη Αφετηρίας, δείτε την αντίστροφη μέτρηση στην οθόνη κλειδώματος ή απλώς ρωτήστε το Siri ή τον βοηθό σας στο Android.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
-                    <h3>iPad &amp; iPhone Duo<span class="tag-new">Νέο</span></h3>
-                    <p>Πλαϊνή στήλη στο iPad, και οι δύο οθόνες στο iPhone Duo, και ρυθμίσεις δίπλα-δίπλα στη μεγάλη οθόνη.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
-                    <h3>Ιδιωτικό &amp; ασφαλές</h3>
-                    <p>Προαιρετικό κλείδωμα με Face ID, Touch ID ή δακτυλικό αποτύπωμα. Διαγράψτε τον λογαριασμό σας όποτε θέλετε. Δεν πουλάμε ποτέ τα δεδομένα σας.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>10 γλώσσες</h3>
-                    <p>Αγγλικά, αραβικά, γερμανικά, ελληνικά, ισπανικά, γαλλικά, εβραϊκά, ιταλικά, πορτογαλικά και τουρκικά.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots -->
-    <section class="screens" id="screens">
-        <div class="container">
-            <div class="section-header">
-                <h2>Δείτε το Parenty στην πράξη</h2>
-                <p>Φωτεινό ή σκούρο, ακολουθεί το κινητό σας.</p>
-            </div>
-            <div class="screens-tabs">
-                <button class="screens-tab active" data-index="0">Αρχική</button>
-                <button class="screens-tab" data-index="1">Πρόγραμμα</button>
-                <button class="screens-tab" data-index="2">Πυρετός</button>
-                <button class="screens-tab" data-index="3">Ιστορικό</button>
-                <button class="screens-tab" data-index="4">Έλεγχος δόσης</button>
-            </div>
-        </div>
-        <div class="screens-track" id="screensTrack">
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="Αρχική οθόνη με τα φάρμακα που πρέπει να πάρει η Emma" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Κάθε δόση, με μια ματιά</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="Οθόνη προγραμματισμού φαρμάκου με προεπισκόπηση των δόσεων" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Ορίστε πρόγραμμα σε δευτερόλεπτα</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="Οθόνη συμπτωμάτων με λίστα καταγραφών θερμοκρασίας" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Παρακολουθήστε τον πυρετό με τον καιρό</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/history.jpg" alt="Ιστορικό δόσεων που δείχνει ποιος έδωσε κάθε δόση" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Δείτε ποιος την έδωσε και πότε</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/too-early.jpg" alt="Προειδοποίηση «πολύ νωρίς» κατά την καταγραφή δόσης" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Τέλος οι διπλές δόσεις</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Review -->
-    <section class="review" aria-label="Τι λένε οι γονείς">
-        <div class="container">
-            <figure class="review-card">
-                <div class="review-stars" role="img" aria-label="5 στα 5 αστέρια">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
-                </div>
-                <blockquote>
-                    <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
-                </blockquote>
-                <figcaption><strong>Carolyn Johnson</strong> · Κριτική στο Google Play</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Δωρεάν για αρχή. Premium για κοινή χρήση.</h2>
-                <p>Ό,τι χρειάζεστε για ένα παιδί είναι δωρεάν. Το Premium είναι για οικογένειες που μοιράζονται τη φροντίδα, και το Parenty Παιδικός Σταθμός για όσους φροντίζουν πολλές οικογένειες.</p>
-            </div>
-            <div class="plans">
-                <div class="plan">
-                    <h3>Δωρεάν</h3>
-                    <p class="plan-price">Δωρεάν για πάντα</p>
+        <!-- Spotlight: double-dose guard -->
+        <section class="spotlight" id="dose-check">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Ψυχική ηρεμία</span>
+                    <h2>Τέλος οι διπλές δόσεις στις 3&nbsp;τα ξημερώματα.</h2>
+                    <p>Κουρασμένοι και δεν είστε σίγουροι αν ήρθε η ώρα; Το Parenty σας προειδοποιεί όταν είναι νωρίς για την επόμενη δόση και δείχνει ακριβώς πότε πρέπει να δοθεί.</p>
                     <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Προγράμματα φαρμάκων, υπενθυμίσεις και έλεγχοι δόσεων</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Καταγραφές θερμοκρασίας και συμπτωμάτων</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 προφίλ παιδιού</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 γιατρός και 2 επισκέψεις</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Αντίγραφο ασφαλείας στο cloud για τις δικές σας συσκευές</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Υπενθυμίσεις ανά λίγες ώρες, σε συγκεκριμένες ώρες ή ως δυνατά ξυπνητήρια</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Προειδοποίηση πριν από μια δόση που είναι πολύ νωρίς</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Εκπρόθεσμα, σε εξέλιξη και ολοκληρωμένα — με μια ματιά</li>
                     </ul>
                 </div>
-                <div class="plan premium">
-                    <h3>Premium</h3>
-                    <p class="plan-price">Μηνιαία ή εφάπαξ αγορά για πάντα</p>
-                    <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Ό,τι έχει το Δωρεάν</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Κοινή χρήση με σύντροφο, οικογένεια και φροντιστές — ζωντανός συγχρονισμός</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Απεριόριστα παιδιά, γιατροί και επισκέψεις</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Αναφορές PDF και γραφήματα πυρετού</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Ρυθμίσεις ξυπνητηριού</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Προσκαλέστε τον σταθμό σας και δείτε τη μέρα</li>
-                    </ul>
-                </div>
-                <div class="plan">
-                    <h3>Parenty Παιδικός Σταθμός</h3>
-                    <p class="plan-price">9,99 € τον μήνα ή 99,99 € τον χρόνο · για παιδικούς σταθμούς και φροντιστές</p>
-                    <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Όλα όσα έχει το Premium</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Όσες οικογένειες φροντίζετε</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Καταγραφή φαρμάκων, θερμοκρασιών, συμπτωμάτων, ανάπτυξης και καθημερινής φροντίδας</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Δικό σας όνομα, όνομα χρήστη και κωδικός QR για τον σταθμό</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Ιστορικό με ό,τι καταγράψατε</li>
-                    </ul>
-                    <p class="plan-foot">Η λειτουργία παιδικού σταθμού είναι δωρεάν για μία οικογένεια που σας προσκάλεσε γονιός με Premium.</p>
+                <div class="spotlight-visual">
+                    <div class="phone">
+                        <picture>
+                            <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
+                            <img src="../screenshots/light/too-early.jpg" alt="Οθόνη καταγραφής δόσης που προειδοποιεί ότι είναι νωρίς για την επόμενη δόση" loading="lazy" width="600" height="1304">
+                        </picture>
+                    </div>
                 </div>
             </div>
-            <p class="pricing-note">Η εφαρμογή δείχνει τις τιμές στο τοπικό σας νόμισμα.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ & Support -->
-    <section class="faq" id="support">
-        <div class="container">
-            <div class="section-header">
-                <h2>Ερωτήσεις &amp; υποστήριξη</h2>
-            </div>
-            <div class="faq-list">
-                <details>
-                    <summary>Πώς λειτουργεί ο συγχρονισμός μεταξύ γονέων και φροντιστών;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Κάθε συνδεδεμένος λογαριασμός έχει δωρεάν αντίγραφο ασφαλείας στο cloud, ώστε τα δεδομένα σας να περνούν σε νέο κινητό και να μένουν ενημερωμένα σε όλες τις συσκευές σας. Με το Premium μπορείτε να προσκαλέσετε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username τους, και κάθε δόση που καταγράφουν εμφανίζεται αμέσως στα κινητά όλων.</p>
-                </details>
-                <details>
-                    <summary>Μπορεί ο παιδικός σταθμός ή η νταντά να χρησιμοποιήσει το Parenty;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Ναι. Με Premium, πηγαίνετε στις Ρυθμίσεις → Λογαριασμός → Πρόσβαση παιδικού σταθμού και προσκαλέστε τον με το όνομα χρήστη του σταθμού ή σαρώστε τον κωδικό QR που σας δείχνει. Επιλέξτε ποια παιδιά βλέπει και για πόσο: 2 εβδομάδες, 1 μήνα, 3 μήνες, 1 χρόνο ή μέχρι να την αφαιρέσετε. Βλέπει τα φάρμακα αυτών των παιδιών, πότε δόθηκε η τελευταία δόση και πότε επιτρέπεται η επόμενη, και μπορεί να καταγράφει δόσεις, θερμοκρασίες, συμπτώματα, ανάπτυξη και την ίδια τη μέρα: γεύματα, ροφήματα, ύπνο, πάνες, γιογιό, διάθεση και σημειώσεις. Τα βλέπετε στην αρχική οθόνη ως «Σήμερα στο» σταθμό σας, κάθε καταγραφή δείχνει ποιος την έκανε, και μπορείτε να παρατείνετε ή να τερματίσετε την πρόσβαση όποτε θέλετε.</p>
-                </details>
-                <details>
-                    <summary>Τι βλέπει ένας παιδικός σταθμός;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Μόνο τα παιδιά που επιλέξατε και τα φάρμακά τους, με το πότε δόθηκε η τελευταία δόση και πότε επιτρέπεται η επόμενη: όχι ποιος την έδωσε, και καμία σημείωση. Ένας σταθμός δεν βλέπει ποτέ τις δικές σας θερμοκρασίες, συμπτώματα, ανάπτυξη, επισκέψεις σε γιατρό, αναφορές ή σημειώσεις, και δεν μπορεί να προσθέσει, να αλλάξει ή να διαγράψει τα φάρμακα ή τα παιδιά σας. Η λειτουργία παιδικού σταθμού δεν κρατά τίποτα για την οικογένειά σας στο κινητό του σταθμού, και η πρόσβαση σταματά την ημερομηνία που επιλέξατε.</p>
-                </details>
-                <details>
-                    <summary>Έχω παιδικό σταθμό. Πώς χρησιμοποιώ τη λειτουργία παιδικού σταθμού;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Δημιουργήστε έναν δωρεάν λογαριασμό και γυρίστε σε λειτουργία παιδικού σταθμού: πατήστε τον τίτλο στο πάνω μέρος της οθόνης ή πηγαίνετε στις Ρυθμίσεις → Λειτουργία εφαρμογής. Ορίστε το όνομα και το όνομα χρήστη του σταθμού σας και δώστε στους γονείς το όνομα χρήστη ή δείξτε τους τον κωδικό QR σας. Οι οικογένειες βλέπουν το όνομα του σταθμού σας, ποτέ τον προσωπικό σας λογαριασμό. Ένας δωρεάν σταθμός μπορεί να φροντίζει μία οικογένεια που τον προσκάλεσε γονιός με Premium· το Parenty Παιδικός Σταθμός (9,99 € τον μήνα ή 99,99 € τον χρόνο) είναι για όσες οικογένειες φροντίζετε και περιλαμβάνει το Premium για τη δική σας οικογένεια. Η λειτουργία παιδικού σταθμού χρειάζεται σύνδεση στο διαδίκτυο.</p>
-                </details>
-                <details>
-                    <summary>Μπορώ να διαχειριστώ πολλά παιδιά;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Ναι. Κάθε παιδί έχει το δικό του προφίλ με χρώμα, και μπορείτε να φιλτράρετε φάρμακα, θερμοκρασίες, συμπτώματα και επισκέψεις ανά παιδί. Το δωρεάν πρόγραμμα περιλαμβάνει ένα προφίλ παιδιού· το Premium ξεκλειδώνει απεριόριστα προφίλ.</p>
-                </details>
-                <details>
-                    <summary>Τι περιλαμβάνεται δωρεάν;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Παρακολούθηση φαρμάκων και δόσεων, υπενθυμίσεις, καταγραφές θερμοκρασίας και συμπτωμάτων, ένα προφίλ παιδιού, ένας γιατρός με δύο επισκέψεις και αντίγραφο ασφαλείας στο cloud. Το Premium προσθέτει κοινή χρήση με την οικογένεια, απεριόριστα προφίλ και γιατρούς, αναφορές PDF, γραφήματα πυρετού και ρυθμίσεις ξυπνητηριού.</p>
-                </details>
-                <details>
-                    <summary>Μπορώ να χρησιμοποιήσω το Parenty με το Siri ή τον βοηθό μου στο Android;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Ναι. Στο iPhone, πείτε στο Siri στα αγγλικά φράσεις όπως “Log Ibuprofen in Parenty” ή “What's due next in Parenty?” — χωρίς ρυθμίσεις. Σε Android 16 και νεότερα, οι βοηθοί που υποστηρίζουν ενέργειες εφαρμογών μπορούν να καταγράφουν δόσεις, θερμοκρασίες, βάρος και ύψος και να ελέγχουν τι ακολουθεί. Το Parenty εξακολουθεί να σας προειδοποιεί για δόση που είναι πολύ νωρίς, και όλα μοιράζονται με την οικογένειά σας όπως πάντα.</p>
-                </details>
-                <details>
-                    <summary>Ποιες γλώσσες υποστηρίζει το Parenty;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Αγγλικά, αραβικά, γερμανικά, ελληνικά, ισπανικά, γαλλικά, εβραϊκά, ιταλικά, πορτογαλικά και τουρκικά.</p>
-                </details>
-                <details>
-                    <summary>Πώς διαγράφω τον λογαριασμό μου;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Μεταβείτε στις Ρυθμίσεις προφίλ και επιλέξτε Διαγραφή λογαριασμού. Ο λογαριασμός σας και τα δεδομένα του στο cloud διαγράφονται.</p>
-                </details>
-                <details>
-                    <summary>Δεν εμφανίζονται ειδοποιήσεις. Τι να ελέγξω;<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Βεβαιωθείτε ότι οι ειδοποιήσεις επιτρέπονται για το Parenty στις ρυθμίσεις του κινητού σας, ότι η Εστίαση ή το «Μην ενοχλείτε» δεν τις σιγάζει, και ότι έχετε την τελευταία έκδοση της εφαρμογής.</p>
-                </details>
-            </div>
-            <p class="faq-contact">Χρειάζεστε ακόμα βοήθεια; Γράψτε μας στο <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-box">
-                <img src="../logo.png" alt="" width="64" height="64" />
-                <h2>Ήρεμη φροντίδα, <span>ακόμα και στις 3&nbsp;τα ξημερώματα.</span></h2>
-                <p>Δωρεάν λήψη για iPhone και Android.</p>
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Κατεβάστε το Parenty από το App Store">
-                        <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">Λήψη από το</span><span class="large">App Store</span></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Αποκτήστε το Parenty στο Google Play">
-                        <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Διαθέσιμο στο</span><span class="large">Google Play</span></span>
-                    </a>
+        <!-- Spotlight: family sync -->
+        <section class="spotlight reverse" id="sync">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Οικογενειακός συγχρονισμός</span>
+                    <h2>«Της έδωσε κανείς το φάρμακο;»</h2>
+                    <p>Μην το ξαναρωτήσετε. Κάθε δόση που καταγράφει οποιοσδήποτε εμφανίζεται αμέσως σε κάθε κινητό της οικογένειας — μαζί με το ποιος την έδωσε και πότε.</p>
+                    <ul class="checklist">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Προσκαλέστε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Δείτε ποιος έδωσε κάθε δόση στο ιστορικό</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Τα κινητά όλων ενημερώνονται αμέσως</li>
+                    </ul>
+                    <p class="note">Το αντίγραφο ασφαλείας στο cloud είναι δωρεάν για όλους. Η κοινή χρήση με την οικογένεια ανήκει στο Premium.</p>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="phone">
+                        <picture>
+                            <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
+                            <img src="../screenshots/light/history.jpg" alt="Ιστορικό δόσεων που δείχνει ποιες δόσεις έδωσε η Maria" loading="lazy" width="600" height="1304">
+                        </picture>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Spotlight: voice (Siri / Android assistants) -->
+        <section class="spotlight" id="voice">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Χωρίς χέρια</span>
+                    <h2>Μωρό στην αγκαλιά; Απλώς ζητήστε το.</h2>
+                    <p>Καταγράψτε μια δόση ή πυρετό χωρίς να ξεκλειδώσετε το κινητό ή να ανοίξετε την εφαρμογή. Πείτε το στο Siri στο iPhone ή στον βοηθό σας στο Android, και το Parenty το μοιράζεται με την οικογένεια.</p>
+                    <ul class="checklist">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>“Log Ibuprofen in Parenty”</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>“What's due next in Parenty?”</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Καταγράψτε πυρετό, βάρος και ύψος και δείτε την τελευταία δόση</li>
+                    </ul>
+                    <p class="note">Το Siri δεν μιλά ελληνικά, οπότε μιλήστε του στα αγγλικά — χωρίς καμία ρύθμιση. Στο Android, λειτουργεί με βοηθούς που υποστηρίζουν ενέργειες εφαρμογών σε Android 16 και νεότερα.</p>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="phone video-phone">
+                        <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Βίντεο φωνητικών εντολών του Parenty: καταγραφή δόσης με το Siri και πυρετού με βοηθό Android"></video>
+                        <button class="video-sound" type="button" aria-label="Ενεργοποίηση ήχου" aria-pressed="false">
+                            <svg class="icon" aria-hidden="true"><use href="#i-muted"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features (6 focused cards, 3x2 grid) -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Όλα σε ένα ήρεμο μέρος</h2>
+                    <p>Φτιαγμένο για κουρασμένους γονείς: μεγάλο, καθαρό και γρήγορο, μέρα ή νύχτα.</p>
+                </div>
+                <div class="features-grid three-col">
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-thermo"/></svg></div>
+                        <h3>Πυρετός &amp; συμπτώματα</h3>
+                        <p>Καταγράψτε θερμοκρασίες σε °C ή °F και συμπτώματα σε κλίμακα 1–5, με σημειώσεις και ώρες.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg></div>
+                        <h3>Ανάπτυξη &amp; καμπύλες</h3>
+                        <p>Βάρος και ύψος για κάθε παιδί, με καμπύλες ανάπτυξης του ΠΟΥ.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-steth"/></svg></div>
+                        <h3>Γιατροί &amp; επισκέψεις</h3>
+                        <p>Ο παιδίατρός σας ένα πάτημα μακριά. Καταγράψτε επισκέψεις και επανελέγχους και προσθέστε τους στο ημερολόγιό σας.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div>
+                        <h3>Αναφορές PDF &amp; CSV</h3>
+                        <p>Μοιραστείτε μια καθαρή σύνοψη με δόσεις, θερμοκρασίες, συμπτώματα και επισκέψεις με τον γιατρό σας ή στα επείγοντα.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg></div>
+                        <h3>Κάθε παιδί</h3>
+                        <p>Ξεχωριστό χρωματικό προφίλ ανά παιδί, με φίλτρα ανά ημερομηνία, παιδί ή ποιος έκανε την καταγραφή.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-tablet"/></svg></div>
+                        <h3>Widgets &amp; iPad</h3>
+                        <p>Καταγράψτε μια δόση από την Αρχική οθόνη, δείτε την αντίστροφη μέτρηση στην Οθόνη κλειδώματος ή χρησιμοποιήστε την πλαϊνή μπάρα στο iPad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots (3 unique screens, no duplicates from Spotlights) -->
+        <section class="screens" id="screens">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Δείτε το Parenty στην πράξη</h2>
+                    <p>Φωτεινό ή σκούρο, ακολουθεί το κινητό σας.</p>
+                </div>
+                <div class="screens-grid">
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="Αρχική οθόνη με τα φάρμακα που πρέπει να πάρει η Emma" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Κάθε δόση, με μια ματιά</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="Οθόνη προγραμματισμού φαρμάκου με προεπισκόπηση των δόσεων" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Ορίστε πρόγραμμα σε δευτερόλεπτα</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="Οθόνη συμπτωμάτων με λίστα καταγραφών θερμοκρασίας" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Παρακολουθήστε τον πυρετό με τον καιρό</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single Daycare Cross-Promo Band -->
+        <section class="daycare-callout" id="daycare">
+            <div class="container">
+                <div class="callout-card">
+                    <div class="callout-body">
+                        <span class="eyebrow">Λειτουργία παιδικού σταθμού</span>
+                        <h2>Μείνετε συνδεδεμένοι και με τον παιδικό σταθμό.</h2>
+                        <p>Προσκαλέστε τον παιδικό σταθμό, τη νταντά ή τους παππούδες για τα παιδιά και τις ημερομηνίες που επιλέγετε. Καταγράφουν δόσεις, γεύματα και ύπνους και βλέπετε τη μέρα ζωντανά — ενώ τα προσωπικά σας αρχεία μένουν ιδιωτικά.</p>
+                    </div>
+                    <a class="btn callout-btn" href="daycare.html">Δείτε το Parenty για παιδικούς σταθμούς<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review -->
+        <section class="review" aria-label="Τι λένε οι γονείς">
+            <div class="container">
+                <figure class="review-card">
+                    <div class="review-stars" role="img" aria-label="5 στα 5 αστέρια">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+                    </div>
+                    <blockquote>
+                        <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
+                    </blockquote>
+                    <figcaption><strong>Carolyn Johnson</strong> · Κριτική στο Google Play</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Pricing (2 focused family plans + compact Daycare banner) -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Δωρεάν για αρχή. Premium για κοινή χρήση.</h2>
+                    <p>Όλα όσα χρειάζεστε για ένα παιδί είναι δωρεάν. Αναβαθμίστε για ζωντανή κοινή χρήση με οικογένεια και παιδικό σταθμό.</p>
+                </div>
+                <div class="plans two">
+                    <div class="plan">
+                        <h3>Δωρεάν</h3>
+                        <p class="plan-price">Δωρεάν για πάντα</p>
+                        <ul class="checklist">
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Προγράμματα φαρμάκων, υπενθυμίσεις και έλεγχοι δόσεων</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Καταγραφές θερμοκρασίας και συμπτωμάτων</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 προφίλ παιδιού</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 γιατρός και 2 επισκέψεις</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Αντίγραφο ασφαλείας στο cloud για τις δικές σας συσκευές</li>
+                        </ul>
+                    </div>
+                    <div class="plan premium">
+                        <h3>Premium</h3>
+                        <p class="plan-price">Μηνιαία ή εφάπαξ αγορά για πάντα</p>
+                        <ul class="checklist">
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ό,τι έχει το Δωρεάν</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Κοινή χρήση με σύντροφο, οικογένεια και φροντιστές — ζωντανός συγχρονισμός</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Απεριόριστα παιδιά, γιατροί και επισκέψεις</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Αναφορές PDF και γραφήματα πυρετού</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ρυθμίσεις ξυπνητηριού</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Προσκαλέστε τον σταθμό σας και δείτε τη μέρα</li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="pricing-banner" href="daycare.html#pricing">
+                    <span class="pricing-banner-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+                    <span class="pricing-banner-text"><strong>Έχετε παιδικό σταθμό ή βρεφονηπιακό;</strong> Δωρεάν για 1 οικογένεια ή 9,99 €/μήνα για απεριόριστες οικογένειες.</span>
+                    <span class="pricing-banner-cta">Δείτε το πακέτο σταθμών<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+                </a>
+                <p class="pricing-note">Η εφαρμογή δείχνει τις τιμές στο τοπικό σας νόμισμα.</p>
+            </div>
+        </section>
+
+        <!-- FAQ & Support (6 focused Q&As) -->
+        <section class="faq" id="support" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="faq-heading">Ερωτήσεις &amp; υποστήριξη</h2>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>Πώς λειτουργεί ο συγχρονισμός μεταξύ γονέων και φροντιστών;<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Κάθε συνδεδεμένος λογαριασμός έχει δωρεάν αντίγραφο ασφαλείας στο cloud, ώστε τα δεδομένα σας να περνούν σε νέο κινητό και να μένουν ενημερωμένα σε όλες τις συσκευές σας. Με το Premium μπορείτε να προσκαλέσετε τον σύντροφό σας, τους παππούδες ή τη νταντά με το @username τους, και κάθε δόση που καταγράφουν εμφανίζεται αμέσως στα κινητά όλων.</p>
+                    </details>
+                    <details>
+                        <summary>Τι περιλαμβάνεται δωρεάν;<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Παρακολούθηση φαρμάκων και δόσεων, υπενθυμίσεις, καταγραφές θερμοκρασίας και συμπτωμάτων, ένα προφίλ παιδιού, ένας γιατρός με δύο επισκέψεις και αντίγραφο ασφαλείας στο cloud. Το Premium προσθέτει κοινή χρήση με την οικογένεια, απεριόριστα προφίλ και γιατρούς, αναφορές PDF, γραφήματα πυρετού και ρυθμίσεις ξυπνητηριού.</p>
+                    </details>
+                    <details>
+                        <summary>Μπορώ να διαχειριστώ πολλά παιδιά;<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Ναι. Κάθε παιδί έχει το δικό του προφίλ με χρώμα, και μπορείτε να φιλτράρετε φάρμακα, θερμοκρασίες, συμπτώματα και επισκέψεις ανά παιδί. Το δωρεάν πρόγραμμα περιλαμβάνει ένα προφίλ παιδιού· το Premium ξεκλειδώνει απεριόριστα προφίλ.</p>
+                    </details>
+                    <details>
+                        <summary>Μπορεί ο παιδικός σταθμός ή η νταντά να χρησιμοποιήσει το Parenty;<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Ναι. Με το Premium προσκαλείτε τον παιδικό σταθμό ή τον φροντιστή με username ή κωδικό QR, επιλέγετε ποια παιδιά βλέπουν και για πόσο, και παρακολουθείτε δόσεις, γεύματα και ύπνους ζωντανά στην Αρχική. Δεν βλέπουν ποτέ τα προσωπικά σας αρχεία ή σημειώσεις.</p>
+                    </details>
+                    <details>
+                        <summary>Μπορώ να χρησιμοποιήσω το Parenty με το Siri ή τον βοηθό μου στο Android;<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Ναι. Στο iPhone, πείτε στο Siri στα αγγλικά φράσεις όπως “Log Ibuprofen in Parenty” ή “What's due next in Parenty?” — χωρίς ρυθμίσεις. Σε Android 16 και νεότερα, οι βοηθοί που υποστηρίζουν ενέργειες εφαρμογών μπορούν να καταγράφουν δόσεις, θερμοκρασίες, βάρος και ύψος και να ελέγχουν τι ακολουθεί. Το Parenty εξακολουθεί να σας προειδοποιεί για δόση που είναι πολύ νωρίς, και όλα μοιράζονται με την οικογένειά σας όπως πάντα.</p>
+                    </details>
+                    <details>
+                        <summary>Πώς διαγράφω τον λογαριασμό μου;<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Μεταβείτε στις Ρυθμίσεις προφίλ και επιλέξτε Διαγραφή λογαριασμού. Ο λογαριασμός σας και τα δεδομένα του στο cloud διαγράφονται.</p>
+                    </details>
+                </div>
+                <p class="faq-contact">Χρειάζεστε ακόμα βοήθεια; Γράψτε μας στο <a href="mailto:info@parenty.uk">info@parenty.uk</a></p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <img src="../logo.png" alt="" width="64" height="64" />
+                    <h2>Ήρεμη φροντίδα, <span>ακόμα και στις 3&nbsp;τα ξημερώματα.</span></h2>
+                    <p>Δωρεάν λήψη για iPhone και Android.</p>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Κατεβάστε το Parenty από το App Store">
+                            <svg aria-hidden="true"><use href="#i-apple"/></svg>
+                            <span class="store-btn-text"><span class="small">Λήψη από το</span><span class="large">App Store</span></span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Αποκτήστε το Parenty στο Google Play">
+                            <svg aria-hidden="true"><use href="#i-play"/></svg>
+                            <span class="store-btn-text"><span class="small">Διαθέσιμο στο</span><span class="large">Google Play</span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Phones: a download bar that appears after the hero and hides at the closing call to action -->
     <a class="sticky-get" href="../get.html">
@@ -794,25 +637,14 @@
     <footer>
         <div class="container footer-content">
             <p>© <span id="year"></span> Parenty · Ανάπτυξη: Stavros Georgiou</p>
-            <nav>
+            <nav aria-label="Υποσέλιδο">
+                <a href="daycare.html">Parenty για παιδικούς σταθμούς</a>
                 <a href="#features">Λειτουργίες</a>
                 <a href="#pricing">Τιμές</a>
                 <a href="#support">Υποστήριξη</a>
                 <a href="../privacy.html">Πολιτική απορρήτου</a>
                 <a href="../terms.html">Όροι χρήσης</a>
                 <button type="button" class="footer-link-btn" data-cookie-settings>Ρυθμίσεις cookies</button>
-            </nav>
-            <nav class="langs" aria-label="Γλώσσα" translate="no">
-                <a hreflang="en" lang="en" href="../">English</a>
-                <a hreflang="el" lang="el" href="../el/" aria-current="page">Ελληνικά</a>
-                <a hreflang="de" lang="de" href="../de/">Deutsch</a>
-                <a hreflang="es" lang="es" href="../es/">Español</a>
-                <a hreflang="fr" lang="fr" href="../fr/">Français</a>
-                <a hreflang="it" lang="it" href="../it/">Italiano</a>
-                <a hreflang="pt" lang="pt" href="../pt/">Português</a>
-                <a hreflang="tr" lang="tr" href="../tr/">Türkçe</a>
-                <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
-                <a hreflang="he" lang="he" href="../he/">עברית</a>
             </nav>
         </div>
     </footer>
@@ -825,6 +657,11 @@
         </div>
     </aside>
 
+    <script type="module">
+        if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
+            import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js");
+        }
+    </script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -834,7 +671,6 @@
         const darkSources = document.querySelectorAll('source[media="(prefers-color-scheme: dark)"]');
         const applyTheme = () => {
             const dark = (document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light")) === "dark";
-            // Screenshots pick their dark/light image through <source media>, so steer that too
             darkSources.forEach((source) => source.media = dark ? "all" : "not all");
             document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.content = dark ? "#0d0817" : "#faf8ff");
             themeToggle.querySelector(".icon-sun").style.display = dark ? "" : "none";
@@ -849,6 +685,16 @@
         });
         systemDark.addEventListener("change", applyTheme);
         applyTheme();
+
+        // Close mobile popover when tapping an in-page link
+        const mobileNav = document.getElementById("mobile-nav");
+        if (mobileNav) {
+            mobileNav.addEventListener("click", (event) => {
+                if (event.target.closest("a") && typeof mobileNav.hidePopover === "function") {
+                    mobileNav.hidePopover();
+                }
+            });
+        }
 
         // Promo videos: play while on screen (not with reduced motion), one with sound at a time
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -886,16 +732,6 @@
             players.forEach(({ video }) => observer.observe(video));
         }
 
-        // Hero: "For families" / "For daycares" swaps the copy and the phone
-        const hero = document.querySelector(".hero");
-        const audienceButtons = hero.querySelectorAll(".audience-switch button");
-        audienceButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                hero.dataset.audience = button.dataset.audience;
-                audienceButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
-            });
-        });
-
         // Phones: show the download bar once the hero's store buttons scroll away, hide it at the closing call to action
         const stickyGet = document.querySelector(".sticky-get");
         if (stickyGet && "IntersectionObserver" in window) {
@@ -908,31 +744,6 @@
             });
             watched.forEach((el) => stickyObserver.observe(el));
         }
-
-        // Screenshot tabs <-> track
-        const track = document.getElementById("screensTrack");
-        const figures = track.querySelectorAll("figure");
-        const tabs = document.querySelectorAll(".screens-tab");
-        tabs.forEach((tab) => {
-            tab.addEventListener("click", () => {
-                const fig = figures[Number(tab.dataset.index)];
-                track.scrollTo({ left: fig.offsetLeft - (track.clientWidth - fig.offsetWidth) / 2, behavior: "smooth" });
-            });
-        });
-        let scrollTimeout;
-        track.addEventListener("scroll", () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                const center = track.scrollLeft + track.clientWidth / 2;
-                let closest = 0;
-                figures.forEach((fig, i) => {
-                    const d = Math.abs(fig.offsetLeft + fig.offsetWidth / 2 - center);
-                    const best = Math.abs(figures[closest].offsetLeft + figures[closest].offsetWidth / 2 - center);
-                    if (d < best) closest = i;
-                });
-                tabs.forEach((t, i) => t.classList.toggle("active", i === closest));
-            }, 60);
-        }, { passive: true });
     </script>
 </body>
 </html>

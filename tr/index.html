@@ -2,7 +2,7 @@
 <html lang="tr" dir="ltr">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Parenty: Çocuklar için İlaç Takibi – Doz Hatırlatıcı &amp; Ateş Kaydı</title>
     <meta name="description" content="Parenty, ebeveynlerin ve bakıcıların çocukların ilaç dozlarını, ateşini, belirtilerini ve doktor ziyaretlerini takip etmesine yardım eder — ve kreş dahil herkesi senkronize tutar, böylece hiçbir doz atlanmaz ya da iki kez verilmez." />
     <meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)" />
@@ -12,17 +12,16 @@
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TK4KS8P7"></script>
     <script>
         // Apply a saved theme choice before first paint; otherwise the system setting applies
-        document.documentElement.classList.add("js");
         try {
             const saved = localStorage.getItem("theme");
             if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
         } catch (e) {}
     </script>
     <meta name="apple-itunes-app" content="app-id=6757712692" />
-    
+
     <meta name="keywords" content="Parenty, Parenty app, medicine tracker, child medicine schedule, pediatric medication log, fever tracker, multi-caregiver sync, baby health tracker, infant fever log, daycare app for parents, daycare daily report" />
     <meta name="robots" content="index, follow" />
-    
+
     <link rel="canonical" href="https://parenty.uk/tr/" />
     <link rel="alternate" hreflang="en" href="https://parenty.uk/" />
     <link rel="alternate" hreflang="el" href="https://parenty.uk/el/" />
@@ -59,7 +58,7 @@
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="500" />
     <meta property="og:image:alt" content="Zamanı gelen ilaç dozlarını ve ateş kaydını gösteren Parenty uygulama ekranları" />
-    
+
     <!-- Twitter / X Meta -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Parenty – Tüm aile için ilaç ve sağlık takibi" />
@@ -111,7 +110,7 @@
       "https://parenty.uk/screenshots/light/home.jpg",
       "https://parenty.uk/screenshots/light/history.jpg",
       "https://parenty.uk/screenshots/light/too-early.jpg",
-      "https://parenty.uk/screenshots/light/daycare-today.jpg"
+      "https://parenty.uk/screenshots/light/schedule.jpg"
     ],
     "publisher": {
       "@id": "https://parenty.uk/#organization"
@@ -153,16 +152,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Parenty Kreş modu: kreşte bir gün",
-    "description": "Kreş bir yemeği, bir uykuyu ve yüksek ateşi kaydeder; ebeveyn de tüm günü ana ekranda ve zaman çizelgesi olarak görür.",
-    "thumbnailUrl": "https://parenty.uk/video/parenty-daycare-day-ad-poster.jpg",
-    "contentUrl": "https://parenty.uk/video/parenty-daycare-day-ad.mp4",
-    "uploadDate": "2026-10-22T20:34:00+03:00",
-    "duration": "PT30S"
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -175,26 +164,10 @@
       },
       {
         "@type": "Question",
-        "name": "Kreşim ya da bakıcım Parenty'yi kullanabilir mi?",
+        "name": "Ücretsiz olarak neler dahil?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Evet. Premium ile Ayarlar → Hesap → Kreş erişimi'ne gidin ve onları kreşin kullanıcı adıyla davet edin ya da gösterdikleri QR kodunu tarayın. Hangi çocukları ne kadar süre göreceklerini seçin: 2 hafta, 1 ay, 3 ay, 1 yıl ya da siz kaldırana kadar. Bu çocukların ilaçlarını, son dozun ne zaman verildiğini ve bir sonrakinin ne zaman verilebileceğini görürler; doz, ateş, belirti, büyüme ve günün kendisini kaydedebilirler: yemekler, içecekler, uykular, bezler, tuvalet, ruh hali ve notlar. Bunları ana ekranda kreşinizin “Bugün” kartında görürsünüz, her kayıtta kimin girdiği yazar ve erişimi istediğiniz zaman uzatabilir ya da sonlandırabilirsiniz."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bir kreş neleri görür?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yalnızca seçtiğiniz çocukları ve ilaçlarını; son dozun ne zaman verildiğini ve bir sonrakinin ne zaman verilebileceğini görür, ama dozu kimin verdiğini ya da notları görmez. Bir kreş kendi ateş ölçümlerinizi, belirtilerinizi, büyüme kayıtlarınızı, doktor ziyaretlerinizi, raporlarınızı ya da notlarınızı asla görmez; ilaçlarınızı ya da çocuklarınızı ekleyemez, değiştiremez veya silemez. Kreş modu kreşin telefonunda ailenizle ilgili hiçbir şey saklamaz ve erişim seçtiğiniz tarihte durur."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bir kreş işletiyorum. Kreş modunu nasıl kullanırım?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ücretsiz bir hesap oluşturun, sonra Kreş moduna geçin: ekranın üstündeki başlığa dokunun ya da Ayarlar → Uygulama modu'na gidin. Kreşinizin adını ve kullanıcı adını ayarlayın, sonra ebeveynlere kullanıcı adını verin ya da QR kodunuzu gösterin. Aileler kreşinizin adını görür, kişisel hesabınızı asla görmez. Ücretsiz bir kreş, Premium bir ebeveynin davet ettiği bir aileye bakabilir; Parenty Kreş (aylık 9,99 € ya da yıllık 99,99 €) baktığınız tüm aileler içindir ve kendi aileniz için Premium'u içerir. Kreş modu internet bağlantısı gerektirir."
+          "text": "İlaç ve doz takibi, hatırlatıcılar, sıcaklık ve belirti kayıtları, bir çocuk profili, iki ziyaretle bir doktor ve bulut yedekleme. Premium; aileyle paylaşım, sınırsız profil ve doktor, PDF raporları, ateş grafikleri ve alarm ayarlarını ekler."
         }
       },
       {
@@ -207,10 +180,10 @@
       },
       {
         "@type": "Question",
-        "name": "Ücretsiz olarak neler dahil?",
+        "name": "Kreşim ya da bakıcım Parenty'yi kullanabilir mi?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "İlaç ve doz takibi, hatırlatıcılar, sıcaklık ve belirti kayıtları, bir çocuk profili, iki ziyaretle bir doktor ve bulut yedekleme. Premium; aileyle paylaşım, sınırsız profil ve doktor, PDF raporları, ateş grafikleri ve alarm ayarlarını ekler."
+          "text": "Evet. Premium ile kreşinizi veya bakıcınızı kullanıcı adı ya da QR kodla davet edin, hangi çocukları ne kadar süre göreceğini seçin ve dozları, öğünleri ve uykuları Ana Sayfada canlı izleyin. Özel aile kayıtlarınızı veya notlarınızı asla görmezler."
         }
       },
       {
@@ -223,26 +196,10 @@
       },
       {
         "@type": "Question",
-        "name": "Parenty hangi dilleri destekliyor?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "İngilizce, Arapça, Almanca, Yunanca, İspanyolca, Fransızca, İbranice, İtalyanca, Portekizce ve Türkçe."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Hesabımı nasıl silerim?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Profil ayarlarına gidin ve Hesabı Sil'i seçin. Hesabınız ve buluttaki verileri silinir."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bildirimler görünmüyor. Neyi kontrol etmeliyim?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Telefonunuzun ayarlarında Parenty bildirimlerine izin verildiğinden, Odak ya da Rahatsız Etmeyin modunun onları susturmadığından ve uygulamanın en son sürümünü kullandığınızdan emin olun."
         }
       }
     ]
@@ -261,7 +218,6 @@
     <!-- Icon sprite (Lucide, ISC licence) -->
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
         <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-        <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></symbol>
         <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
         <symbol id="i-steth" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
         <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
@@ -271,8 +227,9 @@
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
         <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
         <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
-        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></symbol>
         <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-qr" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
         <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
         <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></symbol>
@@ -281,508 +238,394 @@
         <symbol id="i-play" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.7c18.1-10.5 18.1-49.7-1.2-60.2zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></symbol>
     </svg>
 
-    <!-- Header Navigation -->
-    <nav class="navbar">
+    <!-- Unified Header Navigation -->
+    <header class="navbar">
         <div class="container nav-content">
-            <a href="#" class="brand">
-                <img src="../logo.png" alt="" width="36" height="36" />
-                Parenty
-            </a>
-            <ul class="nav-links">
-                <li><a href="#daycare">Kreş</a></li>
-                <li><a href="daycare.html">Kreşler için</a></li>
-                <li><a href="#features">Özellikler</a></li>
-                <li><a href="#pricing">Fiyatlar</a></li>
-                <li><a href="#support">SSS</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Koyu temaya geç">
-                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            </button>
-                <a href="#download" class="btn">İndir</a>
-            </div>
-        </div>
-        <ul class="nav-chips" aria-label="Atla">
-            <li><a href="#daycare">Kreş</a></li>
-            <li><a href="daycare.html">Kreşler için</a></li>
-            <li><a href="#features">Özellikler</a></li>
-            <li><a href="#pricing">Fiyatlar</a></li>
-            <li><a href="#support">SSS</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero: one page, two audiences. The switch (shown only with JavaScript) swaps the copy and the phone. -->
-    <section class="hero" id="download" data-audience="families">
-        <div class="container hero-grid">
-            <div>
-                <a class="new-pill" href="#daycare"><span>Yeni</span>Kreş modu geldi<svg class="icon"><use href="#i-arrow"/></svg></a>
-                <div class="audience-switch" role="group" aria-label="Parenty kimin için?">
-                    <button type="button" data-audience="families" aria-pressed="true">Aileler için</button>
-                    <button type="button" data-audience="daycares" aria-pressed="false">Kreşler için</button>
-                </div>
-                <div class="for-families">
-                    <h1>Ne unutulan ne de <span class="accent">iki kez verilen doz.</span></h1>
-                    <p class="hero-sub">Parenty, çocuklarınızın ilaçlarını, ateşini ve doktor ziyaretlerini takip eder; onlara bakan herkesi, kreş dahil, aynı bilgide tutar. Sakin bakım, gece 3'te bile.</p>
-                </div>
-                <div class="for-daycares">
-                    <p class="hero-title">Her çocuğun ilaçları ve günü <span class="accent">tek listede.</span></p>
-                    <p class="hero-sub">Her ailenin çocukları için neyin zamanı geldiğini görün; doz, ateş, yemek ve uyku kaydedin, ebeveynler de hemen görsün. <a href="daycare.html">Kreşler için Parenty</a></p>
-                </div>
-
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi App Store'dan indirin">
-                        <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">İndirin:</span><span class="large">App Store</span></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi Google Play'den edinin">
-                        <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Şimdi edinin:</span><span class="large">Google Play</span></span>
-                    </a>
-                </div>
-                <p class="hero-meta">Ücretsiz indirin · iPhone, iPad &amp; Android · 10 dil</p>
-
-                <a class="hero-qr" href="../get.html">
-                    <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
-                    <span><strong>Bilgisayarda mısınız?</strong><br>Parenty'yi indirmek için telefonunuzun kamerasıyla tarayın.</span>
+            <div class="nav-start">
+                <a href="./" class="brand">
+                    <img src="../logo.png" alt="" width="34" height="34" />
+                    <span>Parenty</span>
                 </a>
+                <nav class="mode-switch" aria-label="Parenty kimin için?">
+                    <a href="./" data-audience="families" aria-current="page">Aileler</a>
+                    <a href="daycare.html" data-audience="daycares">Kreşler</a>
+                </nav>
             </div>
 
-            <div class="hero-visual">
-                <div class="phone video-phone for-families" id="watch">
-                    <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Parenty uygulama tanıtım videosu"></video>
-                    <button class="video-sound" type="button" aria-label="Sesi aç" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
+            <nav class="site-nav" aria-label="Ana gezinme">
+                <ul class="nav-links">
+                    <li><a href="#features">Özellikler</a></li>
+                    <li><a href="#pricing">Fiyatlar</a></li>
+                    <li><a href="#support">SSS</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="popover-wrap">
+                    <button class="icon-btn lang-btn" type="button" popovertarget="lang-popover" popovertargetaction="toggle" aria-label="Dil" aria-controls="lang-popover">
+                        <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+                        <span class="lang-code" translate="no">TR</span>
                     </button>
+                    <nav id="lang-popover" class="nav-popover lang-popover" popover="auto" aria-label="Dil" translate="no">
+                        <a hreflang="en" lang="en" href="../">English</a>
+                        <a hreflang="el" lang="el" href="../el/">Ελληνικά</a>
+                        <a hreflang="de" lang="de" href="../de/">Deutsch</a>
+                        <a hreflang="es" lang="es" href="../es/">Español</a>
+                        <a hreflang="fr" lang="fr" href="../fr/">Français</a>
+                        <a hreflang="it" lang="it" href="../it/">Italiano</a>
+                        <a hreflang="pt" lang="pt" href="../pt/">Português</a>
+                        <a hreflang="tr" lang="tr" href="../tr/" aria-current="page">Türkçe</a>
+                        <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
+                        <a hreflang="he" lang="he" href="../he/">עברית</a>
+                    </nav>
                 </div>
-                <div class="phone for-daycares">
-                    <picture>
-                        <source srcset="../screenshots/dark/daycare-families.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/daycare-families.jpg" alt="Üç aileyi, Millers, Patels ve Novaks ailelerini ve her birinin erişiminin ne kadar süreceğini gösteren Kreş modu" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Proof strip -->
-    <section class="proof" aria-label="Ebeveynler neden Parenty'ye güveniyor">
-        <ul class="container proof-list">
-            <li><svg class="icon"><use href="#i-check"/></svg>Ücretsiz indirin</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Reklam yok, asla</li>
-            <li><svg class="icon"><use href="#i-lock"/></svg>Verilerinizi asla satmayız</li>
-            <li><svg class="icon"><use href="#i-phone"/></svg>Face ID ya da parmak izi kilidi</li>
-            <li><svg class="icon"><use href="#i-globe"/></svg>10 dil</li>
-        </ul>
-    </section>
+                <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Koyu temaya geç">
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
 
-    <!-- Chapter: At home -->
-    <section class="chapter-head" id="at-home">
-        <div class="container">
-            <span class="eyebrow">Her aile için</span>
-            <h2>Evde</h2>
-            <p>Ailenizin doğru dozu doğru zamanda vermek için ihtiyaç duyduğu her şey, yardım eden herkesle paylaşılır.</p>
-        </div>
-    </section>
+                <a href="#download" class="btn nav-cta">İndir</a>
 
-    <!-- Spotlight: double-dose guard -->
-    <section class="spotlight" id="dose-check">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">İçiniz rahat</span>
-                <h2>Gecenin 3'ünde çift doza son.</h2>
-                <p>Yorgunsunuz ve zamanı geldi mi emin değil misiniz? Parenty bir sonraki doz için çok erken olduğunda sizi uyarır ve tam olarak ne zaman verilmesi gerektiğini gösterir.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Birkaç saatte bir, belirli saatlerde ya da yüksek sesli alarm olarak hatırlatıcılar</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Çok erken bir dozdan önce uyarı</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Geciken, devam eden ve tamamlanan — tek bakışta</li>
-                </ul>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone">
-                    <picture>
-                        <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/too-early.jpg" alt="Bir sonraki doz için çok erken olduğunu bildiren doz kaydetme ekranı" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spotlight: family sync -->
-    <section class="spotlight reverse" id="sync">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Aile senkronizasyonu</span>
-                <h2>“İlacını veren oldu mu?”</h2>
-                <p>Bir daha sormayın. Birinin kaydettiği her doz, kimin verdiği ve ne zaman verdiğiyle birlikte ailedeki her telefonda anında görünür.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Eşinizi, büyükanne ve büyükbabaları ya da bakıcıyı @kullanıcıadı ile davet edin</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Her dozu kimin verdiğini geçmişte görün</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Herkesin telefonu anında güncellenir</li>
-                </ul>
-                <p class="note">Bulut yedekleme herkes için ücretsizdir. Aileyle paylaşım Premium'a dahildir.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone">
-                    <picture>
-                        <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
-                        <img src="../screenshots/light/history.jpg" alt="Maria'nın hangi dozları verdiğini gösteren doz geçmişi" loading="lazy" width="600" height="1304">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spotlight: voice (Siri / Android assistants) -->
-    <section class="spotlight" id="voice">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Yeni · Eller serbest</span>
-                <h2>Kucağınızda bebek mi var? Sadece söyleyin.</h2>
-                <p>Telefonunuzun kilidini açmadan ya da uygulamayı açmadan bir doz veya ateş kaydedin. iPhone'da Siri'ye ya da Android'de asistanınıza söyleyin, Parenty de aileyle paylaşsın.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>“Parenty içinde İbuprofen kaydet”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>“Parenty uygulamasında sıradaki ilaç nedir?”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Ateş, kilo ve boy kaydedin, son dozu kontrol edin</li>
-                </ul>
-                <p class="note">Siri hiçbir ayar gerektirmeden çalışır. Android'de, Android 16 ve sonrasında uygulama eylemlerini destekleyen asistanlarla çalışır.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone video-phone">
-                    <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty sesli komut videosu: Siri ile doz, Android asistanıyla ateş kaydı"></video>
-                    <button class="video-sound" type="button" aria-label="Sesi aç" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
+                <div class="popover-wrap mobile-menu-wrap">
+                    <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" popovertargetaction="toggle" aria-label="Menü" aria-controls="mobile-nav">
+                        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
                     </button>
+                    <nav id="mobile-nav" class="nav-popover mobile-popover" popover="auto" aria-label="Menü">
+                        <a href="#features">Özellikler</a>
+                        <a href="#pricing">Fiyatlar</a>
+                        <a href="#support">SSS</a>
+                        <a href="#download" class="btn">İndir</a>
+                    </nav>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Chapter: At daycare -->
-    <section class="chapter-head" id="at-daycare">
-        <div class="container">
-            <span class="eyebrow">Parenty 2.0'da yeni</span>
-            <h2>Kreşte</h2>
-            <p>Kreşiniz, bakıcınız ya da büyükanne ve büyükbaba günü kaydeder; siz de anında telefonunuzda görürsünüz.</p>
-        </div>
-    </section>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="download">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">Aileler için</span>
+                    <h1>Ne unutulan ne de <span class="accent">iki kez verilen doz.</span></h1>
+                    <p class="hero-sub">Çocuklarınızın ilaçlarını, ateşini ve doktor ziyaretlerini tek bir sakin uygulamada takip edin — ebeveynler, bakıcılar ve kreş arasında anlık senkronize.</p>
 
-    <!-- Spotlight: Daycare, for parents -->
-    <section class="spotlight" id="daycare">
-        <div class="container spotlight-grid">
-            <div>
-                <span class="eyebrow">Ebeveynler için</span>
-                <h2>Günü nasıl geçti, almaya gitmeden öğrenin.</h2>
-                <p>Kreşinizi, bakıcınızı ya da büyükanne ve büyükbabayı kullanıcı adıyla veya QR kodunu tarayarak davet edin. İlaçları, ateşi, yemekleri ve uykuları kaydederler; siz de günü ana ekranınızda anında görürsünüz.</p>
-                <ul class="checklist">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Yalnızca seçtiğiniz çocuklar; 2 hafta, 1 ay, 3 ay, 1 yıl ya da siz kaldırana kadar</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Ana ekranda “Bugün” kreşinizde kartı ve günün zaman çizelgesi</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Her doz, ateş, belirti ve büyüme kaydında “Kaydeden”</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Çok erken bir dozdan önce uyarı, dozu siz evde vermiş olsanız bile</li>
-                </ul>
-                <p class="note">Kreş davet etmek Premium'a dahildir. Erişimi istediğiniz zaman uzatın ya da sonlandırın.</p>
-            </div>
-            <div class="spotlight-visual">
-                <div class="phone video-phone">
-                    <video src="../video/parenty-daycare-day-ad.mp4" poster="../video/parenty-daycare-day-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty Kreş videosu: kreş Emma'nın yemeğini, uykusunu ve yüksek ateşini kaydeder, ebeveyni de tüm günü telefonunda görür"></video>
-                    <button class="video-sound" type="button" aria-label="Sesi aç" aria-pressed="false">
-                        <svg class="icon"><use href="#i-muted"/></svg>
-                    </button>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi App Store'dan indirin">
+                            <svg aria-hidden="true"><use href="#i-apple"/></svg>
+                            <span class="store-btn-text"><span class="small">İndirin:</span><span class="large">App Store</span></span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi Google Play'den edinin">
+                            <svg aria-hidden="true"><use href="#i-play"/></svg>
+                            <span class="store-btn-text"><span class="small">Şimdi edinin:</span><span class="large">Google Play</span></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta-row">
+                        <p class="hero-meta">Ücretsiz indirin · iPhone, iPad &amp; Android · 10 dil</p>
+                        <div class="popover-wrap qr-wrap">
+                            <button class="qr-trigger" type="button" popovertarget="qr-popover" popovertargetaction="toggle" aria-controls="qr-popover">
+                                <svg class="icon" aria-hidden="true"><use href="#i-qr"/></svg>
+                                QR tara
+                            </button>
+                            <div id="qr-popover" class="nav-popover qr-popover" popover="auto">
+                                <span class="qr-tile"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#000000" d="M0 0.5h7m1 0h1m2 0h2m1 0h3m1 0h7M0 1.5h1m5 0h1m2 0h4m1 0h1m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h5m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m4 0h1M0 8.5h1m3 0h1m1 0h3m2 0h1m3 0h1m1 0h5m2 0h1M1 9.5h2m1 0h2m2 0h1m3 0h4m4 0h2m1 0h1M1 10.5h3m1 0h4m1 0h1m2 0h3m1 0h1m3 0h2M0 11.5h1m3 0h1m4 0h1m1 0h1m2 0h3m5 0h2M3 12.5h5m1 0h3m3 0h4m2 0h4M0 13.5h3m1 0h2m6 0h6m2 0h1m2 0h1M4 14.5h3m1 0h1m1 0h3m1 0h4m1 0h4M2 15.5h1m1 0h1m2 0h1m1 0h3m2 0h2m1 0h4m1 0h2M0 16.5h9m1 0h1m1 0h1m3 0h7M8 17.5h1m1 0h1m2 0h1m1 0h2m3 0h1M0 18.5h7m1 0h2m4 0h1m1 0h1m1 0h1m1 0h1M0 19.5h1m5 0h1m5 0h1m3 0h1m3 0h5M0 20.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h9M0 21.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h4m2 0h3M0 22.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h2m2 0h1m1 0h1M0 23.5h1m5 0h1m4 0h1m1 0h1m1 0h1m3 0h5M0 24.5h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h3"/></svg></span>
+                                <p><strong>Bilgisayarda mısınız?</strong><br>Parenty'yi indirmek için telefonunuzun kamerasıyla tarayın.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="phone video-phone" id="watch">
+                        <video src="../video/parenty-ad.mp4" poster="../video/parenty-ad-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Parenty uygulama tanıtım videosu"></video>
+                        <button class="video-sound" type="button" aria-label="Sesi aç" aria-pressed="false">
+                            <svg class="icon" aria-hidden="true"><use href="#i-muted"/></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Daycare: how it works, and privacy -->
-    <section class="daycare-steps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Kreş modu nasıl çalışır</h2>
-                <p>Çocuğu bırakırken bir dakikada kurulur. Kimin neyi, ne kadar süre göreceğine siz karar verirsiniz.</p>
-            </div>
-            <ol class="steps">
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-invite.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-invite.jpg" alt="@sunflowerdaycare'i Emma'yı 1 ay görmesi için davet eden Kreş erişimi ekranı" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Kreşinizi davet edin</h3>
-                    <p>Kreşin kullanıcı adını yazın ya da QR kodunu tarayın. Hangi çocukları ne kadar süre göreceğini seçin.</p>
-                </li>
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-today.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-today.jpg" alt="“Bugün Sunflower Daycare'te” kartı olan ana ekran: 37,8 °C, çoğunu yedi, uyku 12:10–13:30, 2 bez, mutlu" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Gün bir bakışta</h3>
-                    <p>Ana ekrandaki “Bugün” kartı günü özetler: ateş, yemekler, uykular, bezler ve ruh hali.</p>
-                </li>
-                <li class="step">
-                    <div class="phone"><picture><source srcset="../screenshots/dark/daycare-day.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/daycare-day.jpg" alt="Emma'nın kreşteki günü zaman çizelgesi olarak: bez, yemek, ruh hali, uyku ve notlu yüksek ateş" loading="lazy" width="600" height="1304"></picture></div>
-                    <h3>Tüm günü açın</h3>
-                    <p>Kaydettikleri her şey, sırayla ve notlarıyla. Gün gün geriye gidin.</p>
-                </li>
-            </ol>
-            <ul class="privacy-points">
-                <li><svg class="icon"><use href="#i-lock"/></svg><span><strong>Yalnızca seçtiğiniz çocuklar.</strong> Kendi ateş ölçümleriniz, büyüme kayıtlarınız, doktor ziyaretleriniz, raporlarınız ya da notlarınız asla.</span></li>
-                <li><svg class="icon"><use href="#i-phone"/></svg><span><strong>Onların telefonunda hiçbir şey saklanmaz.</strong> Kreş modu canlı okur ve cihazda aile verisi tutmaz.</span></li>
-                <li><svg class="icon"><use href="#i-alarm"/></svg><span><strong>Erişim seçtiğiniz tarihte biter.</strong> Kimse uygulamayı açmasa bile o gün durur.</span></li>
+        <!-- Proof strip -->
+        <section class="proof" aria-label="Ebeveynler neden Parenty'ye güveniyor">
+            <ul class="container proof-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ücretsiz indirin</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Reklam yok, asla</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Verilerinizi asla satmayız</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Face ID ya da parmak izi kilidi</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>10 dil</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- For daycares: teaser for daycare.html -->
-    <section class="teaser">
-        <div class="container">
-            <a class="teaser-card" href="daycare.html">
-                <span class="teaser-icon"><svg class="icon"><use href="#i-home"/></svg></span>
-                <span class="teaser-text"><strong>Kreşiniz mi var, ya da başka ailelerin çocuklarına mı bakıyorsunuz?</strong>Her ailenin ilaçlarını görün ve günlerini Kreş modunda kaydedin. Bir aile için ücretsiz.</span>
-                <span class="teaser-cta">Kreşler için Parenty<svg class="icon"><use href="#i-arrow"/></svg></span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Her şey tek bir sakin yerde</h2>
-                <p>Yorgun ebeveynler için tasarlandı: büyük, net ve hızlı, gece gündüz.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-alarm"/></svg></div>
-                    <h3>Hatırlatıcılar &amp; alarmlar</h3>
-                    <p>Birkaç saatte bir, belirli sayıda gün boyunca ya da belirli saatlerde dozlar. Kaçırılmaması gerekenler için alarm modu.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-thermo"/></svg></div>
-                    <h3>Ateş &amp; belirtiler</h3>
-                    <p>Sıcaklıkları °C ya da °F olarak, belirtileri 1–5 ölçeğinde, notlar ve saatlerle kaydedin.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-home"/></svg></div>
-                    <h3>Kreş modu<span class="tag-new">Yeni</span></h3>
-                    <p>Kreşinizi kullanıcı adı ya da QR koduyla davet edin, çocuğunuzun gününü ana ekranda görün.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-filter"/></svg></div>
-                    <h3>Kayıt filtreleri<span class="tag-new">Yeni</span></h3>
-                    <p>Kayıtları kimin girdiğine göre (siz ya da her kreş), güne veya tarih aralığına göre filtreleyin; çocuğa göre gruplanır.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-ruler"/></svg></div>
-                    <h3>Büyüme &amp; grafikler</h3>
-                    <p>Her çocuk için kilo ve boy, DSÖ büyüme eğrileriyle.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-steth"/></svg></div>
-                    <h3>Doktorlar &amp; ziyaretler</h3>
-                    <p>Çocuk doktorunuz bir dokunuş uzağınızda. Ziyaretleri ve kontrolleri kaydedin, takviminize ekleyin.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></div>
-                    <h3>PDF &amp; CSV raporları</h3>
-                    <p>Dozların, sıcaklıkların, belirtilerin ve ziyaretlerin net bir özetini doktorunuzla ya da acil serviste paylaşın.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-baby"/></svg></div>
-                    <h3>Her çocuk</h3>
-                    <p>Her çocuk için renkli bir profil ve ilaçlar, kayıtlar ve ziyaretler için filtreler.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
-                    <h3>Widget'lar &amp; ses</h3>
-                    <p>Ana ekrandan doz kaydedin, geri sayımı kilit ekranında izleyin ya da sadece Siri'ye veya Android asistanınıza sorun.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-tablet"/></svg></div>
-                    <h3>iPad &amp; iPhone Duo<span class="tag-new">Yeni</span></h3>
-                    <p>iPad'de kenar çubuğu, iPhone Duo'da iki ekran ve büyük ekranda yan yana ayarlar.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
-                    <h3>Gizli &amp; güvenli</h3>
-                    <p>İsteğe bağlı Face ID, Touch ID veya parmak izi kilidi. Hesabınızı istediğiniz zaman silin. Verilerinizi asla satmayız.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></div>
-                    <h3>10 dil</h3>
-                    <p>İngilizce, Arapça, Almanca, Yunanca, İspanyolca, Fransızca, İbranice, İtalyanca, Portekizce ve Türkçe.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots -->
-    <section class="screens" id="screens">
-        <div class="container">
-            <div class="section-header">
-                <h2>Parenty'yi iş başında görün</h2>
-                <p>Açık ya da koyu, telefonunuza uyar.</p>
-            </div>
-            <div class="screens-tabs">
-                <button class="screens-tab active" data-index="0">Ana sayfa</button>
-                <button class="screens-tab" data-index="1">Program</button>
-                <button class="screens-tab" data-index="2">Ateş kaydı</button>
-                <button class="screens-tab" data-index="3">Geçmiş</button>
-                <button class="screens-tab" data-index="4">Doz kontrolü</button>
-            </div>
-        </div>
-        <div class="screens-track" id="screensTrack">
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="Emma'nın zamanı gelen ilaçlarını gösteren ana ekran" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Her doz tek bakışta</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="Dozların önizlemesini gösteren ilaç planlama ekranı" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Saniyeler içinde program oluşturun</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="Sıcaklık kayıtları listesini gösteren belirtiler ekranı" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Ateşi zaman içinde takip edin</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/history.jpg" alt="Her dozu kimin verdiğini gösteren doz geçmişi" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Kim verdi, ne zaman verdi</figcaption>
-            </figure>
-            <figure>
-                <div class="phone"><picture><source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/too-early.jpg" alt="Doz kaydederken çok erken uyarısı" loading="lazy" width="600" height="1304"></picture></div>
-                <figcaption>Çift doza son</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Review -->
-    <section class="review" aria-label="Ebeveynler ne diyor">
-        <div class="container">
-            <figure class="review-card">
-                <div class="review-stars" role="img" aria-label="5 üzerinden 5 yıldız">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
-                </div>
-                <blockquote>
-                    <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
-                </blockquote>
-                <figcaption><strong>Carolyn Johnson</strong> · Google Play yorumu</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Başlamak ücretsiz. Paylaşmak için Premium.</h2>
-                <p>Bir çocuk için gereken her şey ücretsiz. Premium bakımı paylaşan aileler için, Parenty Kreş ise birçok aileye bakanlar için.</p>
-            </div>
-            <div class="plans">
-                <div class="plan">
-                    <h3>Ücretsiz</h3>
-                    <p class="plan-price">Sonsuza dek ücretsiz</p>
+        <!-- Spotlight: double-dose guard -->
+        <section class="spotlight" id="dose-check">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">İçiniz rahat</span>
+                    <h2>Gecenin 3'ünde çift doza son.</h2>
+                    <p>Yorgunsunuz ve zamanı geldi mi emin değil misiniz? Parenty bir sonraki doz için çok erken olduğunda sizi uyarır ve tam olarak ne zaman verilmesi gerektiğini gösterir.</p>
                     <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>İlaç programları, hatırlatıcılar ve doz kontrolleri</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Sıcaklık ve belirti kayıtları</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 çocuk profili</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>1 doktor ve 2 ziyaret</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Kendi cihazlarınızda bulut yedekleme</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Birkaç saatte bir, belirli saatlerde ya da yüksek sesli alarm olarak hatırlatıcılar</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Çok erken bir dozdan önce uyarı</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Geciken, devam eden ve tamamlanan — tek bakışta</li>
                     </ul>
                 </div>
-                <div class="plan premium">
-                    <h3>Premium</h3>
-                    <p class="plan-price">Aylık ya da tek seferlik ömür boyu satın alma</p>
-                    <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Ücretsiz'deki her şey</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Eşiniz, aileniz ve bakıcılarla paylaşın — canlı senkronizasyon</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Sınırsız çocuk, doktor ve ziyaret</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>PDF raporları ve ateş grafikleri</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Alarm ayarları</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Kreşinizi davet edin ve gününü görün</li>
-                    </ul>
-                </div>
-                <div class="plan">
-                    <h3>Parenty Kreş</h3>
-                    <p class="plan-price">Aylık 9,99 € ya da yıllık 99,99 € · kreşler ve bakıcılar için</p>
-                    <ul class="checklist">
-                        <li><svg class="icon"><use href="#i-check"/></svg>Premium'daki her şey</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Baktığınız tüm aileler</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>İlaç, ateş, belirti, büyüme ve günlük bakım kaydedin</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Kreşiniz için kendi adı, kullanıcı adı ve QR kodu</li>
-                        <li><svg class="icon"><use href="#i-check"/></svg>Kaydettiğiniz her şeyin geçmişi</li>
-                    </ul>
-                    <p class="plan-foot">Kreş modu, Premium bir ebeveynin davet ettiği bir aile için ücretsizdir.</p>
+                <div class="spotlight-visual">
+                    <div class="phone">
+                        <picture>
+                            <source srcset="../screenshots/dark/too-early.jpg" media="(prefers-color-scheme: dark)">
+                            <img src="../screenshots/light/too-early.jpg" alt="Bir sonraki doz için çok erken olduğunu bildiren doz kaydetme ekranı" loading="lazy" width="600" height="1304">
+                        </picture>
+                    </div>
                 </div>
             </div>
-            <p class="pricing-note">Uygulama fiyatları yerel para biriminizde gösterir.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ & Support -->
-    <section class="faq" id="support">
-        <div class="container">
-            <div class="section-header">
-                <h2>Sorular &amp; destek</h2>
-            </div>
-            <div class="faq-list">
-                <details>
-                    <summary>Ebeveynler ve bakıcılar arasında senkronizasyon nasıl çalışır?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Oturum açmış her hesap ücretsiz olarak buluta yedeklenir; böylece verileriniz yeni bir telefona taşınır ve tüm cihazlarınızda güncel kalır. Premium ile eşinizi, büyükanne ve büyükbabaları ya da bakıcıyı @kullanıcıadı ile davet edebilirsiniz; kaydettikleri her doz herkesin telefonunda anında görünür.</p>
-                </details>
-                <details>
-                    <summary>Kreşim ya da bakıcım Parenty'yi kullanabilir mi?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Evet. Premium ile Ayarlar → Hesap → Kreş erişimi'ne gidin ve onları kreşin kullanıcı adıyla davet edin ya da gösterdikleri QR kodunu tarayın. Hangi çocukları ne kadar süre göreceklerini seçin: 2 hafta, 1 ay, 3 ay, 1 yıl ya da siz kaldırana kadar. Bu çocukların ilaçlarını, son dozun ne zaman verildiğini ve bir sonrakinin ne zaman verilebileceğini görürler; doz, ateş, belirti, büyüme ve günün kendisini kaydedebilirler: yemekler, içecekler, uykular, bezler, tuvalet, ruh hali ve notlar. Bunları ana ekranda kreşinizin “Bugün” kartında görürsünüz, her kayıtta kimin girdiği yazar ve erişimi istediğiniz zaman uzatabilir ya da sonlandırabilirsiniz.</p>
-                </details>
-                <details>
-                    <summary>Bir kreş neleri görür?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Yalnızca seçtiğiniz çocukları ve ilaçlarını; son dozun ne zaman verildiğini ve bir sonrakinin ne zaman verilebileceğini görür, ama dozu kimin verdiğini ya da notları görmez. Bir kreş kendi ateş ölçümlerinizi, belirtilerinizi, büyüme kayıtlarınızı, doktor ziyaretlerinizi, raporlarınızı ya da notlarınızı asla görmez; ilaçlarınızı ya da çocuklarınızı ekleyemez, değiştiremez veya silemez. Kreş modu kreşin telefonunda ailenizle ilgili hiçbir şey saklamaz ve erişim seçtiğiniz tarihte durur.</p>
-                </details>
-                <details>
-                    <summary>Bir kreş işletiyorum. Kreş modunu nasıl kullanırım?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Ücretsiz bir hesap oluşturun, sonra Kreş moduna geçin: ekranın üstündeki başlığa dokunun ya da Ayarlar → Uygulama modu'na gidin. Kreşinizin adını ve kullanıcı adını ayarlayın, sonra ebeveynlere kullanıcı adını verin ya da QR kodunuzu gösterin. Aileler kreşinizin adını görür, kişisel hesabınızı asla görmez. Ücretsiz bir kreş, Premium bir ebeveynin davet ettiği bir aileye bakabilir; Parenty Kreş (aylık 9,99 € ya da yıllık 99,99 €) baktığınız tüm aileler içindir ve kendi aileniz için Premium'u içerir. Kreş modu internet bağlantısı gerektirir.</p>
-                </details>
-                <details>
-                    <summary>Birden fazla çocuğu yönetebilir miyim?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Evet. Her çocuğun kendi renkli profili olur ve ilaçları, sıcaklıkları, belirtileri ve doktor ziyaretlerini çocuğa göre filtreleyebilirsiniz. Ücretsiz plan bir çocuk profili içerir; Premium sınırsız profilin kilidini açar.</p>
-                </details>
-                <details>
-                    <summary>Ücretsiz olarak neler dahil?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>İlaç ve doz takibi, hatırlatıcılar, sıcaklık ve belirti kayıtları, bir çocuk profili, iki ziyaretle bir doktor ve bulut yedekleme. Premium; aileyle paylaşım, sınırsız profil ve doktor, PDF raporları, ateş grafikleri ve alarm ayarlarını ekler.</p>
-                </details>
-                <details>
-                    <summary>Parenty'yi Siri ya da Android asistanımla kullanabilir miyim?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Evet. iPhone'da Siri'ye “Parenty içinde İbuprofen kaydet” ya da “Parenty uygulamasında sıradaki ilaç nedir?” gibi şeyler söyleyin; hiçbir ayar gerekmez. Android 16 ve sonrasında, uygulama eylemlerini destekleyen asistanlar doz, sıcaklık, kilo ve boy kaydedebilir ve sırada ne olduğunu kontrol edebilir. Parenty çok erken bir doz için sizi yine uyarır ve her şey her zamanki gibi ailenizle paylaşılır.</p>
-                </details>
-                <details>
-                    <summary>Parenty hangi dilleri destekliyor?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>İngilizce, Arapça, Almanca, Yunanca, İspanyolca, Fransızca, İbranice, İtalyanca, Portekizce ve Türkçe.</p>
-                </details>
-                <details>
-                    <summary>Hesabımı nasıl silerim?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Profil ayarlarına gidin ve Hesabı Sil'i seçin. Hesabınız ve buluttaki verileri silinir.</p>
-                </details>
-                <details>
-                    <summary>Bildirimler görünmüyor. Neyi kontrol etmeliyim?<svg class="icon"><use href="#i-chevron"/></svg></summary>
-                    <p>Telefonunuzun ayarlarında Parenty bildirimlerine izin verildiğinden, Odak ya da Rahatsız Etmeyin modunun onları susturmadığından ve uygulamanın en son sürümünü kullandığınızdan emin olun.</p>
-                </details>
-            </div>
-            <p class="faq-contact">Hâlâ yardım mı gerekiyor? <a href="mailto:info@parenty.uk">info@parenty.uk</a> adresine yazın</p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-box">
-                <img src="../logo.png" alt="" width="64" height="64" />
-                <h2>Sakin bakım, <span>gecenin 3'ünde bile.</span></h2>
-                <p>iPhone ve Android için ücretsiz indirin.</p>
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi App Store'dan indirin">
-                        <svg><use href="#i-apple"/></svg>
-                        <span class="store-btn-text"><span class="small">İndirin:</span><span class="large">App Store</span></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi Google Play'den edinin">
-                        <svg><use href="#i-play"/></svg>
-                        <span class="store-btn-text"><span class="small">Şimdi edinin:</span><span class="large">Google Play</span></span>
-                    </a>
+        <!-- Spotlight: family sync -->
+        <section class="spotlight reverse" id="sync">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Aile senkronizasyonu</span>
+                    <h2>“İlacını veren oldu mu?”</h2>
+                    <p>Bir daha sormayın. Birinin kaydettiği her doz, kimin verdiği ve ne zaman verdiğiyle birlikte ailedeki her telefonda anında görünür.</p>
+                    <ul class="checklist">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Eşinizi, büyükanne ve büyükbabaları ya da bakıcıyı @kullanıcıadı ile davet edin</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Her dozu kimin verdiğini geçmişte görün</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Herkesin telefonu anında güncellenir</li>
+                    </ul>
+                    <p class="note">Bulut yedekleme herkes için ücretsizdir. Aileyle paylaşım Premium'a dahildir.</p>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="phone">
+                        <picture>
+                            <source srcset="../screenshots/dark/history.jpg" media="(prefers-color-scheme: dark)">
+                            <img src="../screenshots/light/history.jpg" alt="Maria'nın hangi dozları verdiğini gösteren doz geçmişi" loading="lazy" width="600" height="1304">
+                        </picture>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Spotlight: voice (Siri / Android assistants) -->
+        <section class="spotlight" id="voice">
+            <div class="container spotlight-grid">
+                <div>
+                    <span class="eyebrow">Eller serbest</span>
+                    <h2>Kucağınızda bebek mi var? Sadece söyleyin.</h2>
+                    <p>Telefonunuzun kilidini açmadan ya da uygulamayı açmadan bir doz veya ateş kaydedin. iPhone'da Siri'ye ya da Android'de asistanınıza söyleyin, Parenty de aileyle paylaşsın.</p>
+                    <ul class="checklist">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>“Parenty içinde İbuprofen kaydet”</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>“Parenty uygulamasında sıradaki ilaç nedir?”</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ateş, kilo ve boy kaydedin, son dozu kontrol edin</li>
+                    </ul>
+                    <p class="note">Siri hiçbir ayar gerektirmeden çalışır. Android'de, Android 16 ve sonrasında uygulama eylemlerini destekleyen asistanlarla çalışır.</p>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="phone video-phone">
+                        <video src="../video/parenty-voice-ad.mp4" poster="../video/parenty-voice-ad-poster.jpg" muted loop playsinline preload="none" aria-label="Parenty sesli komut videosu: Siri ile doz, Android asistanıyla ateş kaydı"></video>
+                        <button class="video-sound" type="button" aria-label="Sesi aç" aria-pressed="false">
+                            <svg class="icon" aria-hidden="true"><use href="#i-muted"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features (6 focused cards, 3x2 grid) -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Her şey tek bir sakin yerde</h2>
+                    <p>Yorgun ebeveynler için tasarlandı: büyük, net ve hızlı, gece gündüz.</p>
+                </div>
+                <div class="features-grid three-col">
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-thermo"/></svg></div>
+                        <h3>Ateş &amp; belirtiler</h3>
+                        <p>Sıcaklıkları °C ya da °F olarak, belirtileri 1–5 ölçeğinde, notlar ve saatlerle kaydedin.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg></div>
+                        <h3>Büyüme &amp; grafikler</h3>
+                        <p>Her çocuk için kilo ve boy, DSÖ büyüme eğrileriyle.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-steth"/></svg></div>
+                        <h3>Doktorlar &amp; ziyaretler</h3>
+                        <p>Çocuk doktorunuz bir dokunuş uzağınızda. Ziyaretleri ve kontrolleri kaydedin, takviminize ekleyin.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div>
+                        <h3>PDF &amp; CSV raporları</h3>
+                        <p>Dozların, sıcaklıkların, belirtilerin ve ziyaretlerin net bir özetini doktorunuzla ya da acil serviste paylaşın.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg></div>
+                        <h3>Her çocuk</h3>
+                        <p>Her çocuk için renkli profiller; tarih, çocuk veya kaydı kimin girdiğine göre filtreler.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-tablet"/></svg></div>
+                        <h3>Widget'lar ve iPad</h3>
+                        <p>Ana Ekrandan doz kaydedin, Kilit Ekranında geri sayımı izleyin veya iPad'de kenar çubuğunu kullanın.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots (3 unique screens, no duplicates from Spotlights) -->
+        <section class="screens" id="screens">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Parenty'yi iş başında görün</h2>
+                    <p>Açık ya da koyu, telefonunuza uyar.</p>
+                </div>
+                <div class="screens-grid">
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/home.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/home.jpg" alt="Emma'nın zamanı gelen ilaçlarını gösteren ana ekran" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Her doz tek bakışta</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/schedule.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/schedule.jpg" alt="Dozların önizlemesini gösteren ilaç planlama ekranı" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Saniyeler içinde program oluşturun</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="phone"><picture><source srcset="../screenshots/dark/symptoms.jpg" media="(prefers-color-scheme: dark)"><img src="../screenshots/light/symptoms.jpg" alt="Sıcaklık kayıtları listesini gösteren belirtiler ekranı" loading="lazy" width="600" height="1304"></picture></div>
+                        <figcaption>Ateşi zaman içinde takip edin</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single Daycare Cross-Promo Band -->
+        <section class="daycare-callout" id="daycare">
+            <div class="container">
+                <div class="callout-card">
+                    <div class="callout-body">
+                        <span class="eyebrow">Kreş modu</span>
+                        <h2>Kreşinizle de bağlantıda kalın.</h2>
+                        <p>Seçtiğiniz çocuklar ve tarihler için kreşinizi, bakıcınızı veya büyükanne-büyükbabaları davet edin. Dozları, öğünleri ve uykuları kaydederler, siz de günü canlı izlersiniz — özel kayıtlarınız gizli kalır.</p>
+                    </div>
+                    <a class="btn callout-btn" href="daycare.html">Kreşler için Parenty'yi keşfet<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review -->
+        <section class="review" aria-label="Ebeveynler ne diyor">
+            <div class="container">
+                <figure class="review-card">
+                    <div class="review-stars" role="img" aria-label="5 üzerinden 5 yıldız">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+                    </div>
+                    <blockquote>
+                        <p>“I looked through many medicine tracking apps for something that had a really clear note about when the medicine was last taken and when it was due again. After trying close to 20, I found Parenty and it's been almost exactly what I've been looking for. The developer is also extremely open to feedback and quick to address.”</p>
+                    </blockquote>
+                    <figcaption><strong>Carolyn Johnson</strong> · Google Play yorumu</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Pricing (2 focused family plans + compact Daycare banner) -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Başlamak ücretsiz. Paylaşmak için Premium.</h2>
+                    <p>Bir çocuk için ihtiyacınız olan her şey ücretsiz. Aile ve kreşle canlı paylaşım için yükseltin.</p>
+                </div>
+                <div class="plans two">
+                    <div class="plan">
+                        <h3>Ücretsiz</h3>
+                        <p class="plan-price">Sonsuza dek ücretsiz</p>
+                        <ul class="checklist">
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>İlaç programları, hatırlatıcılar ve doz kontrolleri</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Sıcaklık ve belirti kayıtları</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 çocuk profili</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 doktor ve 2 ziyaret</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Kendi cihazlarınızda bulut yedekleme</li>
+                        </ul>
+                    </div>
+                    <div class="plan premium">
+                        <h3>Premium</h3>
+                        <p class="plan-price">Aylık ya da tek seferlik ömür boyu satın alma</p>
+                        <ul class="checklist">
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ücretsiz'deki her şey</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Eşiniz, aileniz ve bakıcılarla paylaşın — canlı senkronizasyon</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Sınırsız çocuk, doktor ve ziyaret</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>PDF raporları ve ateş grafikleri</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Alarm ayarları</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Kreşinizi davet edin ve gününü görün</li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="pricing-banner" href="daycare.html#pricing">
+                    <span class="pricing-banner-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+                    <span class="pricing-banner-text"><strong>Kreş veya anaokulu mu yönetiyorsunuz?</strong> 1 aile için ücretsiz veya sınırsız aile için ayda 9,99 €.</span>
+                    <span class="pricing-banner-cta">Kreş planını gör<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+                </a>
+                <p class="pricing-note">Uygulama fiyatları yerel para biriminizde gösterir.</p>
+            </div>
+        </section>
+
+        <!-- FAQ & Support (6 focused Q&As) -->
+        <section class="faq" id="support" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="faq-heading">Sorular &amp; destek</h2>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>Ebeveynler ve bakıcılar arasında senkronizasyon nasıl çalışır?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Oturum açmış her hesap ücretsiz olarak buluta yedeklenir; böylece verileriniz yeni bir telefona taşınır ve tüm cihazlarınızda güncel kalır. Premium ile eşinizi, büyükanne ve büyükbabaları ya da bakıcıyı @kullanıcıadı ile davet edebilirsiniz; kaydettikleri her doz herkesin telefonunda anında görünür.</p>
+                    </details>
+                    <details>
+                        <summary>Ücretsiz olarak neler dahil?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>İlaç ve doz takibi, hatırlatıcılar, sıcaklık ve belirti kayıtları, bir çocuk profili, iki ziyaretle bir doktor ve bulut yedekleme. Premium; aileyle paylaşım, sınırsız profil ve doktor, PDF raporları, ateş grafikleri ve alarm ayarlarını ekler.</p>
+                    </details>
+                    <details>
+                        <summary>Birden fazla çocuğu yönetebilir miyim?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Evet. Her çocuğun kendi renkli profili olur ve ilaçları, sıcaklıkları, belirtileri ve doktor ziyaretlerini çocuğa göre filtreleyebilirsiniz. Ücretsiz plan bir çocuk profili içerir; Premium sınırsız profilin kilidini açar.</p>
+                    </details>
+                    <details>
+                        <summary>Kreşim ya da bakıcım Parenty'yi kullanabilir mi?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Evet. Premium ile kreşinizi veya bakıcınızı kullanıcı adı ya da QR kodla davet edin, hangi çocukları ne kadar süre göreceğini seçin ve dozları, öğünleri ve uykuları Ana Sayfada canlı izleyin. Özel aile kayıtlarınızı veya notlarınızı asla görmezler.</p>
+                    </details>
+                    <details>
+                        <summary>Parenty'yi Siri ya da Android asistanımla kullanabilir miyim?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Evet. iPhone'da Siri'ye “Parenty içinde İbuprofen kaydet” ya da “Parenty uygulamasında sıradaki ilaç nedir?” gibi şeyler söyleyin; hiçbir ayar gerekmez. Android 16 ve sonrasında, uygulama eylemlerini destekleyen asistanlar doz, sıcaklık, kilo ve boy kaydedebilir ve sırada ne olduğunu kontrol edebilir. Parenty çok erken bir doz için sizi yine uyarır ve her şey her zamanki gibi ailenizle paylaşılır.</p>
+                    </details>
+                    <details>
+                        <summary>Hesabımı nasıl silerim?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                        <p>Profil ayarlarına gidin ve Hesabı Sil'i seçin. Hesabınız ve buluttaki verileri silinir.</p>
+                    </details>
+                </div>
+                <p class="faq-contact">Hâlâ yardım mı gerekiyor? <a href="mailto:info@parenty.uk">info@parenty.uk</a> adresine yazın</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <img src="../logo.png" alt="" width="64" height="64" />
+                    <h2>Sakin bakım, <span>gecenin 3'ünde bile.</span></h2>
+                    <p>iPhone ve Android için ücretsiz indirin.</p>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/app/parenty-medicine-tracker/id6757712692" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi App Store'dan indirin">
+                            <svg aria-hidden="true"><use href="#i-apple"/></svg>
+                            <span class="store-btn-text"><span class="small">İndirin:</span><span class="large">App Store</span></span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=cy.com.parenty" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Parenty'yi Google Play'den edinin">
+                            <svg aria-hidden="true"><use href="#i-play"/></svg>
+                            <span class="store-btn-text"><span class="small">Şimdi edinin:</span><span class="large">Google Play</span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Phones: a download bar that appears after the hero and hides at the closing call to action -->
     <a class="sticky-get" href="../get.html">
@@ -794,25 +637,14 @@
     <footer>
         <div class="container footer-content">
             <p>© <span id="year"></span> Parenty · Geliştiren: Stavros Georgiou</p>
-            <nav>
+            <nav aria-label="Altbilgi">
+                <a href="daycare.html">Kreşler için Parenty</a>
                 <a href="#features">Özellikler</a>
                 <a href="#pricing">Fiyatlar</a>
                 <a href="#support">Destek</a>
                 <a href="../privacy.html">Gizlilik Politikası</a>
                 <a href="../terms.html">Kullanım Koşulları</a>
                 <button type="button" class="footer-link-btn" data-cookie-settings>Çerez ayarları</button>
-            </nav>
-            <nav class="langs" aria-label="Dil" translate="no">
-                <a hreflang="en" lang="en" href="../">English</a>
-                <a hreflang="el" lang="el" href="../el/">Ελληνικά</a>
-                <a hreflang="de" lang="de" href="../de/">Deutsch</a>
-                <a hreflang="es" lang="es" href="../es/">Español</a>
-                <a hreflang="fr" lang="fr" href="../fr/">Français</a>
-                <a hreflang="it" lang="it" href="../it/">Italiano</a>
-                <a hreflang="pt" lang="pt" href="../pt/">Português</a>
-                <a hreflang="tr" lang="tr" href="../tr/" aria-current="page">Türkçe</a>
-                <a hreflang="ar" lang="ar" href="../ar/">العربية</a>
-                <a hreflang="he" lang="he" href="../he/">עברית</a>
             </nav>
         </div>
     </footer>
@@ -825,6 +657,11 @@
         </div>
     </aside>
 
+    <script type="module">
+        if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
+            import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js");
+        }
+    </script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -834,7 +671,6 @@
         const darkSources = document.querySelectorAll('source[media="(prefers-color-scheme: dark)"]');
         const applyTheme = () => {
             const dark = (document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light")) === "dark";
-            // Screenshots pick their dark/light image through <source media>, so steer that too
             darkSources.forEach((source) => source.media = dark ? "all" : "not all");
             document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.content = dark ? "#0d0817" : "#faf8ff");
             themeToggle.querySelector(".icon-sun").style.display = dark ? "" : "none";
@@ -849,6 +685,16 @@
         });
         systemDark.addEventListener("change", applyTheme);
         applyTheme();
+
+        // Close mobile popover when tapping an in-page link
+        const mobileNav = document.getElementById("mobile-nav");
+        if (mobileNav) {
+            mobileNav.addEventListener("click", (event) => {
+                if (event.target.closest("a") && typeof mobileNav.hidePopover === "function") {
+                    mobileNav.hidePopover();
+                }
+            });
+        }
 
         // Promo videos: play while on screen (not with reduced motion), one with sound at a time
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -886,16 +732,6 @@
             players.forEach(({ video }) => observer.observe(video));
         }
 
-        // Hero: "For families" / "For daycares" swaps the copy and the phone
-        const hero = document.querySelector(".hero");
-        const audienceButtons = hero.querySelectorAll(".audience-switch button");
-        audienceButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                hero.dataset.audience = button.dataset.audience;
-                audienceButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
-            });
-        });
-
         // Phones: show the download bar once the hero's store buttons scroll away, hide it at the closing call to action
         const stickyGet = document.querySelector(".sticky-get");
         if (stickyGet && "IntersectionObserver" in window) {
@@ -908,31 +744,6 @@
             });
             watched.forEach((el) => stickyObserver.observe(el));
         }
-
-        // Screenshot tabs <-> track
-        const track = document.getElementById("screensTrack");
-        const figures = track.querySelectorAll("figure");
-        const tabs = document.querySelectorAll(".screens-tab");
-        tabs.forEach((tab) => {
-            tab.addEventListener("click", () => {
-                const fig = figures[Number(tab.dataset.index)];
-                track.scrollTo({ left: fig.offsetLeft - (track.clientWidth - fig.offsetWidth) / 2, behavior: "smooth" });
-            });
-        });
-        let scrollTimeout;
-        track.addEventListener("scroll", () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                const center = track.scrollLeft + track.clientWidth / 2;
-                let closest = 0;
-                figures.forEach((fig, i) => {
-                    const d = Math.abs(fig.offsetLeft + fig.offsetWidth / 2 - center);
-                    const best = Math.abs(figures[closest].offsetLeft + figures[closest].offsetWidth / 2 - center);
-                    if (d < best) closest = i;
-                });
-                tabs.forEach((t, i) => t.classList.toggle("active", i === closest));
-            }, 60);
-        }, { passive: true });
     </script>
 </body>
 </html>
