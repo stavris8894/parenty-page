@@ -1,7 +1,6 @@
-// Parenty website analytics (GA4 G-4KM30V8DE0 + Google Consent Mode v2)
-// Runs synchronously in <head> before gtag/js so default consent is always set first.
+// Parenty website analytics (Google Tag Manager GTM-TK4KS8P7 + Google Consent Mode v2)
+// Runs synchronously in <head> before gtm.js so default consent is always registered first.
 (function () {
-    var MEASUREMENT_ID = "G-4KM30V8DE0";
     var CONSENT_KEY = "analytics_consent";
 
     window.dataLayer = window.dataLayer || [];
@@ -23,17 +22,22 @@
     });
 
     window.gtag("js", new Date());
-    window.gtag("config", MEASUREMENT_ID);
+    window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
 
     function setConsent(value) {
         try {
             localStorage.setItem(CONSENT_KEY, value);
         } catch (e) {}
+        var status = value === "granted" ? "granted" : "denied";
         window.gtag("consent", "update", {
-            analytics_storage: value === "granted" ? "granted" : "denied",
+            analytics_storage: status,
             ad_storage: "denied",
             ad_user_data: "denied",
             ad_personalization: "denied"
+        });
+        window.dataLayer.push({
+            event: "consent_updated",
+            analytics_consent: status
         });
     }
 
@@ -66,7 +70,7 @@
             });
         }
 
-        // Track App Store / Google Play clicks and audience switches
+        // Push clean GTM Data Layer events for App Store / Google Play clicks and audience switches
         var pageLang = document.documentElement.lang || "en";
         document.addEventListener("click", function (event) {
             var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
@@ -78,7 +82,8 @@
                 if (store) {
                     var section = link.closest("section, nav, header, footer");
                     var placement = (section && (section.id || section.className.split(" ")[0])) || "page";
-                    window.gtag("event", "store_click", {
+                    window.dataLayer.push({
+                        event: "store_click",
                         store: store,
                         page_lang: pageLang,
                         placement: placement
@@ -88,7 +93,8 @@
 
             var audBtn = event.target && event.target.closest ? event.target.closest(".audience-switch button[data-audience]") : null;
             if (audBtn) {
-                window.gtag("event", "audience_switch", {
+                window.dataLayer.push({
+                    event: "audience_switch",
                     audience: audBtn.dataset.audience || "",
                     page_lang: pageLang
                 });
