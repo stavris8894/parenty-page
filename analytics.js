@@ -1,6 +1,7 @@
-// Parenty website analytics (Google Tag Manager + Consent Mode v2)
-// Runs synchronously in <head> before gtm.js so default consent is always set first.
+// Parenty website analytics (GA4 G-4KM30V8DE0 + Google Consent Mode v2)
+// Runs synchronously in <head> before gtag/js so default consent is always set first.
 (function () {
+    var MEASUREMENT_ID = "G-4KM30V8DE0";
     var CONSENT_KEY = "analytics_consent";
 
     window.dataLayer = window.dataLayer || [];
@@ -22,7 +23,7 @@
     });
 
     window.gtag("js", new Date());
-    window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    window.gtag("config", MEASUREMENT_ID);
 
     function setConsent(value) {
         try {
