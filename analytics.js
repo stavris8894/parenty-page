@@ -2,6 +2,11 @@
 // Runs synchronously in <head> before gtm.js so default consent is always registered first.
 (function () {
     var CONSENT_KEY = "analytics_consent";
+    var EEA_UK_CH = [
+        "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR",
+        "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL",
+        "PT", "RO", "SK", "SI", "ES", "SE", "GB", "CH"
+    ];
 
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () {
@@ -13,13 +18,38 @@
         saved = localStorage.getItem(CONSENT_KEY);
     } catch (e) {}
 
-    window.gtag("consent", "default", {
-        analytics_storage: saved === "granted" ? "granted" : "denied",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        wait_for_update: 500
-    });
+    // Privacy-protective by default in EEA/UK/CH; outside those regions analytics is granted unless declined.
+    // Ad storage stays denied since parenty.uk does not run ad tracking cookies without separate consent.
+    if (saved === "granted") {
+        window.gtag("consent", "default", {
+            analytics_storage: "granted",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+        });
+    } else if (saved === "denied") {
+        window.gtag("consent", "default", {
+            analytics_storage: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+        });
+    } else {
+        window.gtag("consent", "default", {
+            analytics_storage: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+            region: EEA_UK_CH,
+            wait_for_update: 500
+        });
+        window.gtag("consent", "default", {
+            analytics_storage: "granted",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+        });
+    }
 
     window.gtag("js", new Date());
     window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -30,10 +60,7 @@
         } catch (e) {}
         var status = value === "granted" ? "granted" : "denied";
         window.gtag("consent", "update", {
-            analytics_storage: status,
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied"
+            analytics_storage: status
         });
         window.dataLayer.push({
             event: "consent_updated",
