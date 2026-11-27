@@ -18,37 +18,26 @@
         saved = localStorage.getItem(CONSENT_KEY);
     } catch (e) {}
 
-    // Privacy-protective by default in EEA/UK/CH; outside those regions analytics is granted unless declined.
-    // Ad storage stays denied since parenty.uk does not run ad tracking cookies without separate consent.
+    function consentPayload(status) {
+        return {
+            analytics_storage: status,
+            ad_storage: status,
+            ad_user_data: status,
+            ad_personalization: status
+        };
+    }
+
+    // Privacy-protective by default in EEA/UK/CH; outside those regions granted unless declined.
     if (saved === "granted") {
-        window.gtag("consent", "default", {
-            analytics_storage: "granted",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied"
-        });
+        window.gtag("consent", "default", consentPayload("granted"));
     } else if (saved === "denied") {
-        window.gtag("consent", "default", {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied"
-        });
+        window.gtag("consent", "default", consentPayload("denied"));
     } else {
-        window.gtag("consent", "default", {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied",
-            region: EEA_UK_CH,
-            wait_for_update: 500
-        });
-        window.gtag("consent", "default", {
-            analytics_storage: "granted",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied"
-        });
+        var eeaDefault = consentPayload("denied");
+        eeaDefault.region = EEA_UK_CH;
+        eeaDefault.wait_for_update = 500;
+        window.gtag("consent", "default", eeaDefault);
+        window.gtag("consent", "default", consentPayload("granted"));
     }
 
     window.gtag("js", new Date());
@@ -59,9 +48,7 @@
             localStorage.setItem(CONSENT_KEY, value);
         } catch (e) {}
         var status = value === "granted" ? "granted" : "denied";
-        window.gtag("consent", "update", {
-            analytics_storage: status
-        });
+        window.gtag("consent", "update", consentPayload(status));
         window.dataLayer.push({
             event: "consent_updated",
             analytics_consent: status
